@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000671
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000671?filename=BIOMD0000000671_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model:Murphy2016DifferencesInPredictionsOfOdeModBiomd0000000671Model
   init_kwargs:
     model_path: data/BIOMD0000000671.xml

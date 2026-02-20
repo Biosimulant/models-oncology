@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000913
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000913?filename=dePillis2008.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.depillis2008_optimal_control_of_mixed_immunother_biomd0000000913_model:Depillis2008OptimalControlOfMixedImmunotherBiomd0000000913Model
   init_kwargs:
     model_path: data/BIOMD0000000913.xml

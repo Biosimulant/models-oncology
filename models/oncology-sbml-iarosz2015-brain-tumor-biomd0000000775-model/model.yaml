@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000775
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000775?filename=Iarosz2015.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.iarosz2015_brain_tumor_biomd0000000775_model:Iarosz2015BrainTumorBiomd0000000775Model
   init_kwargs:
     model_path: data/BIOMD0000000775.xml

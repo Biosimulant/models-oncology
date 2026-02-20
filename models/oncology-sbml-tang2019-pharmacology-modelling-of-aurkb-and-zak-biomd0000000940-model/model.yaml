@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000940
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000940?filename=Tang2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.tang2019_pharmacology_modelling_of_aurkb_and_zak_biomd0000000940_model:Tang2019PharmacologyModellingOfAurkbAndZakBiomd0000000940Model
   init_kwargs:
     model_path: data/BIOMD0000000940.xml

@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000733
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000733?filename=Moore_2004_fig6.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.moore_2004_mathematical_model_for_cml_and_t_cell_biomd0000000733_model:Moore2004MathematicalModelForCmlAndTCellBiomd0000000733Model
   init_kwargs:
     model_path: data/BIOMD0000000733.xml

@@ -1,0 +1,44 @@
+modules:
+  al_tuwairqi2020_1:
+    class: src.al_tuwairqi2020_dynamics_of_cancer_radiovirother_biomd0000001032_model:AlTuwairqi2020DynamicsOfCancerRadiovirotherBiomd0000001032Model
+    args:
+      model_path: data/BIOMD0000001032.xml
+  al_tuwairqi2020_2:
+    class: src.al_tuwairqi2020_dynamics_of_cancer_virotherapy_p_biomd0000001031_model:AlTuwairqi2020DynamicsOfCancerVirotherapyPBiomd0000001031Model
+    args:
+      model_path: data/BIOMD0000001031.xml
+  alharbi2019_tumo_3:
+    class: src.alharbi2019_tumor_normal_model_tnm_of_the_develo_biomd0000001037_model:Alharbi2019TumorNormalModelTnmOfTheDeveloBiomd0000001037Model
+    args:
+      model_path: data/BIOMD0000001037.xml
+  alharbi2019_tumo_4:
+    class: src.alharbi2019_tumor_normal_vitamins_model_tnvm_of_biomd0000001038_model:Alharbi2019TumorNormalVitaminsModelTnvmOfBiomd0000001038Model
+    args:
+      model_path: data/BIOMD0000001038.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: al_tuwairqi2020_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: al_tuwairqi2020_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: alharbi2019_tumo_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: alharbi2019_tumo_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

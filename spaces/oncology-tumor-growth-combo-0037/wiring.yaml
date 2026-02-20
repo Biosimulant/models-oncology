@@ -1,0 +1,36 @@
+modules:
+  rouhimoghadam201_1:
+    class: src.rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model1807040001_model:Rouhimoghadam2018Gpr30Pi3kMapkStatSignalingModel1807040001Model
+    args:
+      model_path: data/MODEL1807040001.xml
+  rouhimoghadam201_2:
+    class: src.rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model2002250001_model:Rouhimoghadam2018Gpr30Pi3kMapkStatSignalingModel2002250001Model
+    args:
+      model_path: data/MODEL2002250001.xml
+  ruscone2023_logi_3:
+    class: src.ruscone2023_logical_model_of_tumor_cell_invasion_model2304070002_model:Ruscone2023LogicalModelOfTumorCellInvasionModel2304070002Model
+    args:
+      model_path: data/MODEL2304070002.sbml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: rouhimoghadam201_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: rouhimoghadam201_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: ruscone2023_logi_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

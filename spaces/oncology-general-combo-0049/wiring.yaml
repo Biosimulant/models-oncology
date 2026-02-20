@@ -1,0 +1,36 @@
+modules:
+  ribba2012_low_1:
+    class: src.ribba2012_low_grade_gliomas_tumour_growth_inhibi_biomd0000000521_model:Ribba2012LowGradeGliomasTumourGrowthInhibiBiomd0000000521Model
+    args:
+      model_path: data/BIOMD0000000521.xml
+  riya_interplay_2:
+    class: src.riya_2024_interplay_between_the_immunologic_netw_model2402030002_model:Riya2024InterplayBetweenTheImmunologicNetwModel2402030002Model
+    args:
+      model_path: data/MODEL2402030002.xml
+  talemi2015_persi_3:
+    class: src.talemi2015_persistent_telomere_associated_dna_da_model1412200000_model:Talemi2015PersistentTelomereAssociatedDnaDaModel1412200000Model
+    args:
+      model_path: data/MODEL1412200000.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: ribba2012_low_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: riya_interplay_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: talemi2015_persi_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000757
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000757?filename=Abernathy2016.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.abernathy2016_glioblastoma_treatment_biomd0000000757_model:Abernathy2016GlioblastomaTreatmentBiomd0000000757Model
   init_kwargs:
     model_path: data/BIOMD0000000757.xml

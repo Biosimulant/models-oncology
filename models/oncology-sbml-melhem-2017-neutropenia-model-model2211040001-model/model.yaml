@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2211040001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2211040001?filename=Neutropenia.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.melhem_2017_neutropenia_model_model2211040001_model:Melhem2017NeutropeniaModelModel2211040001Model
   init_kwargs:
     model_path: data/MODEL2211040001.xml

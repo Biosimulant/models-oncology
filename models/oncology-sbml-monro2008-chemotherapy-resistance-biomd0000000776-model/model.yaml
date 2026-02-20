@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000776
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000776?filename=Monro2008.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.monro2008_chemotherapy_resistance_biomd0000000776_model:Monro2008ChemotherapyResistanceBiomd0000000776Model
   init_kwargs:
     model_path: data/BIOMD0000000776.xml

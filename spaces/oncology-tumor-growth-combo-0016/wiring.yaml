@@ -1,0 +1,28 @@
+modules:
+  dorvash2019_dyna_1:
+    class: src.dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model:Dorvash2019DynamicModelingOfSignalTransductBiomd0000000822Model
+    args:
+      model_path: data/BIOMD0000000822.xml
+  eftimie2010_immu_2:
+    class: src.eftimie2010_immunity_to_melanoma_biomd0000000768_model:Eftimie2010ImmunityToMelanomaBiomd0000000768Model
+    args:
+      model_path: data/BIOMD0000000768.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: dorvash2019_dyna_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: eftimie2010_immu_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

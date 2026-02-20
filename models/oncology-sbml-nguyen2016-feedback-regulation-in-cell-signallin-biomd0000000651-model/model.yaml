@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000651
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000651?filename=BIOMD0000000651_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model:Nguyen2016FeedbackRegulationInCellSignallinBiomd0000000651Model
   init_kwargs:
     model_path: data/BIOMD0000000651.xml

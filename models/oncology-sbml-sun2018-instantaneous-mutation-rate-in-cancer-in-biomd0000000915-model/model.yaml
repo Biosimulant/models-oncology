@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000915
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000915?filename=Sun2018.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model:Sun2018InstantaneousMutationRateInCancerInBiomd0000000915Model
   init_kwargs:
     model_path: data/BIOMD0000000915.xml

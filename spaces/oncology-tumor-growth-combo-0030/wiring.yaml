@@ -1,0 +1,28 @@
+modules:
+  lombardo2018_exp_1:
+    class: src.lombardo2018_expression_of_pdl1_in_neuroblastoma_model1812070002_model:Lombardo2018ExpressionOfPdl1InNeuroblastomaModel1812070002Model
+    args:
+      model_path: data/MODEL1812070002.xml
+  lopes2025_nfkb_2:
+    class: src.lopes2025_nfkb_model_in_breast_cancer_model2508260001_model:Lopes2025NfkbModelInBreastCancerModel2508260001Model
+    args:
+      model_path: data/MODEL2508260001.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: lombardo2018_exp_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: lopes2025_nfkb_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

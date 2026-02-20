@@ -1,0 +1,36 @@
+modules:
+  tham2008_pdmodel_1:
+    class: src.tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model:Tham2008PdmodelTumourShrinkageByGemcitabineBiomd0000000234Model
+    args:
+      model_path: data/BIOMD0000000234.xml
+  unni2019_mathema_2:
+    class: src.unni2019_mathematical_modeling_analysis_and_simu_biomd0000000888_model:Unni2019MathematicalModelingAnalysisAndSimuBiomd0000000888Model
+    args:
+      model_path: data/BIOMD0000000888.xml
+  wei2019_mathemat_3:
+    class: src.wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model:Wei2019MathematicalModelingOfTumorGrowthThModel1909090002Model
+    args:
+      model_path: data/MODEL1909090002.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: tham2008_pdmodel_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: unni2019_mathema_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: wei2019_mathemat_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

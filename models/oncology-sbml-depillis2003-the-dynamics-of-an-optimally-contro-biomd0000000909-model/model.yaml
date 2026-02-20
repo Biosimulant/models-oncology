@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000909
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000909?filename=dePillis2003.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.depillis2003_the_dynamics_of_an_optimally_contro_biomd0000000909_model:Depillis2003TheDynamicsOfAnOptimallyControBiomd0000000909Model
   init_kwargs:
     model_path: data/BIOMD0000000909.xml

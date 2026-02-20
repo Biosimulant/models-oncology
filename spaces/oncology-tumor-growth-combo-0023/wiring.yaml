@@ -1,0 +1,28 @@
+modules:
+  hutchinson2016_v_1:
+    class: src.hutchinson2016_vascular_phenotype_identification_model1911130007_model:Hutchinson2016VascularPhenotypeIdentificationModel1911130007Model
+    args:
+      model_path: data/MODEL1911130007.xml
+  iarosz2015_brain_2:
+    class: src.iarosz2015_brain_tumor_biomd0000000775_model:Iarosz2015BrainTumorBiomd0000000775Model
+    args:
+      model_path: data/BIOMD0000000775.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: hutchinson2016_v_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: iarosz2015_brain_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

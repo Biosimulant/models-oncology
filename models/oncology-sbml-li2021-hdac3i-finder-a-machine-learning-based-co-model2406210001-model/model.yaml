@@ -25,7 +25,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2406210001?filename=BioModelsMetadata
     - eos1n4b.csv
   license: CC0
-bsim:
+biosim:
   entrypoint: src.li2021_hdac3i_finder_a_machine_learning_based_co_model2406210001_model:Li2021Hdac3iFinderAMachineLearningBasedCoModel2406210001Model
   init_kwargs:
     model_path: data/MODEL2406210001.xml

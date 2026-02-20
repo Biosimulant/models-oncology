@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1912160006
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1912160006?filename=Yoon2017.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.yoon2017_mathematical_modeling_of_mutant_transfe_model1912160006_model:Yoon2017MathematicalModelingOfMutantTransfeModel1912160006Model
   init_kwargs:
     model_path: data/MODEL1912160006.xml

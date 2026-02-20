@@ -1,0 +1,28 @@
+modules:
+  chakrabarty2010__1:
+    class: src.chakrabarty2010_a_control_theory_approach_to_can_biomd0000000777_model:Chakrabarty2010AControlTheoryApproachToCanBiomd0000000777Model
+    args:
+      model_path: data/BIOMD0000000777.xml
+  chance1960_glyco_2:
+    class: src.chance1960_glycolysis_respiration_biomd0000000281_model:Chance1960GlycolysisRespirationBiomd0000000281Model
+    args:
+      model_path: data/BIOMD0000000281.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: chakrabarty2010__1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: chance1960_glyco_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

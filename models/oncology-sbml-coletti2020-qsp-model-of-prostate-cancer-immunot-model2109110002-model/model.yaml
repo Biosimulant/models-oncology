@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2109110002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2109110002?filename=Coletti2020.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model:Coletti2020QspModelOfProstateCancerImmunotModel2109110002Model
   init_kwargs:
     model_path: data/MODEL2109110002.xml

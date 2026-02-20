@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001103
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001103?filename=Palaniappan2021_Cell_free_modelling_of_second_generation_toehold_switches_v2.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model:Palaniappan2021CellFreeModellingOfSecondGeBiomd0000001103Model
   init_kwargs:
     model_path: data/BIOMD0000001103.xml

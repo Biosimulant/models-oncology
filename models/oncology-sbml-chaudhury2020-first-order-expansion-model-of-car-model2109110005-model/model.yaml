@@ -25,7 +25,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2109110005?filename=Chaudhury2020
     Eq S1-S3.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.chaudhury2020_first_order_expansion_model_of_car_model2109110005_model:Chaudhury2020FirstOrderExpansionModelOfCarModel2109110005Model
   init_kwargs:
     model_path: data/MODEL2109110005.xml

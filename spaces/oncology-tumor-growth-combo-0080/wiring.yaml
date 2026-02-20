@@ -1,0 +1,44 @@
+modules:
+  chen2011_bone_1:
+    class: src.chen2011_2_bone_marrow_invasion_relative_model_biomd0000000795_model:Chen20112BoneMarrowInvasionRelativeModelBiomd0000000795Model
+    args:
+      model_path: data/BIOMD0000000795.xml
+  claret2009_predi_2:
+    class: src.claret2009_predicting_phase_iii_overall_survival_model1708310001_model:Claret2009PredictingPhaseIiiOverallSurvivalModel1708310001Model
+    args:
+      model_path: data/MODEL1708310001.xml
+  coletti2020_qsp_3:
+    class: src.coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model:Coletti2020QspModelOfProstateCancerImmunotModel2109110002Model
+    args:
+      model_path: data/MODEL2109110002.xml
+  depillis2003_the_4:
+    class: src.depillis2003_the_dynamics_of_an_optimally_contro_biomd0000000909_model:Depillis2003TheDynamicsOfAnOptimallyControBiomd0000000909Model
+    args:
+      model_path: data/BIOMD0000000909.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: chen2011_bone_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: claret2009_predi_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: coletti2020_qsp_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: depillis2003_the_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

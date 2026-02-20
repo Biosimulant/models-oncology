@@ -1,0 +1,28 @@
+modules:
+  al_tuwairqi2020_1:
+    class: src.al_tuwairqi2020_dynamics_of_cancer_radiovirother_biomd0000001032_model:AlTuwairqi2020DynamicsOfCancerRadiovirotherBiomd0000001032Model
+    args:
+      model_path: data/BIOMD0000001032.xml
+  al_tuwairqi2020_2:
+    class: src.al_tuwairqi2020_dynamics_of_cancer_virotherapy_p_biomd0000001031_model:AlTuwairqi2020DynamicsOfCancerVirotherapyPBiomd0000001031Model
+    args:
+      model_path: data/BIOMD0000001031.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: al_tuwairqi2020_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: al_tuwairqi2020_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

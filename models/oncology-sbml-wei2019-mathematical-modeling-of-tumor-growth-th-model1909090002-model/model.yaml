@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1909090002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1909090002?filename=Wei2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model:Wei2019MathematicalModelingOfTumorGrowthThModel1909090002Model
   init_kwargs:
     model_path: data/MODEL1909090002.xml

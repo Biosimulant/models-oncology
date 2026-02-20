@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001043
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001043?filename=Wodarz2001.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.wodarz2001_viruses_as_antitumor_weapons_biomd0000001043_model:Wodarz2001VirusesAsAntitumorWeaponsBiomd0000001043Model
   init_kwargs:
     model_path: data/BIOMD0000001043.xml

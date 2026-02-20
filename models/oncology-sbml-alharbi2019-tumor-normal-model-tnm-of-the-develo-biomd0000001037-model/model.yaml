@@ -22,7 +22,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001037?filename=Alharbi2019
     TNM.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.alharbi2019_tumor_normal_model_tnm_of_the_develo_biomd0000001037_model:Alharbi2019TumorNormalModelTnmOfTheDeveloBiomd0000001037Model
   init_kwargs:
     model_path: data/BIOMD0000001037.xml

@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000149
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000149?filename=BIOMD0000000149_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model:Kim2007CrosstalkBetweenWntAndErkPathwaysBiomd0000000149Model
   init_kwargs:
     model_path: data/BIOMD0000000149.xml

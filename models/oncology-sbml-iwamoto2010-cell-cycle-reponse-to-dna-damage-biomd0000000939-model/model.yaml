@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000939
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000939?filename=Iwamoto2010.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.iwamoto2010_cell_cycle_reponse_to_dna_damage_biomd0000000939_model:Iwamoto2010CellCycleReponseToDnaDamageBiomd0000000939Model
   init_kwargs:
     model_path: data/BIOMD0000000939.xml

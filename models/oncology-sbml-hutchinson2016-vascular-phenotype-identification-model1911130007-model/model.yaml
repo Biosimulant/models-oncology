@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1911130007
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1911130007?filename=Hutchinson2016.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.hutchinson2016_vascular_phenotype_identification_model1911130007_model:Hutchinson2016VascularPhenotypeIdentificationModel1911130007Model
   init_kwargs:
     model_path: data/MODEL1911130007.xml

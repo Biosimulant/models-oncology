@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001020
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001020?filename=Barros2021_RAJI.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.barros2021_cartmath_mathematical_model_of_car_t_biomd0000001020_model:Barros2021CartmathMathematicalModelOfCarTBiomd0000001020Model
   init_kwargs:
     model_path: data/BIOMD0000001020.xml

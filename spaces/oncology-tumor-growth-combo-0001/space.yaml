@@ -1,0 +1,64 @@
+schema_version: '2.0'
+title: 'Oncology: Tumor Growth (COMBO_0001)'
+description: Oncology tumor growth comparative space with 2 models, configured as
+  non-causal co-simulation.
+models:
+- repo: Biosimulant/models-oncology
+  alias: abernathy2016_gl_1
+  manifest_path: models/oncology-sbml-abernathy2016-glioblastoma-treatment-biomd0000000757-model/model.yaml
+  parameters:
+    model_path: data/BIOMD0000000757.xml
+- repo: Biosimulant/models-oncology
+  alias: afenya2018_perip_2
+  manifest_path: models/oncology-sbml-afenya2018-peripheral-blodd-dynamics-in-the-dise-model1910020002-model/model.yaml
+  parameters:
+    model_path: data/MODEL1910020002.xml
+- repo: Biosimulant/models-observability
+  alias: state_compare_mon
+  manifest_path: models/observability-state-comparison-monitor/model.yaml
+  parameters:
+    max_points: 2000
+    min_dt: 1.0
+- repo: Biosimulant/models-observability
+  alias: state_metrics_mon
+  manifest_path: models/observability-state-metrics-monitor/model.yaml
+  parameters:
+    max_points: 2000
+    min_dt: 1.0
+runtime:
+  duration: 120.0
+  tick_dt: 0.01
+  initial_inputs: {}
+wiring:
+- from: abernathy2016_gl_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: afenya2018_perip_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+scientific_context:
+  question: How do tumor growth mechanisms compare across these models?
+  mode: comparative
+  assumptions:
+  - Model implementations are used as published in their curated manifests without
+    biological reinterpretation.
+  - Time integration uses a shared global tick compatible with model min_dt constraints.
+  - Comparative (non-causal) mode is used because full deterministic IO coverage for
+    causal coupling was not satisfied.
+  expected_observables:
+  - Model output trajectories under shared runtime settings.
+  - Cross-model agreement/divergence in key state or metric signals.
+  - Relative behavior comparison without causal linkage claims.
+  limitations:
+  - No new biology is introduced beyond what upstream models encode.
+  - Cross-model semantic matching is rule-based and may under-connect uncertain routes.
+  provenance:
+  - 'oncology-sbml-abernathy2016-glioblastoma-treatment-biomd0000000757-model :: biomodels_ebi:BIOMD0000000757
+    :: https://www.ebi.ac.uk/biomodels/BIOMD0000000757'
+  - 'oncology-sbml-afenya2018-peripheral-blodd-dynamics-in-the-dise-model1910020002-model
+    :: biomodels_ebi:MODEL1910020002 :: https://www.ebi.ac.uk/biomodels/MODEL1910020002'
+  visualization_rationale: A dedicated monitor model receives all participating model
+    state streams (`state_a..state_d`) so trajectories can be compared in one place
+    without claiming causal coupling when IO semantics are incomplete.

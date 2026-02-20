@@ -1,0 +1,28 @@
+modules:
+  depillis2007_see_1:
+    class: src.depillis2007_seeking_bang_bang_solutions_of_mixe_model2003060001_model:Depillis2007SeekingBangBangSolutionsOfMixeModel2003060001Model
+    args:
+      model_path: data/MODEL2003060001.xml
+  depillis2013_mat_2:
+    class: src.depillis2013_mathematical_modeling_of_regulatory_biomd0000000908_model:Depillis2013MathematicalModelingOfRegulatoryBiomd0000000908Model
+    args:
+      model_path: data/BIOMD0000000908.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: depillis2007_see_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: depillis2013_mat_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

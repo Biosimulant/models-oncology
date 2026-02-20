@@ -1,0 +1,28 @@
+modules:
+  jenner2018_treat_1:
+    class: src.jenner2018_treatment_of_oncolytic_virus_biomd0000000789_model:Jenner2018TreatmentOfOncolyticVirusBiomd0000000789Model
+    args:
+      model_path: data/BIOMD0000000789.xml
+  jenner2019_oncol_2:
+    class: src.jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model:Jenner2019OncolyticVirotherapyForTumoursFolBiomd0000000850Model
+    args:
+      model_path: data/BIOMD0000000850.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: jenner2018_treat_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: jenner2019_oncol_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

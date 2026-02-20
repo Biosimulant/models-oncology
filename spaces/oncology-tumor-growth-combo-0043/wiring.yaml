@@ -1,0 +1,36 @@
+modules:
+  west2019_cellula_1:
+    class: src.west2019_cellular_interactions_constrain_tumor_g_biomd0000000820_model:West2019CellularInteractionsConstrainTumorGBiomd0000000820Model
+    args:
+      model_path: data/BIOMD0000000820.xml
+  wodarz2001_virus_2:
+    class: src.wodarz2001_viruses_as_antitumor_weapons_biomd0000001043_model:Wodarz2001VirusesAsAntitumorWeaponsBiomd0000001043Model
+    args:
+      model_path: data/BIOMD0000001043.xml
+  wodarz2018_simpl_3:
+    class: src.wodarz2018_1_simple_model_biomd0000000774_model:Wodarz20181SimpleModelBiomd0000000774Model
+    args:
+      model_path: data/BIOMD0000000774.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: west2019_cellula_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: wodarz2001_virus_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: wodarz2018_simpl_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

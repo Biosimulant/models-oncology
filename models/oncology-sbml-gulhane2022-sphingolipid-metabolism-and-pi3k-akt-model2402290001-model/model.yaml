@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2402290001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2402290001?filename=Sphingolipid-AKT.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.gulhane2022_sphingolipid_metabolism_and_pi3k_akt_model2402290001_model:Gulhane2022SphingolipidMetabolismAndPi3kAktModel2402290001Model
   init_kwargs:
     model_path: data/MODEL2402290001.xml

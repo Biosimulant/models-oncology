@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000946
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000946?filename=Evans2005.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.evans2005_compartmental_model_for_antineoplastic_biomd0000000946_model:Evans2005CompartmentalModelForAntineoplasticBiomd0000000946Model
   init_kwargs:
     model_path: data/BIOMD0000000946.xml

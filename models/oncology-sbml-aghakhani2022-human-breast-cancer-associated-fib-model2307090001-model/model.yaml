@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2307090001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2307090001?filename=CAF-Model.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.aghakhani2022_human_breast_cancer_associated_fib_model2307090001_model:Aghakhani2022HumanBreastCancerAssociatedFibModel2307090001Model
   init_kwargs:
     model_path: data/MODEL2307090001.xml

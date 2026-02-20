@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1506260000
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1506260000?filename=MODEL1506260000_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.terfve2012_signalling_in_liver_cancer_logical_mo_model1506260000_model:Terfve2012SignallingInLiverCancerLogicalMoModel1506260000Model
   init_kwargs:
     model_path: data/MODEL1506260000.xml

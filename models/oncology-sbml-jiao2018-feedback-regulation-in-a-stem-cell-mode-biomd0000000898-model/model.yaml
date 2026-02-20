@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000898
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000898?filename=Jiao2018.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.jiao2018_feedback_regulation_in_a_stem_cell_mode_biomd0000000898_model:Jiao2018FeedbackRegulationInAStemCellModeBiomd0000000898Model
   init_kwargs:
     model_path: data/BIOMD0000000898.xml

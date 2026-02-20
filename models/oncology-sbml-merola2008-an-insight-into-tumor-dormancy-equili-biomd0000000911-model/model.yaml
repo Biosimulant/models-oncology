@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000911
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000911?filename=Merola2008.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.merola2008_an_insight_into_tumor_dormancy_equili_biomd0000000911_model:Merola2008AnInsightIntoTumorDormancyEquiliBiomd0000000911Model
   init_kwargs:
     model_path: data/BIOMD0000000911.xml

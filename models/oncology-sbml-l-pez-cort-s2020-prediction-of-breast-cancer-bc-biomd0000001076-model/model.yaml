@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001076
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001076?filename=MLP_model3.onnx
   license: CC0
-bsim:
+biosim:
   entrypoint: src.l_pez_cort_s2020_prediction_of_breast_cancer_bc_biomd0000001076_model:LPezCortS2020PredictionOfBreastCancerBcBiomd0000001076Model
   init_kwargs:
     model_path: data/BIOMD0000001076.xml

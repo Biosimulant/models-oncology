@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2003050001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003050001?filename=Segun2018.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.segun2018_model_of_breast_cancer_determing_chemo_model2003050001_model:Segun2018ModelOfBreastCancerDetermingChemoModel2003050001Model
   init_kwargs:
     model_path: data/MODEL2003050001.xml

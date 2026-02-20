@@ -25,7 +25,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1807040001?filename=Rouhi
     2018-GPR30 Axis - Normal Model.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model1807040001_model:Rouhimoghadam2018Gpr30Pi3kMapkStatSignalingModel1807040001Model
   init_kwargs:
     model_path: data/MODEL1807040001.xml

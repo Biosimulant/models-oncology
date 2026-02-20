@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2002250001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2002250001?filename=Rouhimoghadam2018.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model2002250001_model:Rouhimoghadam2018Gpr30Pi3kMapkStatSignalingModel2002250001Model
   init_kwargs:
     model_path: data/MODEL2002250001.xml

@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2003060001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003060001?filename=dePillis2007.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.depillis2007_seeking_bang_bang_solutions_of_mixe_model2003060001_model:Depillis2007SeekingBangBangSolutionsOfMixeModel2003060001Model
   init_kwargs:
     model_path: data/MODEL2003060001.xml

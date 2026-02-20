@@ -1,0 +1,36 @@
+modules:
+  monro2008_chemot_1:
+    class: src.monro2008_chemotherapy_resistance_biomd0000000776_model:Monro2008ChemotherapyResistanceBiomd0000000776Model
+    args:
+      model_path: data/BIOMD0000000776.xml
+  morrison1989_fol_2:
+    class: src.morrison1989_folate_cycle_biomd0000000018_model:Morrison1989FolateCycleBiomd0000000018Model
+    args:
+      model_path: data/BIOMD0000000018.xml
+  murphy2016_diffe_3:
+    class: src.murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model:Murphy2016DifferencesInPredictionsOfOdeModBiomd0000000671Model
+    args:
+      model_path: data/BIOMD0000000671.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: monro2008_chemot_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: morrison1989_fol_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: murphy2016_diffe_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

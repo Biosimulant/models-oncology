@@ -1,0 +1,28 @@
+modules:
+  kuznetsov1994_no_1:
+    class: src.kuznetsov1994_nonlinear_dynamics_of_immunogenic_biomd0000000762_model:Kuznetsov1994NonlinearDynamicsOfImmunogenicBiomd0000000762Model
+    args:
+      model_path: data/BIOMD0000000762.xml
+  l_pez_2:
+    class: src.l_pez_cort_s2020_prediction_of_breast_cancer_bc_biomd0000001076_model:LPezCortS2020PredictionOfBreastCancerBcBiomd0000001076Model
+    args:
+      model_path: data/BIOMD0000001076.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: kuznetsov1994_no_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: l_pez_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

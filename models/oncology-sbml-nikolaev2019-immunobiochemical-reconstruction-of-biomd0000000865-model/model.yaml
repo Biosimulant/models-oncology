@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000865
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000865?filename=Nikolaev2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.nikolaev2019_immunobiochemical_reconstruction_of_biomd0000000865_model:Nikolaev2019ImmunobiochemicalReconstructionOfBiomd0000000865Model
   init_kwargs:
     model_path: data/BIOMD0000000865.xml

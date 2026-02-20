@@ -25,7 +25,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000822?filename=Dorvash2019
     - Dynamic modeling of signal transduction by mTOR complexes in cancer.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model:Dorvash2019DynamicModelingOfSignalTransductBiomd0000000822Model
   init_kwargs:
     model_path: data/BIOMD0000000822.xml

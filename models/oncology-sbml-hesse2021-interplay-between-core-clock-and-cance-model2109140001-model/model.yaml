@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2109140001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2109140001?filename=biomodels.zip
   license: CC0
-bsim:
+biosim:
   entrypoint: src.hesse2021_interplay_between_core_clock_and_cance_model2109140001_model:Hesse2021InterplayBetweenCoreClockAndCanceModel2109140001Model
   init_kwargs:
     model_path: data/MODEL2109140001.xml

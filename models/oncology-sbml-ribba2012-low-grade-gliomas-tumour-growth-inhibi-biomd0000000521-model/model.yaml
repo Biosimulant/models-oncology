@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000521
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000521?filename=BIOMD0000000521_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.ribba2012_low_grade_gliomas_tumour_growth_inhibi_biomd0000000521_model:Ribba2012LowGradeGliomasTumourGrowthInhibiBiomd0000000521Model
   init_kwargs:
     model_path: data/BIOMD0000000521.xml

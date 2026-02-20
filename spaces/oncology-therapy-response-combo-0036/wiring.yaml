@@ -1,0 +1,36 @@
+modules:
+  chaudhury2020_fi_1:
+    class: src.chaudhury2020_first_order_expansion_model_of_car_model2109110005_model:Chaudhury2020FirstOrderExpansionModelOfCarModel2109110005Model
+    args:
+      model_path: data/MODEL2109110005.xml
+  chaudhury2020_lo_2:
+    class: src.chaudhury2020_lotka_volterra_mathematical_model_biomd0000001024_model:Chaudhury2020LotkaVolterraMathematicalModelBiomd0000001024Model
+    args:
+      model_path: data/BIOMD0000001024.xml
+  evans2005_compar_3:
+    class: src.evans2005_compartmental_model_for_antineoplastic_biomd0000000946_model:Evans2005CompartmentalModelForAntineoplasticBiomd0000000946Model
+    args:
+      model_path: data/BIOMD0000000946.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: chaudhury2020_fi_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: chaudhury2020_lo_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: evans2005_compar_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

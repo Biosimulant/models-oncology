@@ -1,0 +1,28 @@
+modules:
+  gevertz2018_canc_1:
+    class: src.gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model:Gevertz2018CancerTreatmentWithOncolyticViruBiomd0000000817Model
+    args:
+      model_path: data/BIOMD0000000817.xml
+  giani2019_comput_2:
+    class: src.giani2019_computational_modeling_to_predict_map3_biomd0000000883_model:Giani2019ComputationalModelingToPredictMap3Biomd0000000883Model
+    args:
+      model_path: data/BIOMD0000000883.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: gevertz2018_canc_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: giani2019_comput_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2205030001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2205030001?filename=model_Kemmer2022.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.kemmer2022_disentangling_erbb_signaling_in_breas_model2205030001_model:Kemmer2022DisentanglingErbbSignalingInBreasModel2205030001Model
   init_kwargs:
     model_path: data/MODEL2205030001.xml

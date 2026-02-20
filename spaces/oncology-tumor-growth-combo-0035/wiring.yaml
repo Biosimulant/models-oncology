@@ -1,0 +1,36 @@
+modules:
+  pappalardo2016_p_1:
+    class: src.pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model:Pappalardo2016Pi3kAktAndMapkSignalingPathwBiomd0000000666Model
+    args:
+      model_path: data/BIOMD0000000666.xml
+  park2019_cetuxim_2:
+    class: src.park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model:Park2019CetuximabResistanceInColorectalCancModel1909300004Model
+    args:
+      model_path: data/MODEL1909300004.xml
+  reppas2015_tumor_3:
+    class: src.reppas2015_tumor_control_via_alternating_immunos_biomd0000000749_model:Reppas2015TumorControlViaAlternatingImmunosBiomd0000000749Model
+    args:
+      model_path: data/BIOMD0000000749.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: pappalardo2016_p_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: park2019_cetuxim_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: reppas2015_tumor_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

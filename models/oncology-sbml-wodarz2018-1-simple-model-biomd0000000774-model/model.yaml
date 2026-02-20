@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000774
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000774?filename=Wodarz2018_1.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.wodarz2018_1_simple_model_biomd0000000774_model:Wodarz20181SimpleModelBiomd0000000774Model
   init_kwargs:
     model_path: data/BIOMD0000000774.xml

@@ -1,0 +1,28 @@
+modules:
+  kosinsky2018_rad_1:
+    class: src.kosinsky2018_radiation_and_pd_l_1_treatment_comb_biomd0000000863_model:Kosinsky2018RadiationAndPdL1TreatmentCombBiomd0000000863Model
+    args:
+      model_path: data/BIOMD0000000863.xml
+  kronik2010_predi_2:
+    class: src.kronik2010_predicting_outcomes_of_prostate_cance_model2001130003_model:Kronik2010PredictingOutcomesOfProstateCanceModel2001130003Model
+    args:
+      model_path: data/MODEL2001130003.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: kosinsky2018_rad_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: kronik2010_predi_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

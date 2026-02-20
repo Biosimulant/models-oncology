@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1707250000
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1707250000?filename=MODEL1707250000_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.bordel2018_gsmm_for_human_metabolic_reactions_hm_model1707250000_model:Bordel2018GsmmForHumanMetabolicReactionsHmModel1707250000Model
   init_kwargs:
     model_path: data/MODEL1707250000.xml

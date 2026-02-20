@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1708310001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1708310001?filename=MODEL1708310001_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.claret2009_predicting_phase_iii_overall_survival_model1708310001_model:Claret2009PredictingPhaseIiiOverallSurvivalModel1708310001Model
   init_kwargs:
     model_path: data/MODEL1708310001.xml

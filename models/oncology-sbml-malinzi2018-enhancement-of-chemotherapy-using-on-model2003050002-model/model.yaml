@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2003050002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003050002?filename=Malinzi2018.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model:Malinzi2018EnhancementOfChemotherapyUsingOnModel2003050002Model
   init_kwargs:
     model_path: data/MODEL2003050002.xml

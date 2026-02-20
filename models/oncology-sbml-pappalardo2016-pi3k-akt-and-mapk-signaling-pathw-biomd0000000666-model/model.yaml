@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000666
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000666?filename=BIOMD0000000666_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model:Pappalardo2016Pi3kAktAndMapkSignalingPathwBiomd0000000666Model
   init_kwargs:
     model_path: data/BIOMD0000000666.xml

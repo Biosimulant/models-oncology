@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2001160002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2001160002?filename=Chareyron2009.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.chareyron2009_mixed_immunotherapy_and_chemothera_model2001160002_model:Chareyron2009MixedImmunotherapyAndChemotheraModel2001160002Model
   init_kwargs:
     model_path: data/MODEL2001160002.xml

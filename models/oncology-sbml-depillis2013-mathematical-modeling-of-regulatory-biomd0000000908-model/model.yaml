@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000908
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000908?filename=dePillis2013.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.depillis2013_mathematical_modeling_of_regulatory_biomd0000000908_model:Depillis2013MathematicalModelingOfRegulatoryBiomd0000000908Model
   init_kwargs:
     model_path: data/BIOMD0000000908.xml

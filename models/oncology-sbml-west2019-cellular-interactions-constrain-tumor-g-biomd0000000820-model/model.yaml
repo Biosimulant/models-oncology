@@ -22,7 +22,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000820?filename=West2019
     - Cellular interactions constrain tumor growth.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.west2019_cellular_interactions_constrain_tumor_g_biomd0000000820_model:West2019CellularInteractionsConstrainTumorGBiomd0000000820Model
   init_kwargs:
     model_path: data/BIOMD0000000820.xml

@@ -1,0 +1,36 @@
+modules:
+  wodarz2018_model_1:
+    class: src.wodarz2018_2_model_with_transit_amplifying_cells_biomd0000000773_model:Wodarz20182ModelWithTransitAmplifyingCellsBiomd0000000773Model
+    args:
+      model_path: data/BIOMD0000000773.xml
+  yang2012_cancer_2:
+    class: src.yang2012_cancer_growth_with_angiogenesis_biomd0000000796_model:Yang2012CancerGrowthWithAngiogenesisBiomd0000000796Model
+    args:
+      model_path: data/BIOMD0000000796.xml
+  yangzichen2024_m_3:
+    class: src.yangzichen2024_metabolic_machine_learning_predic_model2407230001_model:Yangzichen2024MetabolicMachineLearningPredicModel2407230001Model
+    args:
+      model_path: data/MODEL2407230001.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: wodarz2018_model_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: yang2012_cancer_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: yangzichen2024_m_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000762
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000762?filename=Kuznetsov1994.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.kuznetsov1994_nonlinear_dynamics_of_immunogenic_biomd0000000762_model:Kuznetsov1994NonlinearDynamicsOfImmunogenicBiomd0000000762Model
   init_kwargs:
     model_path: data/BIOMD0000000762.xml

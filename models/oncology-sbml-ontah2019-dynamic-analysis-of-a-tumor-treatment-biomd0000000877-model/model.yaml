@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000877
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000877?filename=Ontah2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.ontah2019_dynamic_analysis_of_a_tumor_treatment_biomd0000000877_model:Ontah2019DynamicAnalysisOfATumorTreatmentBiomd0000000877Model
   init_kwargs:
     model_path: data/BIOMD0000000877.xml

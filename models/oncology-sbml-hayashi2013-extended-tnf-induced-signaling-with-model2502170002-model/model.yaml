@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2502170002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2502170002?filename=Hayashi2013_modelB.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model:Hayashi2013ExtendedTnfInducedSignalingWithModel2502170002Model
   init_kwargs:
     model_path: data/MODEL2502170002.xml

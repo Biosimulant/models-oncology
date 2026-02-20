@@ -1,0 +1,36 @@
+modules:
+  nave2018_prostat_1:
+    class: src.nave2018_prostate_cancer_model_model1910030001_model:Nave2018ProstateCancerModelModel1910030001Model
+    args:
+      model_path: data/MODEL1910030001.xml
+  nazari2018_il6_2:
+    class: src.nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model:Nazari2018Il6MediatedStemCellDrivenTumorGBiomd0000000819Model
+    args:
+      model_path: data/BIOMD0000000819.xml
+  nguyen2016_feedb_3:
+    class: src.nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model:Nguyen2016FeedbackRegulationInCellSignallinBiomd0000000651Model
+    args:
+      model_path: data/BIOMD0000000651.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: nave2018_prostat_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: nazari2018_il6_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: nguyen2016_feedb_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

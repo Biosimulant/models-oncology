@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000768
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000768?filename=Eftimie2010.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.eftimie2010_immunity_to_melanoma_biomd0000000768_model:Eftimie2010ImmunityToMelanomaBiomd0000000768Model
   init_kwargs:
     model_path: data/BIOMD0000000768.xml

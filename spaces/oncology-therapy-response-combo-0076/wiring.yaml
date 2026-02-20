@@ -1,0 +1,44 @@
+modules:
+  kimmel2021_t_1:
+    class: src.kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model:Kimmel2021TCellCompetitionAndStochasticExtBiomd0000001041Model
+    args:
+      model_path: data/BIOMD0000001041.xml
+  melhem_neutropen_2:
+    class: src.melhem_2017_neutropenia_model_model2211040001_model:Melhem2017NeutropeniaModelModel2211040001Model
+    args:
+      model_path: data/MODEL2211040001.xml
+  mpekris2017_role_3:
+    class: src.mpekris2017_role_of_vascular_normalization_in_be_model2001200002_model:Mpekris2017RoleOfVascularNormalizationInBeModel2001200002Model
+    args:
+      model_path: data/MODEL2001200002.xml
+  perez_garcia19_4:
+    class: src.perez_garcia19_computational_design_of_improved_biomd0000000814_model:PerezGarcia19ComputationalDesignOfImprovedBiomd0000000814Model
+    args:
+      model_path: data/BIOMD0000000814.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: kimmel2021_t_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: melhem_neutropen_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: mpekris2017_role_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: perez_garcia19_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

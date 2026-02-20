@@ -26,7 +26,7 @@ upstream:
     Computational design of improved standardized chemotherapy protocols for grade
     2 oligodendrogliomas.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.perez_garcia19_computational_design_of_improved_biomd0000000814_model:PerezGarcia19ComputationalDesignOfImprovedBiomd0000000814Model
   init_kwargs:
     model_path: data/BIOMD0000000814.xml

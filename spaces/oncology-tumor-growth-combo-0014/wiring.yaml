@@ -1,0 +1,28 @@
+modules:
+  coletti2020_qsp_1:
+    class: src.coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model:Coletti2020QspModelOfProstateCancerImmunotModel2109110002Model
+    args:
+      model_path: data/MODEL2109110002.xml
+  depillis2003_the_2:
+    class: src.depillis2003_the_dynamics_of_an_optimally_contro_biomd0000000909_model:Depillis2003TheDynamicsOfAnOptimallyControBiomd0000000909Model
+    args:
+      model_path: data/BIOMD0000000909.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: coletti2020_qsp_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: depillis2003_the_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2305270001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2305270001?filename=run_model_HesseMuellerRelogio2023.py
   license: CC0
-bsim:
+biosim:
   entrypoint: src.hessemuellerrelogio2023_timing_treatment_toxicit_model2305270001_model:Hessemuellerrelogio2023TimingTreatmentToxicitModel2305270001Model
   init_kwargs:
     model_path: data/MODEL2305270001.xml

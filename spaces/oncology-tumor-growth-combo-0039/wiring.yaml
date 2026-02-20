@@ -1,0 +1,36 @@
+modules:
+  shariatpanahi201_1:
+    class: src.shariatpanahi2018_mathematical_modeling_of_tumor_model1909090003_model:Shariatpanahi2018MathematicalModelingOfTumorModel1909090003Model
+    args:
+      model_path: data/MODEL1909090003.xml
+  shin_egfr_2:
+    class: src.shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model:Shin2018EgfrPyk2CMetInteractionNetworkMoBiomd0000000826Model
+    args:
+      model_path: data/BIOMD0000000826.xml
+  siddhartha2002_k_3:
+    class: src.siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model:Siddhartha2002KineticModellingOfCancerTheraBiomd0000001048Model
+    args:
+      model_path: data/BIOMD0000001048.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: shariatpanahi201_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: shin_egfr_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: siddhartha2002_k_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

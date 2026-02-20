@@ -22,7 +22,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2402030002?filename=Biomodel
     Final_WG.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.riya_2024_interplay_between_the_immunologic_netw_model2402030002_model:Riya2024InterplayBetweenTheImmunologicNetwModel2402030002Model
   init_kwargs:
     model_path: data/MODEL2402030002.xml

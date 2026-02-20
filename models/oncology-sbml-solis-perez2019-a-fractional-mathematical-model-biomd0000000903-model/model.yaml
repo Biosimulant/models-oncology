@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000903
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000903?filename=Solis-perez2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.solis_perez2019_a_fractional_mathematical_model_biomd0000000903_model:SolisPerez2019AFractionalMathematicalModelBiomd0000000903Model
   init_kwargs:
     model_path: data/BIOMD0000000903.xml

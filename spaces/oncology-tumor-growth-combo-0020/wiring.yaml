@@ -1,0 +1,28 @@
+modules:
+  greene2019_diffe_1:
+    class: src.greene2019_differentiate_spontaneous_and_induced_biomd0000000825_model:Greene2019DifferentiateSpontaneousAndInducedBiomd0000000825Model
+    args:
+      model_path: data/BIOMD0000000825.xml
+  gulhane2022_sphi_2:
+    class: src.gulhane2022_sphingolipid_metabolism_and_pi3k_akt_model2402290001_model:Gulhane2022SphingolipidMetabolismAndPi3kAktModel2402290001Model
+    args:
+      model_path: data/MODEL2402290001.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: greene2019_diffe_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: gulhane2022_sphi_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000744
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000744?filename=Hu2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.hu2019_pancreatic_cancer_dynamics_biomd0000000744_model:Hu2019PancreaticCancerDynamicsBiomd0000000744Model
   init_kwargs:
     model_path: data/BIOMD0000000744.xml

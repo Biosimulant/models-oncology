@@ -1,0 +1,44 @@
+modules:
+  hesse2021_interp_1:
+    class: src.hesse2021_interplay_between_core_clock_and_cance_model2109140001_model:Hesse2021InterplayBetweenCoreClockAndCanceModel2109140001Model
+    args:
+      model_path: data/MODEL2109140001.xml
+  jiao2018_feedbac_2:
+    class: src.jiao2018_feedback_regulation_in_a_stem_cell_mode_biomd0000000898_model:Jiao2018FeedbackRegulationInAStemCellModeBiomd0000000898Model
+    args:
+      model_path: data/BIOMD0000000898.xml
+  lolas2016_tumour_3:
+    class: src.lolas2016_tumour_induced_neoneurogenesis_and_per_biomd0000000750_model:Lolas2016TumourInducedNeoneurogenesisAndPerBiomd0000000750Model
+    args:
+      model_path: data/BIOMD0000000750.xml
+  moore_mathematic_4:
+    class: src.moore_2004_mathematical_model_for_cml_and_t_cell_biomd0000000733_model:Moore2004MathematicalModelForCmlAndTCellBiomd0000000733Model
+    args:
+      model_path: data/BIOMD0000000733.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: hesse2021_interp_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: jiao2018_feedbac_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: lolas2016_tumour_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: moore_mathematic_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

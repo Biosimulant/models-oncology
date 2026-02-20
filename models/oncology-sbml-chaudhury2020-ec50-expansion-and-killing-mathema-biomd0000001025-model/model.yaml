@@ -25,7 +25,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001025?filename=Chaudhury2020
     Eq 7-9.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.chaudhury2020_ec50_expansion_and_killing_mathema_biomd0000001025_model:Chaudhury2020Ec50ExpansionAndKillingMathemaBiomd0000001025Model
   init_kwargs:
     model_path: data/BIOMD0000001025.xml

@@ -1,0 +1,28 @@
+modules:
+  galante2012_b7_1:
+    class: src.galante2012_b7_h1_and_a_mathematical_model_for_c_biomd0000000812_model:Galante2012B7H1AndAMathematicalModelForCBiomd0000000812Model
+    args:
+      model_path: data/BIOMD0000000812.xml
+  gevertz2018_canc_2:
+    class: src.gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000816_model:Gevertz2018CancerTreatmentWithOncolyticViruBiomd0000000816Model
+    args:
+      model_path: data/BIOMD0000000816.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: galante2012_b7_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: gevertz2018_canc_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

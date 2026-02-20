@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2502170001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2502170001?filename=Hayashi2013_modelA.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.hayashi2013_tnf_induced_signaling_dynamics_model_model2502170001_model:Hayashi2013TnfInducedSignalingDynamicsModelModel2502170001Model
   init_kwargs:
     model_path: data/MODEL2502170001.xml

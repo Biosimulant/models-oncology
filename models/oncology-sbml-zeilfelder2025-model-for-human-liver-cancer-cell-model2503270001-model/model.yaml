@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2503270001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2503270001?filename=HepG2_model.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model:Zeilfelder2025ModelForHumanLiverCancerCellModel2503270001Model
   init_kwargs:
     model_path: data/MODEL2503270001.xml

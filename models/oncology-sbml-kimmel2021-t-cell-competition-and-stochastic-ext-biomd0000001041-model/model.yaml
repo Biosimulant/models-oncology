@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001041
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001041?filename=Kimmel2021.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model:Kimmel2021TCellCompetitionAndStochasticExtBiomd0000001041Model
   init_kwargs:
     model_path: data/BIOMD0000001041.xml

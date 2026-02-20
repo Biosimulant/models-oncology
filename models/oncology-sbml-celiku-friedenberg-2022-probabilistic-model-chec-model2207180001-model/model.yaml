@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2207180001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2207180001?filename=prism_glycolysis_tca_varied.sm
   license: CC0
-bsim:
+biosim:
   entrypoint: src.celiku_friedenberg_2022_probabilistic_model_chec_model2207180001_model:CelikuFriedenberg2022ProbabilisticModelChecModel2207180001Model
   init_kwargs:
     model_path: data/MODEL2207180001.xml

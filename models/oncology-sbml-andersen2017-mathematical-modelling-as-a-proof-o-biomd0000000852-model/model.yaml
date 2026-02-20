@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000852
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000852?filename=Andersen2017.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.andersen2017_mathematical_modelling_as_a_proof_o_biomd0000000852_model:Andersen2017MathematicalModellingAsAProofOBiomd0000000852Model
   init_kwargs:
     model_path: data/BIOMD0000000852.xml

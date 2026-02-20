@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1601250000
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1601250000?filename=MODEL1601250000_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.tortolina2015_multiple_signalling_pathway_associ_model1601250000_model:Tortolina2015MultipleSignallingPathwayAssociModel1601250000Model
   init_kwargs:
     model_path: data/MODEL1601250000.xml

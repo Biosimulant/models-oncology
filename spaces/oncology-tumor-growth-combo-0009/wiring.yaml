@@ -1,0 +1,28 @@
+modules:
+  bordel2018_gsmm_1:
+    class: src.bordel2018_gsmm_for_human_metabolic_reactions_hm_model1707250000_model:Bordel2018GsmmForHumanMetabolicReactionsHmModel1707250000Model
+    args:
+      model_path: data/MODEL1707250000.xml
+  bouchnita2019_a_2:
+    class: src.bouchnita2019_a_multiscale_model_to_design_thera_model1912170004_model:Bouchnita2019AMultiscaleModelToDesignTheraModel1912170004Model
+    args:
+      model_path: data/MODEL1912170004.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: bordel2018_gsmm_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: bouchnita2019_a_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

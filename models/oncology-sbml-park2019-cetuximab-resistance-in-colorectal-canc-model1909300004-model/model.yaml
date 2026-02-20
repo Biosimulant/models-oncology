@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1909300004
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1909300004?filename=Park2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model:Park2019CetuximabResistanceInColorectalCancModel1909300004Model
   init_kwargs:
     model_path: data/MODEL1909300004.xml

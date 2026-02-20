@@ -22,7 +22,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001038?filename=Alharbi2019
     TNVM.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.alharbi2019_tumor_normal_vitamins_model_tnvm_of_biomd0000001038_model:Alharbi2019TumorNormalVitaminsModelTnvmOfBiomd0000001038Model
   init_kwargs:
     model_path: data/BIOMD0000001038.xml

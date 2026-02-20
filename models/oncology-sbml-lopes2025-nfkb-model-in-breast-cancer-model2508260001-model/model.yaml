@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2508260001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2508260001?filename=Lopes2025.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.lopes2025_nfkb_model_in_breast_cancer_model2508260001_model:Lopes2025NfkbModelInBreastCancerModel2508260001Model
   init_kwargs:
     model_path: data/MODEL2508260001.xml

@@ -1,0 +1,75 @@
+schema_version: '2.0'
+title: 'Oncology: Tumor Growth (COMBO_0035)'
+description: Oncology tumor growth comparative space with 3 models, configured as
+  non-causal co-simulation.
+models:
+- repo: Biosimulant/models-oncology
+  alias: pappalardo2016_p_1
+  manifest_path: models/oncology-sbml-pappalardo2016-pi3k-akt-and-mapk-signaling-pathw-biomd0000000666-model/model.yaml
+  parameters:
+    model_path: data/BIOMD0000000666.xml
+- repo: Biosimulant/models-oncology
+  alias: park2019_cetuxim_2
+  manifest_path: models/oncology-sbml-park2019-cetuximab-resistance-in-colorectal-canc-model1909300004-model/model.yaml
+  parameters:
+    model_path: data/MODEL1909300004.xml
+- repo: Biosimulant/models-oncology
+  alias: reppas2015_tumor_3
+  manifest_path: models/oncology-sbml-reppas2015-tumor-control-via-alternating-immunos-biomd0000000749-model/model.yaml
+  parameters:
+    model_path: data/BIOMD0000000749.xml
+- repo: Biosimulant/models-observability
+  alias: state_compare_mon
+  manifest_path: models/observability-state-comparison-monitor/model.yaml
+  parameters:
+    max_points: 2000
+    min_dt: 1.0
+- repo: Biosimulant/models-observability
+  alias: state_metrics_mon
+  manifest_path: models/observability-state-metrics-monitor/model.yaml
+  parameters:
+    max_points: 2000
+    min_dt: 1.0
+runtime:
+  duration: 120.0
+  tick_dt: 0.01
+  initial_inputs: {}
+wiring:
+- from: pappalardo2016_p_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: park2019_cetuxim_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: reppas2015_tumor_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+scientific_context:
+  question: How do tumor growth mechanisms compare across these models?
+  mode: comparative
+  assumptions:
+  - Model implementations are used as published in their curated manifests without
+    biological reinterpretation.
+  - Time integration uses a shared global tick compatible with model min_dt constraints.
+  - Comparative (non-causal) mode is used because full deterministic IO coverage for
+    causal coupling was not satisfied.
+  expected_observables:
+  - Model output trajectories under shared runtime settings.
+  - Cross-model agreement/divergence in key state or metric signals.
+  - Relative behavior comparison without causal linkage claims.
+  limitations:
+  - No new biology is introduced beyond what upstream models encode.
+  - Cross-model semantic matching is rule-based and may under-connect uncertain routes.
+  provenance:
+  - 'oncology-sbml-pappalardo2016-pi3k-akt-and-mapk-signaling-pathw-biomd0000000666-model
+    :: biomodels_ebi:BIOMD0000000666 :: https://www.ebi.ac.uk/biomodels/BIOMD0000000666'
+  - 'oncology-sbml-park2019-cetuximab-resistance-in-colorectal-canc-model1909300004-model
+    :: biomodels_ebi:MODEL1909300004 :: https://www.ebi.ac.uk/biomodels/MODEL1909300004'
+  - 'oncology-sbml-reppas2015-tumor-control-via-alternating-immunos-biomd0000000749-model
+    :: biomodels_ebi:BIOMD0000000749 :: https://www.ebi.ac.uk/biomodels/BIOMD0000000749'
+  visualization_rationale: A dedicated monitor model receives all participating model
+    state streams (`state_a..state_d`) so trajectories can be compared in one place
+    without claiming causal coupling when IO semantics are incomplete.

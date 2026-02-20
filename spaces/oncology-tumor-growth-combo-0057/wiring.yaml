@@ -1,0 +1,44 @@
+modules:
+  afenya2018_perip_1:
+    class: src.afenya2018_peripheral_blodd_dynamics_in_the_dise_model1910020002_model:Afenya2018PeripheralBloddDynamicsInTheDiseModel1910020002Model
+    args:
+      model_path: data/MODEL1910020002.xml
+  aghakhani2022_hu_2:
+    class: src.aghakhani2022_human_breast_cancer_associated_fib_model2307090001_model:Aghakhani2022HumanBreastCancerAssociatedFibModel2307090001Model
+    args:
+      model_path: data/MODEL2307090001.xml
+  al_husari2013_3:
+    class: src.al_husari2013_ph_and_lactate_in_tumor_biomd0000000805_model:AlHusari2013PhAndLactateInTumorBiomd0000000805Model
+    args:
+      model_path: data/BIOMD0000000805.xml
+  al_tuwairqi2020_4:
+    class: src.al_tuwairqi2020_dynamics_of_cancer_radiovirother_biomd0000001032_model:AlTuwairqi2020DynamicsOfCancerRadiovirotherBiomd0000001032Model
+    args:
+      model_path: data/BIOMD0000001032.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: afenya2018_perip_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: aghakhani2022_hu_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: al_husari2013_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: al_tuwairqi2020_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

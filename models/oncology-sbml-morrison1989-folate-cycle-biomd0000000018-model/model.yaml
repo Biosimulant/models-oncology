@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000018
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000018?filename=BIOMD0000000018_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.morrison1989_folate_cycle_biomd0000000018_model:Morrison1989FolateCycleBiomd0000000018Model
   init_kwargs:
     model_path: data/BIOMD0000000018.xml

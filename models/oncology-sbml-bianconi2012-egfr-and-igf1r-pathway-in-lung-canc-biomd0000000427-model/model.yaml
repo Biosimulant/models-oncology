@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000427
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000427?filename=BIOMD0000000427_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model:Bianconi2012EgfrAndIgf1rPathwayInLungCancBiomd0000000427Model
   init_kwargs:
     model_path: data/BIOMD0000000427.xml

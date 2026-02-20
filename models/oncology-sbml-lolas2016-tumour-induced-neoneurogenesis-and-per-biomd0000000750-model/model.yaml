@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000750
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000750?filename=Lolas2016.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.lolas2016_tumour_induced_neoneurogenesis_and_per_biomd0000000750_model:Lolas2016TumourInducedNeoneurogenesisAndPerBiomd0000000750Model
   init_kwargs:
     model_path: data/BIOMD0000000750.xml

@@ -24,7 +24,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000819?filename=Nazari2018
     - IL6 mediated stem cell driven tumor growth and targeted treatment.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model:Nazari2018Il6MediatedStemCellDrivenTumorGBiomd0000000819Model
   init_kwargs:
     model_path: data/BIOMD0000000819.xml

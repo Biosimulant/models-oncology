@@ -1,0 +1,28 @@
+modules:
+  bajzer2008_model_1:
+    class: src.bajzer2008_modeling_of_cancer_virotherapy_with_r_biomd0000000771_model:Bajzer2008ModelingOfCancerVirotherapyWithRBiomd0000000771Model
+    args:
+      model_path: data/BIOMD0000000771.xml
+  barros2021_cartm_2:
+    class: src.barros2021_cartmath_mathematical_model_of_car_t_biomd0000001019_model:Barros2021CartmathMathematicalModelOfCarTBiomd0000001019Model
+    args:
+      model_path: data/BIOMD0000001019.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: bajzer2008_model_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: barros2021_cartm_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

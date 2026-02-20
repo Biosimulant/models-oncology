@@ -1,0 +1,44 @@
+modules:
+  bayleyegn2016_in_1:
+    class: src.bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model:Bayleyegn2016InteractionsOfCyceCdk2Cdc25aAModel2003180002Model
+    args:
+      model_path: data/MODEL2003180002.xml
+  bianconi2012_egf_2:
+    class: src.bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model:Bianconi2012EgfrAndIgf1rPathwayInLungCancBiomd0000000427Model
+    args:
+      model_path: data/BIOMD0000000427.xml
+  boer1986_interac_3:
+    class: src.boer1986_interactions_between_macrophages_and_t_model1912110001_model:Boer1986InteractionsBetweenMacrophagesAndTModel1912110001Model
+    args:
+      model_path: data/MODEL1912110001.xml
+  bordel2018_gsmm_4:
+    class: src.bordel2018_gsmm_for_human_metabolic_reactions_hm_model1707250000_model:Bordel2018GsmmForHumanMetabolicReactionsHmModel1707250000Model
+    args:
+      model_path: data/MODEL1707250000.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: bayleyegn2016_in_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: bianconi2012_egf_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: boer1986_interac_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c
+- from: bordel2018_gsmm_4.state
+  to:
+  - state_compare_mon.state_d
+  - state_metrics_mon.state_d

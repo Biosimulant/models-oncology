@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000888
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000888?filename=unni2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.unni2019_mathematical_modeling_analysis_and_simu_biomd0000000888_model:Unni2019MathematicalModelingAnalysisAndSimuBiomd0000000888Model
   init_kwargs:
     model_path: data/BIOMD0000000888.xml

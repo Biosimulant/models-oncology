@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2003180002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003180002?filename=Bayleyegn2016.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model:Bayleyegn2016InteractionsOfCyceCdk2Cdc25aAModel2003180002Model
   init_kwargs:
     model_path: data/MODEL2003180002.xml

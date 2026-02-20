@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1912110001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1912110001?filename=Boer1986.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.boer1986_interactions_between_macrophages_and_t_model1912110001_model:Boer1986InteractionsBetweenMacrophagesAndTModel1912110001Model
   init_kwargs:
     model_path: data/MODEL1912110001.xml

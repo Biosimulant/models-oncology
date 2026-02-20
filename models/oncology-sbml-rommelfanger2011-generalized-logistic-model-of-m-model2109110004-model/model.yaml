@@ -25,7 +25,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2109110004?filename=Rommelfanger2011
     Generalized Logistic.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.rommelfanger2011_generalized_logistic_model_of_m_model2109110004_model:Rommelfanger2011GeneralizedLogisticModelOfMModel2109110004Model
   init_kwargs:
     model_path: data/MODEL2109110004.xml

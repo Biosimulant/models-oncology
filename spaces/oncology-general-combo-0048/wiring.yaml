@@ -1,0 +1,36 @@
+modules:
+  owen1998_tumour_1:
+    class: src.owen1998_tumour_growth_model_biomd0000000670_model:Owen1998TumourGrowthModelBiomd0000000670Model
+    args:
+      model_path: data/BIOMD0000000670.xml
+  raia2010_il13_2:
+    class: src.raia2010_il13_signalling_medb1_biomd0000000313_model:Raia2010Il13SignallingMedb1Biomd0000000313Model
+    args:
+      model_path: data/BIOMD0000000313.xml
+  raia2011_il13_3:
+    class: src.raia2011_il13_l1236_biomd0000000314_model:Raia2011Il13L1236Biomd0000000314Model
+    args:
+      model_path: data/BIOMD0000000314.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: owen1998_tumour_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: raia2010_il13_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: raia2011_il13_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

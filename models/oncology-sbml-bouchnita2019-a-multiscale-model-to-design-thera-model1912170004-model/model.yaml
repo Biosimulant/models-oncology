@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1912170004
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1912170004?filename=Bouchnita2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.bouchnita2019_a_multiscale_model_to_design_thera_model1912170004_model:Bouchnita2019AMultiscaleModelToDesignTheraModel1912170004Model
   init_kwargs:
     model_path: data/MODEL1912170004.xml

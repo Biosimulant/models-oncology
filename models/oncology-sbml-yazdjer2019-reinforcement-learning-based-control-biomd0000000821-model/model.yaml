@@ -25,7 +25,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000821?filename=Yazdjer2019
     - reinforcement learning-based control of tumor growth under anti-angiogenic therapy.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.yazdjer2019_reinforcement_learning_based_control_biomd0000000821_model:Yazdjer2019ReinforcementLearningBasedControlBiomd0000000821Model
   init_kwargs:
     model_path: data/BIOMD0000000821.xml

@@ -23,7 +23,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2312120001?filename=Self
     Genetic Modification.py
   license: CC0
-bsim:
+biosim:
   entrypoint: src.bukkuri2022_models_of_mendelian_and_reverse_tran_model2312120001_model:Bukkuri2022ModelsOfMendelianAndReverseTranModel2312120001Model
   init_kwargs:
     model_path: data/MODEL2312120001.xml

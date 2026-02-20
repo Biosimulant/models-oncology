@@ -1,0 +1,28 @@
+modules:
+  nikolaev2019_imm_1:
+    class: src.nikolaev2019_immunobiochemical_reconstruction_of_biomd0000000865_model:Nikolaev2019ImmunobiochemicalReconstructionOfBiomd0000000865Model
+    args:
+      model_path: data/BIOMD0000000865.xml
+  owen1998_tumour_2:
+    class: src.owen1998_tumour_growth_model_biomd0000000670_model:Owen1998TumourGrowthModelBiomd0000000670Model
+    args:
+      model_path: data/BIOMD0000000670.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: nikolaev2019_imm_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: owen1998_tumour_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

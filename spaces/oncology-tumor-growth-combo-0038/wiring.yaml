@@ -1,0 +1,36 @@
+modules:
+  schattler2016_dy_1:
+    class: src.schattler2016_dynamical_properties_of_a_minimall_model2002030001_model:Schattler2016DynamicalPropertiesOfAMinimallModel2002030001Model
+    args:
+      model_path: data/MODEL2002030001.xml
+  segun2018_model_2:
+    class: src.segun2018_model_of_breast_cancer_determing_chemo_model2003050001_model:Segun2018ModelOfBreastCancerDetermingChemoModel2003050001Model
+    args:
+      model_path: data/MODEL2003050001.xml
+  selvaggio2020_mi_3:
+    class: src.selvaggio2020_microenvironment_control_of_hybrid_model2004040001_model:Selvaggio2020MicroenvironmentControlOfHybridModel2004040001Model
+    args:
+      model_path: data/MODEL2004040001.sbml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: schattler2016_dy_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: segun2018_model_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: selvaggio2020_mi_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

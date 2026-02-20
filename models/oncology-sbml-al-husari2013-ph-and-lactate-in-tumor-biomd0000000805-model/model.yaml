@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000805
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000805?filename=Al-Husari2013.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.al_husari2013_ph_and_lactate_in_tumor_biomd0000000805_model:AlHusari2013PhAndLactateInTumorBiomd0000000805Model
   init_kwargs:
     model_path: data/BIOMD0000000805.xml

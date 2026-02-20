@@ -25,7 +25,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001024?filename=Chaudhury2020
     Eq 4-5.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.chaudhury2020_lotka_volterra_mathematical_model_biomd0000001024_model:Chaudhury2020LotkaVolterraMathematicalModelBiomd0000001024Model
   init_kwargs:
     model_path: data/BIOMD0000001024.xml

@@ -1,0 +1,28 @@
+modules:
+  hayashi2013_exte_1:
+    class: src.hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model:Hayashi2013ExtendedTnfInducedSignalingWithModel2502170002Model
+    args:
+      model_path: data/MODEL2502170002.xml
+  hayashi2013_tnf_2:
+    class: src.hayashi2013_tnf_induced_signaling_dynamics_model_model2502170001_model:Hayashi2013TnfInducedSignalingDynamicsModelModel2502170001Model
+    args:
+      model_path: data/MODEL2502170001.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: hayashi2013_exte_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: hayashi2013_tnf_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1506170000
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1506170000?filename=MODEL1506170000_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.capuani2015_human_core_catabolic_network_model1506170000_model:Capuani2015HumanCoreCatabolicNetworkModel1506170000Model
   init_kwargs:
     model_path: data/MODEL1506170000.xml

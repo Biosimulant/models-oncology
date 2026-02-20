@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000749
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000749?filename=Reppas2015.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.reppas2015_tumor_control_via_alternating_immunos_biomd0000000749_model:Reppas2015TumorControlViaAlternatingImmunosBiomd0000000749Model
   init_kwargs:
     model_path: data/BIOMD0000000749.xml

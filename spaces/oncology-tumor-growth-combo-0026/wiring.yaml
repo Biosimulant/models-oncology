@@ -1,0 +1,28 @@
+modules:
+  khajanchi2015_th_1:
+    class: src.khajanchi2015_the_combined_effects_of_optimal_co_biomd0000000897_model:Khajanchi2015TheCombinedEffectsOfOptimalCoBiomd0000000897Model
+    args:
+      model_path: data/BIOMD0000000897.xml
+  kim2007_crosstal_2:
+    class: src.kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model:Kim2007CrosstalkBetweenWntAndErkPathwaysBiomd0000000149Model
+    args:
+      model_path: data/BIOMD0000000149.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: khajanchi2015_th_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: kim2007_crosstal_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

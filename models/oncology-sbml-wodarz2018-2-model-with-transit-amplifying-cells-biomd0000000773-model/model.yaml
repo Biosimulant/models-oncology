@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000773
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000773?filename=Wodarz2018_2.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.wodarz2018_2_model_with_transit_amplifying_cells_biomd0000000773_model:Wodarz20182ModelWithTransitAmplifyingCellsBiomd0000000773Model
   init_kwargs:
     model_path: data/BIOMD0000000773.xml

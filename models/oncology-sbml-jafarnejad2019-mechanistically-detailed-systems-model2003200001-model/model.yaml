@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2003200001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003200001?filename=Jafarnejad2019.2.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.jafarnejad2019_mechanistically_detailed_systems_model2003200001_model:Jafarnejad2019MechanisticallyDetailedSystemsModel2003200001Model
   init_kwargs:
     model_path: data/MODEL2003200001.xml

@@ -1,0 +1,36 @@
+modules:
+  ribba2018_mathem_1:
+    class: src.ribba2018_mathematical_model_of_tumor_uptake_for_model1909050002_model:Ribba2018MathematicalModelOfTumorUptakeForModel1909050002Model
+    args:
+      model_path: data/MODEL1909050002.xml
+  rommelfanger2011_2:
+    class: src.rommelfanger2011_generalized_logistic_model_of_m_model2109110004_model:Rommelfanger2011GeneralizedLogisticModelOfMModel2109110004Model
+    args:
+      model_path: data/MODEL2109110004.xml
+  rommelfanger2011_3:
+    class: src.rommelfanger2011_gompertz_model_of_melanoma_tumo_model2109110003_model:Rommelfanger2011GompertzModelOfMelanomaTumoModel2109110003Model
+    args:
+      model_path: data/MODEL2109110003.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: ribba2018_mathem_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: rommelfanger2011_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: rommelfanger2011_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

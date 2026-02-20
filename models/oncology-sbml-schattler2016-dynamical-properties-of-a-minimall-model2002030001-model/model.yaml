@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2002030001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2002030001?filename=Schattler2016.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.schattler2016_dynamical_properties_of_a_minimall_model2002030001_model:Schattler2016DynamicalPropertiesOfAMinimallModel2002030001Model
   init_kwargs:
     model_path: data/MODEL2002030001.xml

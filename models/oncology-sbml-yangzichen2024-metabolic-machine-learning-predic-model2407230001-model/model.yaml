@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2407230001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2407230001?filename=trained_model.onnx
   license: CC0
-bsim:
+biosim:
   entrypoint: src.yangzichen2024_metabolic_machine_learning_predic_model2407230001_model:Yangzichen2024MetabolicMachineLearningPredicModel2407230001Model
   init_kwargs:
     model_path: data/MODEL2407230001.xml

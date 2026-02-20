@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2304070002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2304070002?filename=intracellular_model.sbml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.ruscone2023_logical_model_of_tumor_cell_invasion_model2304070002_model:Ruscone2023LogicalModelOfTumorCellInvasionModel2304070002Model
   init_kwargs:
     model_path: data/MODEL2304070002.sbml

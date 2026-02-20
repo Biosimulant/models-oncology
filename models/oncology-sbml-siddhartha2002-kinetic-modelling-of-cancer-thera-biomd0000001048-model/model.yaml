@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001048
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001048?filename=cancer_therapy.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model:Siddhartha2002KineticModellingOfCancerTheraBiomd0000001048Model
   init_kwargs:
     model_path: data/BIOMD0000001048.xml

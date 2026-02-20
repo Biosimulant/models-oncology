@@ -1,0 +1,36 @@
+modules:
+  riya_interplay_1:
+    class: src.riya_2024_interplay_between_the_immunologic_netw_model2402030002_model:Riya2024InterplayBetweenTheImmunologicNetwModel2402030002Model
+    args:
+      model_path: data/MODEL2402030002.xml
+  talemi2015_persi_2:
+    class: src.talemi2015_persistent_telomere_associated_dna_da_model1412200000_model:Talemi2015PersistentTelomereAssociatedDnaDaModel1412200000Model
+    args:
+      model_path: data/MODEL1412200000.xml
+  tortolina2015_mu_3:
+    class: src.tortolina2015_multiple_signalling_pathway_associ_model1601250000_model:Tortolina2015MultipleSignallingPathwayAssociModel1601250000Model
+    args:
+      model_path: data/MODEL1601250000.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: riya_interplay_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: talemi2015_persi_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: tortolina2015_mu_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

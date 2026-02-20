@@ -22,7 +22,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1910030001?filename=Nave2018
     - prostate cancer model.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.nave2018_prostate_cancer_model_model1910030001_model:Nave2018ProstateCancerModelModel1910030001Model
   init_kwargs:
     model_path: data/MODEL1910030001.xml

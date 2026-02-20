@@ -22,7 +22,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000812
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000812?filename=Galante2012.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.galante2012_b7_h1_and_a_mathematical_model_for_c_biomd0000000812_model:Galante2012B7H1AndAMathematicalModelForCBiomd0000000812Model
   init_kwargs:
     model_path: data/BIOMD0000000812.xml

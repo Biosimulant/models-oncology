@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000816
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000816?filename=model.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000816_model:Gevertz2018CancerTreatmentWithOncolyticViruBiomd0000000816Model
   init_kwargs:
     model_path: data/BIOMD0000000816.xml

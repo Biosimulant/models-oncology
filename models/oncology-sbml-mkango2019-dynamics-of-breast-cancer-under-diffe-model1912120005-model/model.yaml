@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1912120005
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1912120005?filename=Mkango2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.mkango2019_dynamics_of_breast_cancer_under_diffe_model1912120005_model:Mkango2019DynamicsOfBreastCancerUnderDiffeModel1912120005Model
   init_kwargs:
     model_path: data/MODEL1912120005.xml

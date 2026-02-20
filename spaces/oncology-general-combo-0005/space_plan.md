@@ -1,0 +1,23 @@
+# Space Plan - oncology-general-combo-0005
+
+## Scientific Scope
+- Domain: oncology
+- Theme: general
+- Base models: oncology-sbml-depillis2008-optimal-control-of-mixed-immunother-biomd0000000913-model, oncology-sbml-dritschel2018-a-mathematical-model-of-cytotoxic-biomd0000000763-model
+
+## Wiring Plan
+- Comparative mode with monitor-only routing.
+- Each base model state-like output connects to monitor ports `state_a..state_d`.
+- No direct causal links among base models unless explicitly upgraded later.
+
+## Visualization Plan
+- Include `StateComparisonMonitor` and `StateMetricsMonitor`.
+- Require at least:
+  - one timeseries visual,
+  - one summary table visual.
+
+## Validation Gates
+- space schema validity
+- wiring endpoint validity
+- smoke run success
+- repo manifest/entrypoint validators pass

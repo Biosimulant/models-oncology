@@ -1,0 +1,36 @@
+modules:
+  malinzi2018_enha_1:
+    class: src.malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model:Malinzi2018EnhancementOfChemotherapyUsingOnModel2003050002Model
+    args:
+      model_path: data/MODEL2003050002.xml
+  merola2008_an_2:
+    class: src.merola2008_an_insight_into_tumor_dormancy_equili_biomd0000000911_model:Merola2008AnInsightIntoTumorDormancyEquiliBiomd0000000911Model
+    args:
+      model_path: data/BIOMD0000000911.xml
+  mkango2019_dynam_3:
+    class: src.mkango2019_dynamics_of_breast_cancer_under_diffe_model1912120005_model:Mkango2019DynamicsOfBreastCancerUnderDiffeModel1912120005Model
+    args:
+      model_path: data/MODEL1912120005.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: malinzi2018_enha_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: merola2008_an_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: mkango2019_dynam_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

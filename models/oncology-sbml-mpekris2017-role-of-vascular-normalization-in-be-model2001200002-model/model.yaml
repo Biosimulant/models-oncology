@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2001200002
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2001200002?filename=Mpekris2017.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.mpekris2017_role_of_vascular_normalization_in_be_model2001200002_model:Mpekris2017RoleOfVascularNormalizationInBeModel2001200002Model
   init_kwargs:
     model_path: data/MODEL2001200002.xml

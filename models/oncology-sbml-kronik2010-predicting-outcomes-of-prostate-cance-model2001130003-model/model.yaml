@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2001130003
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2001130003?filename=Kronik2010.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.kronik2010_predicting_outcomes_of_prostate_cance_model2001130003_model:Kronik2010PredictingOutcomesOfProstateCanceModel2001130003Model
   init_kwargs:
     model_path: data/MODEL2001130003.xml

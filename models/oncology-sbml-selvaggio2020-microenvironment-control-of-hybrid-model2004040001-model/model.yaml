@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2004040001
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2004040001?filename=Selvaggio_etal_2020.sbml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.selvaggio2020_microenvironment_control_of_hybrid_model2004040001_model:Selvaggio2020MicroenvironmentControlOfHybridModel2004040001Model
   init_kwargs:
     model_path: data/MODEL2004040001.sbml

@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000313
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000313?filename=BIOMD0000000313_url.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.raia2010_il13_signalling_medb1_biomd0000000313_model:Raia2010Il13SignallingMedb1Biomd0000000313Model
   init_kwargs:
     model_path: data/BIOMD0000000313.xml

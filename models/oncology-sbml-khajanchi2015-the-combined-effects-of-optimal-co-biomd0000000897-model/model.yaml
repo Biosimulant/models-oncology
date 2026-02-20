@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000897
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000897?filename=Khajanchi2015.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.khajanchi2015_the_combined_effects_of_optimal_co_biomd0000000897_model:Khajanchi2015TheCombinedEffectsOfOptimalCoBiomd0000000897Model
   init_kwargs:
     model_path: data/BIOMD0000000897.xml

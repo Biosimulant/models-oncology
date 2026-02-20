@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000826
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000826?filename=Shin2018.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model:Shin2018EgfrPyk2CMetInteractionNetworkMoBiomd0000000826Model
   init_kwargs:
     model_path: data/BIOMD0000000826.xml

@@ -1,0 +1,28 @@
+modules:
+  chareyron2009_mi_1:
+    class: src.chareyron2009_mixed_immunotherapy_and_chemothera_model2001160002_model:Chareyron2009MixedImmunotherapyAndChemotheraModel2001160002Model
+    args:
+      model_path: data/MODEL2001160002.xml
+  chen2011_bone_2:
+    class: src.chen2011_1_bone_marrow_invasion_absolute_model_biomd0000000793_model:Chen20111BoneMarrowInvasionAbsoluteModelBiomd0000000793Model
+    args:
+      model_path: data/BIOMD0000000793.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: chareyron2009_mi_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: chen2011_bone_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

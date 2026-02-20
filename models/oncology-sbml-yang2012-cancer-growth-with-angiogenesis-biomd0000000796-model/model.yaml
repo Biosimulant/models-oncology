@@ -20,7 +20,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000796
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000796?filename=Yang2012.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.yang2012_cancer_growth_with_angiogenesis_biomd0000000796_model:Yang2012CancerGrowthWithAngiogenesisBiomd0000000796Model
   init_kwargs:
     model_path: data/BIOMD0000000796.xml

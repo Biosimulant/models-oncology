@@ -21,7 +21,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000795
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000795?filename=Chen2011_2.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.chen2011_2_bone_marrow_invasion_relative_model_biomd0000000795_model:Chen20112BoneMarrowInvasionRelativeModelBiomd0000000795Model
   init_kwargs:
     model_path: data/BIOMD0000000795.xml

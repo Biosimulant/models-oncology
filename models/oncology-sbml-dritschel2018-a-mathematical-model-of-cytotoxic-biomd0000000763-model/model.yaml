@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000763
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000763?filename=Dritschel2018.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.dritschel2018_a_mathematical_model_of_cytotoxic_biomd0000000763_model:Dritschel2018AMathematicalModelOfCytotoxicBiomd0000000763Model
   init_kwargs:
     model_path: data/BIOMD0000000763.xml

@@ -1,0 +1,36 @@
+modules:
+  solis_perez2019_1:
+    class: src.solis_perez2019_a_fractional_mathematical_model_biomd0000000903_model:SolisPerez2019AFractionalMathematicalModelBiomd0000000903Model
+    args:
+      model_path: data/BIOMD0000000903.xml
+  sotolongo_costa2_2:
+    class: src.sotolongo_costa2003_behavior_of_tumors_under_non_biomd0000000785_model:SotolongoCosta2003BehaviorOfTumorsUnderNonBiomd0000000785Model
+    args:
+      model_path: data/BIOMD0000000785.xml
+  sun2018_instanta_3:
+    class: src.sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model:Sun2018InstantaneousMutationRateInCancerInBiomd0000000915Model
+    args:
+      model_path: data/BIOMD0000000915.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: solis_perez2019_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: sotolongo_costa2_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b
+- from: sun2018_instanta_3.state
+  to:
+  - state_compare_mon.state_c
+  - state_metrics_mon.state_c

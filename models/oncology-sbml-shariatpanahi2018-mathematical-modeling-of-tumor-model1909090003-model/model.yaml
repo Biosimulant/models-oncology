@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1909090003
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1909090003?filename=Shariatpanahi2018.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.shariatpanahi2018_mathematical_modeling_of_tumor_model1909090003_model:Shariatpanahi2018MathematicalModelingOfTumorModel1909090003Model
   init_kwargs:
     model_path: data/MODEL1909090003.xml

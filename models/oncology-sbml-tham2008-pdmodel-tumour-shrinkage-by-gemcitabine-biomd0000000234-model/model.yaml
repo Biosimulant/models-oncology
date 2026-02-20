@@ -24,7 +24,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000234
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000234?filename=GemcitabineCorrected.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model:Tham2008PdmodelTumourShrinkageByGemcitabineBiomd0000000234Model
   init_kwargs:
     model_path: data/BIOMD0000000234.xml

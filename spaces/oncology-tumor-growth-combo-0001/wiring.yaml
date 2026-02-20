@@ -1,0 +1,28 @@
+modules:
+  abernathy2016_gl_1:
+    class: src.abernathy2016_glioblastoma_treatment_biomd0000000757_model:Abernathy2016GlioblastomaTreatmentBiomd0000000757Model
+    args:
+      model_path: data/BIOMD0000000757.xml
+  afenya2018_perip_2:
+    class: src.afenya2018_peripheral_blodd_dynamics_in_the_dise_model1910020002_model:Afenya2018PeripheralBloddDynamicsInTheDiseModel1910020002Model
+    args:
+      model_path: data/MODEL1910020002.xml
+  state_compare_mon:
+    class: src.state_comparison_monitor:StateComparisonMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+  state_metrics_mon:
+    class: src.state_metrics_monitor:StateMetricsMonitor
+    args:
+      max_points: 2000
+      min_dt: 1.0
+wiring:
+- from: abernathy2016_gl_1.state
+  to:
+  - state_compare_mon.state_a
+  - state_metrics_mon.state_a
+- from: afenya2018_perip_2.state
+  to:
+  - state_compare_mon.state_b
+  - state_metrics_mon.state_b

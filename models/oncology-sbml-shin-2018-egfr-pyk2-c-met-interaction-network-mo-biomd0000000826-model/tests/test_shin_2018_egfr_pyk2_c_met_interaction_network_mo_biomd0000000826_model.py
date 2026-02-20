@@ -25,14 +25,14 @@ def _find_repo_root(start: Path) -> Path:
     raise RuntimeError("repo root not found (models/STANDARDS.md missing)")
 
 REPO_ROOT = _find_repo_root(Path(__file__).resolve())
-BSIM_SRC = REPO_ROOT / "bsim" / "src"
+BSIM_SRC = REPO_ROOT / "biosim" / "src"
 if BSIM_SRC.exists() and str(BSIM_SRC) not in sys.path:
-    # Ensure we import the real installable package at bsim/src/bsim/.
+    # Ensure we import the real installable package at biosim/src/biosim/.
     sys.path.insert(0, str(BSIM_SRC))
 
 
 from src.shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model import Shin2018EgfrPyk2CMetInteractionNetworkMoBiomd0000000826Model  # noqa: E402
-from bsim.signals import BioSignal  # noqa: E402
+from biosim.signals import BioSignal  # noqa: E402
 
 
 def test_instantiation() -> None:

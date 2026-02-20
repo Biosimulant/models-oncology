@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000879
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000879?filename=Rodrigues2019.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.rodrigues2019_a_mathematical_model_for_chemoimmu_biomd0000000879_model:Rodrigues2019AMathematicalModelForChemoimmuBiomd0000000879Model
   init_kwargs:
     model_path: data/BIOMD0000000879.xml

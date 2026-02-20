@@ -23,7 +23,7 @@ upstream:
   original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000785
   download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000785?filename=Sotolongo-Costa2003.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.sotolongo_costa2003_behavior_of_tumors_under_non_biomd0000000785_model:SotolongoCosta2003BehaviorOfTumorsUnderNonBiomd0000000785Model
   init_kwargs:
     model_path: data/BIOMD0000000785.xml

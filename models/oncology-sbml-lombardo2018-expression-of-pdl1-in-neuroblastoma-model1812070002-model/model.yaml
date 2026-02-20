@@ -25,7 +25,7 @@ upstream:
   download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1812070002?filename=Lombardo2018
     - PDL1 Signaling Pathway in Neuroblastoma Cancer.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.lombardo2018_expression_of_pdl1_in_neuroblastoma_model1812070002_model:Lombardo2018ExpressionOfPdl1InNeuroblastomaModel1812070002Model
   init_kwargs:
     model_path: data/MODEL1812070002.xml

@@ -24,7 +24,7 @@ upstream:
     - Differentiate Spontaneous and Induced Evolution to Drug Resistance During Cancer
     Treatment.xml
   license: CC0
-bsim:
+biosim:
   entrypoint: src.greene2019_differentiate_spontaneous_and_induced_biomd0000000825_model:Greene2019DifferentiateSpontaneousAndInducedBiomd0000000825Model
   init_kwargs:
     model_path: data/BIOMD0000000825.xml
