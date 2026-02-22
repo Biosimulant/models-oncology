@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Li2021Hdac3iFinderAMachineLearningBasedCoModel2406210001Model'
-description: The model predicts the inhibitory potential of small molecules against
-  Histone deacetylase 3 (HDAC3), a relevant human target for cancer, inflammation,
-  neurodegenerative diseases and diabetes. The aut
+description: "The model predicts the inhibitory potential of small molecules against Histone deacetylase 3 (HDAC3), a relevant human target for cancer, inflammation, neurodegenerative diseases and diabetes. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

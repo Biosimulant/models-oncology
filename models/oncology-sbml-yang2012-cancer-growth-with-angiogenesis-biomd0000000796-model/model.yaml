@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Yang2012CancerGrowthWithAngiogenesisBiomd0000000796Model'
-description: 'The paper describes a model of tumor growth with angiogenesis. Created
-  by COPASI 4.26 (Build 213) This model is described in the article: Mathematical
-  modeling of solid cancer growth with angiogenesis'
+description: "The paper describes a model of tumor growth with angiogenesis. Created by COPASI 4.26 (Build 213) This model is described in the article: Mathematical modeling of solid cancer growth with angiogenesis."
 standard: other
 tags:
 - oncology

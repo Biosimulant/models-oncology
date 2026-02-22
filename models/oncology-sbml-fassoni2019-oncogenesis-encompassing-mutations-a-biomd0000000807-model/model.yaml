@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Fassoni2019OncogenesisEncompassingMutationsABiomd0000000807Model'
-description: 'This model describes the multistep process that transform a normal cell
-  and its descendants into a malignant tumour by considering three populations: normal,
-  premalignant and cancer cells. Created by '
+description: "This model describes the multistep process that transform a normal cell and its descendants into a malignant tumour by considering three populations: normal, premalignant and cancer cells. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

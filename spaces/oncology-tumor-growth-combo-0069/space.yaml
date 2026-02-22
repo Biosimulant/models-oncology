@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Tumor Growth (COMBO_0069)'
-description: Oncology tumor growth comparative space with 4 models, configured as
-  non-causal co-simulation.
+description: "Oncology Tumor Growth (COMBO_0069) organizes bayleyegn2016_in_1, bianconi2012_egf_2, boer1986_interac_3 into a comparative simulation setup to examine how tumor growth mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-oncology
   alias: bayleyegn2016_in_1

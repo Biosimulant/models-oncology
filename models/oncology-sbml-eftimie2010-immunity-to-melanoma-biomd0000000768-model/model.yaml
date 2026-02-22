@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Eftimie2010ImmunityToMelanomaBiomd0000000768Model'
-description: 'The paper describes a model of immunity to melanoma. Created by COPASI
-  4.25 (Build 207) This model is described in the article: Modeling anti-tumor Th1
-  and Th2 immunity in the rejection of melanoma Ra'
+description: "The paper describes a model of immunity to melanoma. Created by COPASI 4.25 (Build 207) This model is described in the article: Modeling anti-tumor Th1 and Th2 immunity in the rejection of melanoma Ra."
 standard: other
 tags:
 - oncology

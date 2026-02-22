@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: General (COMBO_0045)'
-description: Oncology general comparative space with 3 models, configured as non-causal
-  co-simulation.
+description: "Oncology General (COMBO_0045) organizes bukkuri2022_mode_1, depillis2008_opt_2, dritschel2018_a_3 into a comparative simulation setup to examine how general mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-oncology
   alias: bukkuri2022_mode_1

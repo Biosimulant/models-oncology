@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Orton2009ModellingCancerousMutationsInTheEBiomd0000000623Model'
-description: 'Orton2009 - Modelling cancerous mutations inthe EGFR/ERK pathway - EGF
-  Model This model studies the aberrations inERK signalling for different cancer mutations.
-  The authors alter apreviously existing '
+description: "Orton2009 - Modelling cancerous mutations inthe EGFR/ERK pathway - EGF Model This model studies the aberrations inERK signalling for different cancer mutations. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

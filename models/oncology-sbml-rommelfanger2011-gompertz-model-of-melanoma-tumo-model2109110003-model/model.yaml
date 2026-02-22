@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Rommelfanger2011GompertzModelOfMelanomaTumoModel2109110003Model'
-description: 'This mathematical model is described by the publication:Rommelfanger
-  DM, Offord CP, Dev J, Bajzer Z, Vile RG, Dingli D. ''Dynamics of melanoma tumor
-  therapy with vesicular stomatitis virus: explaining '
+description: "This mathematical model is described by the publication:Rommelfanger DM, Offord CP, Dev J, Bajzer Z, Vile RG, Dingli D. 'Dynamics of melanoma tumor therapy with vesicular stomatitis virus: explaining."
 standard: other
 tags:
 - oncology

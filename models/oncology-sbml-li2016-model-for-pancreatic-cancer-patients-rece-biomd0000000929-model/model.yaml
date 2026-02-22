@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Li2016ModelForPancreaticCancerPatientsReceBiomd0000000929Model'
-description: immunotherapy offers a better prognosis for pancreatic cancer patients.
-  As a direct extension of this work, various new therapy methods that are under exploration
-  and clinical trials could be assessed
+description: "immunotherapy offers a better prognosis for pancreatic cancer patients. As a direct extension of this work, various new therapy methods that are under exploration and clinical trials could be assessed."
 standard: other
 tags:
 - oncology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Zeilfelder2025ModelForHumanLiverCancerCellModel2503270001Model'
-description: Mathematical multi-compartment model described by sets of coupledordinary
-  differential equations (ODEs) for studying the IL6 and SMAD signaling in HepG2 human
-  cancer cell lines.
+description: "Mathematical multi-compartment model described by sets of coupledordinary differential equations (ODEs) for studying the IL6 and SMAD signaling in HepG2 human cancer cell lines. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

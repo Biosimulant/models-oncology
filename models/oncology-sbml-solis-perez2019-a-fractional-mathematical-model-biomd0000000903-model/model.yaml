@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: SolisPerez2019AFractionalMathematicalModelBiomd0000000903Model'
-description: "A fractional mathematical model of breast cancer competition modelAuthor\
-  \ links open overlay panelJ.E.Sol\xEDs-P\xE9rezaJ.F.G\xF3mez-AguilarbA.Atanganaca\
-  \ Tecnol\xF3gico Nacional de M\xE9xico/CENIDET. Interior Interna"
+description: "A fractional mathematical model of breast cancer competition modelAuthor links open overlay panelJ.E.Sol\u00eds-P\u00e9rezaJ.F.G\u00f3mez-AguilarbA.Atanganaca Tecnol\u00f3gico Nacional de M\u00e9xico/CENIDET. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Boer1986InteractionsBetweenMacrophagesAndTModel1912110001Model'
-description: 'Interactions between Macrophages and T-lymphocytes: TumorSneaking Through
-  Intrinsic to Helper T cell DynamicsROB J. DE BOER AND PAULINE HOGEWEGBioinformatics
-  Group, University of Utrecht, Padualaan 8,'
+description: "Interactions between Macrophages and T-lymphocytes: TumorSneaking Through Intrinsic to Helper T cell DynamicsROB J. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

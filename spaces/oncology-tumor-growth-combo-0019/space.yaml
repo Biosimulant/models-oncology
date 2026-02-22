@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Tumor Growth (COMBO_0019)'
-description: Oncology tumor growth comparative space with 2 models, configured as
-  non-causal co-simulation.
+description: "Oncology Tumor Growth (COMBO_0019) brings together gevertz2018_canc_1, giani2019_comput_2, state_compare_mon in a comparative space to examine how tumor growth mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-oncology
   alias: gevertz2018_canc_1

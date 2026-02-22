@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Kimmel2021TCellCompetitionAndStochasticExtBiomd0000001041Model'
-description: This mathematical model of T cell-tumour interactions considering the
-  roles of T cell competition and stochastic extinction events in CAR T cell therapy
-  is described by the publication:Kimmel GJ, Lock
+description: "This mathematical model of T cell-tumour interactions considering the roles of T cell competition and stochastic extinction events in CAR T cell therapy is described by the publication:Kimmel GJ, Lock. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

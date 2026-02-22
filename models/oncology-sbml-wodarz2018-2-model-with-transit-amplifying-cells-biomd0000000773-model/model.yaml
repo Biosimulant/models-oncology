@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Wodarz20182ModelWithTransitAmplifyingCellsBiomd0000000773Model'
-description: 'The paper describes a model of effect of cellular de-differentiation
-  on the dynamics and evolution of tissue and tumor cells. Created by COPASI 4.25
-  (Build 207) This model is described in the article:'
+description: "The paper describes a model of effect of cellular de-differentiation on the dynamics and evolution of tissue and tumor cells. Created by COPASI 4.25 (Build 207) This model is described in the article:."
 standard: other
 tags:
 - oncology

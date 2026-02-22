@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Kosinsky2018RadiationAndPdL1TreatmentCombBiomd0000000863Model'
-description: This is a quantitative systems pharmacology (QSP) model that describes
-  key elements of the cancer immunity cycle and the tumor microenvironment, tumor
-  growth, as well as dose-exposure-target modulatio
+description: "This is a quantitative systems pharmacology (QSP) model that describes key elements of the cancer immunity cycle and the tumor microenvironment, tumor growth, as well as dose-exposure-target modulatio. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

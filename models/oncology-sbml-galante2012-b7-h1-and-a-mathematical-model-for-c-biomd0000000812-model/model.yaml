@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Galante2012B7H1AndAMathematicalModelForCBiomd0000000812Model'
-description: This is a mathematical model that describes the interactions between
-  cytotoxic T cells and tumor cells as influenced by B7-H1 (PD-L1) activity, with
-  a focus on how B7-H1 affects cancer cells apoptosis
+description: "This is a mathematical model that describes the interactions between cytotoxic T cells and tumor cells as influenced by B7-H1 (PD-L1) activity, with a focus on how B7-H1 affects cancer cells apoptosis. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

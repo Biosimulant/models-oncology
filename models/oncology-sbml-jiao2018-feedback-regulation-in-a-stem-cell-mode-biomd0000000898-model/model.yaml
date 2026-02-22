@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Jiao2018FeedbackRegulationInAStemCellModeBiomd0000000898Model'
-description: This is a mathematical model describing the hematopoietic lineages with
-  leukemia lineages, as controlled by end-product negative feedback inhibition. Variables
-  include hematopoietic stem cells, progen
+description: "This is a mathematical model describing the hematopoietic lineages with leukemia lineages, as controlled by end-product negative feedback inhibition. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

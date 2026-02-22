@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Melhem2017NeutropeniaModelModel2211040001Model'
-description: "The objective of the present study was to use pharmacokinetic\u2013\
-  pharmacodynamic modelling to characterize the effects of chemotherapy on the granulopoietic\
-  \ system and to predict the absolute neutrophil "
+description: "The objective of the present study was to use pharmacokinetic\u2013pharmacodynamic modelling to characterize the effects of chemotherapy on the granulopoietic system and to predict the absolute neutrophil. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

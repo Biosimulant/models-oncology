@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Riya2024InterplayBetweenTheImmunologicNetwModel2402030002Model'
-description: In later stages of NSCLC, we observed that the overexpression of IL-6
-  and IL-17 cytokines leads to macroautophagic and inflammatory responses, which contribute
-  to disease progression.
+description: "In later stages of NSCLC, we observed that the overexpression of IL-6 and IL-17 cytokines leads to macroautophagic and inflammatory responses, which contribute to disease progression. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

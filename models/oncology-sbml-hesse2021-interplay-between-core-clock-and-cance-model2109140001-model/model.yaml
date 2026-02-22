@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Hesse2021InterplayBetweenCoreClockAndCanceModel2109140001Model'
-description: "Refined quantitative core-clock model based on the model by Rel\xF3\
-  gio et al. 2011. The translation-transcription network is extended by a set of irinotecan-relevant\
-  \ genes, which allows to connect the co"
+description: "Refined quantitative core-clock model based on the model by Rel\u00f3gio et al. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

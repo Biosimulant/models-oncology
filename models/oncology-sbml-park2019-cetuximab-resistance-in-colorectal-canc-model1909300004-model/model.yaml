@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Park2019CetuximabResistanceInColorectalCancModel1909300004Model'
-description: It's an experimental + mathematical paper explaining probable targets
-  for Cetixumab resistance in colorectal cancer.
+description: "It's an experimental + mathematical paper explaining probable targets for Cetixumab resistance in colorectal cancer. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

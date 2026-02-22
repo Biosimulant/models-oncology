@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Therapy Response (COMBO_0051)'
-description: Oncology therapy response comparative space with 3 models, configured
-  as non-causal co-simulation.
+description: "Oncology Therapy Response (COMBO_0051) organizes evans2005_compar_1, hessemuellerrelo_2, kemmer2022_disen_3 into a comparative simulation setup to examine how therapy response mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-oncology
   alias: evans2005_compar_1

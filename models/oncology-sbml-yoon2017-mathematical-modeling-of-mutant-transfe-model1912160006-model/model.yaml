@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Yoon2017MathematicalModelingOfMutantTransfeModel1912160006Model'
-description: Mathematical modeling of mutant transferrin-CRM107 molecular conjugates
-  for cancer therapy.Yoon DJ1, Chen KY1, Lopes AM1, Pan AA1, Shiloach J2, Mason AB3,
-  Kamei DT4.Author information1 Department of B
+description: "Mathematical modeling of mutant transferrin-CRM107 molecular conjugates for cancer therapy.Yoon DJ1, Chen KY1, Lopes AM1, Pan AA1, Shiloach J2, Mason AB3, Kamei DT4.Author information1 Department of B. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Zhu2015CombinedGemcitabineAndBirinapantInPBiomd0000000669Model'
-description: Zhu2015 - combined gemcitabine and birinapantin pancreatic cancer cells
-  - mechanistic PD model Mechanistic mathematical model toillustrate the effectiveness
-  of combination chemotherapy involvinggemcit
+description: "Zhu2015 - combined gemcitabine and birinapantin pancreatic cancer cells - mechanistic PD model Mechanistic mathematical model toillustrate the effectiveness of combination chemotherapy involvinggemcit. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

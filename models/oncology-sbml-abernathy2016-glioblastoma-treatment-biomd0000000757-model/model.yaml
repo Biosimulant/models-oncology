@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Abernathy2016GlioblastomaTreatmentBiomd0000000757Model'
-description: 'The paper describes a model of glioblastoma. Created by COPASI 4.25
-  (Build 207) This model is described in the article: Modeling the Treatment of Glioblastoma
-  Multiforme and Cancer Stem Cells with Ord'
+description: "The paper describes a model of glioblastoma. Created by COPASI 4.25 (Build 207) This model is described in the article: Modeling the Treatment of Glioblastoma Multiforme and Cancer Stem Cells with Ord."
 standard: other
 tags:
 - oncology

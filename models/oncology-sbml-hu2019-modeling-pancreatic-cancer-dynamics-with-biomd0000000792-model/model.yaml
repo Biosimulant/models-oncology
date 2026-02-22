@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Hu2019ModelingPancreaticCancerDynamicsWithBiomd0000000792Model'
-description: This is a mathematical model of pancreatic cancer that includes descriptions
-  of pancreatic cancer cells, pancreatic stellate cells, effector cells and tumor-promoting
-  and tumor-suppressing cytokines t
+description: "This is a mathematical model of pancreatic cancer that includes descriptions of pancreatic cancer cells, pancreatic stellate cells, effector cells and tumor-promoting and tumor-suppressing cytokines t. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

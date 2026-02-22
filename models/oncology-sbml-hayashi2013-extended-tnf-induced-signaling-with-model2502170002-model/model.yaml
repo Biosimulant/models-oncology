@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Hayashi2013ExtendedTnfInducedSignalingWithModel2502170002Model'
-description: 'Hayashi2013 - Extended TNF-induced Signaling with Gene Expression Dynamics
-  (Model B)Tumor necrosis factor (TNF) plays a crucial role in inflammation and is
-  associated with diseases such as rheumatoid '
+description: "Hayashi2013 - Extended TNF-induced Signaling with Gene Expression Dynamics (Model B)Tumor necrosis factor (TNF) plays a crucial role in inflammation and is associated with diseases such as rheumatoid. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

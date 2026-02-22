@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Dorvash2019DynamicModelingOfSignalTransductBiomd0000000822Model'
-description: This model is based on:Dynamic modeling of signal transduction by mTOR
-  complexes in cancerAuthor:Mohammadreza Dorvash, Mohammad Farahmandnia, Pouria Mosaddeghi,
-  Mitra Farahmandnejad, Hosein Saber, Moh
+description: "This model is based on:Dynamic modeling of signal transduction by mTOR complexes in cancerAuthor:Mohammadreza Dorvash, Mohammad Farahmandnia, Pouria Mosaddeghi, Mitra Farahmandnejad, Hosein Saber, Moh. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

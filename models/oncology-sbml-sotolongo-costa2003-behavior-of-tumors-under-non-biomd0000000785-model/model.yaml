@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: SotolongoCosta2003BehaviorOfTumorsUnderNonBiomd0000000785Model'
-description: This model describes the interaction dynamics of a lymphocyte-tumor cell
-  population.
+description: "This model describes the interaction dynamics of a lymphocyte-tumor cell population. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

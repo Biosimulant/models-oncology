@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Gevertz2018CancerTreatmentWithOncolyticViruBiomd0000000816Model'
-description: The model is based on 'Developing a Minimally Structured Mathematical
-  Model of Cancer Treatment with Oncolytic Viruses and Dendritic Cell Injections',
-  PMID:30510594. Author:Jana L.Gevertz and Joanna R
+description: "The model is based on 'Developing a Minimally Structured Mathematical Model of Cancer Treatment with Oncolytic Viruses and Dendritic Cell Injections', PMID:30510594. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

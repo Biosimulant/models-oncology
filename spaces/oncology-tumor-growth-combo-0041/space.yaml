@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Tumor Growth (COMBO_0041)'
-description: Oncology tumor growth comparative space with 3 models, configured as
-  non-causal co-simulation.
+description: "Oncology Tumor Growth (COMBO_0041) brings together tang2019_pharmac_1, taoma2024_the_2, terfve2012_signa_3 in a comparative space to examine how tumor growth mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-oncology
   alias: tang2019_pharmac_1

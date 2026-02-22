@@ -1,6 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Bukkuri2022ModelsOfMendelianAndReverseTranModel2312120001Model'
-description: Faithful wrapper of upstream SBML model.
+description: "Oncology Bukkuri2022Models Of Mendelian And Reverse Tran Model2312120001Model represents core biological mechanisms from biomodels_ebi reference biomodels_ebi:MODEL2312120001. When you run it, you can inspect state and compare temporal behavior between baseline and adjusted inputs."
 standard: other
 tags:
 - oncology

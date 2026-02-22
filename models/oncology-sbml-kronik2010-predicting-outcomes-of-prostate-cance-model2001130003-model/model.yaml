@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Kronik2010PredictingOutcomesOfProstateCanceModel2001130003Model'
-description: "Predicting Outcomes of Prostate Cancer Immunotherapyby Personalized\
-  \ Mathematical ModelsNatalie Kronik1\xA4, Yuri Kogan1, Moran Elishmereni1, Karin\
-  \ Halevi-Tobias1, Stanimir Vuk-Pavlovic \u03012.,Zvia Agur1*.1I"
+description: "Predicting Outcomes of Prostate Cancer Immunotherapyby Personalized Mathematical ModelsNatalie Kronik1\u00a4, Yuri Kogan1, Moran Elishmereni1, Karin Halevi-Tobias1, Stanimir Vuk-Pavlovic \u03012.,Zvia Agur1*.1I. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Giani2019ComputationalModelingToPredictMap3Biomd0000000883Model'
-description: Computational modeling to predict MAP3K8 effects as mediator of resistance
-  to vemurafenib in thyroid cancer stem cells
+description: "Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Chen20111BoneMarrowInvasionAbsoluteModelBiomd0000000793Model'
-description: 'The paper describes a model of tumor invasion to bone marrow. Created
-  by COPASI 4.26 (Build 213) This model is described in the article: Modeling invasion
-  of metastasizing cancer cells to bone marrow '
+description: "The paper describes a model of tumor invasion to bone marrow. Created by COPASI 4.26 (Build 213) This model is described in the article: Modeling invasion of metastasizing cancer cells to bone marrow."
 standard: other
 tags:
 - oncology

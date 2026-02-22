@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: PerezGarcia19ComputationalDesignOfImprovedBiomd0000000814Model'
-description: "This is a model built by COPASI4.24(Build 197)This a model from the\
-  \ article: Computational design of improved standardized chemotherapy protocols\
-  \ for grade II oligodendrogliomasV\xEDctor M. P\xE9rez-Garc\xEDa,"
+description: "This is a model built by COPASI4.24(Build 197)This a model from the article: Computational design of improved standardized chemotherapy protocols for grade II oligodendrogliomasV\u00edctor M. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

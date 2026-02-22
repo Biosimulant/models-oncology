@@ -1,6 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Tortolina2015MultipleSignallingPathwayAssociModel1601250000Model'
-description: Faithful wrapper of upstream SBML model.
+description: "Oncology Tortolina2015Multiple Signalling Pathway Associ Model1601250000Model models core biological dynamics as a OTHER simulation curated from biomodels_ebi (biomodels_ebi:MODEL1601250000), focused on oncolog. When you run it, you can track state over time and compare response patterns across parameter settings."
 standard: other
 tags:
 - oncology

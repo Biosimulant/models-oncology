@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: CelikuFriedenberg2022ProbabilisticModelChecModel2207180001Model'
-description: We provide a model of glycolysis and TCA cycle in cancers in which IDH
-  is encountered both in its wild type form as well as mutated and capable of catalyzing
-  an onco-metabolite. The model is construct
+description: "We provide a model of glycolysis and TCA cycle in cancers in which IDH is encountered both in its wild type form as well as mutated and capable of catalyzing an onco-metabolite. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

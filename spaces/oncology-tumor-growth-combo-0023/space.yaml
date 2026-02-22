@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Tumor Growth (COMBO_0023)'
-description: Oncology tumor growth comparative space with 2 models, configured as
-  non-causal co-simulation.
+description: "Oncology Tumor Growth (COMBO_0023) brings together hutchinson2016_v_1, iarosz2015_brain_2, state_compare_mon in a comparative space to examine how tumor growth mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-oncology
   alias: hutchinson2016_v_1

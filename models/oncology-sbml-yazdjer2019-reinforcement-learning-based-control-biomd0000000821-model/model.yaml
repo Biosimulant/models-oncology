@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Yazdjer2019ReinforcementLearningBasedControlBiomd0000000821Model'
-description: 'This model is based on:Reinforcement learning-based control of tumor
-  growth under anti-angiogenic therapyAuthors: Parisa Yazdjerdi, Nader Meskin, Mohammad
-  Al-Naemi, Ala-Eddin Al Moustafa, Levente Kova'
+description: "This model is based on:Reinforcement learning-based control of tumor growth under anti-angiogenic therapyAuthors: Parisa Yazdjerdi, Nader Meskin, Mohammad Al-Naemi, Ala-Eddin Al Moustafa, Levente Kova. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

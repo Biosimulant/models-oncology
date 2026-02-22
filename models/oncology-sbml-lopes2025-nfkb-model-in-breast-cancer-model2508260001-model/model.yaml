@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Lopes2025NfkbModelInBreastCancerModel2508260001Model'
-description: "Model for the activation of SLUG, SIP1, TWIST1, and NF-\u03BAB (subunits\
-  \ p50 and p65). The model exhibits two stationary states (bistability), each corresponding\
-  \ to the gene expression profiles we determin"
+description: "Model for the activation of SLUG, SIP1, TWIST1, and NF-\u03baB (subunits p50 and p65). The model exhibits two stationary states (bistability), each corresponding to the gene expression profiles we determin."
 standard: other
 tags:
 - oncology

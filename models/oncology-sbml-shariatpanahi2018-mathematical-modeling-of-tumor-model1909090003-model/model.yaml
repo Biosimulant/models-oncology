@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Shariatpanahi2018MathematicalModelingOfTumorModel1909090003Model'
-description: This is a ODE-based mathematical model featuring equations describing
-  the dynamics of tumor cells, cytotoxic T cells, natural killer cells, and myeloid-derived
-  suppressor cells (MDSCs) that together d
+description: "This is a ODE-based mathematical model featuring equations describing the dynamics of tumor cells, cytotoxic T cells, natural killer cells, and myeloid-derived suppressor cells (MDSCs) that together d. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

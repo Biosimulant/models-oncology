@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Babbs2012ImmunotherapyBiomd0000000758Model'
-description: 'The paper describes a simple model of tumor immunotherapy. Created by
-  COPASI 4.25 (Build 207) This model is described in the article: Predicting success
-  or failure of immunotherapy for cancer: insight'
+description: "The paper describes a simple model of tumor immunotherapy. Created by COPASI 4.25 (Build 207) This model is described in the article: Predicting success or failure of immunotherapy for cancer: insight."
 standard: other
 tags:
 - oncology

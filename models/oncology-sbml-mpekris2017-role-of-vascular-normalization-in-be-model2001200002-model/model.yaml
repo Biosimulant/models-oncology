@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Mpekris2017RoleOfVascularNormalizationInBeModel2001200002Model'
-description: Role of vascular normalization in benefit from metronomic chemotherapy.Mpekris
-  F1, Baish JW2, Stylianopoulos T3, Jain RK4.Author informationAbstractMetronomic
-  dosing of chemotherapy-defined as frequen
+description: "Role of vascular normalization in benefit from metronomic chemotherapy.Mpekris F1, Baish JW2, Stylianopoulos T3, Jain RK4.Author informationAbstractMetronomic dosing of chemotherapy-defined as frequen. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

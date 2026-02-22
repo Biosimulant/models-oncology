@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Therapy Response (COMBO_0053)'
-description: Oncology therapy response comparative space with 3 models, configured
-  as non-causal co-simulation.
+description: "Oncology Therapy Response (COMBO_0053) assembles mpekris2017_role_1, perez_garcia19_2, rodrigues2019_a_3 as a comparative composed simulation to examine how therapy response mechanisms compare across these models. When you run it, you can compare synchronized outputs through the declared wiring paths and monitor views."
 models:
 - repo: Biosimulant/models-oncology
   alias: mpekris2017_role_1

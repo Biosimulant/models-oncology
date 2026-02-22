@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Morrison1989FolateCycleBiomd0000000018Model'
-description: 'Morrison1989 - Folate Cycle The model describes the folate cyclekinetics
-  in breast cancer cells. This model is described in the article: Folate cycle kinetics
-  in human breast cancer cells. Morrison PF'
+description: "Morrison1989 - Folate Cycle The model describes the folate cyclekinetics in breast cancer cells. This model is described in the article: Folate cycle kinetics in human breast cancer cells."
 standard: other
 tags:
 - oncology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Bordel2018GsmmForHumanMetabolicReactionsHmModel1707250000Model'
-description: 'Bordel2018 - GSMM for Human MetabolicReactions (HMR database) This model
-  is described in the article: Constraint based modeling of metabolism allows finding
-  metabolic cancer hallmarks and identifying '
+description: "Bordel2018 - GSMM for Human MetabolicReactions (HMR database) This model is described in the article: Constraint based modeling of metabolism allows finding metabolic cancer hallmarks and identifying. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

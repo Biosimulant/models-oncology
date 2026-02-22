@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Selvaggio2020MicroenvironmentControlOfHybridModel2004040001Model'
-description: 'Epithelial to Mesenchymal Transition (EMT) has been associated with
-  cancer cell heterogeneity, plasticity and metastasis. It has been the subject of
-  several modeling effort. This logical model of the '
+description: "Epithelial to Mesenchymal Transition (EMT) has been associated with cancer cell heterogeneity, plasticity and metastasis. It has been the subject of several modeling effort."
 standard: other
 tags:
 - oncology

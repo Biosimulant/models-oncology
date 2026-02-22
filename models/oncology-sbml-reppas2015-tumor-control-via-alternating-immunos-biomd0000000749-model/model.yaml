@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Reppas2015TumorControlViaAlternatingImmunosBiomd0000000749Model'
-description: 'The paper describes a model of tumor control via alternating immunostimulating
-  and immunosuppressive phases. Created by COPASI 4.25 (Build 207) This model is described
-  in the article: In silico tumor '
+description: "The paper describes a model of tumor control via alternating immunostimulating and immunosuppressive phases. Created by COPASI 4.25 (Build 207) This model is described in the article: In silico tumor."
 standard: other
 tags:
 - oncology

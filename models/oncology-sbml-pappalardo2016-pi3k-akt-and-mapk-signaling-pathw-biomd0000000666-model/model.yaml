@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Pappalardo2016Pi3kAktAndMapkSignalingPathwBiomd0000000666Model'
-description: 'Pappalardo2016 - PI3K/AKT and MAPK SignalingPathways in Melanoma Cancer
-  This model is described in the article: Computational Modeling of PI3K/AKT and MAPK
-  Signaling Pathways in Melanoma Cancer. Pappa'
+description: "Pappalardo2016 - PI3K/AKT and MAPK SignalingPathways in Melanoma Cancer This model is described in the article: Computational Modeling of PI3K/AKT and MAPK Signaling Pathways in Melanoma Cancer. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

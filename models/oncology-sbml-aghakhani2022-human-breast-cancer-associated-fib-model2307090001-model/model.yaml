@@ -1,6 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Aghakhani2022HumanBreastCancerAssociatedFibModel2307090001Model'
-description: Faithful wrapper of upstream SBML model.
+description: "Oncology Aghakhani2022Human Breast Cancer Associated Fib Model2307090001Model models core biological dynamics as a OTHER simulation curated from biomodels_ebi (biomodels_ebi:MODEL2307090001), focused on oncolog. When you run it, you can track state over time and compare response patterns across parameter settings."
 standard: other
 tags:
 - oncology

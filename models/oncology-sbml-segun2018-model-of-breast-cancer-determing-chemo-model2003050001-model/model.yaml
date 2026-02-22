@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Segun2018ModelOfBreastCancerDetermingChemoModel2003050001Model'
-description: optimal control theory is applied to find out the optimal drug adjustment
-  as an input control of the system therapies to minimize the number of cancerous
-  cells by considering different controlled comb
+description: "optimal control theory is applied to find out the optimal drug adjustment as an input control of the system therapies to minimize the number of cancerous cells by considering different controlled comb. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

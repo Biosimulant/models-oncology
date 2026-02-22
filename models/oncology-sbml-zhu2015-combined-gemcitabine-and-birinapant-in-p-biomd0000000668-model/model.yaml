@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Zhu2015CombinedGemcitabineAndBirinapantInPBiomd0000000668Model'
-description: Zhu2015 - Combined gemcitabine and birinapantin pancreatic cancer cells
-  - basic PD model Mathematical model to illustrate theeffectiveness of combination
-  chemotherapy involving gemcitabine andbirinapa
+description: "Zhu2015 - Combined gemcitabine and birinapantin pancreatic cancer cells - basic PD model Mathematical model to illustrate theeffectiveness of combination chemotherapy involving gemcitabine andbirinapa. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Ruscone2023LogicalModelOfTumorCellInvasionModel2304070002Model'
-description: This model builds upon two published models focused on the early steps
-  of metastasis by Cohen et al. and on EMT process by Selvaggio et. al. The initial
-  model of Cohen and colleagues was built with tw
+description: "This model builds upon two published models focused on the early steps of metastasis by Cohen et al. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

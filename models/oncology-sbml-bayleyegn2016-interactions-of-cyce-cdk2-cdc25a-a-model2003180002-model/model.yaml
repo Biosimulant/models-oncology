@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Bayleyegn2016InteractionsOfCyceCdk2Cdc25aAModel2003180002Model'
-description: Mathematical description of the interactions of CycE/Cdk2, Cdc25A, and
-  P27Kip1 in a core cancer subnetwork. Model is encoded by Matthieu Maire/partially
-  by Krishna Kumar Tiwari and submitted to BioMod
+description: "Mathematical description of the interactions of CycE/Cdk2, Cdc25A, and P27Kip1 in a core cancer subnetwork. Model is encoded by Matthieu Maire/partially by Krishna Kumar Tiwari and submitted to BioMod."
 standard: other
 tags:
 - oncology

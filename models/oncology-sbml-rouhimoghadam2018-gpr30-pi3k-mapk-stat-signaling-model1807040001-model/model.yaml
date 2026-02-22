@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Rouhimoghadam2018Gpr30Pi3kMapkStatSignalingModel1807040001Model'
-description: 'In the current study, we aimed to simulate the GPR30/PI3K/MAPK/STAT
-  signaling pathway in normal and cancer cells by the use of ordinary differential
-  equation modeling. In addition, we planned to show '
+description: "In the current study, we aimed to simulate the GPR30/PI3K/MAPK/STAT signaling pathway in normal and cancer cells by the use of ordinary differential equation modeling. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

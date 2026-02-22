@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Murphy2016DifferencesInPredictionsOfOdeModBiomd0000000671Model'
-description: Murphy2016 - Differences in predictions ofODE models of tumor growth
-  Comparison of 7 ODE models for tumoursize. This models have been compared to experimental
-  data. This model is described in the arti
+description: "Murphy2016 - Differences in predictions ofODE models of tumor growth Comparison of 7 ODE models for tumoursize. This models have been compared to experimental data."
 standard: other
 tags:
 - oncology

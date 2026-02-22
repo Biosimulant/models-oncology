@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Yangzichen2024MetabolicMachineLearningPredicModel2407230001Model'
-description: 'The paper ''Metabolomic Machine Learning Predictor for Diagnosis and
-  Prognosis of Gastric Cancer'' addresses the need for non-invasive diagnostic tools
-  for gastric cancer (GC). Traditional methods like '
+description: "The paper 'Metabolomic Machine Learning Predictor for Diagnosis and Prognosis of Gastric Cancer' addresses the need for non-invasive diagnostic tools for gastric cancer (GC). It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

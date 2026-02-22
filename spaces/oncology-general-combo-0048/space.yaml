@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: General (COMBO_0048)'
-description: Oncology general comparative space with 3 models, configured as non-causal
-  co-simulation.
+description: "Oncology General (COMBO_0048) assembles owen1998_tumour_1, raia2010_il13_2, raia2011_il13_3 as a comparative composed simulation to examine how general mechanisms compare across these models. When you run it, you can compare synchronized outputs through the declared wiring paths and monitor views."
 models:
 - repo: Biosimulant/models-oncology
   alias: owen1998_tumour_1

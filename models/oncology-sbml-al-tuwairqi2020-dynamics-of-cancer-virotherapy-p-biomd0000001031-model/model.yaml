@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: AlTuwairqi2020DynamicsOfCancerVirotherapyPBiomd0000001031Model'
-description: This ordinary differential equation model of cancer virotherapy dynamics
-  is described in the publication:Salma M. Al-Tuwairqi, Najwa O. Al-Johani, Eman A.
-  Simbawa,'Modeling dynamics of cancer radiovir
+description: "This ordinary differential equation model of cancer virotherapy dynamics is described in the publication:Salma M. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

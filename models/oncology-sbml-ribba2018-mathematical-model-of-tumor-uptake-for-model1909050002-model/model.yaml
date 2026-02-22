@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Ribba2018MathematicalModelOfTumorUptakeForModel1909050002Model'
-description: This is a model developed to predict concentrations of cergutuzumab amunaleukin
-  (CEA-IL2v) after various systemic dosing intensities.
+description: "This is a model developed to predict concentrations of cergutuzumab amunaleukin (CEA-IL2v) after various systemic dosing intensities. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

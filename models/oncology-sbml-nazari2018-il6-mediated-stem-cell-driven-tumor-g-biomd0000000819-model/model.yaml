@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Nazari2018Il6MediatedStemCellDrivenTumorGBiomd0000000819Model'
-description: 'This a model from the article: A mathematical model for IL-6-mediated,
-  stem cell driven tumor growth and targeted treatmentFereshteh Nazari, Alexander
-  T. Pearson, Jacques Eduardo Nor, Trachette L. Jac'
+description: "This a model from the article: A mathematical model for IL-6-mediated, stem cell driven tumor growth and targeted treatmentFereshteh Nazari, Alexander T. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

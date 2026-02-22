@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Wodarz2001VirusesAsAntitumorWeaponsBiomd0000001043Model'
-description: 'This mathematical model of the dynamics between tumor, virus and virus-specific
-  CTL populations is described by the publication:Wodarz D. ''Viruses as antitumor
-  weapons: defining conditions for tumor r'
+description: "This mathematical model of the dynamics between tumor, virus and virus-specific CTL populations is described by the publication:Wodarz D. 'Viruses as antitumor weapons: defining conditions for tumor r."
 standard: other
 tags:
 - oncology

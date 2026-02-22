@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Chaudhury2020FirstOrderExpansionModelOfCarModel2109110005Model'
-description: This ordinary differential equation model of the cellular kinetics and
-  pharmacodynamics of CAR-T cell therapy is described in the publication:Chaudhury,
-  A., Zhu, X., Chu, L., Goliaei, A., June, C., Ke
+description: "This ordinary differential equation model of the cellular kinetics and pharmacodynamics of CAR-T cell therapy is described in the publication:Chaudhury, A., Zhu, X., Chu, L., Goliaei, A., June, C., Ke. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

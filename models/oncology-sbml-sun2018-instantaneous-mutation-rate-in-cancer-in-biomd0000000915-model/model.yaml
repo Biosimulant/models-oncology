@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Sun2018InstantaneousMutationRateInCancerInBiomd0000000915Model'
-description: '&lt;notes xmlns=&quot;http://www.sbml.org/sbml/level2/version4&quot;&gt;
-  &lt;body xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt; &lt;p&gt;BackgroundCancer
-  is one of the leading causes for the morb'
+description: "&lt;notes xmlns=&quot;http://www.sbml.org/sbml/level2/version4&quot;&gt; &lt;body xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt; &lt;p&gt;BackgroundCancer is one of the leading causes for the morb. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Bianconi2012EgfrAndIgf1rPathwayInLungCancBiomd0000000427Model'
-description: Bianconi2012 - EGFR and IGF1R pathway in lung cancer EGFR and IGF1R pathways
-  play a key role in various human cancers and are crucial for tumour transformation
-  and survival of malignant cells. High EG
+description: "Bianconi2012 - EGFR and IGF1R pathway in lung cancer EGFR and IGF1R pathways play a key role in various human cancers and are crucial for tumour transformation and survival of malignant cells. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

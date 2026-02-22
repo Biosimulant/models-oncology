@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Taoma2024TheSsaBasedBooleanModelOfCellCyModel2405030001Model'
-description: 'Our model is considered as a Continuous-Time Stochastic Boolean Model.
-  It is extended from the previous work (PMID: 36434030) in order to explain more
-  mutations that are important in cancer, e.g., end'
+description: "Our model is considered as a Continuous-Time Stochastic Boolean Model. It is extended from the previous work (PMID: 36434030) in order to explain more mutations that are important in cancer, e.g., end."
 standard: other
 tags:
 - oncology

@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Tumor Growth (COMBO_0038)'
-description: Oncology tumor growth comparative space with 3 models, configured as
-  non-causal co-simulation.
+description: "Oncology Tumor Growth (COMBO_0038) organizes schattler2016_dy_1, segun2018_model_2, selvaggio2020_mi_3 into a comparative simulation setup to examine how tumor growth mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-oncology
   alias: schattler2016_dy_1

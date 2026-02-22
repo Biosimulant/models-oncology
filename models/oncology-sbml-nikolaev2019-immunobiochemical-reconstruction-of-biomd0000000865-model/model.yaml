@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Nikolaev2019ImmunobiochemicalReconstructionOfBiomd0000000865Model'
-description: 'This is a mathematical mechanistic immunobiochemical model that incorporates
-  T cell pathways that control programmed cell death protein 1 (PD-1) expression.
-  A core component of the model is a kinetic '
+description: "This is a mathematical mechanistic immunobiochemical model that incorporates T cell pathways that control programmed cell death protein 1 (PD-1) expression. A core component of the model is a kinetic."
 standard: other
 tags:
 - oncology

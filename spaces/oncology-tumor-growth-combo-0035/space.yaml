@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Tumor Growth (COMBO_0035)'
-description: Oncology tumor growth comparative space with 3 models, configured as
-  non-causal co-simulation.
+description: "Oncology Tumor Growth (COMBO_0035) organizes pappalardo2016_p_1, park2019_cetuxim_2, reppas2015_tumor_3 into a comparative simulation setup to examine how tumor growth mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-oncology
   alias: pappalardo2016_p_1

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Bajzer2008ModelingOfCancerVirotherapyWithRBiomd0000000771Model'
-description: 'This model describes the interactions between tumor cells and virus
-  particles, with particular reference to virus-induced syncytium formation and ultimately
-  death of tumor cells. Dynamics of infected '
+description: "This model describes the interactions between tumor cells and virus particles, with particular reference to virus-induced syncytium formation and ultimately death of tumor cells. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Jafarnejad2019MechanisticallyDetailedSystemsModel2003200001Model'
-description: Hepatocyte growth factor (HGF) signaling through its receptor Met has
-  been implicated in hepatocellular carcinoma tumorigenesis and progression. Met interaction
-  with integrins is shown to modulate the
+description: "Hepatocyte growth factor (HGF) signaling through its receptor Met has been implicated in hepatocellular carcinoma tumorigenesis and progression. Met interaction with integrins is shown to modulate the."
 standard: other
 tags:
 - oncology

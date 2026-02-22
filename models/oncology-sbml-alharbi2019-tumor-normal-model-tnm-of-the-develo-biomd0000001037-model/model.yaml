@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Alharbi2019TumorNormalModelTnmOfTheDeveloBiomd0000001037Model'
-description: 'This ordinary differential equation model of the interactions between
-  tumor and normal cells is based on the publication:S. A. Alharbi and A. S. Rambely,
-  ''Dynamic Simulation for Analyzing the Effects '
+description: "This ordinary differential equation model of the interactions between tumor and normal cells is based on the publication:S. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

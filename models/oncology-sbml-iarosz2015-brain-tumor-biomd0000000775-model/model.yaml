@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Iarosz2015BrainTumorBiomd0000000775Model'
-description: 'The paper describes a model of brain tumor. Created by COPASI 4.25 (Build
-  207) This model is described in the article: Mathematical model of brain tumour
-  with glia-neuron interactions and chemotherapy'
+description: "The paper describes a model of brain tumor. Created by COPASI 4.25 (Build 207) This model is described in the article: Mathematical model of brain tumour with glia-neuron interactions and chemotherapy."
 standard: other
 tags:
 - oncology

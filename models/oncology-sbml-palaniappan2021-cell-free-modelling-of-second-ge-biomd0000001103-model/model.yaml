@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Palaniappan2021CellFreeModellingOfSecondGeBiomd0000001103Model'
-description: Cervical cancer is a global public health subject as it affects women
-  in the reproductive ages, and accounts for the second largest burden among cancer
-  patients worldwide with an unforgiving 50% morta
+description: "Cervical cancer is a global public health subject as it affects women in the reproductive ages, and accounts for the second largest burden among cancer patients worldwide with an unforgiving 50% morta. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

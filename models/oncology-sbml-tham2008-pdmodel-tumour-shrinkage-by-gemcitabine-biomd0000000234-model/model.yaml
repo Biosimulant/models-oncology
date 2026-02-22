@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Tham2008PdmodelTumourShrinkageByGemcitabineBiomd0000000234Model'
-description: 'PURPOSE: This tumor response pharmacodynamic model aims to describe
-  primary lesion shrinkage in non-small cell lung cancer over time and determine if
-  concentration-based exposure metrics for gemcitabi'
+description: "PURPOSE: This tumor response pharmacodynamic model aims to describe primary lesion shrinkage in non-small cell lung cancer over time and determine if concentration-based exposure metrics for gemcitabi. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

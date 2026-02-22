@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Therapy Response (COMBO_0050)'
-description: Oncology therapy response comparative space with 3 models, configured
-  as non-causal co-simulation.
+description: "Oncology Therapy Response (COMBO_0050) brings together chaudhury2020_ec_1, chaudhury2020_fi_2, chaudhury2020_lo_3 in a comparative space to examine how therapy response mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-oncology
   alias: chaudhury2020_ec_1

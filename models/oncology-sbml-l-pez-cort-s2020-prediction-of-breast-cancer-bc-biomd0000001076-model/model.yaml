@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: LPezCortS2020PredictionOfBreastCancerBcBiomd0000001076Model'
-description: This study introduces a predictive classifier for breast cancer-related
-  proteins, utilising a combination of protein sequence descriptors and machine learning
-  techniques. The best-performing classifie
+description: "This study introduces a predictive classifier for breast cancer-related proteins, utilising a combination of protein sequence descriptors and machine learning techniques. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Khajanchi2015TheCombinedEffectsOfOptimalCoBiomd0000000897Model'
-description: The combined effects of optimal control in cancer remissionSubhasKhajanchiDibakarGhoshAbstractWe
-  investigate a mathematical model depicting the nonlinear dynamics of immunogenic
-  tumors as envisioned b
+description: "The combined effects of optimal control in cancer remissionSubhasKhajanchiDibakarGhoshAbstractWe investigate a mathematical model depicting the nonlinear dynamics of immunogenic tumors as envisioned b. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

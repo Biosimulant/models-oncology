@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Tumor Growth (COMBO_0029)'
-description: Oncology tumor growth comparative space with 2 models, configured as
-  non-causal co-simulation.
+description: "Oncology Tumor Growth (COMBO_0029) organizes li2016_model_1, li2021_hdac3i_2, state_compare_mon into a comparative simulation setup to examine how tumor growth mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-oncology
   alias: li2016_model_1

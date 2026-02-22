@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Iwamoto2010CellCycleReponseToDnaDamageBiomd0000000939Model'
-description: After DNA damage, cells activate p53, a tumor suppressor gene, and select
-  a cell fate (e.g., DNA repair, cell cycle arrest, or apoptosis). Recently, a p53
-  oscillatory behavior was observed following D
+description: "After DNA damage, cells activate p53, a tumor suppressor gene, and select a cell fate (e.g., DNA repair, cell cycle arrest, or apoptosis). Recently, a p53 oscillatory behavior was observed following D."
 standard: other
 tags:
 - oncology

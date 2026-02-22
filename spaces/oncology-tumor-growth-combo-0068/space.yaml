@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Tumor Growth (COMBO_0068)'
-description: Oncology tumor growth comparative space with 4 models, configured as
-  non-causal co-simulation.
+description: "Oncology Tumor Growth (COMBO_0068) assembles barros2021_cartm_1, bayleyegn2016_in_2, bianconi2012_egf_3 as a comparative composed simulation to examine how tumor growth mechanisms compare across these models. When you run it, you can compare synchronized outputs through the declared wiring paths and monitor views."
 models:
 - repo: Biosimulant/models-oncology
   alias: barros2021_cartm_1

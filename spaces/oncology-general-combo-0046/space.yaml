@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: General (COMBO_0046)'
-description: Oncology general comparative space with 3 models, configured as non-causal
-  co-simulation.
+description: "Oncology General (COMBO_0046) organizes ghaffari2019_thr_1, hesse2021_interp_2, jiao2018_feedbac_3 into a comparative simulation setup to examine how general mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-oncology
   alias: ghaffari2019_thr_1

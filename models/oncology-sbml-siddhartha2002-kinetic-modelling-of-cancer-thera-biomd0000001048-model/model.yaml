@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Siddhartha2002KineticModellingOfCancerTheraBiomd0000001048Model'
-description: Siddhartha Jain. Kinetic model for designing a cancer therapy. Cancer
-  Cell International 2, 1 (2002). A kinetic model has been developed to study cancer
-  growth. Cancer growth has been considered as in
+description: "Siddhartha Jain. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

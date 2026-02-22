@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Barros2021CartmathMathematicalModelOfCarTBiomd0000001019Model'
-description: A mathematical model (CART-math) studying the impact of CAR-T cells therapy
-  on haematological cancer cell line which in this case is HDLM-2.
+description: "A mathematical model (CART-math) studying the impact of CAR-T cells therapy on haematological cancer cell line which in this case is HDLM-2. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

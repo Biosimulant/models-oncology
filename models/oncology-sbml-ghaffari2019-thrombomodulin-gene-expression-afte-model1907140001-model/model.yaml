@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Ghaffari2019ThrombomodulinGeneExpressionAfteModel1907140001Model'
-description: Publication includes a mathematical model for how retinoic acid affects
-  thrombomodulin gene and mRNA expression as well as a two-compartment pharmacokinetic
-  model for retinoic acid.
+description: "Publication includes a mathematical model for how retinoic acid affects thrombomodulin gene and mRNA expression as well as a two-compartment pharmacokinetic model for retinoic acid. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

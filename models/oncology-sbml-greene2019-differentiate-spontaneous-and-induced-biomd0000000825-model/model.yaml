@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Greene2019DifferentiateSpontaneousAndInducedBiomd0000000825Model'
-description: This model is built by COPASI 4.24(Build 197), based on paper:Mathematical
-  Approach to Differentiate Spontaneous and Induced Evolution to Drug Resistance During
-  Cancer Treatment.Author:James M. Greene
+description: "This model is built by COPASI 4.24(Build 197), based on paper:Mathematical Approach to Differentiate Spontaneous and Induced Evolution to Drug Resistance During Cancer Treatment.Author:James M. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

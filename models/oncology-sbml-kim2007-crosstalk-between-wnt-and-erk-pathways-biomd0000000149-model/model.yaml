@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Kim2007CrosstalkBetweenWntAndErkPathwaysBiomd0000000149Model'
-description: Kim2007 - Crosstalk between Wnt and ERK pathways Experimental studies
-  have shown that both Wnt and the MAPK pathways are involved in the pathogenesis
-  of various kinds of cancers (eg. colorectal cancer
+description: "Kim2007 - Crosstalk between Wnt and ERK pathways Experimental studies have shown that both Wnt and the MAPK pathways are involved in the pathogenesis of various kinds of cancers (eg. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

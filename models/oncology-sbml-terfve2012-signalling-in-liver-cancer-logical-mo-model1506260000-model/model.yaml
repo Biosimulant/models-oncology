@@ -1,6 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Terfve2012SignallingInLiverCancerLogicalMoModel1506260000Model'
-description: Faithful wrapper of upstream SBML model.
+description: "Oncology Terfve2012Signalling In Liver Cancer Logical Mo Model1506260000Model captures core biological behavior in the context of oncology, sbml, biomodels_ebi using a biomodels_ebi-sourced OTHER model. When you run it, you can observe state and evaluate how the modeled system changes across runs."
 standard: other
 tags:
 - oncology

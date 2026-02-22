@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Therapy Response (COMBO_0052)'
-description: Oncology therapy response comparative space with 3 models, configured
-  as non-causal co-simulation.
+description: "Oncology Therapy Response (COMBO_0052) brings together kimmel2021_t_1, melhem_neutropen_2, mpekris2017_role_3 in a comparative space to examine how therapy response mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-oncology
   alias: kimmel2021_t_1

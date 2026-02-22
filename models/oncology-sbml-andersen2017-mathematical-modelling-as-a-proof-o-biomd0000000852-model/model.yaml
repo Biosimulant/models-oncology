@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Andersen2017MathematicalModellingAsAProofOBiomd0000000852Model'
-description: This is a mathematical model investigating the role of chronic inflammation
-  in the development and progression of myeloproliferative neoplasms (MPNs). The model
-  describes the proliferation from stem c
+description: "This is a mathematical model investigating the role of chronic inflammation in the development and progression of myeloproliferative neoplasms (MPNs). The model describes the proliferation from stem c."
 standard: other
 tags:
 - oncology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Depillis2008OptimalControlOfMixedImmunotherBiomd0000000913Model'
-description: '&amp;lt;notes xmlns=&amp;quot;http://www.sbml.org/sbml/level2/version4&amp;quot;&amp;gt;
-  &amp;lt;body xmlns=&amp;quot;http://www.w3.org/1999/xhtml&amp;quot;&amp;gt; &amp;lt;pre&amp;gt;Optimal
-  control '
+description: "&amp;lt;notes xmlns=&amp;quot;http://www.sbml.org/sbml/level2/version4&amp;quot;&amp;gt; &amp;lt;body xmlns=&amp;quot;http://www.w3.org/1999/xhtml&amp;quot;&amp;gt; &amp;lt;pre&amp;gt;Optimal control. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

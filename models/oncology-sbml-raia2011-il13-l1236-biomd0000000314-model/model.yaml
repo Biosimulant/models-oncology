@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Raia2011Il13L1236Biomd0000000314Model'
-description: 'This is the model of IL13 induced signalling in L1236 cells described
-  in the article: Dynamic Mathematical Modeling of IL13-Induced Signaling in Hodgkin
-  and Primary Mediastinal B-Cell Lymphoma Allows '
+description: "This is the model of IL13 induced signalling in L1236 cells described in the article: Dynamic Mathematical Modeling of IL13-Induced Signaling in Hodgkin and Primary Mediastinal B-Cell Lymphoma Allows. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

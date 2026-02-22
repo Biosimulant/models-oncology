@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Hutchinson2016VascularPhenotypeIdentificationModel1911130007Model'
-description: 'This is a spatially averaged multiscale mathematical model of tumor
-  angiogenesis. The model describes the dynamics of VEGF, Ang1, Ang2, and PDGF, coupled
-  with those of mature and immature endothelial '
+description: "This is a spatially averaged multiscale mathematical model of tumor angiogenesis. The model describes the dynamics of VEGF, Ang1, Ang2, and PDGF, coupled with those of mature and immature endothelial."
 standard: other
 tags:
 - oncology

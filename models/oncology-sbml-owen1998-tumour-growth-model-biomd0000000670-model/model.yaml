@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Owen1998TumourGrowthModelBiomd0000000670Model'
-description: 'Owen1998 - tumour growth model Deterministic model for the early,avascular
-  growth of a tumour, concentrating on the inhibitoryeffect of macrophages. This model
-  is described in the article: Modelling t'
+description: "Owen1998 - tumour growth model Deterministic model for the early,avascular growth of a tumour, concentrating on the inhibitoryeffect of macrophages. This model is described in the article: Modelling t."
 standard: other
 tags:
 - oncology

@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Nave2018ProstateCancerModelModel1910030001Model'
-description: This model is based on paper:Combination of singularly perturbed vector
-  field method and method of directly defining the inverse mapping applied to complex
-  ODE system prostate cancer modelAuthor:Ophir
+description: "This model is based on paper:Combination of singularly perturbed vector field method and method of directly defining the inverse mapping applied to complex ODE system prostate cancer modelAuthor:Ophir. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

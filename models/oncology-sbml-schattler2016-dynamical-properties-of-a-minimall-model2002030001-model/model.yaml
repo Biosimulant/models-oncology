@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Schattler2016DynamicalPropertiesOfAMinimallModel2002030001Model'
-description: A minimally parameterized mathematical model for low-dose metronomicchemotherapy
-  is formulated that takes into account angiogenic signaling betweenthe tumor and
-  its vasculature and tumor inhibiting ef
+description: "A minimally parameterized mathematical model for low-dose metronomicchemotherapy is formulated that takes into account angiogenic signaling betweenthe tumor and its vasculature and tumor inhibiting ef. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

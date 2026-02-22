@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Chance1960GlycolysisRespirationBiomd0000000281Model'
-description: 'This model is described inthe article: Metabolic control mechanisms.
-  5. A solution for the equations representing interaction between glycolysis and
-  respiration in ascites tumor cells. Britton Chance,'
+description: "This model is described inthe article: Metabolic control mechanisms. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

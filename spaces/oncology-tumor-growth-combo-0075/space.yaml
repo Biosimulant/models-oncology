@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Tumor Growth (COMBO_0075)'
-description: Oncology tumor growth comparative space with 4 models, configured as
-  non-causal co-simulation.
+description: "Oncology Tumor Growth (COMBO_0075) assembles celiku_friedenbe_1, chakrabarty2010__2, chance1960_glyco_3 as a comparative composed simulation to examine how tumor growth mechanisms compare across these models. When you run it, you can compare synchronized outputs through the declared wiring paths and monitor views."
 models:
 - repo: Biosimulant/models-oncology
   alias: celiku_friedenbe_1

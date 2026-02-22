@@ -1,8 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Mkango2019DynamicsOfBreastCancerUnderDiffeModel1912120005Model'
-description: Dynamics of Breast Cancer under Different Rates of Chemoradiotherapy.Mkango
-  SB1, Shaban N1, Mureithi E1, Ngoma T2.Author information1 Department of Mathematics,
-  University of Dar es Salaam, P.O. Box 3
+description: "Dynamics of Breast Cancer under Different Rates of Chemoradiotherapy.Mkango SB1, Shaban N1, Mureithi E1, Ngoma T2.Author information1 Department of Mathematics, University of Dar es Salaam, P.O. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
 - oncology

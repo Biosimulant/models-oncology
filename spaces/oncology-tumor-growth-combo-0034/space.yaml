@@ -1,7 +1,6 @@
 schema_version: '2.0'
 title: 'Oncology: Tumor Growth (COMBO_0034)'
-description: Oncology tumor growth comparative space with 3 models, configured as
-  non-causal co-simulation.
+description: "Oncology Tumor Growth (COMBO_0034) brings together ontah2019_dynami_1, orton2009_modell_2, palaniappan2021__3 in a comparative space to examine how tumor growth mechanisms compare across these models. When you run it, you can compare participant trajectories through shared runtime settings and routed output streams."
 models:
 - repo: Biosimulant/models-oncology
   alias: ontah2019_dynami_1
