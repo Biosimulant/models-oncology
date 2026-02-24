@@ -17,6 +17,10 @@ if TYPE_CHECKING:  # pragma: no cover - typing only
 import biosim
 from biosim.signals import BioSignal, SignalMetadata
 
+import logging
+
+logger = logging.getLogger(__name__)
+
 class SbmlLi2021Hdac3iFinderAMachineLearningBasedComputational(biosim.BioModule):
     """BioModule wrapper for SBML model: Li2021 - HDAC3i-Finder: A Machine Learning-based Computational Tool to Screen for HDAC3 Inhibitors."""
 
@@ -60,7 +64,8 @@ class SbmlLi2021Hdac3iFinderAMachineLearningBasedComputational(biosim.BioModule)
         for sid in self._species_ids:
             try:
                 concentrations[sid] = float(self._rr[sid])
-            except Exception:
+            except (KeyError, ValueError, TypeError):  # narrowed from bare Exception
+                logger.warning("Failed to read species %s, defaulting to 0.0", sid)
                 concentrations[sid] = 0.0
         self._outputs = {
             "state": BioSignal(

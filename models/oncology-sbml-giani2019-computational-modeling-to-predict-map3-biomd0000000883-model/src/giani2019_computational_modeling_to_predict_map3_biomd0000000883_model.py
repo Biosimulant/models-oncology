@@ -17,6 +17,10 @@ if TYPE_CHECKING:  # pragma: no cover - typing only
 import biosim
 from biosim.signals import BioSignal, SignalMetadata
 
+import logging
+
+logger = logging.getLogger(__name__)
+
 class SbmlGiani2019ComputationalModelingToPredictMap3k8Effects(biosim.BioModule):
     """BioModule wrapper for SBML model: Giani2019 - Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells."""
 
@@ -60,7 +64,8 @@ class SbmlGiani2019ComputationalModelingToPredictMap3k8Effects(biosim.BioModule)
         for sid in self._species_ids:
             try:
                 concentrations[sid] = float(self._rr[sid])
-            except Exception:
+            except (KeyError, ValueError, TypeError):  # narrowed from bare Exception
+                logger.warning("Failed to read species %s, defaulting to 0.0", sid)
                 concentrations[sid] = 0.0
         self._outputs = {
             "state": BioSignal(
@@ -93,7 +98,7 @@ class SbmlGiani2019ComputationalModelingToPredictMap3k8Effects(biosim.BioModule)
                     "name": species_id,
                     "points": [[self._t, value]]
                 })
-            except Exception:
+            except (KeyError, ValueError, TypeError):  # narrowed from bare Exception
                 continue
 
         if not series:
