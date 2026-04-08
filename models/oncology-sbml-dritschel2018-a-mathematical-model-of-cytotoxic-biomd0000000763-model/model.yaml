@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Dritschel2018AMathematicalModelOfCytotoxicBiomd0000000763Model'
+title: "Dritschel2018 - A mathematical model of cytotoxic and helper T cell interactions in a tumour microenvironment"
 description: "This model examines the role of helper and cytotoxic T cells in an anti-tumour response, with implicit inclusions of immunosuppressive effects. The model demonstrates the dependence of immunoediting o."
 standard: other
 tags:

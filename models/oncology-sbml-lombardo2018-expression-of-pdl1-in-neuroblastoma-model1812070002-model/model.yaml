@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Lombardo2018ExpressionOfPdl1InNeuroblastomaModel1812070002Model'
+title: "Lombardo2018 - Expression of PDL1 in Neuroblastoma Cancer Cell"
 description: "The model reproduces the time profiles of PDL1 in a Neuroblastoma Cancer Cell, considering the activating mutation of ALK: ALKF1174L. We simulate the impact of two different therapy: Crizotinib and Ge."
 standard: other
 tags:

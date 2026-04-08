@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Malinzi2018EnhancementOfChemotherapyUsingOnModel2003050002Model'
+title: "Malinzi2018 - Enhancement of chemotherapy using oncolytic virotherapy"
 description: "IA spatio-temporal mathematical model, in the form of a moving boundary problem, to explain cancer dormancy is developed. Analysis of the model is carried out for both temporal and spatio-temporal cas."
 standard: other
 tags:

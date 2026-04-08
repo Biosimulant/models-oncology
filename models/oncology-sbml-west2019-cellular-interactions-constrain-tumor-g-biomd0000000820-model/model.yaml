@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: West2019CellularInteractionsConstrainTumorGBiomd0000000820Model'
+title: "West2019 - Cellular interactions constrain tumor growth"
 description: "These selections of models are described in the paper:Cellular interactions constrain tumor growthby Jeffrey West and Paul K. NewtonSignificance:A mathematical model relating tumor heterogeneity at th."
 standard: other
 tags:

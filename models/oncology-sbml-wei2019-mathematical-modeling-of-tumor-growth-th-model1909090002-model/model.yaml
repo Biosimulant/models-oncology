@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Wei2019MathematicalModelingOfTumorGrowthThModel1909090002Model'
+title: "Wei2019 - Mathematical modeling of tumor growth The MCF-7 breast cancer cell line"
 description: "This is a mathematical model describing MCF-7 cancer cell growth with interaction between tumor cells, estradiol (hormone-dependent tumor growth), natural killer cells, cytotoxic T lymphocytes and whi. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:

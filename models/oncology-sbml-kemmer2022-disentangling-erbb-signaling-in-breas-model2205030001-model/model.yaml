@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Kemmer2022DisentanglingErbbSignalingInBreasModel2205030001Model'
+title: "Kemmer2022 - Disentangling ERBB Signaling in Breast Cancer Subtypes – a Model-Based Analysis"
 description: "This is a dynamic pathway model capturing ERBB receptor signaling as well as downstream MAPK and PI3K signaling pathways. The effect of different growth factors and drugs on the formation of active re."
 standard: other
 tags:

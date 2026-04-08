@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Selvaggio2020MicroenvironmentControlOfHybridModel2004040001Model'
+title: "Selvaggio2020 - Microenvironment control of hybrid Epithelial-Mesenchymal phenotypes"
 description: "Epithelial to Mesenchymal Transition (EMT) has been associated with cancer cell heterogeneity, plasticity and metastasis. It has been the subject of several modeling effort."
 standard: other
 tags:

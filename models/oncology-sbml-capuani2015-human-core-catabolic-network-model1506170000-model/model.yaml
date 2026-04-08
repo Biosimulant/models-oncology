@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Capuani2015HumanCoreCatabolicNetworkModel1506170000Model'
+title: "Capuani2015 - Human Core Catabolic Network"
 description: "Capuani2015 - Human Core CatabolicNetwork This model is described in the article: Quantitative constraint-based computational model of tumor-to-stroma coupling via lactate shuttle Fabrizio Capuani, Da. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:

@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Hesse2021InterplayBetweenCoreClockAndCanceModel2109140001Model'
+title: "Hesse2021 - Interplay between core-clock and cancer drug irinotecan pharmacokinetics and -dynamics"
 description: "Refined quantitative core-clock model based on the model by Rel\u00f3gio et al. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:

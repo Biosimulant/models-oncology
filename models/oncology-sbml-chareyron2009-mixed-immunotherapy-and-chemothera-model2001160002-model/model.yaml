@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Chareyron2009MixedImmunotherapyAndChemotheraModel2001160002Model'
+title: "Chareyron2009 - Mixed immunotherapy and chemotherapy of tumors Feedback design and model updating schemes"
 description: "Mixed immunotherapy and chemotherapy of tumors: feedback design and model updating schemes.Chareyron S1, Alamir M.Author informationAbstractIn this paper, a recently developed model governing the canc. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:

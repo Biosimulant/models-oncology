@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Hu2019PancreaticCancerDynamicsBiomd0000000744Model'
+title: "Hu2019 - Pancreatic cancer dynamics"
 description: "The paper describes a model on the size of pancreatic tumour. Created by COPASI 4.25 (Build 207) This model is described in the article: Modeling Pancreatic Cancer Dynamics with Immunotherapy Xiaochua."
 standard: other
 tags:

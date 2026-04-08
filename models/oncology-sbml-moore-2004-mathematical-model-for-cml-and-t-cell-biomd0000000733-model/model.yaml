@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Moore2004MathematicalModelForCmlAndTCellBiomd0000000733Model'
+title: "Moore_2004_Mathematical model for CML and T cell interaction"
 description: "Its a mathematical model depicting CML (chronic myelogenous leukemia) interaction with T cells and impact of T cell activations on CML progression over time. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:

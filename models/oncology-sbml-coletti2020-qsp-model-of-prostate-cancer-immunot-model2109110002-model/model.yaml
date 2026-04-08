@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Coletti2020QspModelOfProstateCancerImmunotModel2109110002Model'
+title: "Coletti2020 - QSP model of prostate cancer immunotherapy"
 description: "This model is based on the publication:Coletti R, Leonardelli L, Parolo S, Marchetti L. A QSP model of prostate cancer immunotherapy to identify effective combination therapies."
 standard: other
 tags:

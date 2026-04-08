@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Jenner2018TreatmentOfOncolyticVirusBiomd0000000789Model'
+title: "Jenner2018 - treatment of oncolytic virus"
 description: "The paper describes a model of oncolytic virotherapy. Created by COPASI 4.26 (Build 213) This model is described in the article: Mathematical Modelling of the Interaction Between Cancer Cells and an O."
 standard: other
 tags:

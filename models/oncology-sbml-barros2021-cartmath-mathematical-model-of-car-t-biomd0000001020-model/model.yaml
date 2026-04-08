@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Barros2021CartmathMathematicalModelOfCarTBiomd0000001020Model'
+title: "Barros2021 - CARTmath, Mathematical Model of CAR-T Immunotherapy in Raji Cell Line"
 description: "A mathematical model (CART-math) studying the impact of CAR-T cells therapy on haematological cancer cell lines which in this case is RAJI. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:

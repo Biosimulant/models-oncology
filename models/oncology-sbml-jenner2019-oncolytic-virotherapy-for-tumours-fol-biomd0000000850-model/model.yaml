@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Jenner2019OncolyticVirotherapyForTumoursFolBiomd0000000850Model'
+title: "Jenner2019 - Oncolytic virotherapy for tumours following a Gompertz growth law"
 description: "This is a mathematical model using a Gompertz growth law to describe the in vivo dynamics of a cancer under treatment with an oncolytic virus. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:

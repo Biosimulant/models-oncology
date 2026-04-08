@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Tang2019PharmacologyModellingOfAurkbAndZakBiomd0000000940Model'
+title: "Tang2019 - Pharmacology modelling of AURKB and ZAK interaction in TNBC"
 description: "Aurora Kinase B and ZAK interaction model Equivalent of the stochastic model used in 'Network pharmacology model predicts combined Aurora B and ZAK inhibition in MDA-MB-231 breast cancer cells' by Tan. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:

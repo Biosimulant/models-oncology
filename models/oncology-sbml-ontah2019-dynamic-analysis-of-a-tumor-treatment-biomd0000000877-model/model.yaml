@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Ontah2019DynamicAnalysisOfATumorTreatmentBiomd0000000877Model'
+title: "Ontah2019 - Dynamic analysis of a tumor treatment model using oncolytic virus and chemotherapy with saturated infection rate"
 description: "This is a mathematical model describing the treatment of tumors using oncolytic virus and chemotherapy. The model is comprised of nonlinear ordinary differential equations describing the interactions."
 standard: other
 tags:

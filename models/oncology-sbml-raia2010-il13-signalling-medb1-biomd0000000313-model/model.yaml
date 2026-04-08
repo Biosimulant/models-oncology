@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Raia2010Il13SignallingMedb1Biomd0000000313Model'
+title: "Raia2010 - IL13 Signalling MedB1"
 description: "This is the model of IL13 induced signalling in MedB-1 cell described in the article: Dynamic Mathematical Modeling of IL13-Induced Signaling in Hodgkin and Primary Mediastinal B-Cell Lymphoma Allows. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:

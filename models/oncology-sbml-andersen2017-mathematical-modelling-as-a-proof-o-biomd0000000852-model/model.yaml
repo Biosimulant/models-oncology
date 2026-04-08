@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Andersen2017MathematicalModellingAsAProofOBiomd0000000852Model'
+title: "Andersen2017 - Mathematical modelling as a proof of concept for MPNs as a human inflammation model for cancer development"
 description: "This is a mathematical model investigating the role of chronic inflammation in the development and progression of myeloproliferative neoplasms (MPNs). The model describes the proliferation from stem c."
 standard: other
 tags:

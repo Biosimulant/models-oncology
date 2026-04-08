@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Evans2005CompartmentalModelForAntineoplasticBiomd0000000946Model'
+title: "Evans2005 - Compartmental model for antineoplastic drug topotecan in breast cancer cells"
 description: "Compartment model for the antineoplastic drug topotecan. Modelling drug in its active lactone and inactive hydroxy acid forms in the medium, extracellular, cytoplasm and nucleus."
 standard: other
 tags:

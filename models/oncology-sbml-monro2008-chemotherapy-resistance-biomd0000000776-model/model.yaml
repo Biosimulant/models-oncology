@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Monro2008ChemotherapyResistanceBiomd0000000776Model'
+title: "Monro2008 - chemotherapy resistance"
 description: "The paper describes a model of resistance of cancer to chemotherapy. Created by COPASI 4.25 (Build 207) This model is described in the article: Modelling chemotherapy resistance in palliation and fail."
 standard: other
 tags:

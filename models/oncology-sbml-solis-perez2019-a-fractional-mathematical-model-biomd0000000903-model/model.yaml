@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: SolisPerez2019AFractionalMathematicalModelBiomd0000000903Model'
+title: "Solis-perez2019 - A fractional mathematical model of breast cancer competition model"
 description: "A fractional mathematical model of breast cancer competition modelAuthor links open overlay panelJ.E.Sol\u00eds-P\u00e9rezaJ.F.G\u00f3mez-AguilarbA.Atanganaca Tecnol\u00f3gico Nacional de M\u00e9xico/CENIDET. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:

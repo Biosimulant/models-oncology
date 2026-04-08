@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Shin2018EgfrPyk2CMetInteractionNetworkMoBiomd0000000826Model'
+title: "Shin_2018_EGFR-PYK2-c-Met interaction network_model"
 description: "Systems modelling of the EGFR-PYK2-c-Met interaction network predicted and prioritized synergistic drug combinations for Triple-negative breast cancer. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:

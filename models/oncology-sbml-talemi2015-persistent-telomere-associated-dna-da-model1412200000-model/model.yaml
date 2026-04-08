@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Talemi2015PersistentTelomereAssociatedDnaDaModel1412200000Model'
+title: "Talemi2015 - Persistent telomere-associated DNA damage foci (TAF), a measure to predict cancer risks"
 description: "A Robust Model of DNA Damage Dynamics.Rasgou Talemi and Schaber, 12.20.2014. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:

@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Lolas2016TumourInducedNeoneurogenesisAndPerBiomd0000000750Model'
+title: "Lolas2016 - tumour-induced neoneurogenesis and perineural tumour growth"
 description: "The paper describes a model of tumour-induced neoneurogenesis and perineural tumour growth. Created by COPASI 4.25 (Build 207) This model is described in the article: Tumour-induced neoneurogenesis an."
 standard: other
 tags:

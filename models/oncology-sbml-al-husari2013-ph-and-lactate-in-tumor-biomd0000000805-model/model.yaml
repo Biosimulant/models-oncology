@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: AlHusari2013PhAndLactateInTumorBiomd0000000805Model'
+title: "Al-Husari2013 - pH and lactate in tumor"
 description: "The paper describes a model of pH control in tumor. Created by COPASI 4.26 (Build 213) This model is described in the article: Regulation of tumour intracellular pH: A mathematical model examining the."
 standard: other
 tags:

@@ -1,5 +1,5 @@
 schema_version: '2.0'
-title: 'Oncology: Chance1960GlycolysisRespirationBiomd0000000281Model'
+title: "Chance1960_Glycolysis_Respiration"
 description: "This model is described inthe article: Metabolic control mechanisms. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
 standard: other
 tags:
