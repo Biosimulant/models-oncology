@@ -11,14 +11,13 @@ Orton2009 - Modelling cancerous mutations inthe EGFR/ERK pathway - EGF Model Thi
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-orton2009-modelling-cancerous-mutations-in-the-e-biomd0000000623-model
     alias: model
-    manifest_path: models/oncology-sbml-orton2009-modelling-cancerous-mutations-in-the-e-biomd0000000623-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ immunotherapy offers a better prognosis for pancreatic cancer patients. As a dir
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-li2016-model-for-pancreatic-cancer-patients-rece-biomd0000000929-model
     alias: model
-    manifest_path: models/oncology-sbml-li2016-model-for-pancreatic-cancer-patients-rece-biomd0000000929-model/model.yaml
 ```
 
 ## Tags

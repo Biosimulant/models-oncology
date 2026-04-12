@@ -11,14 +11,13 @@ Systems modelling of the EGFR-PYK2-c-Met interaction network predicted and prior
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-shin-2018-egfr-pyk2-c-met-interaction-network-mo-biomd0000000826-model
     alias: model
-    manifest_path: models/oncology-sbml-shin-2018-egfr-pyk2-c-met-interaction-network-mo-biomd0000000826-model/model.yaml
 ```
 
 ## Tags

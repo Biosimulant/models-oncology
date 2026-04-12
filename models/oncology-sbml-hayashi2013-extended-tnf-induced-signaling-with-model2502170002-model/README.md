@@ -11,14 +11,13 @@ Hayashi2013 - Extended TNF-induced Signaling with Gene Expression Dynamics (Mode
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-hayashi2013-extended-tnf-induced-signaling-with-model2502170002-model
     alias: model
-    manifest_path: models/oncology-sbml-hayashi2013-extended-tnf-induced-signaling-with-model2502170002-model/model.yaml
 ```
 
 ## Tags

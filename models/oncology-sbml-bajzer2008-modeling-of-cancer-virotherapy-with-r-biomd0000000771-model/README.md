@@ -11,14 +11,13 @@ This model describes the interactions between tumor cells and virus particles, w
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-bajzer2008-modeling-of-cancer-virotherapy-with-r-biomd0000000771-model
     alias: model
-    manifest_path: models/oncology-sbml-bajzer2008-modeling-of-cancer-virotherapy-with-r-biomd0000000771-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ Aurora Kinase B and ZAK interaction model Equivalent of the stochastic model use
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-tang2019-pharmacology-modelling-of-aurkb-and-zak-biomd0000000940-model
     alias: model
-    manifest_path: models/oncology-sbml-tang2019-pharmacology-modelling-of-aurkb-and-zak-biomd0000000940-model/model.yaml
 ```
 
 ## Tags

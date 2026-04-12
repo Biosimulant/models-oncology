@@ -11,14 +11,13 @@ Drug resistance (DR) is a phenomenon characterized by the tolerance of a disease
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-bouchnita2019-a-multiscale-model-to-design-thera-model1912170004-model
     alias: model
-    manifest_path: models/oncology-sbml-bouchnita2019-a-multiscale-model-to-design-thera-model1912170004-model/model.yaml
 ```
 
 ## Tags

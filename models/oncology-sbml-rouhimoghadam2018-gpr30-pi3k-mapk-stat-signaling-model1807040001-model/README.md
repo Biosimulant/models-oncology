@@ -11,14 +11,13 @@ In the current study, we aimed to simulate the GPR30/PI3K/MAPK/STAT signaling pa
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-rouhimoghadam2018-gpr30-pi3k-mapk-stat-signaling-model1807040001-model
     alias: model
-    manifest_path: models/oncology-sbml-rouhimoghadam2018-gpr30-pi3k-mapk-stat-signaling-model1807040001-model/model.yaml
 ```
 
 ## Tags

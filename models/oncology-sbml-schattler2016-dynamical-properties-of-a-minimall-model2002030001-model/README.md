@@ -11,14 +11,13 @@ A minimally parameterized mathematical model for low-dose metronomicchemotherapy
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-schattler2016-dynamical-properties-of-a-minimall-model2002030001-model
     alias: model
-    manifest_path: models/oncology-sbml-schattler2016-dynamical-properties-of-a-minimall-model2002030001-model/model.yaml
 ```
 
 ## Tags

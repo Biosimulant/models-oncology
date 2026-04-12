@@ -11,14 +11,13 @@ Refined quantitative core-clock model based on the model by Relógio et al. 2011
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-hesse2021-interplay-between-core-clock-and-cance-model2109140001-model
     alias: model
-    manifest_path: models/oncology-sbml-hesse2021-interplay-between-core-clock-and-cance-model2109140001-model/model.yaml
 ```
 
 ## Tags

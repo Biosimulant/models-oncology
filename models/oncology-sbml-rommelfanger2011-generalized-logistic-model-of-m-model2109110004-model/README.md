@@ -11,14 +11,13 @@ This mathematical model is described by the publication:Rommelfanger DM, Offord 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-rommelfanger2011-generalized-logistic-model-of-m-model2109110004-model
     alias: model
-    manifest_path: models/oncology-sbml-rommelfanger2011-generalized-logistic-model-of-m-model2109110004-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ Interactions between Macrophages and T-lymphocytes: TumorSneaking Through Intrin
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-boer1986-interactions-between-macrophages-and-t-model1912110001-model
     alias: model
-    manifest_path: models/oncology-sbml-boer1986-interactions-between-macrophages-and-t-model1912110001-model/model.yaml
 ```
 
 ## Tags

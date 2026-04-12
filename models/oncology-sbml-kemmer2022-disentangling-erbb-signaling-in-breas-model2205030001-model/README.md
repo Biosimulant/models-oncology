@@ -11,14 +11,13 @@ This is a dynamic pathway model capturing ERBB receptor signaling as well as dow
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-kemmer2022-disentangling-erbb-signaling-in-breas-model2205030001-model
     alias: model
-    manifest_path: models/oncology-sbml-kemmer2022-disentangling-erbb-signaling-in-breas-model2205030001-model/model.yaml
 ```
 
 ## Tags

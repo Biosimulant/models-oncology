@@ -11,14 +11,13 @@ This model is built by COPASI 4.24(Build 197), based on paper:Mathematical Appro
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-greene2019-differentiate-spontaneous-and-induced-biomd0000000825-model
     alias: model
-    manifest_path: models/oncology-sbml-greene2019-differentiate-spontaneous-and-induced-biomd0000000825-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ This mathematical model of T cell-tumour interactions considering the roles of T
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-kimmel2021-t-cell-competition-and-stochastic-ext-biomd0000001041-model
     alias: model
-    manifest_path: models/oncology-sbml-kimmel2021-t-cell-competition-and-stochastic-ext-biomd0000001041-model/model.yaml
 ```
 
 ## Tags

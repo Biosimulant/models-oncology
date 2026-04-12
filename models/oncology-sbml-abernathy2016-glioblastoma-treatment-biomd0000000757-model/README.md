@@ -11,14 +11,13 @@ The paper describes a model of glioblastoma. Created by COPASI 4.25 (Build 207) 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-abernathy2016-glioblastoma-treatment-biomd0000000757-model
     alias: model
-    manifest_path: models/oncology-sbml-abernathy2016-glioblastoma-treatment-biomd0000000757-model/model.yaml
 ```
 
 ## Tags

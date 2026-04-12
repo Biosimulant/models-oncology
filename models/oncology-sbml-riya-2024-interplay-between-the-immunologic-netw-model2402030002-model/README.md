@@ -11,14 +11,13 @@ In later stages of NSCLC, we observed that the overexpression of IL-6 and IL-17 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-riya-2024-interplay-between-the-immunologic-netw-model2402030002-model
     alias: model
-    manifest_path: models/oncology-sbml-riya-2024-interplay-between-the-immunologic-netw-model2402030002-model/model.yaml
 ```
 
 ## Tags

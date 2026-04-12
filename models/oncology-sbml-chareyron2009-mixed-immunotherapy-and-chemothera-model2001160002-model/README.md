@@ -11,14 +11,13 @@ Mixed immunotherapy and chemotherapy of tumors: feedback design and model updati
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-chareyron2009-mixed-immunotherapy-and-chemothera-model2001160002-model
     alias: model
-    manifest_path: models/oncology-sbml-chareyron2009-mixed-immunotherapy-and-chemothera-model2001160002-model/model.yaml
 ```
 
 ## Tags

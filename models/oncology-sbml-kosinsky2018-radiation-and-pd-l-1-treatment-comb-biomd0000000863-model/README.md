@@ -11,14 +11,13 @@ This is a quantitative systems pharmacology (QSP) model that describes key eleme
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-kosinsky2018-radiation-and-pd-l-1-treatment-comb-biomd0000000863-model
     alias: model
-    manifest_path: models/oncology-sbml-kosinsky2018-radiation-and-pd-l-1-treatment-comb-biomd0000000863-model/model.yaml
 ```
 
 ## Tags

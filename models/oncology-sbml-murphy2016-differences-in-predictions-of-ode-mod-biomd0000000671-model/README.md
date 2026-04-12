@@ -11,14 +11,13 @@ Murphy2016 - Differences in predictions ofODE models of tumor growth Comparison 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-murphy2016-differences-in-predictions-of-ode-mod-biomd0000000671-model
     alias: model
-    manifest_path: models/oncology-sbml-murphy2016-differences-in-predictions-of-ode-mod-biomd0000000671-model/model.yaml
 ```
 
 ## Tags

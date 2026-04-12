@@ -11,14 +11,13 @@ Faratian2009 - Role of PTEN in Trastuzumabresistance This model is described in 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-faratian2009-role-of-pten-in-trastuzumab-resista-biomd0000000424-model
     alias: model
-    manifest_path: models/oncology-sbml-faratian2009-role-of-pten-in-trastuzumab-resista-biomd0000000424-model/model.yaml
 ```
 
 ## Tags

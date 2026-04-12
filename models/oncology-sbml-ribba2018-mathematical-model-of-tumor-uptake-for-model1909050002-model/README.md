@@ -11,14 +11,13 @@ This is a model developed to predict concentrations of cergutuzumab amunaleukin 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-ribba2018-mathematical-model-of-tumor-uptake-for-model1909050002-model
     alias: model
-    manifest_path: models/oncology-sbml-ribba2018-mathematical-model-of-tumor-uptake-for-model1909050002-model/model.yaml
 ```
 
 ## Tags

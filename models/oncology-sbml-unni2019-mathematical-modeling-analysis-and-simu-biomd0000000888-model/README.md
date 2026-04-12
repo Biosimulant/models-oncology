@@ -11,14 +11,13 @@ Mathematical Modeling, Analysis, and Simulation of Tumor Dynamics with Drug Inte
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-unni2019-mathematical-modeling-analysis-and-simu-biomd0000000888-model
     alias: model
-    manifest_path: models/oncology-sbml-unni2019-mathematical-modeling-analysis-and-simu-biomd0000000888-model/model.yaml
 ```
 
 ## Tags

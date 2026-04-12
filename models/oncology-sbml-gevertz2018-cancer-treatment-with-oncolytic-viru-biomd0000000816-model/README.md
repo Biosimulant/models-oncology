@@ -11,14 +11,13 @@ The model is based on 'Developing a Minimally Structured Mathematical Model of C
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-gevertz2018-cancer-treatment-with-oncolytic-viru-biomd0000000816-model
     alias: model
-    manifest_path: models/oncology-sbml-gevertz2018-cancer-treatment-with-oncolytic-viru-biomd0000000816-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ The paper describes a model of brain tumor. Created by COPASI 4.25 (Build 207) T
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-iarosz2015-brain-tumor-biomd0000000775-model
     alias: model
-    manifest_path: models/oncology-sbml-iarosz2015-brain-tumor-biomd0000000775-model/model.yaml
 ```
 
 ## Tags

@@ -11,14 +11,13 @@ PURPOSE: This tumor response pharmacodynamic model aims to describe primary lesi
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-tham2008-pdmodel-tumour-shrinkage-by-gemcitabine-biomd0000000234-model
     alias: model
-    manifest_path: models/oncology-sbml-tham2008-pdmodel-tumour-shrinkage-by-gemcitabine-biomd0000000234-model/model.yaml
 ```
 
 ## Tags

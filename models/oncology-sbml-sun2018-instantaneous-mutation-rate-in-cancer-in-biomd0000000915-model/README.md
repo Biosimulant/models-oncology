@@ -11,14 +11,13 @@
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-sun2018-instantaneous-mutation-rate-in-cancer-in-biomd0000000915-model
     alias: model
-    manifest_path: models/oncology-sbml-sun2018-instantaneous-mutation-rate-in-cancer-in-biomd0000000915-model/model.yaml
 ```
 
 ## Tags

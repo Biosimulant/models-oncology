@@ -11,14 +11,13 @@ Claret2009 - Predicting phase III overall survival in colorectal cancer This mod
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-claret2009-predicting-phase-iii-overall-survival-model1708310001-model
     alias: model
-    manifest_path: models/oncology-sbml-claret2009-predicting-phase-iii-overall-survival-model1708310001-model/model.yaml
 ```
 
 ## Tags

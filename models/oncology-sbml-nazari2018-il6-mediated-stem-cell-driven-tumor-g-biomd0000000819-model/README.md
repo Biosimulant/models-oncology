@@ -11,14 +11,13 @@ This a model from the article: A mathematical model for IL-6-mediated, stem cell
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-nazari2018-il6-mediated-stem-cell-driven-tumor-g-biomd0000000819-model
     alias: model
-    manifest_path: models/oncology-sbml-nazari2018-il6-mediated-stem-cell-driven-tumor-g-biomd0000000819-model/model.yaml
 ```
 
 ## Tags

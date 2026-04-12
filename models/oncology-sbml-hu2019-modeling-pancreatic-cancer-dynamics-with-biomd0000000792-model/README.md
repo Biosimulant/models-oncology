@@ -11,14 +11,13 @@ This is a mathematical model of pancreatic cancer that includes descriptions of 
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-hu2019-modeling-pancreatic-cancer-dynamics-with-biomd0000000792-model
     alias: model
-    manifest_path: models/oncology-sbml-hu2019-modeling-pancreatic-cancer-dynamics-with-biomd0000000792-model/model.yaml
 ```
 
 ## Tags

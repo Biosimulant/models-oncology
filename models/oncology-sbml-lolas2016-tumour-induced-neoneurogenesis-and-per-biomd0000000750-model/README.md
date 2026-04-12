@@ -11,14 +11,13 @@ The paper describes a model of tumour-induced neoneurogenesis and perineural tum
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-lolas2016-tumour-induced-neoneurogenesis-and-per-biomd0000000750-model
     alias: model
-    manifest_path: models/oncology-sbml-lolas2016-tumour-induced-neoneurogenesis-and-per-biomd0000000750-model/model.yaml
 ```
 
 ## Tags

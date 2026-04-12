@@ -11,14 +11,13 @@ This is a mathematical model describing the hematopoietic lineages with leukemia
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-jiao2018-feedback-regulation-in-a-stem-cell-mode-biomd0000000898-model
     alias: model
-    manifest_path: models/oncology-sbml-jiao2018-feedback-regulation-in-a-stem-cell-mode-biomd0000000898-model/model.yaml
 ```
 
 ## Tags

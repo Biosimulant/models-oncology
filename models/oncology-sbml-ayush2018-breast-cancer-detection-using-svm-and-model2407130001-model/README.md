@@ -11,14 +11,13 @@ In this study, authors had briefly talked about the comparison of Support Vector
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-ayush2018-breast-cancer-detection-using-svm-and-model2407130001-model
     alias: model
-    manifest_path: models/oncology-sbml-ayush2018-breast-cancer-detection-using-svm-and-model2407130001-model/model.yaml
 ```
 
 ## Tags

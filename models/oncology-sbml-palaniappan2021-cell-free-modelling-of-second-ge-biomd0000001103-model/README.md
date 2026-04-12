@@ -11,14 +11,13 @@ Cervical cancer is a global public health subject as it affects women in the rep
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-palaniappan2021-cell-free-modelling-of-second-ge-biomd0000001103-model
     alias: model
-    manifest_path: models/oncology-sbml-palaniappan2021-cell-free-modelling-of-second-ge-biomd0000001103-model/model.yaml
 ```
 
 ## Tags

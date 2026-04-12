@@ -11,14 +11,13 @@ A Robust Model of DNA Damage Dynamics.Rasgou Talemi and Schaber, 12.20.2014.
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-talemi2015-persistent-telomere-associated-dna-da-model1412200000-model
     alias: model
-    manifest_path: models/oncology-sbml-talemi2015-persistent-telomere-associated-dna-da-model1412200000-model/model.yaml
 ```
 
 ## Tags

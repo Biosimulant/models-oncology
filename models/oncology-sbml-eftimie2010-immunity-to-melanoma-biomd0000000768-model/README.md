@@ -11,14 +11,13 @@ The paper describes a model of immunity to melanoma. Created by COPASI 4.25 (Bui
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-eftimie2010-immunity-to-melanoma-biomd0000000768-model
     alias: model
-    manifest_path: models/oncology-sbml-eftimie2010-immunity-to-melanoma-biomd0000000768-model/model.yaml
 ```
 
 ## Tags

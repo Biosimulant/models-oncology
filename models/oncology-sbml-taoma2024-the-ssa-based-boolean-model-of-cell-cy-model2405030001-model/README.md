@@ -11,14 +11,13 @@ Our model is considered as a Continuous-Time Stochastic Boolean Model. It is ext
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-taoma2024-the-ssa-based-boolean-model-of-cell-cy-model2405030001-model
     alias: model
-    manifest_path: models/oncology-sbml-taoma2024-the-ssa-based-boolean-model-of-cell-cy-model2405030001-model/model.yaml
 ```
 
 ## Tags

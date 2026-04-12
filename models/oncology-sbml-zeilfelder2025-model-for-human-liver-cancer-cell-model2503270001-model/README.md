@@ -11,14 +11,13 @@ Mathematical multi-compartment model described by sets of coupledordinary differ
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-zeilfelder2025-model-for-human-liver-cancer-cell-model2503270001-model
     alias: model
-    manifest_path: models/oncology-sbml-zeilfelder2025-model-for-human-liver-cancer-cell-model2503270001-model/model.yaml
 ```
 
 ## Tags

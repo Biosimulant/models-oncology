@@ -11,14 +11,13 @@ Capuani2015 - Human Core CatabolicNetwork This model is described in the article
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-capuani2015-human-core-catabolic-network-model1506170000-model
     alias: model
-    manifest_path: models/oncology-sbml-capuani2015-human-core-catabolic-network-model1506170000-model/model.yaml
 ```
 
 ## Tags

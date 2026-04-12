@@ -11,14 +11,13 @@ This is a mathematical model investigating the role of chronic inflammation in t
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-andersen2017-mathematical-modelling-as-a-proof-o-biomd0000000852-model
     alias: model
-    manifest_path: models/oncology-sbml-andersen2017-mathematical-modelling-as-a-proof-o-biomd0000000852-model/model.yaml
 ```
 
 ## Tags

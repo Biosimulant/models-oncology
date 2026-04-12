@@ -11,14 +11,13 @@ This is a mathematical model that describes the interactions between cytotoxic T
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-galante2012-b7-h1-and-a-mathematical-model-for-c-biomd0000000812-model
     alias: model
-    manifest_path: models/oncology-sbml-galante2012-b7-h1-and-a-mathematical-model-for-c-biomd0000000812-model/model.yaml
 ```
 
 ## Tags

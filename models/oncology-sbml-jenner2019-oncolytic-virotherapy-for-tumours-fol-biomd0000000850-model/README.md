@@ -11,14 +11,13 @@ This is a mathematical model using a Gompertz growth law to describe the in vivo
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-jenner2019-oncolytic-virotherapy-for-tumours-fol-biomd0000000850-model
     alias: model
-    manifest_path: models/oncology-sbml-jenner2019-oncolytic-virotherapy-for-tumours-fol-biomd0000000850-model/model.yaml
 ```
 
 ## Tags

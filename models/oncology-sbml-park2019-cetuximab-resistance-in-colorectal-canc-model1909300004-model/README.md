@@ -11,14 +11,13 @@ It's an experimental + mathematical paper explaining probable targets for Cetixu
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-park2019-cetuximab-resistance-in-colorectal-canc-model1909300004-model
     alias: model
-    manifest_path: models/oncology-sbml-park2019-cetuximab-resistance-in-colorectal-canc-model1909300004-model/model.yaml
 ```
 
 ## Tags

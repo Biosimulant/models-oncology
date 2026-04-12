@@ -11,14 +11,13 @@ This model is based on paper:Combination of singularly perturbed vector field me
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-nave2018-prostate-cancer-model-model1910030001-model
     alias: model
-    manifest_path: models/oncology-sbml-nave2018-prostate-cancer-model-model1910030001-model/model.yaml
 ```
 
 ## Tags

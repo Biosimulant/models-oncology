@@ -11,14 +11,13 @@ THis is a simple ordinary differential equation model describing chemoimmunother
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-rodrigues2019-a-mathematical-model-for-chemoimmu-biomd0000000879-model
     alias: model
-    manifest_path: models/oncology-sbml-rodrigues2019-a-mathematical-model-for-chemoimmu-biomd0000000879-model/model.yaml
 ```
 
 ## Tags

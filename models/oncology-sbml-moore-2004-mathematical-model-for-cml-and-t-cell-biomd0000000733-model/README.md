@@ -11,14 +11,13 @@ Its a mathematical model depicting CML (chronic myelogenous leukemia) interactio
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-moore-2004-mathematical-model-for-cml-and-t-cell-biomd0000000733-model
     alias: model
-    manifest_path: models/oncology-sbml-moore-2004-mathematical-model-for-cml-and-t-cell-biomd0000000733-model/model.yaml
 ```
 
 ## Tags

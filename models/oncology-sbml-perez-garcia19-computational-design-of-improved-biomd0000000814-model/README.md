@@ -11,14 +11,13 @@ This is a model built by COPASI4.24(Build 197)This a model from the article: Com
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-perez-garcia19-computational-design-of-improved-biomd0000000814-model
     alias: model
-    manifest_path: models/oncology-sbml-perez-garcia19-computational-design-of-improved-biomd0000000814-model/model.yaml
 ```
 
 ## Tags

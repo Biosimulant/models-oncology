@@ -11,14 +11,13 @@ This model is based on the publication:Coletti R, Leonardelli L, Parolo S, March
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-coletti2020-qsp-model-of-prostate-cancer-immunot-model2109110002-model
     alias: model
-    manifest_path: models/oncology-sbml-coletti2020-qsp-model-of-prostate-cancer-immunot-model2109110002-model/model.yaml
 ```
 
 ## Tags

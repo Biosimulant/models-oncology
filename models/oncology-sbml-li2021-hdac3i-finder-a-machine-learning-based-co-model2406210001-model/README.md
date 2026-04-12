@@ -11,14 +11,13 @@ The model predicts the inhibitory potential of small molecules against Histone d
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-li2021-hdac3i-finder-a-machine-learning-based-co-model2406210001-model
     alias: model
-    manifest_path: models/oncology-sbml-li2021-hdac3i-finder-a-machine-learning-based-co-model2406210001-model/model.yaml
 ```
 
 ## Tags

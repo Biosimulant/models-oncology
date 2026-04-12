@@ -11,14 +11,13 @@ The paper describes a model of oncolytic virotherapy. Created by COPASI 4.26 (Bu
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-jenner2018-treatment-of-oncolytic-virus-biomd0000000789-model
     alias: model
-    manifest_path: models/oncology-sbml-jenner2018-treatment-of-oncolytic-virus-biomd0000000789-model/model.yaml
 ```
 
 ## Tags

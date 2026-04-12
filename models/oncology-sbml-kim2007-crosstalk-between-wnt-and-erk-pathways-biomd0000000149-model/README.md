@@ -11,14 +11,13 @@ Kim2007 - Crosstalk between Wnt and ERK pathways Experimental studies have shown
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-kim2007-crosstalk-between-wnt-and-erk-pathways-biomd0000000149-model
     alias: model
-    manifest_path: models/oncology-sbml-kim2007-crosstalk-between-wnt-and-erk-pathways-biomd0000000149-model/model.yaml
 ```
 
 ## Tags

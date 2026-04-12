@@ -11,14 +11,13 @@ Mathematical description of the interactions of CycE/Cdk2, Cdc25A, and P27Kip1 i
 
 ## Usage
 
-This model was auto-generated from the biomodels_ebi repository.
+This model was auto-generated from the BioModels EBI catalog.
 
 ```yaml
 # In a space.yaml wiring file:
 models:
-  - repo: Biosimulant/models
+  - path: ../../models/oncology-sbml-bayleyegn2016-interactions-of-cyce-cdk2-cdc25a-a-model2003180002-model
     alias: model
-    manifest_path: models/oncology-sbml-bayleyegn2016-interactions-of-cyce-cdk2-cdc25a-a-model2003180002-model/model.yaml
 ```
 
 ## Tags
