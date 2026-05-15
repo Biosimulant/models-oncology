@@ -1,0 +1,91 @@
+schema_version: '2.0'
+title: Perez-Garcia19 - Computational design of improved standardized chemotherapy protocols for grade 2 oligodendrogliomas Lab
+description: "This is a model built by COPASI4.24(Build 197)This a model from the article: Computational design of improved standardized chemotherapy protocols for grade II oligodendrogliomasV\xEDctor M. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
+tags:
+- biomodels_ebi
+- chemotherapy
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: dose_5
+    maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.dose_5
+    label: Dose 5 source parameter
+    default: 0.0
+    units: native SBML value
+    description: Dose 5 source parameter. Maps to bundled SBML parameter `dose_5`.
+  - name: dose_4
+    maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.dose_4
+    label: Dose 4 source parameter
+    default: 0.0
+    units: native SBML value
+    description: Dose 4 source parameter. Maps to bundled SBML parameter `dose_4`.
+  - name: dose3
+    maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.dose3
+    label: Dose3 source parameter
+    default: 0.0
+    units: native SBML value
+    description: Dose3 source parameter. Maps to bundled SBML parameter `dose3`.
+  - name: dose2
+    maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.dose2
+    label: Dose2 source parameter
+    default: 0.0
+    units: native SBML value
+    description: Dose2 source parameter. Maps to bundled SBML parameter `dose2`.
+  - name: initial_damaged_tumor_cells_d
+    maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.initial_damaged_tumor_cells_d
+    label: Damaged Tumor Cells D
+    default: 0.0
+    units: native SBML value
+    description: Initial Damaged Tumor Cells D. Sets the initial value of bundled SBML symbol `Damaged_Tumor_Cells_D`.
+  - name: initial_tumor_cell_population_p
+    maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.initial_tumor_cell_population_p
+    label: Tumor Cell Population P
+    default: 144.952075141053
+    units: native SBML value
+    description: Initial Tumor Cell Population P. Sets the initial value of bundled SBML symbol `Tumor_Cell_Population_P`.
+  outputs:
+  - name: damaged_tumor_cells_d
+    maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.damaged_tumor_cells_d
+    description: Damaged Tumor Cells D observable. Maps to SBML symbol `Damaged_Tumor_Cells_D`.
+  - name: tumor_cell_population_p
+    maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.tumor_cell_population_p
+    description: Tumor Cell Population P observable. Maps to SBML symbol `Tumor_Cell_Population_P`.
+  - name: drug_concentration_c
+    maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.drug_concentration_c
+    description: Drug Concentration C observable. Maps to SBML symbol `Drug_Concentration_C`.
+  - name: state
+    maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.state
+  to:
+  - visualisation.oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model_state
+- from: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.summary
+  to:
+  - visualisation.oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model_summary
+- from: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.species_labels
+  to:
+  - visualisation.oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

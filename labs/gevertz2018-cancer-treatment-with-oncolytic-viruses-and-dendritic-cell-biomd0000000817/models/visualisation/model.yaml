@@ -1,0 +1,99 @@
+schema_version: '2.0'
+title: Gevertz2018 - cancer treatment with oncolytic viruses and dendritic cell injections minimal model Visualisation
+description: Oncology visualisation for Gevertz2018 - cancer treatment with oncolytic viruses and dendritic cell injections minimal model.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunotherapy
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- virotherapy
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Gevertz2018 - cancer treatment with oncolytic viruses and dendritic cell injections minimal model
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model
+      title: Gevertz2018 - cancer treatment with oncolytic viruses and dendritic cell injections minimal model
+      state_observables:
+      - Uninfected_Tumor_Cell_U
+      - Infected_Cancer_Cell_I
+      - Oncolytic_Adenovirus_V
+      - Tumor_targeting_T_cells_T
+      - Naive_T_cells_A
+      - Dendritic_Cells_D
+      observables:
+      - id: Uninfected_Tumor_Cell_U
+        port: uninfected_tumor_cell_u
+        label: Uninfected Tumor Cell U
+        group: drug_response
+      - id: Tumor_targeting_T_cells_T
+        port: tumor_targeting_t_cells_t
+        label: Tumor targeting T cells T
+        group: drug_response
+      - id: Infected_Cancer_Cell_I
+        port: infected_cancer_cell_i
+        label: Infected Cancer Cell I
+        group: drug_response
+      - id: Naive_T_cells_A
+        port: naive_t_cells_a
+        label: Naive T cells A
+        group: drug_response
+      - id: Dendritic_Cells_D
+        port: dendritic_cells_d
+        label: Dendritic Cells D
+        group: drug_response
+      - id: Oncolytic_Adenovirus_V
+        port: oncolytic_adenovirus_v
+        label: Oncolytic Adenovirus V
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model_state
+    schema:
+      Uninfected_Tumor_Cell_U: float
+      Infected_Cancer_Cell_I: float
+      Oncolytic_Adenovirus_V: float
+      Tumor_targeting_T_cells_T: float
+      Naive_T_cells_A: float
+      Dendritic_Cells_D: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model_species_labels
+    schema:
+      Uninfected_Tumor_Cell_U: str
+      Tumor_targeting_T_cells_T: str
+      Infected_Cancer_Cell_I: str
+      Naive_T_cells_A: str
+      Dendritic_Cells_D: str
+      Oncolytic_Adenovirus_V: str
+    description: Display labels for selected source states.
+  outputs: []

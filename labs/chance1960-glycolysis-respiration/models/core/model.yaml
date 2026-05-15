@@ -1,0 +1,121 @@
+schema_version: '2.0'
+title: Chance1960_Glycolysis_Respiration
+description: 'This model is described inthe article: Metabolic control mechanisms. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- metabolism
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- B CHANCE
+- D GARFINKEL
+- J HIGGINS
+- B HESS
+upstream:
+  id: biomodels_ebi:BIOMD0000000281
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000281
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000281
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000281?filename=BIOMD0000000281_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.chance1960_glycolysis_respiration_biomd0000000281_model:Chance1960GlycolysisRespirationBiomd0000000281Model
+  init_kwargs:
+    model_path: data/BIOMD0000000281.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000281.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_lac_lactate
+    maps_to: LAC
+    label: (LAC) lactate
+    default: 0.001
+    units: native SBML value
+    description: Initial (LAC) lactate. Sets the initial value of bundled SBML symbol `LAC`.
+  - name: initial_pue_enzyme_concerned_in_atp_utilization
+    maps_to: PUE
+    label: (PUE) enzyme concerned in ATP utilization
+    default: 2.0e-06
+    units: native SBML value
+    description: Initial (PUE) enzyme concerned in ATP utilization. Sets the initial value of bundled SBML symbol `PUE`.
+  - name: initial_ppp_enzyme_intermediate_concerned_in_atp_utilization
+    maps_to: PPP
+    label: (PPP) enzyme intermediate concerned in ATP utilization
+    default: 1.0e-06
+    units: native SBML value
+    description: Initial (PPP) enzyme intermediate concerned in ATP utilization. Sets the initial value of bundled SBML symbol `PPP`.
+  - name: initial_glu_glucose
+    maps_to: GLU
+    label: (GLU) glucose
+    default: 0.0
+    units: native SBML value
+    description: Initial (GLU) glucose. Sets the initial value of bundled SBML symbol `GLU`.
+  - name: initial_eng_hexokinase_glucose_intermediate
+    maps_to: ENG
+    label: (ENG) hexokinase glucose intermediate
+    default: 0.0
+    units: native SBML value
+    description: Initial (ENG) hexokinase glucose intermediate. Sets the initial value of bundled SBML symbol `ENG`.
+  - name: initial_glp_glucose_6_phosphate
+    maps_to: GLP
+    label: (GLP) glucose 6 phosphate
+    default: 0.0
+    units: native SBML value
+    description: Initial (GLP) glucose 6 phosphate. Sets the initial value of bundled SBML symbol `GLP`.
+  outputs:
+  - name: lac_lactate
+    maps_to: LAC
+    label: (LAC) lactate
+    description: (LAC) lactate observable. Maps to SBML symbol `LAC`.
+  - name: pue_enzyme_concerned_in_atp_utilization
+    maps_to: PUE
+    label: (PUE) enzyme concerned in ATP utilization
+    description: (PUE) enzyme concerned in ATP utilization observable. Maps to SBML symbol `PUE`.
+  - name: ppp_enzyme_intermediate_concerned_in_atp_utilization
+    maps_to: PPP
+    label: (PPP) enzyme intermediate concerned in ATP utilization
+    description: (PPP) enzyme intermediate concerned in ATP utilization observable. Maps to SBML symbol `PPP`.
+  - name: glu_glucose
+    maps_to: GLU
+    label: (GLU) glucose
+    description: (GLU) glucose observable. Maps to SBML symbol `GLU`.
+  - name: eng_hexokinase_glucose_intermediate
+    maps_to: ENG
+    label: (ENG) hexokinase glucose intermediate
+    description: (ENG) hexokinase glucose intermediate observable. Maps to SBML symbol `ENG`.
+  - name: glp_glucose_6_phosphate
+    maps_to: GLP
+    label: (GLP) glucose 6 phosphate
+    description: (GLP) glucose 6 phosphate observable. Maps to SBML symbol `GLP`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

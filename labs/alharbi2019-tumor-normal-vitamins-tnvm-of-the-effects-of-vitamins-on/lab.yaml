@@ -1,0 +1,72 @@
+schema_version: '2.0'
+title: Alharbi2019 - Tumor-normal-vitamins model (TNVM) of the effects of vitamins on delaying the growth of tumor cells Lab
+description: This ordinary differential equation model of the interactions between tumor and normal cells, in the presence of a regular rate of vitamins, is based on the publication:S. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: initial_tumor_cells
+    maps_to: oncology_sbml_alharbi2019_tumor_normal_vitamins_model_tnvm_of_biomd0000001038_model.initial_tumor_cells
+    label: Tumor cells
+    default: 1.0
+    units: native SBML value
+    description: Initial Tumor cells. Sets the initial value of bundled SBML symbol `Tumor_cells`.
+  - name: initial_normal_cells
+    maps_to: oncology_sbml_alharbi2019_tumor_normal_vitamins_model_tnvm_of_biomd0000001038_model.initial_normal_cells
+    label: Normal cells
+    default: 1.0
+    units: native SBML value
+    description: Initial Normal cells. Sets the initial value of bundled SBML symbol `Normal_cells`.
+  - name: initial_vitamins
+    maps_to: oncology_sbml_alharbi2019_tumor_normal_vitamins_model_tnvm_of_biomd0000001038_model.initial_vitamins
+    label: Vitamins
+    default: 5.0
+    units: native SBML value
+    description: Initial Vitamins. Sets the initial value of bundled SBML symbol `Vitamins`.
+  outputs:
+  - name: tumor_cells
+    maps_to: oncology_sbml_alharbi2019_tumor_normal_vitamins_model_tnvm_of_biomd0000001038_model.tumor_cells
+    description: Tumor cells observable. Maps to SBML symbol `Tumor_cells`.
+  - name: normal_cells
+    maps_to: oncology_sbml_alharbi2019_tumor_normal_vitamins_model_tnvm_of_biomd0000001038_model.normal_cells
+    description: Normal cells observable. Maps to SBML symbol `Normal_cells`.
+  - name: vitamins
+    maps_to: oncology_sbml_alharbi2019_tumor_normal_vitamins_model_tnvm_of_biomd0000001038_model.vitamins
+    description: Vitamins observable. Maps to SBML symbol `Vitamins`.
+  - name: state
+    maps_to: oncology_sbml_alharbi2019_tumor_normal_vitamins_model_tnvm_of_biomd0000001038_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_alharbi2019_tumor_normal_vitamins_model_tnvm_of_biomd0000001038_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_alharbi2019_tumor_normal_vitamins_model_tnvm_of_biomd0000001038_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_alharbi2019_tumor_normal_vitamins_model_tnvm_of_biomd0000001038_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_alharbi2019_tumor_normal_vitamins_model_tnvm_of_biomd0000001038_model.state
+  to:
+  - visualisation.oncology_sbml_alharbi2019_tumor_normal_vitamins_model_tnvm_of_biomd0000001038_model_state
+- from: oncology_sbml_alharbi2019_tumor_normal_vitamins_model_tnvm_of_biomd0000001038_model.summary
+  to:
+  - visualisation.oncology_sbml_alharbi2019_tumor_normal_vitamins_model_tnvm_of_biomd0000001038_model_summary
+- from: oncology_sbml_alharbi2019_tumor_normal_vitamins_model_tnvm_of_biomd0000001038_model.species_labels
+  to:
+  - visualisation.oncology_sbml_alharbi2019_tumor_normal_vitamins_model_tnvm_of_biomd0000001038_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

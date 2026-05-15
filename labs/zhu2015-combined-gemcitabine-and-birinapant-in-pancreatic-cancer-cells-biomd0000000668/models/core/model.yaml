@@ -1,0 +1,120 @@
+schema_version: '2.0'
+title: Zhu2015 - Combined gemcitabine and birinapant in pancreatic cancer cells - basic PD model
+description: Zhu2015 - Combined gemcitabine and birinapantin pancreatic cancer cells - basic PD model Mathematical model to illustrate theeffectiveness of combination chemotherapy involving gemcitabine andbirinapa. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- chemotherapy
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Xu Zhu
+- Robert M Straubinger
+- William J Jusko
+upstream:
+  id: biomodels_ebi:BIOMD0000000668
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000668
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000668
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000668?filename=BIOMD0000000668_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000668_model:Zhu2015CombinedGemcitabineAndBirinapantInPBiomd0000000668Model
+  init_kwargs:
+    model_path: data/BIOMD0000000668.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000668.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_sti_g1
+    maps_to: Sti_g1
+    label: Sti g1
+    default: 0.0
+    units: native SBML value
+    description: Initial Sti g1. Sets the initial value of bundled SBML symbol `Sti_g1`.
+  - name: initial_sti_g2
+    maps_to: Sti_g2
+    label: Sti g2
+    default: 0.0
+    units: native SBML value
+    description: Initial Sti g2. Sets the initial value of bundled SBML symbol `Sti_g2`.
+  - name: initial_sti_g3
+    maps_to: Sti_g3
+    label: Sti g3
+    default: 0.0
+    units: native SBML value
+    description: Initial Sti g3. Sets the initial value of bundled SBML symbol `Sti_g3`.
+  - name: initial_sti_g4
+    maps_to: Sti_g4
+    label: Sti g4
+    default: 0.0
+    units: native SBML value
+    description: Initial Sti g4. Sets the initial value of bundled SBML symbol `Sti_g4`.
+  - name: initial_sti_b1
+    maps_to: Sti_b1
+    label: Sti b1
+    default: 0.0
+    units: native SBML value
+    description: Initial Sti b1. Sets the initial value of bundled SBML symbol `Sti_b1`.
+  - name: initial_sti_b2
+    maps_to: Sti_b2
+    label: Sti b2
+    default: 0.0
+    units: native SBML value
+    description: Initial Sti b2. Sets the initial value of bundled SBML symbol `Sti_b2`.
+  outputs:
+  - name: sti_g1
+    maps_to: Sti_g1
+    label: Sti g1
+    description: Sti g1 observable. Maps to SBML symbol `Sti_g1`.
+  - name: sti_g2
+    maps_to: Sti_g2
+    label: Sti g2
+    description: Sti g2 observable. Maps to SBML symbol `Sti_g2`.
+  - name: sti_g3
+    maps_to: Sti_g3
+    label: Sti g3
+    description: Sti g3 observable. Maps to SBML symbol `Sti_g3`.
+  - name: sti_g4
+    maps_to: Sti_g4
+    label: Sti g4
+    description: Sti g4 observable. Maps to SBML symbol `Sti_g4`.
+  - name: sti_b1
+    maps_to: Sti_b1
+    label: Sti b1
+    description: Sti b1 observable. Maps to SBML symbol `Sti_b1`.
+  - name: sti_b2
+    maps_to: Sti_b2
+    label: Sti b2
+    description: Sti b2 observable. Maps to SBML symbol `Sti_b2`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

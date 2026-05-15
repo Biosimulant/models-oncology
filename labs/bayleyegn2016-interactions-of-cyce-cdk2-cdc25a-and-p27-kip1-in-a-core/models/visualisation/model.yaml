@@ -1,0 +1,75 @@
+schema_version: '2.0'
+title: Bayleyegn2016 - interactions of CycE/Cdk2, Cdc25A, and P27 Kip1 in a core cancer subnetwork Visualisation
+description: Oncology visualisation for Bayleyegn2016 - interactions of CycE/Cdk2, Cdc25A, and P27 Kip1 in a core cancer subnetwork.
+standard: other
+tags:
+- biomodels_ebi
+- cellcycle
+- curated
+- faithful
+- oncology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Bayleyegn2016 - interactions of CycE/Cdk2, Cdc25A, and P27 Kip1 in a core cancer subnetwork
+    question: Which cell-cycle or damage-response states dominate the baseline cancer model?
+    answer_focus: Compares selected cycle/checkpoint observables and largest state changes.
+    visual_scope: Cancer cell-cycle/checkpoint state activity
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model
+      title: Bayleyegn2016 - interactions of CycE/Cdk2, Cdc25A, and P27 Kip1 in a core cancer subnetwork
+      state_observables:
+      - Cdc25A
+      - CycE_CDK2
+      - p27_kip1
+      observables:
+      - id: CycE_CDK2
+        port: cyce_cdk2
+        label: CycE CDK2
+        group: cellcycle
+      - id: p27_kip1
+        port: p27_kip1
+        label: P27 kip1
+        group: cellcycle
+      - id: Cdc25A
+        port: cdc25a
+        label: Cdc25A
+        group: cellcycle
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model_state
+    schema:
+      Cdc25A: float
+      CycE_CDK2: float
+      p27_kip1: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model_species_labels
+    schema:
+      CycE_CDK2: str
+      p27_kip1: str
+      Cdc25A: str
+    description: Display labels for selected source states.
+  outputs: []

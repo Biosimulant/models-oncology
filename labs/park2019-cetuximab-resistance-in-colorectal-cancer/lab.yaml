@@ -1,0 +1,99 @@
+schema_version: '2.0'
+title: Park2019 - Cetuximab resistance in colorectal cancer Lab
+description: It's an experimental + mathematical paper explaining probable targets for Cetixumab resistance in colorectal cancer. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: initial_egf
+    maps_to: oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model.initial_egf
+    label: EGF
+    default: 1.0
+    units: native SBML value
+    description: Initial EGF. Sets the initial value of bundled SBML symbol `EGF`.
+  - name: initial_gnb5
+    maps_to: oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model.initial_gnb5
+    label: GNB5
+    default: 0.5
+    units: native SBML value
+    description: Initial GNB5. Sets the initial value of bundled SBML symbol `GNB5`.
+  - name: initial_meki
+    maps_to: oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model.initial_meki
+    label: MEKi
+    default: 1.0
+    units: native SBML value
+    description: Initial MEKi. Sets the initial value of bundled SBML symbol `MEKi`.
+  - name: initial_erki
+    maps_to: oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model.initial_erki
+    label: ERKi
+    default: 1.0
+    units: native SBML value
+    description: Initial ERKi. Sets the initial value of bundled SBML symbol `ERKi`.
+  - name: initial_akti
+    maps_to: oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model.initial_akti
+    label: AKTi
+    default: 1.0
+    units: native SBML value
+    description: Initial AKTi. Sets the initial value of bundled SBML symbol `AKTi`.
+  - name: initial_egfri
+    maps_to: oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model.initial_egfri
+    label: EGFRi
+    default: 1.0
+    units: native SBML value
+    description: Initial EGFRi. Sets the initial value of bundled SBML symbol `EGFRi`.
+  outputs:
+  - name: egf
+    maps_to: oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model.egf
+    description: EGF observable. Maps to SBML symbol `EGF`.
+  - name: gnb5
+    maps_to: oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model.gnb5
+    description: GNB5 observable. Maps to SBML symbol `GNB5`.
+  - name: meki
+    maps_to: oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model.meki
+    description: MEKi observable. Maps to SBML symbol `MEKi`.
+  - name: erki
+    maps_to: oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model.erki
+    description: ERKi observable. Maps to SBML symbol `ERKi`.
+  - name: akti
+    maps_to: oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model.akti
+    description: AKTi observable. Maps to SBML symbol `AKTi`.
+  - name: egfri
+    maps_to: oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model.egfri
+    description: EGFRi observable. Maps to SBML symbol `EGFRi`.
+  - name: state
+    maps_to: oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model.state
+  to:
+  - visualisation.oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model_state
+- from: oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model.summary
+  to:
+  - visualisation.oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model_summary
+- from: oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model.species_labels
+  to:
+  - visualisation.oncology_sbml_park2019_cetuximab_resistance_in_colorectal_canc_model1909300004_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

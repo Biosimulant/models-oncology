@@ -1,0 +1,123 @@
+schema_version: '2.0'
+title: Raia2010 - IL13 Signalling MedB1
+description: 'This is the model of IL13 induced signalling in MedB-1 cell described in the article: Dynamic Mathematical Modeling of IL13-Induced Signaling in Hodgkin and Primary Mediastinal B-Cell Lymphoma Allows. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Valentina Raia
+- Marcel Schilling
+- "Martin B\xF6hm"
+- Bettina Hahn
+- Andreas Kowarsch
+upstream:
+  id: biomodels_ebi:BIOMD0000000313
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000313
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000313
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000313?filename=BIOMD0000000313_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.raia2010_il13_signalling_medb1_biomd0000000313_model:Raia2010Il13SignallingMedb1Biomd0000000313Model
+  init_kwargs:
+    model_path: data/BIOMD0000000313.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000313.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: kon_il13rec_level
+    maps_to: Kon_IL13Rec
+    label: Kon IL13Rec source parameter
+    default: 0.00341992
+    units: native SBML value
+    description: Kon IL13Rec source parameter. Maps to bundled SBML parameter `Kon_IL13Rec`.
+  - name: il13stimulation_level
+    maps_to: IL13stimulation
+    label: IL13stimulation source parameter
+    default: 1.0
+    units: native SBML value
+    description: IL13stimulation source parameter. Maps to bundled SBML parameter `IL13stimulation`.
+  - name: initial_stat5
+    maps_to: STAT5
+    label: STAT5
+    default: 165.0
+    units: native SBML value
+    description: Initial STAT5. Sets the initial value of bundled SBML symbol `STAT5`.
+  - name: initial_pstat5
+    maps_to: pSTAT5
+    label: PSTAT5
+    default: 0.0
+    units: native SBML value
+    description: Initial PSTAT5. Sets the initial value of bundled SBML symbol `pSTAT5`.
+  - name: initial_rec
+    maps_to: Rec
+    label: Rec
+    default: 1.3
+    units: native SBML value
+    description: Initial Rec. Sets the initial value of bundled SBML symbol `Rec`.
+  - name: initial_jak2
+    maps_to: JAK2
+    label: JAK2
+    default: 2.8
+    units: native SBML value
+    description: Initial JAK2. Sets the initial value of bundled SBML symbol `JAK2`.
+  outputs:
+  - name: stat5
+    maps_to: STAT5
+    label: STAT5
+    description: STAT5 observable. Maps to SBML symbol `STAT5`.
+  - name: pstat5
+    maps_to: pSTAT5
+    label: PSTAT5
+    description: PSTAT5 observable. Maps to SBML symbol `pSTAT5`.
+  - name: rec
+    maps_to: Rec
+    label: Rec
+    description: Rec observable. Maps to SBML symbol `Rec`.
+  - name: jak2
+    maps_to: JAK2
+    label: JAK2
+    description: JAK2 observable. Maps to SBML symbol `JAK2`.
+  - name: shp1
+    maps_to: SHP1
+    label: SHP1
+    description: SHP1 observable. Maps to SBML symbol `SHP1`.
+  - name: rec_i
+    maps_to: Rec_i
+    label: Rec i
+    description: Rec i observable. Maps to SBML symbol `Rec_i`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

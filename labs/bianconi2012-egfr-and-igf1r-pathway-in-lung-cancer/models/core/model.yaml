@@ -1,0 +1,126 @@
+schema_version: '2.0'
+title: Bianconi2012 - EGFR and IGF1R pathway in lung cancer
+description: Bianconi2012 - EGFR and IGF1R pathway in lung cancer EGFR and IGF1R pathways play a key role in various human cancers and are crucial for tumour transformation and survival of malignant cells. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Fortunato Bianconi
+- Elisa Baldelli
+- Vienna Ludovini
+- "Lucio Crin\xF2"
+- Antonella Flacco
+upstream:
+  id: biomodels_ebi:BIOMD0000000427
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000427
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000427
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000427?filename=BIOMD0000000427_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model:Bianconi2012EgfrAndIgf1rPathwayInLungCancBiomd0000000427Model
+  init_kwargs:
+    model_path: data/BIOMD0000000427.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000427.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: gamma_egfr_level
+    maps_to: gamma_EGFR
+    label: Gamma EGFR source parameter
+    default: 0.02
+    units: native SBML value
+    description: Gamma EGFR source parameter. Maps to bundled SBML parameter `gamma_EGFR`.
+  - name: initial_egfr_active
+    maps_to: EGFR_active
+    label: EGFR active
+    default: 8000.0
+    units: native SBML value
+    description: Initial EGFR active. Sets the initial value of bundled SBML symbol `EGFR_active`.
+  - name: initial_raf
+    maps_to: Raf
+    label: Raf
+    default: 120000.0
+    units: native SBML value
+    description: Initial Raf. Sets the initial value of bundled SBML symbol `Raf`.
+  - name: initial_erk
+    maps_to: ERK
+    label: ERK
+    default: 600000.0
+    units: native SBML value
+    description: Initial ERK. Sets the initial value of bundled SBML symbol `ERK`.
+  - name: initial_akt
+    maps_to: AKT
+    label: AKT
+    default: 600000.0
+    units: native SBML value
+    description: Initial AKT. Sets the initial value of bundled SBML symbol `AKT`.
+  - name: initial_ras
+    maps_to: Ras
+    label: Ras
+    default: 120000.0
+    units: native SBML value
+    description: Initial Ras. Sets the initial value of bundled SBML symbol `Ras`.
+  outputs:
+  - name: egfr_active
+    maps_to: EGFR_active
+    label: EGFR active
+    description: EGFR active observable. Maps to SBML symbol `EGFR_active`.
+  - name: raf
+    maps_to: Raf
+    label: Raf
+    description: Raf observable. Maps to SBML symbol `Raf`.
+  - name: erk
+    maps_to: ERK
+    label: ERK
+    description: ERK observable. Maps to SBML symbol `ERK`.
+  - name: akt
+    maps_to: AKT
+    label: AKT
+    description: AKT observable. Maps to SBML symbol `AKT`.
+  - name: ras
+    maps_to: Ras
+    label: Ras
+    description: Ras observable. Maps to SBML symbol `Ras`.
+  - name: pi3kca
+    maps_to: PI3KCA
+    label: PI3KCA
+    description: PI3KCA observable. Maps to SBML symbol `PI3KCA`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

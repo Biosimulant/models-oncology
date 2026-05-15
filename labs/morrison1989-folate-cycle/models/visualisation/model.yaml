@@ -1,0 +1,124 @@
+schema_version: '2.0'
+title: Morrison1989 - Folate Cycle Visualisation
+description: Oncology visualisation for Morrison1989 - Folate Cycle.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- metabolism
+- oncology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Morrison1989 - Folate Cycle
+    question: Which metabolic states dominate the baseline oncology-associated metabolic model?
+    answer_focus: Compares selected metabolic observables and peak source states.
+    visual_scope: Cancer metabolism and metabolic-state changes
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model
+      title: Morrison1989 - Folate Cycle
+      state_observables:
+      - FH2f
+      - DHFRf
+      - FH4
+      - CH2FH4
+      - CH3FH4
+      - CHOFH4
+      - FFH2
+      - HCHO
+      - FGAR
+      - AICAR
+      - MTX1
+      - MTX2
+      - MTX3
+      - MTX4
+      - MTX5
+      - MTX1b
+      - MTX2b
+      - MTX3b
+      - MTX4b
+      - MTX5b
+      observables:
+      - id: FH2f
+        port: dihydrofolate_free
+        label: Dihydrofolate free
+        group: metabolism
+      - id: FH4
+        port: tetrahydrofolate
+        label: Tetrahydrofolate
+        group: metabolism
+      - id: FFH2
+        port: model_state_3
+        label: 10 formyl dihydrofolate
+        group: metabolism
+      - id: DHFRf
+        port: dihydrofolate_reductase_free
+        label: Dihydrofolate reductase free
+        group: metabolism
+      - id: CH2FH4
+        port: model_state_5
+        label: 5,10 methylene tetrahydrofolate
+        group: metabolism
+      - id: CH3FH4
+        port: model_state_6
+        label: 5 methyl tetrahydrofolate
+        group: metabolism
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model_state
+    schema:
+      FH2f: float
+      DHFRf: float
+      FH4: float
+      CH2FH4: float
+      CH3FH4: float
+      CHOFH4: float
+      FFH2: float
+      HCHO: float
+      FGAR: float
+      AICAR: float
+      MTX1: float
+      MTX2: float
+      MTX3: float
+      MTX4: float
+      MTX5: float
+      MTX1b: float
+      MTX2b: float
+      MTX3b: float
+      MTX4b: float
+      MTX5b: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model_species_labels
+    schema:
+      FH2f: str
+      FH4: str
+      FFH2: str
+      DHFRf: str
+      CH2FH4: str
+      CH3FH4: str
+    description: Display labels for selected source states.
+  outputs: []

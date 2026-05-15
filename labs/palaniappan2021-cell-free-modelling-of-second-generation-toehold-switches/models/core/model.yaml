@@ -1,0 +1,121 @@
+schema_version: '2.0'
+title: Palaniappan2021 - Cell free modelling of second generation Toehold switches
+description: Cervical cancer is a global public health subject as it affects women in the reproductive ages, and accounts for the second largest burden among cancer patients worldwide with an unforgiving 50% morta. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Priyannth Ramasami S Baabu
+- Shivaramakrishna Srinivasan
+- Swetha Nagarajan
+- Sangeetha Muthamilselvan
+- Thamarai Selvi
+upstream:
+  id: biomodels_ebi:BIOMD0000001103
+  source_db: biomodels_ebi
+  source_id: BIOMD0000001103
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001103
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001103?filename=Palaniappan2021_Cell_free_modelling_of_second_generation_toehold_switches_v2.xml
+  license: CC0
+biosim:
+  entrypoint: src.palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model:Palaniappan2021CellFreeModellingOfSecondGeBiomd0000001103Model
+  init_kwargs:
+    model_path: data/BIOMD0000001103.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000001103.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_mir
+    maps_to: miR
+    label: MiR
+    default: 1.2e-07
+    units: native SBML value
+    description: Initial MiR. Sets the initial value of bundled SBML symbol `miR`.
+  - name: initial_antimir
+    maps_to: antimiR
+    label: AntimiR
+    default: 1.2e-07
+    units: native SBML value
+    description: Initial AntimiR. Sets the initial value of bundled SBML symbol `antimiR`.
+  - name: initial_toehold_dna
+    maps_to: Toehold_DNA
+    label: Toehold DNA
+    default: 2.35e-07
+    units: native SBML value
+    description: Initial Toehold DNA. Sets the initial value of bundled SBML symbol `Toehold_DNA`.
+  - name: initial_gfp
+    maps_to: GFP
+    label: GFP
+    default: 0.0
+    units: native SBML value
+    description: Initial GFP. Sets the initial value of bundled SBML symbol `GFP`.
+  - name: initial_toehold_rna_cts
+    maps_to: Toehold_RNA_CTS
+    label: Toehold RNA CTS
+    default: 0.0
+    units: native SBML value
+    description: Initial Toehold RNA CTS. Sets the initial value of bundled SBML symbol `Toehold_RNA_CTS`.
+  - name: initial_mir_antimir
+    maps_to: miR_antimiR
+    label: MiR antimiR
+    default: 0.0
+    units: native SBML value
+    description: Initial MiR antimiR. Sets the initial value of bundled SBML symbol `miR_antimiR`.
+  outputs:
+  - name: mir
+    maps_to: miR
+    label: MiR
+    description: MiR observable. Maps to SBML symbol `miR`.
+  - name: antimir
+    maps_to: antimiR
+    label: AntimiR
+    description: AntimiR observable. Maps to SBML symbol `antimiR`.
+  - name: toehold_dna
+    maps_to: Toehold_DNA
+    label: Toehold DNA
+    description: Toehold DNA observable. Maps to SBML symbol `Toehold_DNA`.
+  - name: gfp
+    maps_to: GFP
+    label: GFP
+    description: GFP observable. Maps to SBML symbol `GFP`.
+  - name: toehold_rna_cts
+    maps_to: Toehold_RNA_CTS
+    label: Toehold RNA CTS
+    description: Toehold RNA CTS observable. Maps to SBML symbol `Toehold_RNA_CTS`.
+  - name: mir_antimir
+    maps_to: miR_antimiR
+    label: MiR antimiR
+    description: MiR antimiR observable. Maps to SBML symbol `miR_antimiR`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

@@ -1,0 +1,61 @@
+schema_version: '2.0'
+title: Murphy2016 - Differences in predictions of ODE models of tumor growth Lab
+description: Murphy2016 - Differences in predictions ofODE models of tumor growth Comparison of 7 ODE models for tumoursize. This models have been compared to experimental data.
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- oncology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs: []
+  outputs:
+  - name: v_exp
+    maps_to: oncology_sbml_murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model.v_exp
+    description: V exp observable. Maps to SBML symbol `V_exp`.
+  - name: v_mend
+    maps_to: oncology_sbml_murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model.v_mend
+    description: V mend observable. Maps to SBML symbol `V_mend`.
+  - name: v_log
+    maps_to: oncology_sbml_murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model.v_log
+    description: V log observable. Maps to SBML symbol `V_log`.
+  - name: v_lin
+    maps_to: oncology_sbml_murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model.v_lin
+    description: V lin observable. Maps to SBML symbol `V_lin`.
+  - name: v_surf
+    maps_to: oncology_sbml_murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model.v_surf
+    description: V surf observable. Maps to SBML symbol `V_surf`.
+  - name: v_gomp
+    maps_to: oncology_sbml_murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model.v_gomp
+    description: V gomp observable. Maps to SBML symbol `V_gomp`.
+  - name: state
+    maps_to: oncology_sbml_murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model.state
+  to:
+  - visualisation.oncology_sbml_murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model_state
+- from: oncology_sbml_murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model.summary
+  to:
+  - visualisation.oncology_sbml_murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model_summary
+- from: oncology_sbml_murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model.species_labels
+  to:
+  - visualisation.oncology_sbml_murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

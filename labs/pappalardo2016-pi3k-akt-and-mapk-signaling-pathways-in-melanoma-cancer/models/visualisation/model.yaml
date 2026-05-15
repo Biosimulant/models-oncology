@@ -1,0 +1,157 @@
+schema_version: '2.0'
+title: Pappalardo2016 - PI3K/AKT and MAPK Signaling Pathways in Melanoma Cancer Visualisation
+description: Oncology visualisation for Pappalardo2016 - PI3K/AKT and MAPK Signaling Pathways in Melanoma Cancer.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Pappalardo2016 - PI3K/AKT and MAPK Signaling Pathways in Melanoma Cancer
+    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
+    visual_scope: Cancer signaling pathway activity and dominant source states
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model
+      title: Pappalardo2016 - PI3K/AKT and MAPK Signaling Pathways in Melanoma Cancer
+      state_observables:
+      - species_0
+      - species_1
+      - species_2
+      - species_3
+      - species_4
+      - species_5
+      - species_6
+      - species_7
+      - species_8
+      - species_9
+      - species_10
+      - species_11
+      - species_12
+      - species_13
+      - species_14
+      - species_15
+      - species_16
+      - species_17
+      - species_19
+      - species_20
+      - species_21
+      - species_22
+      - PIP3Active
+      - PIP3Inactive
+      - IRS1Active
+      - IRS1Inactive
+      - PDK1Inactive
+      - PDK1Active
+      - mTORC1Active
+      - mTORC1Inactive
+      - S6K1Active
+      - S6K1Inactive
+      - bRafMutated
+      - Dabrafenib
+      - bRafMutatedInactive
+      observables:
+      - id: species_5
+        port: rasinactive
+        label: RasInactive
+        group: signaling
+      - id: species_7
+        port: raf1inactive
+        label: Raf1Inactive
+        group: signaling
+      - id: species_11
+        port: erkinactive
+        label: ErkInactive
+        group: signaling
+      - id: species_15
+        port: pi3kinactive
+        label: PI3KInactive
+        group: signaling
+      - id: species_17
+        port: aktinactive
+        label: AktInactive
+        group: signaling
+      - id: bRafMutated
+        port: brafmutated
+        label: BRafMutated
+        group: signaling
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model_state
+    schema:
+      species_0: float
+      species_1: float
+      species_2: float
+      species_3: float
+      species_4: float
+      species_5: float
+      species_6: float
+      species_7: float
+      species_8: float
+      species_9: float
+      species_10: float
+      species_11: float
+      species_12: float
+      species_13: float
+      species_14: float
+      species_15: float
+      species_16: float
+      species_17: float
+      species_19: float
+      species_20: float
+      species_21: float
+      species_22: float
+      PIP3Active: float
+      PIP3Inactive: float
+      IRS1Active: float
+      IRS1Inactive: float
+      PDK1Inactive: float
+      PDK1Active: float
+      mTORC1Active: float
+      mTORC1Inactive: float
+      S6K1Active: float
+      S6K1Inactive: float
+      bRafMutated: float
+      Dabrafenib: float
+      bRafMutatedInactive: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model_species_labels
+    schema:
+      species_5: str
+      species_7: str
+      species_11: str
+      species_15: str
+      species_17: str
+      bRafMutated: str
+    description: Display labels for selected source states.
+  outputs: []

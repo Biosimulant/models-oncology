@@ -1,0 +1,121 @@
+schema_version: '2.0'
+title: Gulhane2022 - Sphingolipid metabolism and PI3K-AKT axis in NSCLC
+description: In this model, we demonstrated that the increased expression of sphingolipids enzyme affects PI3K-AKT signaling axis and its downstream signaling mediators resulting in cancer progression. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- metabolism
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Pooja Gulhane
+- Shailza Singh
+upstream:
+  id: biomodels_ebi:MODEL2402290001
+  source_db: biomodels_ebi
+  source_id: MODEL2402290001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2402290001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2402290001?filename=Sphingolipid-AKT.xml
+  license: CC0
+biosim:
+  entrypoint: src.gulhane2022_sphingolipid_metabolism_and_pi3k_akt_model2402290001_model:Gulhane2022SphingolipidMetabolismAndPi3kAktModel2402290001Model
+  init_kwargs:
+    model_path: data/MODEL2402290001.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/MODEL2402290001.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_glucose_metabolism
+    maps_to: mwcc0d0d1e_f9ca_43ca_a94d_dbf4e0efbc13
+    label: Glucose Metabolism
+    default: 518000.0
+    units: native SBML value
+    description: Initial Glucose Metabolism. Sets the initial value of bundled SBML symbol `mwcc0d0d1e_f9ca_43ca_a94d_dbf4e0efbc13`.
+  - name: initial_ras
+    maps_to: mw338974cb_3199_4092_a3fe_e32b9b3fc4d6
+    label: Ras
+    default: 100000.0
+    units: native SBML value
+    description: Initial Ras. Sets the initial value of bundled SBML symbol `mw338974cb_3199_4092_a3fe_e32b9b3fc4d6`.
+  - name: initial_pi3k
+    maps_to: mw1906ffc7_edd7_4567_8b41_84201e788393
+    label: PI3K
+    default: 216000.0
+    units: native SBML value
+    description: Initial PI3K. Sets the initial value of bundled SBML symbol `mw1906ffc7_edd7_4567_8b41_84201e788393`.
+  - name: initial_grb2
+    maps_to: mwe5fc6bf1_e5b9_4f84_b107_5828de7af61b
+    label: GRB2
+    default: 986.0
+    units: native SBML value
+    description: Initial GRB2. Sets the initial value of bundled SBML symbol `mwe5fc6bf1_e5b9_4f84_b107_5828de7af61b`.
+  - name: initial_sos
+    maps_to: mw25445311_570d_491b_835f_c395e5a4003a
+    label: SOS
+    default: 986.0
+    units: native SBML value
+    description: Initial SOS. Sets the initial value of bundled SBML symbol `mw25445311_570d_491b_835f_c395e5a4003a`.
+  - name: initial_irs
+    maps_to: mw36987a2d_4042_4802_add1_f8d289da6b4a
+    label: IRS
+    default: 986.0
+    units: native SBML value
+    description: Initial IRS. Sets the initial value of bundled SBML symbol `mw36987a2d_4042_4802_add1_f8d289da6b4a`.
+  outputs:
+  - name: glucose_metabolism
+    maps_to: mwcc0d0d1e_f9ca_43ca_a94d_dbf4e0efbc13
+    label: Glucose Metabolism
+    description: Glucose Metabolism observable. Maps to SBML symbol `mwcc0d0d1e_f9ca_43ca_a94d_dbf4e0efbc13`.
+  - name: ras
+    maps_to: mw338974cb_3199_4092_a3fe_e32b9b3fc4d6
+    label: Ras
+    description: Ras observable. Maps to SBML symbol `mw338974cb_3199_4092_a3fe_e32b9b3fc4d6`.
+  - name: pi3k
+    maps_to: mw1906ffc7_edd7_4567_8b41_84201e788393
+    label: PI3K
+    description: PI3K observable. Maps to SBML symbol `mw1906ffc7_edd7_4567_8b41_84201e788393`.
+  - name: grb2
+    maps_to: mwe5fc6bf1_e5b9_4f84_b107_5828de7af61b
+    label: GRB2
+    description: GRB2 observable. Maps to SBML symbol `mwe5fc6bf1_e5b9_4f84_b107_5828de7af61b`.
+  - name: sos
+    maps_to: mw25445311_570d_491b_835f_c395e5a4003a
+    label: SOS
+    description: SOS observable. Maps to SBML symbol `mw25445311_570d_491b_835f_c395e5a4003a`.
+  - name: irs
+    maps_to: mw36987a2d_4042_4802_add1_f8d289da6b4a
+    label: IRS
+    description: IRS observable. Maps to SBML symbol `mw36987a2d_4042_4802_add1_f8d289da6b4a`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

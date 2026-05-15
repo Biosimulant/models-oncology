@@ -1,0 +1,84 @@
+schema_version: '2.0'
+title: Malinzi2018 - Enhancement of chemotherapy using oncolytic virotherapy
+description: IA spatio-temporal mathematical model, in the form of a moving boundary problem, to explain cancer dormancy is developed. Analysis of the model is carried out for both temporal and spatio-temporal cas.
+standard: other
+tags:
+- biomodels_ebi
+- chemotherapy
+- curated
+- drug-response
+- faithful
+- immunotherapy
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- virotherapy
+authors:
+- Biosimulant Team
+- Malinzi J
+- Rachid Ouifki
+- Amina Eladdadi
+- Delfim F M Torres
+- Jane K A White
+upstream:
+  id: biomodels_ebi:MODEL2003050002
+  source_db: biomodels_ebi
+  source_id: MODEL2003050002
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2003050002
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003050002?filename=Malinzi2018.xml
+  license: CC0
+biosim:
+  entrypoint: src.malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model:Malinzi2018EnhancementOfChemotherapyUsingOnModel2003050002Model
+  init_kwargs:
+    model_path: data/MODEL2003050002.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/MODEL2003050002.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations. No scientifically safe external input was exposed by the cleanup.
+io:
+  inputs: []
+  outputs:
+  - name: model_state_1
+    maps_to: I
+    label: I
+    description: I observable. Maps to SBML symbol `I`.
+  - name: model_state_2
+    maps_to: T
+    label: T
+    description: T observable. Maps to SBML symbol `T`.
+  - name: model_state_3
+    maps_to: Td
+    label: Td
+    description: Td observable. Maps to SBML symbol `Td`.
+  - name: model_state_4
+    maps_to: C
+    label: C
+    description: C observable. Maps to SBML symbol `C`.
+  - name: model_state_5
+    maps_to: R
+    label: R
+    description: R observable. Maps to SBML symbol `R`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

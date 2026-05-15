@@ -1,0 +1,79 @@
+schema_version: '2.0'
+title: Rommelfanger2011 - Gompertz model of melanoma tumor therapy with vesicular stomatitis virus
+description: 'This mathematical model is described by the publication:Rommelfanger DM, Offord CP, Dev J, Bajzer Z, Vile RG, Dingli D. ''Dynamics of melanoma tumor therapy with vesicular stomatitis virus: explaining.'
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunotherapy
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- virotherapy
+authors:
+- Biosimulant Team
+- D M Rommelfanger
+- C P Offord
+- J Dev
+- Z Bajzer
+- R G Vile
+upstream:
+  id: biomodels_ebi:MODEL2109110003
+  source_db: biomodels_ebi
+  source_id: MODEL2109110003
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2109110003
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2109110003?filename=Rommelfanger2011 Gompertz.xml
+  license: CC0
+biosim:
+  entrypoint: src.rommelfanger2011_gompertz_model_of_melanoma_tumo_model2109110003_model:Rommelfanger2011GompertzModelOfMelanomaTumoModel2109110003Model
+  init_kwargs:
+    model_path: data/MODEL2109110003.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/MODEL2109110003.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations. No scientifically safe external input was exposed by the cleanup.
+io:
+  inputs: []
+  outputs:
+  - name: model_state_1
+    maps_to: y
+    label: Y
+    description: Y observable. Maps to SBML symbol `y`.
+  - name: model_state_2
+    maps_to: v_i
+    label: V i
+    description: V i observable. Maps to SBML symbol `v_i`.
+  - name: model_state_3
+    maps_to: x
+    label: X
+    description: X observable. Maps to SBML symbol `x`.
+  - name: model_state_4
+    maps_to: z
+    label: Z
+    description: Z observable. Maps to SBML symbol `z`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

@@ -1,0 +1,101 @@
+schema_version: '2.0'
+title: Zeilfelder2025 - Model for human liver cancer cell line HepG2 Lab
+description: Mathematical multi-compartment model described by sets of coupledordinary differential equations (ODEs) for studying the IL6 and SMAD signaling in HepG2 human cancer cell lines. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: input_il6_level
+    maps_to: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model.input_il6_level
+    label: Input il6 source parameter
+    default: 10.0
+    units: native SBML value
+    description: Input il6 source parameter. Maps to bundled SBML parameter `input_il6`.
+  - name: il6_basal_level
+    maps_to: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model.il6_basal_level
+    label: Il6 basal source parameter
+    default: 0.00957067090828757
+    units: native SBML value
+    description: Il6 basal source parameter. Maps to bundled SBML parameter `il6_basal`.
+  - name: il6_act_level
+    maps_to: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model.il6_act_level
+    label: Il6 act source parameter
+    default: 0.0226985677410744
+    units: native SBML value
+    description: Il6 act source parameter. Maps to bundled SBML parameter `il6_act`.
+  - name: dcf_il6_basal_level
+    maps_to: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model.dcf_il6_basal_level
+    label: Dcf il6 basal source parameter
+    default: 0.835096746625705
+    units: native SBML value
+    description: Dcf il6 basal source parameter. Maps to bundled SBML parameter `dcf_il6_basal`.
+  - name: initial_unphosphorylated_stat3
+    maps_to: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model.initial_unphosphorylated_stat3
+    label: Unphosphorylated STAT3
+    default: 1237.76392668883
+    units: native SBML value
+    description: Initial Unphosphorylated STAT3. Sets the initial value of bundled SBML symbol `STAT3`.
+  - name: initial_active_cytoplasmic_stat3
+    maps_to: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model.initial_active_cytoplasmic_stat3
+    label: Active cytoplasmic STAT3
+    default: 24.1373740148803
+    units: native SBML value
+    description: Initial Active cytoplasmic STAT3. Sets the initial value of bundled SBML symbol `cpSTAT3`.
+  outputs:
+  - name: unphosphorylated_stat3
+    maps_to: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model.unphosphorylated_stat3
+    description: Unphosphorylated STAT3 observable. Maps to SBML symbol `STAT3`.
+  - name: active_cytoplasmic_stat3
+    maps_to: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model.active_cytoplasmic_stat3
+    description: Active cytoplasmic STAT3 observable. Maps to SBML symbol `cpSTAT3`.
+  - name: active_nuclear_stat3
+    maps_to: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model.active_nuclear_stat3
+    description: Active nuclear STAT3 observable. Maps to SBML symbol `npSTAT3`.
+  - name: total_bmp_receptor
+    maps_to: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model.total_bmp_receptor
+    description: Total BMP receptor observable. Maps to SBML symbol `BMPR`.
+  - name: cofactor_activated_by_bmp_receptor
+    maps_to: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model.cofactor_activated_by_bmp_receptor
+    description: Cofactor activated by BMP receptor observable. Maps to SBML symbol `BMPR_delay1`.
+  - name: cofactor_activated_by_bmp_receptor_2
+    maps_to: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model.cofactor_activated_by_bmp_receptor_2
+    description: Cofactor activated by BMP receptor 2 observable. Maps to SBML symbol `BMPR_delay2`.
+  - name: state
+    maps_to: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model.state
+  to:
+  - visualisation.oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model_state
+- from: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model.summary
+  to:
+  - visualisation.oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model_summary
+- from: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model.species_labels
+  to:
+  - visualisation.oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

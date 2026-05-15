@@ -1,0 +1,123 @@
+schema_version: '2.0'
+title: Dorvash2019 - Dynamic modeling of signal transduction by mTOR complexes in cancer
+description: This model is based on:Dynamic modeling of signal transduction by mTOR complexes in cancerAuthor:Mohammadreza Dorvash, Mohammad Farahmandnia, Pouria Mosaddeghi, Mitra Farahmandnejad, Hosein Saber, Moh. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Mohammadreza Dorvash
+- Mohammad Farahmandnia
+- Pouria Mosaddeghi
+- Mitra Farahmandnejad
+- Hosein Saber
+upstream:
+  id: biomodels_ebi:BIOMD0000000822
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000822
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000822
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000822?filename=Dorvash2019 - Dynamic modeling of signal transduction by mTOR complexes in cancer.xml
+  license: CC0
+biosim:
+  entrypoint: src.dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model:Dorvash2019DynamicModelingOfSignalTransductBiomd0000000822Model
+  init_kwargs:
+    model_path: data/BIOMD0000000822.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000822.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: rapamycin_dose
+    maps_to: Rapamycin_Dose
+    label: Rapamycin Dose source parameter
+    default: 0.0
+    units: native SBML value
+    description: Rapamycin Dose source parameter. Maps to bundled SBML parameter `Rapamycin_Dose`.
+  - name: initial_mtor
+    maps_to: mTOR
+    label: MTOR
+    default: 3.756228e-07
+    units: native SBML value
+    description: Initial MTOR. Sets the initial value of bundled SBML symbol `mTOR`.
+  - name: initial_raptor
+    maps_to: Raptor
+    label: Raptor
+    default: 3.201594e-07
+    units: native SBML value
+    description: Initial Raptor. Sets the initial value of bundled SBML symbol `Raptor`.
+  - name: initial_rictor
+    maps_to: Rictor
+    label: Rictor
+    default: 8.834274e-08
+    units: native SBML value
+    description: Initial Rictor. Sets the initial value of bundled SBML symbol `Rictor`.
+  - name: initial_cytosolic_rapamycin
+    maps_to: Cytosolic_Rapamycin
+    label: Cytosolic Rapamycin
+    default: 0.0
+    units: native SBML value
+    description: Initial Cytosolic Rapamycin. Sets the initial value of bundled SBML symbol `Cytosolic_Rapamycin`.
+  - name: initial_mtorc1
+    maps_to: mTORC1
+    label: MTORC1
+    default: 0.0
+    units: native SBML value
+    description: Initial MTORC1. Sets the initial value of bundled SBML symbol `mTORC1`.
+  outputs:
+  - name: mtor
+    maps_to: mTOR
+    label: MTOR
+    description: MTOR observable. Maps to SBML symbol `mTOR`.
+  - name: raptor
+    maps_to: Raptor
+    label: Raptor
+    description: Raptor observable. Maps to SBML symbol `Raptor`.
+  - name: rictor
+    maps_to: Rictor
+    label: Rictor
+    description: Rictor observable. Maps to SBML symbol `Rictor`.
+  - name: cytosolic_rapamycin
+    maps_to: Cytosolic_Rapamycin
+    label: Cytosolic Rapamycin
+    description: Cytosolic Rapamycin observable. Maps to SBML symbol `Cytosolic_Rapamycin`.
+  - name: mtorc1
+    maps_to: mTORC1
+    label: MTORC1
+    description: MTORC1 observable. Maps to SBML symbol `mTORC1`.
+  - name: mtorc2
+    maps_to: mTORC2
+    label: MTORC2
+    description: MTORC2 observable. Maps to SBML symbol `mTORC2`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

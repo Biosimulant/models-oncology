@@ -1,0 +1,94 @@
+schema_version: '2.0'
+title: Tham2008 - PDmodel, Tumour shrinkage by gemcitabine and carboplatin
+description: 'PURPOSE: This tumor response pharmacodynamic model aims to describe primary lesion shrinkage in non-small cell lung cancer over time and determine if concentration-based exposure metrics for gemcitabi. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+standard: other
+tags:
+- biomodels_ebi
+- chemotherapy
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Lai-San Tham
+- Lingzhi Wang
+- Ross A Soo
+- Soo-Chin Lee
+- How-Sung Lee
+upstream:
+  id: biomodels_ebi:BIOMD0000000234
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000234
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000234
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000234?filename=GemcitabineCorrected.xml
+  license: CC0
+biosim:
+  entrypoint: src.tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model:Tham2008PdmodelTumourShrinkageByGemcitabineBiomd0000000234Model
+  init_kwargs:
+    model_path: data/BIOMD0000000234.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000234.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: dose_int2
+    maps_to: Dose_Int2
+    label: Dose Int2 source parameter
+    default: -2.0
+    units: native SBML value
+    description: Dose Int2 source parameter. Maps to bundled SBML parameter `Dose_Int2`.
+  - name: dose_int1
+    maps_to: Dose_Int1
+    label: Dose Int1 source parameter
+    default: 0.0
+    units: native SBML value
+    description: Dose Int1 source parameter. Maps to bundled SBML parameter `Dose_Int1`.
+  - name: dose
+    maps_to: Dose
+    label: Dose source parameter
+    default: 5203.84
+    units: native SBML value
+    description: Dose source parameter. Maps to bundled SBML parameter `Dose`.
+  - name: initial_tumorsize
+    maps_to: TumorSize
+    label: TumorSize
+    default: 6.66
+    units: native SBML value
+    description: Initial TumorSize. Sets the initial value of bundled SBML symbol `TumorSize`.
+  outputs:
+  - name: tumorsize
+    maps_to: TumorSize
+    label: TumorSize
+    description: TumorSize observable. Maps to SBML symbol `TumorSize`.
+  - name: model_state_2
+    maps_to: Ce
+    label: Ce
+    description: Ce observable. Maps to SBML symbol `Ce`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

@@ -1,0 +1,65 @@
+schema_version: '2.0'
+title: Chaudhury2020 - First order expansion model of CAR-T cell and tumour kinetics Visualisation
+description: Oncology visualisation for Chaudhury2020 - First order expansion model of CAR-T cell and tumour kinetics.
+standard: other
+tags:
+- biomodels_ebi
+- car-t
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Chaudhury2020 - First order expansion model of CAR-T cell and tumour kinetics
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model
+      title: Chaudhury2020 - First order expansion model of CAR-T cell and tumour kinetics
+      state_observables:
+      - U
+      observables:
+      - id: U
+        port: model_state_1
+        label: U
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model_state
+    schema:
+      U: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model_species_labels
+    schema:
+      U: str
+    description: Display labels for selected source states.
+  outputs: []

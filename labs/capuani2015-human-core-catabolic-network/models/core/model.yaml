@@ -1,0 +1,84 @@
+schema_version: '2.0'
+title: Capuani2015 - Human Core Catabolic Network
+description: 'Capuani2015 - Human Core CatabolicNetwork This model is described in the article: Quantitative constraint-based computational model of tumor-to-stroma coupling via lactate shuttle Fabrizio Capuani, Da. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- metabolism
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Fabrizio Capuani
+- Daniele De Martino
+- "Enzo Marinari\t& Andrea De Martino"
+upstream:
+  id: biomodels_ebi:MODEL1506170000
+  source_db: biomodels_ebi
+  source_id: MODEL1506170000
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1506170000
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1506170000?filename=MODEL1506170000_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.capuani2015_human_core_catabolic_network_model1506170000_model:Capuani2015HumanCoreCatabolicNetworkModel1506170000Model
+  init_kwargs:
+    model_path: data/MODEL1506170000.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/MODEL1506170000.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations. No scientifically safe external input was exposed by the cleanup.
+io:
+  inputs: []
+  outputs:
+  - name: atp
+    maps_to: M_atp_e
+    label: ATP
+    description: ATP observable. Maps to SBML symbol `M_atp_e`.
+  - name: d_glucose_6_phosphate
+    maps_to: M_g6p_e
+    label: D Glucose 6 phosphate
+    description: D Glucose 6 phosphate observable. Maps to SBML symbol `M_g6p_e`.
+  - name: d_glucose
+    maps_to: M_glc_DASH_D_e
+    label: D Glucose
+    description: D Glucose observable. Maps to SBML symbol `M_glc_DASH_D_e`.
+  - name: l_lactate
+    maps_to: M_lac_DASH_L_e
+    label: L Lactate
+    description: L Lactate observable. Maps to SBML symbol `M_lac_DASH_L_e`.
+  - name: nicotinamide_adenine_dinucleotide
+    maps_to: M_nad_e
+    label: Nicotinamide adenine dinucleotide
+    description: Nicotinamide adenine dinucleotide observable. Maps to SBML symbol `M_nad_e`.
+  - name: nicotinamide_adenine_dinucleotide_reduced
+    maps_to: M_nadh_e
+    label: Nicotinamide adenine dinucleotide reduced
+    description: Nicotinamide adenine dinucleotide reduced observable. Maps to SBML symbol `M_nadh_e`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

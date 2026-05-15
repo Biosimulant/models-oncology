@@ -1,0 +1,97 @@
+schema_version: '2.0'
+title: Murphy2016 - Differences in predictions of ODE models of tumor growth Visualisation
+description: Oncology visualisation for Murphy2016 - Differences in predictions of ODE models of tumor growth.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- oncology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Murphy2016 - Differences in predictions of ODE models of tumor growth
+    question: What oncology-relevant state dominates the bundled SBML simulation over the baseline run?
+    answer_focus: Compares the largest-changing and peak observables with selected source states.
+    visual_scope: Tumor-system state trajectories and dominant observable changes
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model
+      title: Murphy2016 - Differences in predictions of ODE models of tumor growth
+      state_observables:
+      - V_exp
+      - V_mend
+      - V_log
+      - V_lin
+      - V_surf
+      - V_gomp
+      - V_bert
+      observables:
+      - id: V_exp
+        port: v_exp
+        label: V exp
+        group: tumor_system
+      - id: V_mend
+        port: v_mend
+        label: V mend
+        group: tumor_system
+      - id: V_log
+        port: v_log
+        label: V log
+        group: tumor_system
+      - id: V_lin
+        port: v_lin
+        label: V lin
+        group: tumor_system
+      - id: V_surf
+        port: v_surf
+        label: V surf
+        group: tumor_system
+      - id: V_gomp
+        port: v_gomp
+        label: V gomp
+        group: tumor_system
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model_state
+    schema:
+      V_exp: float
+      V_mend: float
+      V_log: float
+      V_lin: float
+      V_surf: float
+      V_gomp: float
+      V_bert: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_murphy2016_differences_in_predictions_of_ode_mod_biomd0000000671_model_species_labels
+    schema:
+      V_exp: str
+      V_mend: str
+      V_log: str
+      V_lin: str
+      V_surf: str
+      V_gomp: str
+    description: Display labels for selected source states.
+  outputs: []

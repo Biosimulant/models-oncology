@@ -1,0 +1,128 @@
+schema_version: '2.0'
+title: Coletti2020 - QSP model of prostate cancer immunotherapy Visualisation
+description: Oncology visualisation for Coletti2020 - QSP model of prostate cancer immunotherapy.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Coletti2020 - QSP model of prostate cancer immunotherapy
+    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
+    visual_scope: Cancer signaling pathway activity and dominant source states
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model
+      title: Coletti2020 - QSP model of prostate cancer immunotherapy
+      state_observables:
+      - X_1
+      - X_2
+      - A
+      - D_m
+      - V
+      - C_2
+      - I_2
+      - N
+      - R_2
+      - M
+      - D_f
+      - D_r
+      - C_1
+      - R_1
+      - I_1
+      - AI
+      - AR
+      - AM
+      - ICB
+      observables:
+      - id: X_1
+        port: model_state_1
+        label: X 1
+        group: signaling
+      - id: A
+        port: model_state_2
+        label: A
+        group: signaling
+      - id: D_m
+        port: model_state_3
+        label: D m
+        group: signaling
+      - id: C_2
+        port: model_state_4
+        label: C 2
+        group: signaling
+      - id: I_2
+        port: model_state_5
+        label: I 2
+        group: signaling
+      - id: N
+        port: model_state_6
+        label: N
+        group: signaling
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model_state
+    schema:
+      X_1: float
+      X_2: float
+      A: float
+      D_m: float
+      V: float
+      C_2: float
+      I_2: float
+      N: float
+      R_2: float
+      M: float
+      D_f: float
+      D_r: float
+      C_1: float
+      R_1: float
+      I_1: float
+      AI: float
+      AR: float
+      AM: float
+      ICB: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model_species_labels
+    schema:
+      X_1: str
+      A: str
+      D_m: str
+      C_2: str
+      I_2: str
+      N: str
+    description: Display labels for selected source states.
+  outputs: []

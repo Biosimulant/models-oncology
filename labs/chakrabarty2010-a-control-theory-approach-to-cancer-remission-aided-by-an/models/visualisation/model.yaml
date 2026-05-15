@@ -1,0 +1,76 @@
+schema_version: '2.0'
+title: Chakrabarty2010 - A control theory approach to cancer remission aided by an optimal therapy Visualisation
+description: Oncology visualisation for Chakrabarty2010 - A control theory approach to cancer remission aided by an optimal therapy.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Chakrabarty2010 - A control theory approach to cancer remission aided by an optimal therapy
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_chakrabarty2010_a_control_theory_approach_to_can_biomd0000000777_model
+      title: Chakrabarty2010 - A control theory approach to cancer remission aided by an optimal therapy
+      state_observables:
+      - M_Tumor_Cells
+      - N_CTL
+      - Z_THL
+      observables:
+      - id: M_Tumor_Cells
+        port: m_tumor_cells
+        label: M Tumor Cells
+        group: drug_response
+      - id: N_CTL
+        port: n_ctl
+        label: N CTL
+        group: drug_response
+      - id: Z_THL
+        port: z_thl
+        label: Z THL
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_chakrabarty2010_a_control_theory_approach_to_can_biomd0000000777_model_state
+    schema:
+      M_Tumor_Cells: float
+      N_CTL: float
+      Z_THL: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_chakrabarty2010_a_control_theory_approach_to_can_biomd0000000777_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_chakrabarty2010_a_control_theory_approach_to_can_biomd0000000777_model_species_labels
+    schema:
+      M_Tumor_Cells: str
+      N_CTL: str
+      Z_THL: str
+    description: Display labels for selected source states.
+  outputs: []

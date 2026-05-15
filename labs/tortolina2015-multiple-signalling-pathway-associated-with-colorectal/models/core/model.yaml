@@ -1,0 +1,122 @@
+schema_version: '2.0'
+title: Tortolina2015 - Multiple signalling pathway associated with colorectal cancer
+description: Oncology Tortolina2015Multiple Signalling Pathway Associ Model1601250000Model models core biological dynamics as a OTHER simulation curated from biomodels_ebi (biomodels_ebi:MODEL1601250000), focused on oncolog. When you run it, you can track state over time and compare response patterns across parameter settings.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- logical-model
+- oncology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Lorenzo Tortolina
+- David J Duffy
+- Massimo Maffei
+- Nicoletta Castagnino
+- "Aim\xE9e M Carmody"
+upstream:
+  id: biomodels_ebi:MODEL1601250000
+  source_db: biomodels_ebi
+  source_id: MODEL1601250000
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1601250000
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1601250000?filename=MODEL1601250000_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.tortolina2015_multiple_signalling_pathway_associ_model1601250000_model:Tortolina2015MultipleSignallingPathwayAssociModel1601250000Model
+  init_kwargs:
+    model_path: data/MODEL1601250000.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/MODEL1601250000.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Logical/qualitative SBML semantics must be validated carefully; do not treat numeric trajectories as mechanistic ODEs without source support.
+io:
+  inputs:
+  - name: initial_raf_ras_gtp
+    maps_to: mw813e3a30_3dd2_48dc_9b30_f8392d171ad5
+    label: Raf Ras GTP
+    default: 0.0
+    units: native SBML value
+    description: Initial Raf Ras GTP. Sets the initial value of bundled SBML symbol `mw813e3a30_3dd2_48dc_9b30_f8392d171ad5`.
+  - name: initial_raf_aktp
+    maps_to: mwfabf208d_3879_4a2a_b1dc_568efc0f00d8
+    label: Raf* AKTP
+    default: 0.0
+    units: native SBML value
+    description: Initial Raf* AKTP. Sets the initial value of bundled SBML symbol `mwfabf208d_3879_4a2a_b1dc_568efc0f00d8`.
+  - name: initial_ras
+    maps_to: mw33086e75_6e6c_406a_8e47_9e8290ec6c71
+    label: Ras
+    default: 85.0
+    units: native SBML value
+    description: Initial Ras. Sets the initial value of bundled SBML symbol `mw33086e75_6e6c_406a_8e47_9e8290ec6c71`.
+  - name: initial_raf
+    maps_to: mw020aa876_35fd_48bc_a111_b4d2c8e30189
+    label: Raf
+    default: 50.0
+    units: native SBML value
+    description: Initial Raf. Sets the initial value of bundled SBML symbol `mw020aa876_35fd_48bc_a111_b4d2c8e30189`.
+  - name: initial_erk
+    maps_to: mw2b09949a_fc27_4cec_a09a_533d7c925f21
+    label: ERK
+    default: 200.0
+    units: native SBML value
+    description: Initial ERK. Sets the initial value of bundled SBML symbol `mw2b09949a_fc27_4cec_a09a_533d7c925f21`.
+  - name: initial_akt
+    maps_to: mwb39c51c6_1b77_4c59_a689_81c9c728255a
+    label: AKT
+    default: 100.0
+    units: native SBML value
+    description: Initial AKT. Sets the initial value of bundled SBML symbol `mwb39c51c6_1b77_4c59_a689_81c9c728255a`.
+  outputs:
+  - name: raf_ras_gtp
+    maps_to: mw813e3a30_3dd2_48dc_9b30_f8392d171ad5
+    label: Raf Ras GTP
+    description: Raf Ras GTP observable. Maps to SBML symbol `mw813e3a30_3dd2_48dc_9b30_f8392d171ad5`.
+  - name: raf_aktp
+    maps_to: mwfabf208d_3879_4a2a_b1dc_568efc0f00d8
+    label: Raf* AKTP
+    description: Raf* AKTP observable. Maps to SBML symbol `mwfabf208d_3879_4a2a_b1dc_568efc0f00d8`.
+  - name: ras
+    maps_to: mw33086e75_6e6c_406a_8e47_9e8290ec6c71
+    label: Ras
+    description: Ras observable. Maps to SBML symbol `mw33086e75_6e6c_406a_8e47_9e8290ec6c71`.
+  - name: raf
+    maps_to: mw020aa876_35fd_48bc_a111_b4d2c8e30189
+    label: Raf
+    description: Raf observable. Maps to SBML symbol `mw020aa876_35fd_48bc_a111_b4d2c8e30189`.
+  - name: erk
+    maps_to: mw2b09949a_fc27_4cec_a09a_533d7c925f21
+    label: ERK
+    description: ERK observable. Maps to SBML symbol `mw2b09949a_fc27_4cec_a09a_533d7c925f21`.
+  - name: akt
+    maps_to: mwb39c51c6_1b77_4c59_a689_81c9c728255a
+    label: AKT
+    description: AKT observable. Maps to SBML symbol `mwb39c51c6_1b77_4c59_a689_81c9c728255a`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

@@ -1,0 +1,99 @@
+schema_version: '2.0'
+title: Sun2018 - Instantaneous mutation rate in cancer initiation and progression Lab
+description: '&lt;notes xmlns=&quot;http://www.sbml.org/sbml/level2/version4&quot;&gt; &lt;body xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt; &lt;p&gt;BackgroundCancer is one of the leading causes for the morb. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: initial_patient_0
+    maps_to: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model.initial_patient_0
+    label: Patient 0
+    default: 1.0
+    units: native SBML value
+    description: Initial Patient 0. Sets the initial value of bundled SBML symbol `p_0`.
+  - name: initial_patient_1
+    maps_to: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model.initial_patient_1
+    label: Patient 1
+    default: 0.0
+    units: native SBML value
+    description: Initial Patient 1. Sets the initial value of bundled SBML symbol `p_1`.
+  - name: initial_patient_2
+    maps_to: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model.initial_patient_2
+    label: Patient 2
+    default: 0.0
+    units: native SBML value
+    description: Initial Patient 2. Sets the initial value of bundled SBML symbol `p_2`.
+  - name: initial_patient_3
+    maps_to: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model.initial_patient_3
+    label: Patient 3
+    default: 0.0
+    units: native SBML value
+    description: Initial Patient 3. Sets the initial value of bundled SBML symbol `p_3`.
+  - name: initial_patient_4
+    maps_to: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model.initial_patient_4
+    label: Patient 4
+    default: 0.0
+    units: native SBML value
+    description: Initial Patient 4. Sets the initial value of bundled SBML symbol `p_4`.
+  - name: initial_patient_5
+    maps_to: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model.initial_patient_5
+    label: Patient 5
+    default: 0.0
+    units: native SBML value
+    description: Initial Patient 5. Sets the initial value of bundled SBML symbol `p_5`.
+  outputs:
+  - name: patient_0
+    maps_to: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model.patient_0
+    description: Patient 0 observable. Maps to SBML symbol `p_0`.
+  - name: patient_1
+    maps_to: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model.patient_1
+    description: Patient 1 observable. Maps to SBML symbol `p_1`.
+  - name: patient_2
+    maps_to: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model.patient_2
+    description: Patient 2 observable. Maps to SBML symbol `p_2`.
+  - name: patient_3
+    maps_to: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model.patient_3
+    description: Patient 3 observable. Maps to SBML symbol `p_3`.
+  - name: patient_4
+    maps_to: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model.patient_4
+    description: Patient 4 observable. Maps to SBML symbol `p_4`.
+  - name: patient_5
+    maps_to: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model.patient_5
+    description: Patient 5 observable. Maps to SBML symbol `p_5`.
+  - name: state
+    maps_to: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model.state
+  to:
+  - visualisation.oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model_state
+- from: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model.summary
+  to:
+  - visualisation.oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model_summary
+- from: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model.species_labels
+  to:
+  - visualisation.oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

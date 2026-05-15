@@ -1,0 +1,78 @@
+schema_version: '2.0'
+title: Owen1998 - tumour growth model Visualisation
+description: Oncology visualisation for Owen1998 - tumour growth model.
+standard: other
+tags:
+- angiogenesis
+- biomodels_ebi
+- curated
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Owen1998 - tumour growth model
+    question: Does the baseline model indicate vascular or angiogenic support for tumour dynamics?
+    answer_focus: Tracks vascular, tumour, and therapy-linked observables where present.
+    visual_scope: Tumour vascularization, angiogenesis, and tissue-level response
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_owen1998_tumour_growth_model_biomd0000000670_model
+      title: Owen1998 - tumour growth model
+      state_observables:
+      - l
+      - n
+      - m
+      observables:
+      - id: l
+        port: model_state_1
+        label: L
+        group: angiogenesis
+      - id: n
+        port: model_state_2
+        label: N
+        group: angiogenesis
+      - id: m
+        port: model_state_3
+        label: M
+        group: angiogenesis
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_owen1998_tumour_growth_model_biomd0000000670_model_state
+    schema:
+      l: float
+      n: float
+      m: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_owen1998_tumour_growth_model_biomd0000000670_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_owen1998_tumour_growth_model_biomd0000000670_model_species_labels
+    schema:
+      l: str
+      n: str
+      m: str
+    description: Display labels for selected source states.
+  outputs: []

@@ -1,0 +1,91 @@
+schema_version: '2.0'
+title: Al-Tuwairqi2020 - Dynamics of cancer virotherapy - Phase I treatment
+description: This ordinary differential equation model of cancer virotherapy dynamics is described in the publication:Salma M. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunotherapy
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- virotherapy
+authors:
+- Biosimulant Team
+- Salma M Al-Tuwairqi
+- Najwa O Al-Johani
+- Eman A Simbawa
+upstream:
+  id: biomodels_ebi:BIOMD0000001031
+  source_db: biomodels_ebi
+  source_id: BIOMD0000001031
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001031
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001031?filename=Al-Tuwairqi2020 - Phase I virotherapy.xml
+  license: CC0
+biosim:
+  entrypoint: src.al_tuwairqi2020_dynamics_of_cancer_virotherapy_p_biomd0000001031_model:AlTuwairqi2020DynamicsOfCancerVirotherapyPBiomd0000001031Model
+  init_kwargs:
+    model_path: data/BIOMD0000001031.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000001031.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_uninfected_cancer_cells
+    maps_to: uninfected_cancer_cells
+    label: Uninfected cancer cells
+    default: 0.6
+    units: native SBML value
+    description: Initial Uninfected cancer cells. Sets the initial value of bundled SBML symbol `uninfected_cancer_cells`.
+  - name: initial_infected_cancer_cells
+    maps_to: infected_cancer_cells
+    label: Infected cancer cells
+    default: 0.0
+    units: native SBML value
+    description: Initial Infected cancer cells. Sets the initial value of bundled SBML symbol `infected_cancer_cells`.
+  - name: initial_free_virus
+    maps_to: free_virus
+    label: Free virus
+    default: 0.5
+    units: native SBML value
+    description: Initial Free virus. Sets the initial value of bundled SBML symbol `free_virus`.
+  outputs:
+  - name: uninfected_cancer_cells
+    maps_to: uninfected_cancer_cells
+    label: Uninfected cancer cells
+    description: Uninfected cancer cells observable. Maps to SBML symbol `uninfected_cancer_cells`.
+  - name: infected_cancer_cells
+    maps_to: infected_cancer_cells
+    label: Infected cancer cells
+    description: Infected cancer cells observable. Maps to SBML symbol `infected_cancer_cells`.
+  - name: free_virus
+    maps_to: free_virus
+    label: Free virus
+    description: Free virus observable. Maps to SBML symbol `free_virus`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

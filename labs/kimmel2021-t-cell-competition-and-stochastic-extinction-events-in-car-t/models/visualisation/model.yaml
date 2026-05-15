@@ -1,0 +1,79 @@
+schema_version: '2.0'
+title: Kimmel2021 - T cell competition and stochastic extinction events in CAR T cell therapy Visualisation
+description: Oncology visualisation for Kimmel2021 - T cell competition and stochastic extinction events in CAR T cell therapy.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Kimmel2021 - T cell competition and stochastic extinction events in CAR T cell therapy
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model
+      title: Kimmel2021 - T cell competition and stochastic extinction events in CAR T cell therapy
+      state_observables:
+      - Normal_T_cells
+      - CAR_T_cells
+      - Antigen_presenting_tumour_cells
+      observables:
+      - id: Antigen_presenting_tumour_cells
+        port: antigen_presenting_tumour_cells
+        label: Antigen presenting tumour cells
+        group: drug_response
+      - id: Normal_T_cells
+        port: normal_t_cells
+        label: Normal T cells
+        group: drug_response
+      - id: CAR_T_cells
+        port: car_t_cells
+        label: CAR T cells
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model_state
+    schema:
+      Normal_T_cells: float
+      CAR_T_cells: float
+      Antigen_presenting_tumour_cells: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model_species_labels
+    schema:
+      Antigen_presenting_tumour_cells: str
+      Normal_T_cells: str
+      CAR_T_cells: str
+    description: Display labels for selected source states.
+  outputs: []

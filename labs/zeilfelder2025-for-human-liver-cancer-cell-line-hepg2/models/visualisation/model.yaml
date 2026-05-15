@@ -1,0 +1,149 @@
+schema_version: '2.0'
+title: Zeilfelder2025 - Model for human liver cancer cell line HepG2 Visualisation
+description: Oncology visualisation for Zeilfelder2025 - Model for human liver cancer cell line HepG2.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Zeilfelder2025 - Model for human liver cancer cell line HepG2
+    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
+    visual_scope: Cancer signaling pathway activity and dominant source states
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model
+      title: Zeilfelder2025 - Model for human liver cancer cell line HepG2
+      state_observables:
+      - BMPR
+      - BMPR_delay1
+      - BMPR_delay2
+      - BMPR_delay3
+      - BMPR_delay4
+      - BMPR_delay5
+      - BMPR_delay6
+      - SMAD6RNA1
+      - SMAD6RNA2
+      - SMAD6RNA
+      - ID3RNA
+      - JAK1_gp130
+      - pJAK1_pgp130
+      - STAT3
+      - cpSTAT3
+      - npSTAT3
+      - nSOCS3RNA1
+      - nSOCS3RNA2
+      - nSOCS3RNA3
+      - nSOCS3RNA4
+      - nSOCS3RNA5
+      - SOCS3RNA
+      - SOCS3
+      - nHAMPRNA1
+      - nHAMPRNA2
+      - nHAMPRNA3
+      - nHAMPRNA4
+      - nHAMPRNA5
+      - nHAMPRNA6
+      - nHAMPRNA7
+      - HAMPRNA
+      observables:
+      - id: STAT3
+        port: unphosphorylated_stat3
+        label: Unphosphorylated STAT3
+        group: signaling
+      - id: cpSTAT3
+        port: active_cytoplasmic_stat3
+        label: Active cytoplasmic STAT3
+        group: signaling
+      - id: npSTAT3
+        port: active_nuclear_stat3
+        label: Active nuclear STAT3
+        group: signaling
+      - id: BMPR
+        port: total_bmp_receptor
+        label: Total BMP receptor
+        group: signaling
+      - id: BMPR_delay1
+        port: cofactor_activated_by_bmp_receptor
+        label: Cofactor activated by BMP receptor
+        group: signaling
+      - id: BMPR_delay2
+        port: cofactor_activated_by_bmp_receptor_2
+        label: Cofactor activated by BMP receptor 2
+        group: signaling
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model_state
+    schema:
+      BMPR: float
+      BMPR_delay1: float
+      BMPR_delay2: float
+      BMPR_delay3: float
+      BMPR_delay4: float
+      BMPR_delay5: float
+      BMPR_delay6: float
+      SMAD6RNA1: float
+      SMAD6RNA2: float
+      SMAD6RNA: float
+      ID3RNA: float
+      JAK1_gp130: float
+      pJAK1_pgp130: float
+      STAT3: float
+      cpSTAT3: float
+      npSTAT3: float
+      nSOCS3RNA1: float
+      nSOCS3RNA2: float
+      nSOCS3RNA3: float
+      nSOCS3RNA4: float
+      nSOCS3RNA5: float
+      SOCS3RNA: float
+      SOCS3: float
+      nHAMPRNA1: float
+      nHAMPRNA2: float
+      nHAMPRNA3: float
+      nHAMPRNA4: float
+      nHAMPRNA5: float
+      nHAMPRNA6: float
+      nHAMPRNA7: float
+      HAMPRNA: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_zeilfelder2025_model_for_human_liver_cancer_cell_model2503270001_model_species_labels
+    schema:
+      STAT3: str
+      cpSTAT3: str
+      npSTAT3: str
+      BMPR: str
+      BMPR_delay1: str
+      BMPR_delay2: str
+    description: Display labels for selected source states.
+  outputs: []

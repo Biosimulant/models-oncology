@@ -1,0 +1,93 @@
+schema_version: '2.0'
+title: Mpekris2017 - Role of vascular normalization in benefit from metronomic chemotherapy
+description: Role of vascular normalization in benefit from metronomic chemotherapy.Mpekris F1, Baish JW2, Stylianopoulos T3, Jain RK4.Author informationAbstractMetronomic dosing of chemotherapy-defined as frequen. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- angiogenesis
+- biomodels_ebi
+- chemotherapy
+- curated
+- drug-response
+- faithful
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Fotios Mpekris
+- James W Baish
+- Triantafyllos Stylianopoulos
+- Rakesh K Jain
+upstream:
+  id: biomodels_ebi:MODEL2001200002
+  source_db: biomodels_ebi
+  source_id: MODEL2001200002
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2001200002
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2001200002?filename=Mpekris2017.xml
+  license: CC0
+biosim:
+  entrypoint: src.mpekris2017_role_of_vascular_normalization_in_be_model2001200002_model:Mpekris2017RoleOfVascularNormalizationInBeModel2001200002Model
+  init_kwargs:
+    model_path: data/MODEL2001200002.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/MODEL2001200002.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_csc
+    maps_to: Csc
+    label: Csc
+    default: 1.0
+    units: native SBML value
+    description: Initial Csc. Sets the initial value of bundled SBML symbol `Csc`.
+  outputs:
+  - name: model_state_1
+    maps_to: C
+    label: C
+    description: C observable. Maps to SBML symbol `C`.
+  - name: model_state_2
+    maps_to: T
+    label: T
+    description: T observable. Maps to SBML symbol `T`.
+  - name: csc
+    maps_to: Csc
+    label: Csc
+    description: Csc observable. Maps to SBML symbol `Csc`.
+  - name: model_state_4
+    maps_to: I
+    label: I
+    description: I observable. Maps to SBML symbol `I`.
+  - name: model_state_5
+    maps_to: N
+    label: N
+    description: N observable. Maps to SBML symbol `N`.
+  - name: model_state_6
+    maps_to: L
+    label: L
+    description: L observable. Maps to SBML symbol `L`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

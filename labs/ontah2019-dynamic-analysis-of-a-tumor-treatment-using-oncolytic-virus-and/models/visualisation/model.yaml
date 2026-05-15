@@ -1,0 +1,86 @@
+schema_version: '2.0'
+title: Ontah2019 - Dynamic analysis of a tumor treatment model using oncolytic virus and chemotherapy with saturated infection rate Visualisation
+description: Oncology visualisation for Ontah2019 - Dynamic analysis of a tumor treatment model using oncolytic virus and chemotherapy with saturated infection rate.
+standard: other
+tags:
+- biomodels_ebi
+- chemotherapy
+- curated
+- drug-response
+- faithful
+- immunotherapy
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- virotherapy
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Ontah2019 - Dynamic analysis of a tumor treatment model using oncolytic virus and chemotherapy with saturated infection rate
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_ontah2019_dynamic_analysis_of_a_tumor_treatment_biomd0000000877_model
+      title: Ontah2019 - Dynamic analysis of a tumor treatment model using oncolytic virus and chemotherapy with saturated infection rate
+      state_observables:
+      - U
+      - I
+      - V
+      - C
+      observables:
+      - id: U
+        port: model_state_1
+        label: U
+        group: drug_response
+      - id: I
+        port: model_state_2
+        label: I
+        group: drug_response
+      - id: V
+        port: model_state_3
+        label: V
+        group: drug_response
+      - id: C
+        port: model_state_4
+        label: C
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_ontah2019_dynamic_analysis_of_a_tumor_treatment_biomd0000000877_model_state
+    schema:
+      U: float
+      I: float
+      V: float
+      C: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_ontah2019_dynamic_analysis_of_a_tumor_treatment_biomd0000000877_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_ontah2019_dynamic_analysis_of_a_tumor_treatment_biomd0000000877_model_species_labels
+    schema:
+      U: str
+      I: str
+      V: str
+      C: str
+    description: Display labels for selected source states.
+  outputs: []

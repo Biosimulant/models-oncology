@@ -1,0 +1,113 @@
+schema_version: '2.0'
+title: Shin_2018_EGFR-PYK2-c-Met interaction network_model Visualisation
+description: Oncology visualisation for Shin_2018_EGFR-PYK2-c-Met interaction network_model.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Shin_2018_EGFR-PYK2-c-Met interaction network_model
+    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
+    visual_scope: Cancer signaling pathway activity and dominant source states
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model
+      title: Shin_2018_EGFR-PYK2-c-Met interaction network_model
+      state_observables:
+      - pEGFR
+      - EGFRub
+      - PYK2m
+      - PYK2
+      - pPYK2
+      - pSTAT3
+      - cMETm
+      - cMET
+      - pcMET
+      - pCbl
+      - aPTP
+      - pERK
+      - STAT3uStattic
+      observables:
+      - id: pEGFR
+        port: pegfr
+        label: PEGFR
+        group: signaling
+      - id: EGFRub
+        port: egfrub
+        label: EGFRub
+        group: signaling
+      - id: pERK
+        port: perk
+        label: PERK
+        group: signaling
+      - id: pSTAT3
+        port: pstat3
+        label: PSTAT3
+        group: signaling
+      - id: STAT3uStattic
+        port: stat3ustattic
+        label: STAT3uStattic
+        group: signaling
+      - id: PYK2
+        port: pyk2
+        label: PYK2
+        group: signaling
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model_state
+    schema:
+      pEGFR: float
+      EGFRub: float
+      PYK2m: float
+      PYK2: float
+      pPYK2: float
+      pSTAT3: float
+      cMETm: float
+      cMET: float
+      pcMET: float
+      pCbl: float
+      aPTP: float
+      pERK: float
+      STAT3uStattic: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model_species_labels
+    schema:
+      pEGFR: str
+      EGFRub: str
+      pERK: str
+      pSTAT3: str
+      STAT3uStattic: str
+      PYK2: str
+    description: Display labels for selected source states.
+  outputs: []

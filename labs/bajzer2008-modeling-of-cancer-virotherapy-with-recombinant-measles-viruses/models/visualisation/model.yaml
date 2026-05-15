@@ -1,0 +1,78 @@
+schema_version: '2.0'
+title: Bajzer2008 - Modeling of cancer virotherapy with recombinant measles viruses Visualisation
+description: Oncology visualisation for Bajzer2008 - Modeling of cancer virotherapy with recombinant measles viruses.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunotherapy
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- virotherapy
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Bajzer2008 - Modeling of cancer virotherapy with recombinant measles viruses
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_bajzer2008_modeling_of_cancer_virotherapy_with_r_biomd0000000771_model
+      title: Bajzer2008 - Modeling of cancer virotherapy with recombinant measles viruses
+      state_observables:
+      - y_Tumor_Cell
+      - v_Virus
+      - x_Infected_Cell
+      observables:
+      - id: y_Tumor_Cell
+        port: y_tumor_cell
+        label: Y Tumor Cell
+        group: drug_response
+      - id: x_Infected_Cell
+        port: x_infected_cell
+        label: X Infected Cell
+        group: drug_response
+      - id: v_Virus
+        port: v_virus
+        label: V Virus
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_bajzer2008_modeling_of_cancer_virotherapy_with_r_biomd0000000771_model_state
+    schema:
+      y_Tumor_Cell: float
+      v_Virus: float
+      x_Infected_Cell: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_bajzer2008_modeling_of_cancer_virotherapy_with_r_biomd0000000771_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_bajzer2008_modeling_of_cancer_virotherapy_with_r_biomd0000000771_model_species_labels
+    schema:
+      y_Tumor_Cell: str
+      x_Infected_Cell: str
+      v_Virus: str
+    description: Display labels for selected source states.
+  outputs: []

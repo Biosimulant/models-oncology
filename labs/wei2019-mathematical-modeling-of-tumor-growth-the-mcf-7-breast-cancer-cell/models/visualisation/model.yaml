@@ -1,0 +1,91 @@
+schema_version: '2.0'
+title: Wei2019 - Mathematical modeling of tumor growth The MCF-7 breast cancer cell line Visualisation
+description: Oncology visualisation for Wei2019 - Mathematical modeling of tumor growth The MCF-7 breast cancer cell line.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- radiotherapy
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Wei2019 - Mathematical modeling of tumor growth The MCF-7 breast cancer cell line
+    question: Does the radiotherapy-linked model show tumour response under baseline source conditions?
+    answer_focus: Compares radiation/treatment and tumour observables where present.
+    visual_scope: Radiotherapy-linked tumour response
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model
+      title: Wei2019 - Mathematical modeling of tumor growth The MCF-7 breast cancer cell line
+      state_observables:
+      - T
+      - N
+      - L
+      - C
+      - E
+      observables:
+      - id: T
+        port: model_state_1
+        label: T
+        group: radiotherapy
+      - id: N
+        port: model_state_2
+        label: N
+        group: radiotherapy
+      - id: C
+        port: model_state_3
+        label: C
+        group: radiotherapy
+      - id: E
+        port: model_state_4
+        label: E
+        group: radiotherapy
+      - id: L
+        port: model_state_5
+        label: L
+        group: radiotherapy
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model_state
+    schema:
+      T: float
+      N: float
+      L: float
+      C: float
+      E: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model_species_labels
+    schema:
+      T: str
+      N: str
+      C: str
+      E: str
+      L: str
+    description: Display labels for selected source states.
+  outputs: []

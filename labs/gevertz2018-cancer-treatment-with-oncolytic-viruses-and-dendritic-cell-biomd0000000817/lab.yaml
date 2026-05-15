@@ -1,0 +1,101 @@
+schema_version: '2.0'
+title: Gevertz2018 - cancer treatment with oncolytic viruses and dendritic cell injections minimal model Lab
+description: The model is based on 'Developing a Minimally Structured Mathematical Model of Cancer Treatment with Oncolytic Viruses and Dendritic Cell Injections', PMID:30510594. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunotherapy
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- virotherapy
+io:
+  inputs:
+  - name: c_kill_level
+    maps_to: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model.c_kill_level
+    label: C kill source parameter
+    default: 0.623397
+    units: native SBML value
+    description: C kill source parameter. Maps to bundled SBML parameter `c_kill`.
+  - name: ov_dose
+    maps_to: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model.ov_dose
+    label: OV dose source parameter
+    default: 2.5
+    units: native SBML value
+    description: OV dose source parameter. Maps to bundled SBML parameter `OV_dose`.
+  - name: initial_uninfected_tumor_cell_u
+    maps_to: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model.initial_uninfected_tumor_cell_u
+    label: Uninfected Tumor Cell U
+    default: 57.414042
+    units: native SBML value
+    description: Initial Uninfected Tumor Cell U. Sets the initial value of bundled SBML symbol `Uninfected_Tumor_Cell_U`.
+  - name: initial_tumor_targeting_t_cells_t
+    maps_to: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model.initial_tumor_targeting_t_cells_t
+    label: Tumor targeting T cells T
+    default: 0.0
+    units: native SBML value
+    description: Initial Tumor targeting T cells T. Sets the initial value of bundled SBML symbol `Tumor_targeting_T_cells_T`.
+  - name: initial_infected_cancer_cell_i
+    maps_to: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model.initial_infected_cancer_cell_i
+    label: Infected Cancer Cell I
+    default: 0.0
+    units: native SBML value
+    description: Initial Infected Cancer Cell I. Sets the initial value of bundled SBML symbol `Infected_Cancer_Cell_I`.
+  - name: initial_naive_t_cells_a
+    maps_to: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model.initial_naive_t_cells_a
+    label: Naive T cells A
+    default: 0.0
+    units: native SBML value
+    description: Initial Naive T cells A. Sets the initial value of bundled SBML symbol `Naive_T_cells_A`.
+  outputs:
+  - name: uninfected_tumor_cell_u
+    maps_to: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model.uninfected_tumor_cell_u
+    description: Uninfected Tumor Cell U observable. Maps to SBML symbol `Uninfected_Tumor_Cell_U`.
+  - name: tumor_targeting_t_cells_t
+    maps_to: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model.tumor_targeting_t_cells_t
+    description: Tumor targeting T cells T observable. Maps to SBML symbol `Tumor_targeting_T_cells_T`.
+  - name: infected_cancer_cell_i
+    maps_to: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model.infected_cancer_cell_i
+    description: Infected Cancer Cell I observable. Maps to SBML symbol `Infected_Cancer_Cell_I`.
+  - name: naive_t_cells_a
+    maps_to: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model.naive_t_cells_a
+    description: Naive T cells A observable. Maps to SBML symbol `Naive_T_cells_A`.
+  - name: dendritic_cells_d
+    maps_to: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model.dendritic_cells_d
+    description: Dendritic Cells D observable. Maps to SBML symbol `Dendritic_Cells_D`.
+  - name: oncolytic_adenovirus_v
+    maps_to: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model.oncolytic_adenovirus_v
+    description: Oncolytic Adenovirus V observable. Maps to SBML symbol `Oncolytic_Adenovirus_V`.
+  - name: state
+    maps_to: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model.state
+  to:
+  - visualisation.oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model_state
+- from: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model.summary
+  to:
+  - visualisation.oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model_summary
+- from: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model.species_labels
+  to:
+  - visualisation.oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000817_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

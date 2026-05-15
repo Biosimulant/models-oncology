@@ -1,0 +1,86 @@
+schema_version: '2.0'
+title: Galante2012 - B7-H1 and a Mathematical Model for Cytotoxic T Cell and Tumor Cell Interaction Visualisation
+description: Oncology visualisation for Galante2012 - B7-H1 and a Mathematical Model for Cytotoxic T Cell and Tumor Cell Interaction.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Galante2012 - B7-H1 and a Mathematical Model for Cytotoxic T Cell and Tumor Cell Interaction
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_galante2012_b7_h1_and_a_mathematical_model_for_c_biomd0000000812_model
+      title: Galante2012 - B7-H1 and a Mathematical Model for Cytotoxic T Cell and Tumor Cell Interaction
+      state_observables:
+      - X_Complex
+      - P_Perforin
+      - C_Cancer_Uncomplexed
+      - T_ast
+      observables:
+      - id: P_Perforin
+        port: p_perforin
+        label: P Perforin
+        group: drug_response
+      - id: C_Cancer_Uncomplexed
+        port: c_cancer_uncomplexed
+        label: C Cancer Uncomplexed
+        group: drug_response
+      - id: T_ast
+        port: t_ast
+        label: T ast
+        group: drug_response
+      - id: X_Complex
+        port: x_complex
+        label: X Complex
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_galante2012_b7_h1_and_a_mathematical_model_for_c_biomd0000000812_model_state
+    schema:
+      X_Complex: float
+      P_Perforin: float
+      C_Cancer_Uncomplexed: float
+      T_ast: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_galante2012_b7_h1_and_a_mathematical_model_for_c_biomd0000000812_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_galante2012_b7_h1_and_a_mathematical_model_for_c_biomd0000000812_model_species_labels
+    schema:
+      P_Perforin: str
+      C_Cancer_Uncomplexed: str
+      T_ast: str
+      X_Complex: str
+    description: Display labels for selected source states.
+  outputs: []

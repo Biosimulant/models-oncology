@@ -1,0 +1,127 @@
+schema_version: '2.0'
+title: Lopes2025 - NFkB model in Breast Cancer Visualisation
+description: Oncology visualisation for Lopes2025 - NFkB model in Breast Cancer.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- oncology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Lopes2025 - NFkB model in Breast Cancer
+    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
+    visual_scope: Cancer signaling pathway activity and dominant source states
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model
+      title: Lopes2025 - NFkB model in Breast Cancer
+      state_observables:
+      - NFkB
+      - SLUG
+      - TWIST1
+      - N0TWIST1
+      - SIP1
+      - N0SIP1
+      - N0SLUG
+      - p65
+      - p50
+      - RNAp50
+      - RNAp65
+      - RNASLUG
+      - RNASIP1
+      - RNATWIST1
+      - N0p50
+      - N0p65
+      - N1p50
+      - N1p65
+      - N1SIP1
+      - N1SLUG
+      - N1TWIST1
+      observables:
+      - id: NFkB
+        port: nf_kb
+        label: NF-kB
+        group: signaling
+      - id: SLUG
+        port: slug
+        label: SLUG
+        group: signaling
+      - id: SIP1
+        port: sip1
+        label: SIP1
+        group: signaling
+      - id: p65
+        port: p65
+        label: P65
+        group: signaling
+      - id: p50
+        port: p50
+        label: P50
+        group: signaling
+      - id: TWIST1
+        port: twist1
+        label: TWIST1
+        group: signaling
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model_state
+    schema:
+      NFkB: float
+      SLUG: float
+      TWIST1: float
+      N0TWIST1: float
+      SIP1: float
+      N0SIP1: float
+      N0SLUG: float
+      p65: float
+      p50: float
+      RNAp50: float
+      RNAp65: float
+      RNASLUG: float
+      RNASIP1: float
+      RNATWIST1: float
+      N0p50: float
+      N0p65: float
+      N1p50: float
+      N1p65: float
+      N1SIP1: float
+      N1SLUG: float
+      N1TWIST1: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model_species_labels
+    schema:
+      NFkB: str
+      SLUG: str
+      SIP1: str
+      p65: str
+      p50: str
+      TWIST1: str
+    description: Display labels for selected source states.
+  outputs: []

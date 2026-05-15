@@ -1,0 +1,102 @@
+schema_version: '2.0'
+title: Zhu2015 - Combined gemcitabine and birinapant in pancreatic cancer cells - basic PD model Visualisation
+description: Oncology visualisation for Zhu2015 - Combined gemcitabine and birinapant in pancreatic cancer cells - basic PD model.
+standard: other
+tags:
+- biomodels_ebi
+- chemotherapy
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Zhu2015 - Combined gemcitabine and birinapant in pancreatic cancer cells - basic PD model
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000668_model
+      title: Zhu2015 - Combined gemcitabine and birinapant in pancreatic cancer cells - basic PD model
+      state_observables:
+      - Sti_g1
+      - Sti_g2
+      - Sti_g3
+      - Sti_g4
+      - Sti_b1
+      - Sti_b2
+      - Sti_b3
+      - Sti_b4
+      observables:
+      - id: Sti_g1
+        port: sti_g1
+        label: Sti g1
+        group: drug_response
+      - id: Sti_g2
+        port: sti_g2
+        label: Sti g2
+        group: drug_response
+      - id: Sti_g3
+        port: sti_g3
+        label: Sti g3
+        group: drug_response
+      - id: Sti_g4
+        port: sti_g4
+        label: Sti g4
+        group: drug_response
+      - id: Sti_b1
+        port: sti_b1
+        label: Sti b1
+        group: drug_response
+      - id: Sti_b2
+        port: sti_b2
+        label: Sti b2
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000668_model_state
+    schema:
+      Sti_g1: float
+      Sti_g2: float
+      Sti_g3: float
+      Sti_g4: float
+      Sti_b1: float
+      Sti_b2: float
+      Sti_b3: float
+      Sti_b4: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000668_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000668_model_species_labels
+    schema:
+      Sti_g1: str
+      Sti_g2: str
+      Sti_g3: str
+      Sti_g4: str
+      Sti_b1: str
+      Sti_b2: str
+    description: Display labels for selected source states.
+  outputs: []

@@ -1,0 +1,121 @@
+schema_version: '2.0'
+title: Giani2019 - Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells
+description: Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- "Fiorenza Gian\xEC"
+- Giulia Russo
+- Marzio Pennisi
+- Laura Sciacca
+- Francesco Frasca
+upstream:
+  id: biomodels_ebi:BIOMD0000000883
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000883
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000883
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000883?filename=Giani2019.xml
+  license: CC0
+biosim:
+  entrypoint: src.giani2019_computational_modeling_to_predict_map3_biomd0000000883_model:Giani2019ComputationalModelingToPredictMap3Biomd0000000883Model
+  init_kwargs:
+    model_path: data/BIOMD0000000883.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000883.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_free_egfr
+    maps_to: species_1
+    label: Free EGFR
+    default: 10.0
+    units: native SBML value
+    description: Initial Free EGFR. Sets the initial value of bundled SBML symbol `species_1`.
+  - name: initial_sos_inactive
+    maps_to: species_3
+    label: Sos Inactive
+    default: 10.0
+    units: native SBML value
+    description: Initial Sos Inactive. Sets the initial value of bundled SBML symbol `species_3`.
+  - name: initial_ras_inactive
+    maps_to: species_5
+    label: Ras Inactive
+    default: 10.0
+    units: native SBML value
+    description: Initial Ras Inactive. Sets the initial value of bundled SBML symbol `species_5`.
+  - name: initial_raf1_inactive
+    maps_to: species_7
+    label: Raf1 Inactive
+    default: 10.0
+    units: native SBML value
+    description: Initial Raf1 Inactive. Sets the initial value of bundled SBML symbol `species_7`.
+  - name: initial_mek_inactive
+    maps_to: species_9
+    label: Mek Inactive
+    default: 10.0
+    units: native SBML value
+    description: Initial Mek Inactive. Sets the initial value of bundled SBML symbol `species_9`.
+  - name: initial_erk
+    maps_to: species_11
+    label: ERK
+    default: 10.0
+    units: native SBML value
+    description: Initial ERK. Sets the initial value of bundled SBML symbol `species_11`.
+  outputs:
+  - name: free_egfr
+    maps_to: species_1
+    label: Free EGFR
+    description: Free EGFR observable. Maps to SBML symbol `species_1`.
+  - name: sos_inactive
+    maps_to: species_3
+    label: Sos Inactive
+    description: Sos Inactive observable. Maps to SBML symbol `species_3`.
+  - name: ras_inactive
+    maps_to: species_5
+    label: Ras Inactive
+    description: Ras Inactive observable. Maps to SBML symbol `species_5`.
+  - name: raf1_inactive
+    maps_to: species_7
+    label: Raf1 Inactive
+    description: Raf1 Inactive observable. Maps to SBML symbol `species_7`.
+  - name: mek_inactive
+    maps_to: species_9
+    label: Mek Inactive
+    description: Mek Inactive observable. Maps to SBML symbol `species_9`.
+  - name: erk
+    maps_to: species_11
+    label: ERK
+    description: ERK observable. Maps to SBML symbol `species_11`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

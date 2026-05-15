@@ -1,0 +1,76 @@
+schema_version: '2.0'
+title: Tham2008 - PDmodel, Tumour shrinkage by gemcitabine and carboplatin Lab
+description: 'PURPOSE: This tumor response pharmacodynamic model aims to describe primary lesion shrinkage in non-small cell lung cancer over time and determine if concentration-based exposure metrics for gemcitabi. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+tags:
+- biomodels_ebi
+- chemotherapy
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: dose_int2
+    maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.dose_int2
+    label: Dose Int2 source parameter
+    default: -2.0
+    units: native SBML value
+    description: Dose Int2 source parameter. Maps to bundled SBML parameter `Dose_Int2`.
+  - name: dose_int1
+    maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.dose_int1
+    label: Dose Int1 source parameter
+    default: 0.0
+    units: native SBML value
+    description: Dose Int1 source parameter. Maps to bundled SBML parameter `Dose_Int1`.
+  - name: dose
+    maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.dose
+    label: Dose source parameter
+    default: 5203.84
+    units: native SBML value
+    description: Dose source parameter. Maps to bundled SBML parameter `Dose`.
+  - name: initial_tumorsize
+    maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.initial_tumorsize
+    label: TumorSize
+    default: 6.66
+    units: native SBML value
+    description: Initial TumorSize. Sets the initial value of bundled SBML symbol `TumorSize`.
+  outputs:
+  - name: tumorsize
+    maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.tumorsize
+    description: TumorSize observable. Maps to SBML symbol `TumorSize`.
+  - name: model_state_2
+    maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.model_state_2
+    description: Ce observable. Maps to SBML symbol `Ce`.
+  - name: state
+    maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.state
+  to:
+  - visualisation.oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model_state
+- from: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.summary
+  to:
+  - visualisation.oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model_summary
+- from: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.species_labels
+  to:
+  - visualisation.oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

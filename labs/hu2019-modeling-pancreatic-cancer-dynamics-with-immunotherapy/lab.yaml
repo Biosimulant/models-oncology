@@ -1,0 +1,102 @@
+schema_version: '2.0'
+title: Hu2019 - Modeling Pancreatic Cancer Dynamics with Immunotherapy Lab
+description: This is a mathematical model of pancreatic cancer that includes descriptions of pancreatic cancer cells, pancreatic stellate cells, effector cells and tumor-promoting and tumor-suppressing cytokines t. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: initial_z_effector_cells
+    maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.initial_z_effector_cells
+    label: Z Effector Cells
+    default: 190000000.0
+    units: native SBML value
+    description: Initial Z Effector Cells. Sets the initial value of bundled SBML symbol `z_Effector_Cells`.
+  - name: initial_x_pcc
+    maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.initial_x_pcc
+    label: X PCC
+    default: 1000000000.0
+    units: native SBML value
+    description: Initial X PCC. Sets the initial value of bundled SBML symbol `x_PCC`.
+  - name: initial_y_psc
+    maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.initial_y_psc
+    label: Y PSC
+    default: 5600000.0
+    units: native SBML value
+    description: Initial Y PSC. Sets the initial value of bundled SBML symbol `y_PSC`.
+  - name: initial_w_tpc
+    maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.initial_w_tpc
+    label: W TPC
+    default: 50000.0
+    units: native SBML value
+    description: Initial W TPC. Sets the initial value of bundled SBML symbol `w_TPC`.
+  - name: initial_v_tsc
+    maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.initial_v_tsc
+    label: V TSC
+    default: 9.4
+    units: native SBML value
+    description: Initial V TSC. Sets the initial value of bundled SBML symbol `v_TSC`.
+  - name: initial_r_sirna
+    maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.initial_r_sirna
+    label: R siRNA
+    default: 1.0
+    units: native SBML value
+    description: Initial R siRNA. Sets the initial value of bundled SBML symbol `R_siRNA`.
+  outputs:
+  - name: z_effector_cells
+    maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.z_effector_cells
+    description: Z Effector Cells observable. Maps to SBML symbol `z_Effector_Cells`.
+  - name: x_pcc
+    maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.x_pcc
+    description: X PCC observable. Maps to SBML symbol `x_PCC`.
+  - name: y_psc
+    maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.y_psc
+    description: Y PSC observable. Maps to SBML symbol `y_PSC`.
+  - name: w_tpc
+    maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.w_tpc
+    description: W TPC observable. Maps to SBML symbol `w_TPC`.
+  - name: v_tsc
+    maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.v_tsc
+    description: V TSC observable. Maps to SBML symbol `v_TSC`.
+  - name: r_sirna
+    maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.r_sirna
+    description: R siRNA observable. Maps to SBML symbol `R_siRNA`.
+  - name: state
+    maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.state
+  to:
+  - visualisation.oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model_state
+- from: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.summary
+  to:
+  - visualisation.oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model_summary
+- from: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.species_labels
+  to:
+  - visualisation.oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

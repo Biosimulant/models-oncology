@@ -1,0 +1,72 @@
+schema_version: '2.0'
+title: Yazdjer2019 - reinforcement learning-based control of tumor growth under anti-angiogenic therapy Lab
+description: 'This model is based on:Reinforcement learning-based control of tumor growth under anti-angiogenic therapyAuthors: Parisa Yazdjerdi, Nader Meskin, Mohammad Al-Naemi, Ala-Eddin Al Moustafa, Levente Kova. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: initial_tumor_volume_x_1
+    maps_to: oncology_sbml_yazdjer2019_reinforcement_learning_based_control_biomd0000000821_model.initial_tumor_volume_x_1
+    label: Tumor volume x 1
+    default: 1.0
+    units: native SBML value
+    description: Initial Tumor volume x 1. Sets the initial value of bundled SBML symbol `tumor_volume_x_1`.
+  - name: initial_endothelial_volume_x_2
+    maps_to: oncology_sbml_yazdjer2019_reinforcement_learning_based_control_biomd0000000821_model.initial_endothelial_volume_x_2
+    label: Endothelial volume x 2
+    default: 1.0
+    units: native SBML value
+    description: Initial Endothelial volume x 2. Sets the initial value of bundled SBML symbol `endothelial_volume_x_2`.
+  - name: initial_concentration_of_administrated_inhibitor_x_3
+    maps_to: oncology_sbml_yazdjer2019_reinforcement_learning_based_control_biomd0000000821_model.initial_concentration_of_administrated_inhibitor_x_3
+    label: Concentration of administrated inhibitor x 3
+    default: 0.0
+    units: native SBML value
+    description: Initial Concentration of administrated inhibitor x 3. Sets the initial value of bundled SBML symbol `concentration_of_administrated_inhibitor_x_3`.
+  outputs:
+  - name: tumor_volume_x_1
+    maps_to: oncology_sbml_yazdjer2019_reinforcement_learning_based_control_biomd0000000821_model.tumor_volume_x_1
+    description: Tumor volume x 1 observable. Maps to SBML symbol `tumor_volume_x_1`.
+  - name: endothelial_volume_x_2
+    maps_to: oncology_sbml_yazdjer2019_reinforcement_learning_based_control_biomd0000000821_model.endothelial_volume_x_2
+    description: Endothelial volume x 2 observable. Maps to SBML symbol `endothelial_volume_x_2`.
+  - name: concentration_of_administrated_inhibitor_x_3
+    maps_to: oncology_sbml_yazdjer2019_reinforcement_learning_based_control_biomd0000000821_model.concentration_of_administrated_inhibitor_x_3
+    description: Concentration of administrated inhibitor x 3 observable. Maps to SBML symbol `concentration_of_administrated_inhibitor_x_3`.
+  - name: state
+    maps_to: oncology_sbml_yazdjer2019_reinforcement_learning_based_control_biomd0000000821_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_yazdjer2019_reinforcement_learning_based_control_biomd0000000821_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_yazdjer2019_reinforcement_learning_based_control_biomd0000000821_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_yazdjer2019_reinforcement_learning_based_control_biomd0000000821_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_yazdjer2019_reinforcement_learning_based_control_biomd0000000821_model.state
+  to:
+  - visualisation.oncology_sbml_yazdjer2019_reinforcement_learning_based_control_biomd0000000821_model_state
+- from: oncology_sbml_yazdjer2019_reinforcement_learning_based_control_biomd0000000821_model.summary
+  to:
+  - visualisation.oncology_sbml_yazdjer2019_reinforcement_learning_based_control_biomd0000000821_model_summary
+- from: oncology_sbml_yazdjer2019_reinforcement_learning_based_control_biomd0000000821_model.species_labels
+  to:
+  - visualisation.oncology_sbml_yazdjer2019_reinforcement_learning_based_control_biomd0000000821_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

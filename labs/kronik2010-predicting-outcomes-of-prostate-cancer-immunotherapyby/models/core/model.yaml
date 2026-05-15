@@ -1,0 +1,90 @@
+schema_version: '2.0'
+title: Kronik2010 - Predicting Outcomes of Prostate Cancer Immunotherapyby Personalized Mathematical Models
+description: "Predicting Outcomes of Prostate Cancer Immunotherapyby Personalized Mathematical ModelsNatalie Kronik1\xA4, Yuri Kogan1, Moran Elishmereni1, Karin Halevi-Tobias1, Stanimir Vuk-Pavlovic \u03012.,Zvia Agur1*.1I. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Natalie Kronik
+- Yuri Kogan
+- Moran Elishmereni
+- Karin Halevi-Tobias
+- "Stanimir Vuk-Pavlovi\u0107"
+upstream:
+  id: biomodels_ebi:MODEL2001130003
+  source_db: biomodels_ebi
+  source_id: MODEL2001130003
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2001130003
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2001130003?filename=Kronik2010.xml
+  license: CC0
+biosim:
+  entrypoint: src.kronik2010_predicting_outcomes_of_prostate_cance_model2001130003_model:Kronik2010PredictingOutcomesOfProstateCanceModel2001130003Model
+  init_kwargs:
+    model_path: data/MODEL2001130003.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/MODEL2001130003.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations. No scientifically safe external input was exposed by the cleanup.
+io:
+  inputs: []
+  outputs:
+  - name: model_state_1
+    maps_to: V
+    label: V
+    description: V observable. Maps to SBML symbol `V`.
+  - name: model_state_2
+    maps_to: Dm
+    label: Dm
+    description: Dm observable. Maps to SBML symbol `Dm`.
+  - name: model_state_3
+    maps_to: Dc
+    label: Dc
+    description: Dc observable. Maps to SBML symbol `Dc`.
+  - name: model_state_4
+    maps_to: Dr
+    label: Dr
+    description: Dr observable. Maps to SBML symbol `Dr`.
+  - name: model_state_5
+    maps_to: C
+    label: C
+    description: C observable. Maps to SBML symbol `C`.
+  - name: model_state_6
+    maps_to: R
+    label: R
+    description: R observable. Maps to SBML symbol `R`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

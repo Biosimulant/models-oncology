@@ -1,0 +1,103 @@
+schema_version: '2.0'
+title: Sun2018 - Instantaneous mutation rate in cancer initiation and progression Visualisation
+description: Oncology visualisation for Sun2018 - Instantaneous mutation rate in cancer initiation and progression.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Sun2018 - Instantaneous mutation rate in cancer initiation and progression
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model
+      title: Sun2018 - Instantaneous mutation rate in cancer initiation and progression
+      state_observables:
+      - p_0
+      - p_1
+      - p_2
+      - p_3
+      - p_4
+      - p_5
+      - p_6
+      - p_7
+      - p_8
+      observables:
+      - id: p_0
+        port: patient_0
+        label: Patient 0
+        group: drug_response
+      - id: p_1
+        port: patient_1
+        label: Patient 1
+        group: drug_response
+      - id: p_2
+        port: patient_2
+        label: Patient 2
+        group: drug_response
+      - id: p_3
+        port: patient_3
+        label: Patient 3
+        group: drug_response
+      - id: p_4
+        port: patient_4
+        label: Patient 4
+        group: drug_response
+      - id: p_5
+        port: patient_5
+        label: Patient 5
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model_state
+    schema:
+      p_0: float
+      p_1: float
+      p_2: float
+      p_3: float
+      p_4: float
+      p_5: float
+      p_6: float
+      p_7: float
+      p_8: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_sun2018_instantaneous_mutation_rate_in_cancer_in_biomd0000000915_model_species_labels
+    schema:
+      p_0: str
+      p_1: str
+      p_2: str
+      p_3: str
+      p_4: str
+      p_5: str
+    description: Display labels for selected source states.
+  outputs: []

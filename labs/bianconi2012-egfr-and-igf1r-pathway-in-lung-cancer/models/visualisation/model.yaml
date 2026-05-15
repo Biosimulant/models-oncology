@@ -1,0 +1,132 @@
+schema_version: '2.0'
+title: Bianconi2012 - EGFR and IGF1R pathway in lung cancer Visualisation
+description: Oncology visualisation for Bianconi2012 - EGFR and IGF1R pathway in lung cancer.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Bianconi2012 - EGFR and IGF1R pathway in lung cancer
+    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
+    visual_scope: Cancer signaling pathway activity and dominant source states
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model
+      title: Bianconi2012 - EGFR and IGF1R pathway in lung cancer
+      state_observables:
+      - EGFR_active
+      - D_SOS
+      - A_SOS
+      - Raf
+      - Ras_active
+      - Mek_active
+      - ERK
+      - ERK_active
+      - IGFR_active
+      - PI3KCA
+      - PI3KCA_active
+      - AKT_active
+      - AKT
+      - PP2A
+      - Ras
+      - Raf_active
+      - Mek
+      - RasGapActive
+      - RafPP
+      - P90RskInactive
+      - P90Rsk_Active
+      observables:
+      - id: EGFR_active
+        port: egfr_active
+        label: EGFR active
+        group: signaling
+      - id: Raf
+        port: raf
+        label: Raf
+        group: signaling
+      - id: ERK
+        port: erk
+        label: ERK
+        group: signaling
+      - id: AKT
+        port: akt
+        label: AKT
+        group: signaling
+      - id: Ras
+        port: ras
+        label: Ras
+        group: signaling
+      - id: PI3KCA
+        port: pi3kca
+        label: PI3KCA
+        group: signaling
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model_state
+    schema:
+      EGFR_active: float
+      D_SOS: float
+      A_SOS: float
+      Raf: float
+      Ras_active: float
+      Mek_active: float
+      ERK: float
+      ERK_active: float
+      IGFR_active: float
+      PI3KCA: float
+      PI3KCA_active: float
+      AKT_active: float
+      AKT: float
+      PP2A: float
+      Ras: float
+      Raf_active: float
+      Mek: float
+      RasGapActive: float
+      RafPP: float
+      P90RskInactive: float
+      P90Rsk_Active: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model_species_labels
+    schema:
+      EGFR_active: str
+      Raf: str
+      ERK: str
+      AKT: str
+      Ras: str
+      PI3KCA: str
+    description: Display labels for selected source states.
+  outputs: []

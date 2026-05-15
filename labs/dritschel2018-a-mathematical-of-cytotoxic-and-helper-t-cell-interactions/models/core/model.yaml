@@ -1,0 +1,85 @@
+schema_version: '2.0'
+title: Dritschel2018 - A mathematical model of cytotoxic and helper T cell interactions in a tumour microenvironment
+description: This model examines the role of helper and cytotoxic T cells in an anti-tumour response, with implicit inclusions of immunosuppressive effects. The model demonstrates the dependence of immunoediting o.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Heidi Dritschel
+- Sarah L. Waters
+- Helen M. Byrne
+- Andreas Roller
+upstream:
+  id: biomodels_ebi:BIOMD0000000763
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000763
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000763
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000763?filename=Dritschel2018.xml
+  license: CC0
+biosim:
+  entrypoint: src.dritschel2018_a_mathematical_model_of_cytotoxic_biomd0000000763_model:Dritschel2018AMathematicalModelOfCytotoxicBiomd0000000763Model
+  init_kwargs:
+    model_path: data/BIOMD0000000763.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000763.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: ntilde_level
+    maps_to: Ntilde
+    label: Ntilde source parameter
+    default: 0.04
+    units: native SBML value
+    description: Ntilde source parameter. Maps to bundled SBML parameter `Ntilde`.
+  - name: initial_n_tumour
+    maps_to: N_Tumour
+    label: N Tumour
+    default: 0.01
+    units: native SBML value
+    description: Initial N Tumour. Sets the initial value of bundled SBML symbol `N_Tumour`.
+  outputs:
+  - name: n_tumour
+    maps_to: N_Tumour
+    label: N Tumour
+    description: N Tumour observable. Maps to SBML symbol `N_Tumour`.
+  - name: model_state_2
+    maps_to: T_H
+    label: T H
+    description: T H observable. Maps to SBML symbol `T_H`.
+  - name: model_state_3
+    maps_to: T_C
+    label: T C
+    description: T C observable. Maps to SBML symbol `T_C`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

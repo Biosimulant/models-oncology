@@ -1,0 +1,122 @@
+schema_version: '2.0'
+title: Hu2019 - Modeling Pancreatic Cancer Dynamics with Immunotherapy
+description: This is a mathematical model of pancreatic cancer that includes descriptions of pancreatic cancer cells, pancreatic stellate cells, effector cells and tumor-promoting and tumor-suppressing cytokines t. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Xiaochuan Hu
+- Guoyi Ke
+- Sophia R-J Jang
+upstream:
+  id: biomodels_ebi:BIOMD0000000792
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000792
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000792
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000792?filename=Hu2019.xml
+  license: CC0
+biosim:
+  entrypoint: src.hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model:Hu2019ModelingPancreaticCancerDynamicsWithBiomd0000000792Model
+  init_kwargs:
+    model_path: data/BIOMD0000000792.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000792.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_z_effector_cells
+    maps_to: z_Effector_Cells
+    label: Z Effector Cells
+    default: 190000000.0
+    units: native SBML value
+    description: Initial Z Effector Cells. Sets the initial value of bundled SBML symbol `z_Effector_Cells`.
+  - name: initial_x_pcc
+    maps_to: x_PCC
+    label: X PCC
+    default: 1000000000.0
+    units: native SBML value
+    description: Initial X PCC. Sets the initial value of bundled SBML symbol `x_PCC`.
+  - name: initial_y_psc
+    maps_to: y_PSC
+    label: Y PSC
+    default: 5600000.0
+    units: native SBML value
+    description: Initial Y PSC. Sets the initial value of bundled SBML symbol `y_PSC`.
+  - name: initial_w_tpc
+    maps_to: w_TPC
+    label: W TPC
+    default: 50000.0
+    units: native SBML value
+    description: Initial W TPC. Sets the initial value of bundled SBML symbol `w_TPC`.
+  - name: initial_v_tsc
+    maps_to: v_TSC
+    label: V TSC
+    default: 9.4
+    units: native SBML value
+    description: Initial V TSC. Sets the initial value of bundled SBML symbol `v_TSC`.
+  - name: initial_r_sirna
+    maps_to: R_siRNA
+    label: R siRNA
+    default: 1.0
+    units: native SBML value
+    description: Initial R siRNA. Sets the initial value of bundled SBML symbol `R_siRNA`.
+  outputs:
+  - name: z_effector_cells
+    maps_to: z_Effector_Cells
+    label: Z Effector Cells
+    description: Z Effector Cells observable. Maps to SBML symbol `z_Effector_Cells`.
+  - name: x_pcc
+    maps_to: x_PCC
+    label: X PCC
+    description: X PCC observable. Maps to SBML symbol `x_PCC`.
+  - name: y_psc
+    maps_to: y_PSC
+    label: Y PSC
+    description: Y PSC observable. Maps to SBML symbol `y_PSC`.
+  - name: w_tpc
+    maps_to: w_TPC
+    label: W TPC
+    description: W TPC observable. Maps to SBML symbol `w_TPC`.
+  - name: v_tsc
+    maps_to: v_TSC
+    label: V TSC
+    description: V TSC observable. Maps to SBML symbol `v_TSC`.
+  - name: r_sirna
+    maps_to: R_siRNA
+    label: R siRNA
+    description: R siRNA observable. Maps to SBML symbol `R_siRNA`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

@@ -1,0 +1,122 @@
+schema_version: '2.0'
+title: Kim2007 - Crosstalk between Wnt and ERK pathways
+description: Kim2007 - Crosstalk between Wnt and ERK pathways Experimental studies have shown that both Wnt and the MAPK pathways are involved in the pathogenesis of various kinds of cancers (eg. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- D Kim
+- O Rath
+- W Kolch
+- K-H Cho
+upstream:
+  id: biomodels_ebi:BIOMD0000000149
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000149
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000149
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000149?filename=BIOMD0000000149_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model:Kim2007CrosstalkBetweenWntAndErkPathwaysBiomd0000000149Model
+  init_kwargs:
+    model_path: data/BIOMD0000000149.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000149.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_rasi
+    maps_to: X16
+    label: Rasi
+    default: 200.0
+    units: native SBML value
+    description: Initial Rasi. Sets the initial value of bundled SBML symbol `X16`.
+  - name: initial_raf_1
+    maps_to: X18
+    label: Raf 1
+    default: 112.5585
+    units: native SBML value
+    description: Initial Raf 1. Sets the initial value of bundled SBML symbol `X18`.
+  - name: initial_raf_1_ast
+    maps_to: X19
+    label: Raf 1 ast
+    default: 6.486
+    units: native SBML value
+    description: Initial Raf 1 ast. Sets the initial value of bundled SBML symbol `X19`.
+  - name: initial_erk
+    maps_to: X22
+    label: ERK
+    default: 297.8897
+    units: native SBML value
+    description: Initial ERK. Sets the initial value of bundled SBML symbol `X22`.
+  - name: initial_erk_ast
+    maps_to: X23
+    label: ERK ast
+    default: 2.1103
+    units: native SBML value
+    description: Initial ERK ast. Sets the initial value of bundled SBML symbol `X23`.
+  - name: initial_raf1_rkip
+    maps_to: X24
+    label: Raf1/RKIP
+    default: 180.9595
+    units: native SBML value
+    description: Initial Raf1/RKIP. Sets the initial value of bundled SBML symbol `X24`.
+  outputs:
+  - name: rasi
+    maps_to: X16
+    label: Rasi
+    description: Rasi observable. Maps to SBML symbol `X16`.
+  - name: raf_1
+    maps_to: X18
+    label: Raf 1
+    description: Raf 1 observable. Maps to SBML symbol `X18`.
+  - name: raf_1_ast
+    maps_to: X19
+    label: Raf 1 ast
+    description: Raf 1 ast observable. Maps to SBML symbol `X19`.
+  - name: erk
+    maps_to: X22
+    label: ERK
+    description: ERK observable. Maps to SBML symbol `X22`.
+  - name: erk_ast
+    maps_to: X23
+    label: ERK ast
+    description: ERK ast observable. Maps to SBML symbol `X23`.
+  - name: raf1_rkip
+    maps_to: X24
+    label: Raf1/RKIP
+    description: Raf1/RKIP observable. Maps to SBML symbol `X24`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

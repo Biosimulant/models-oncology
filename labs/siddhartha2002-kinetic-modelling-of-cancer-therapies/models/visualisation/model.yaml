@@ -1,0 +1,76 @@
+schema_version: '2.0'
+title: Siddhartha2002 - Kinetic modelling of cancer therapies Visualisation
+description: Oncology visualisation for Siddhartha2002 - Kinetic modelling of cancer therapies.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Siddhartha2002 - Kinetic modelling of cancer therapies
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model
+      title: Siddhartha2002 - Kinetic modelling of cancer therapies
+      state_observables:
+      - Ttum
+      - Tplas
+      - Tnew
+      observables:
+      - id: Ttum
+        port: ttum
+        label: Ttum
+        group: drug_response
+      - id: Tplas
+        port: tplas
+        label: Tplas
+        group: drug_response
+      - id: Tnew
+        port: tnew
+        label: Tnew
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model_state
+    schema:
+      Ttum: float
+      Tplas: float
+      Tnew: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model_species_labels
+    schema:
+      Ttum: str
+      Tplas: str
+      Tnew: str
+    description: Display labels for selected source states.
+  outputs: []

@@ -1,0 +1,81 @@
+schema_version: '2.0'
+title: Ribba2012 - Low-grade gliomas, tumour growth inhibition model Lab
+description: Ribba2012 - Low-grade gliomas, tumour growth inhibition model Using longitudinal mean tumour diameter (MTD) data, this model describe the size evolution of low-grade glioma (LGG) in patients treated w. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: initial_damaged_quiescent_cells
+    maps_to: oncology_sbml_ribba2012_low_grade_gliomas_tumour_growth_inhibi_biomd0000000521_model.initial_damaged_quiescent_cells
+    label: Damaged quiescent cells
+    default: 0.0
+    units: native SBML value
+    description: Initial Damaged quiescent cells. Sets the initial value of bundled SBML symbol `Qp`.
+  - name: initial_pcv_plasma
+    maps_to: oncology_sbml_ribba2012_low_grade_gliomas_tumour_growth_inhibi_biomd0000000521_model.initial_pcv_plasma
+    label: PCV plasma
+    default: 1.0
+    units: native SBML value
+    description: Initial PCV plasma. Sets the initial value of bundled SBML symbol `C`.
+  - name: initial_proliferative_tissue
+    maps_to: oncology_sbml_ribba2012_low_grade_gliomas_tumour_growth_inhibi_biomd0000000521_model.initial_proliferative_tissue
+    label: Proliferative tissue
+    default: 7.13
+    units: native SBML value
+    description: Initial Proliferative tissue. Sets the initial value of bundled SBML symbol `P`.
+  - name: initial_nonproliferative_quiescent_tissue
+    maps_to: oncology_sbml_ribba2012_low_grade_gliomas_tumour_growth_inhibi_biomd0000000521_model.initial_nonproliferative_quiescent_tissue
+    label: Nonproliferative quiescent tissue
+    default: 41.2
+    units: native SBML value
+    description: Initial Nonproliferative quiescent tissue. Sets the initial value of bundled SBML symbol `Q`.
+  outputs:
+  - name: damaged_quiescent_cells
+    maps_to: oncology_sbml_ribba2012_low_grade_gliomas_tumour_growth_inhibi_biomd0000000521_model.damaged_quiescent_cells
+    description: Damaged quiescent cells observable. Maps to SBML symbol `Qp`.
+  - name: pcv_plasma
+    maps_to: oncology_sbml_ribba2012_low_grade_gliomas_tumour_growth_inhibi_biomd0000000521_model.pcv_plasma
+    description: PCV plasma observable. Maps to SBML symbol `C`.
+  - name: proliferative_tissue
+    maps_to: oncology_sbml_ribba2012_low_grade_gliomas_tumour_growth_inhibi_biomd0000000521_model.proliferative_tissue
+    description: Proliferative tissue observable. Maps to SBML symbol `P`.
+  - name: nonproliferative_quiescent_tissue
+    maps_to: oncology_sbml_ribba2012_low_grade_gliomas_tumour_growth_inhibi_biomd0000000521_model.nonproliferative_quiescent_tissue
+    description: Nonproliferative quiescent tissue observable. Maps to SBML symbol `Q`.
+  - name: state
+    maps_to: oncology_sbml_ribba2012_low_grade_gliomas_tumour_growth_inhibi_biomd0000000521_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_ribba2012_low_grade_gliomas_tumour_growth_inhibi_biomd0000000521_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_ribba2012_low_grade_gliomas_tumour_growth_inhibi_biomd0000000521_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_ribba2012_low_grade_gliomas_tumour_growth_inhibi_biomd0000000521_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_ribba2012_low_grade_gliomas_tumour_growth_inhibi_biomd0000000521_model.state
+  to:
+  - visualisation.oncology_sbml_ribba2012_low_grade_gliomas_tumour_growth_inhibi_biomd0000000521_model_state
+- from: oncology_sbml_ribba2012_low_grade_gliomas_tumour_growth_inhibi_biomd0000000521_model.summary
+  to:
+  - visualisation.oncology_sbml_ribba2012_low_grade_gliomas_tumour_growth_inhibi_biomd0000000521_model_summary
+- from: oncology_sbml_ribba2012_low_grade_gliomas_tumour_growth_inhibi_biomd0000000521_model.species_labels
+  to:
+  - visualisation.oncology_sbml_ribba2012_low_grade_gliomas_tumour_growth_inhibi_biomd0000000521_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

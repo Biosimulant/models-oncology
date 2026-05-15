@@ -1,0 +1,95 @@
+schema_version: '2.0'
+title: Coletti2020 - QSP model of prostate cancer immunotherapy
+description: This model is based on the publication:Coletti R, Leonardelli L, Parolo S, Marchetti L. A QSP model of prostate cancer immunotherapy to identify effective combination therapies.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Roberta Coletti
+- Lorena Leonardelli
+- Silvia Parolo
+- Luca Marchetti
+upstream:
+  id: biomodels_ebi:MODEL2109110002
+  source_db: biomodels_ebi
+  source_id: MODEL2109110002
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2109110002
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2109110002?filename=Coletti2020.xml
+  license: CC0
+biosim:
+  entrypoint: src.coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model:Coletti2020QspModelOfProstateCancerImmunotModel2109110002Model
+  init_kwargs:
+    model_path: data/MODEL2109110002.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/MODEL2109110002.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: k_antiil_level
+    maps_to: k_antiIl
+    label: K antiIl source parameter
+    default: 0.714
+    units: native SBML value
+    description: K antiIl source parameter. Maps to bundled SBML parameter `k_antiIl`.
+  outputs:
+  - name: model_state_1
+    maps_to: X_1
+    label: X 1
+    description: X 1 observable. Maps to SBML symbol `X_1`.
+  - name: model_state_2
+    maps_to: A
+    label: A
+    description: A observable. Maps to SBML symbol `A`.
+  - name: model_state_3
+    maps_to: D_m
+    label: D m
+    description: D m observable. Maps to SBML symbol `D_m`.
+  - name: model_state_4
+    maps_to: C_2
+    label: C 2
+    description: C 2 observable. Maps to SBML symbol `C_2`.
+  - name: model_state_5
+    maps_to: I_2
+    label: I 2
+    description: I 2 observable. Maps to SBML symbol `I_2`.
+  - name: model_state_6
+    maps_to: N
+    label: N
+    description: N observable. Maps to SBML symbol `N`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

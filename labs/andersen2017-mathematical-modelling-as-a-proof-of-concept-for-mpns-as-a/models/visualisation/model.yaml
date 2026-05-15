@@ -1,0 +1,95 @@
+schema_version: '2.0'
+title: Andersen2017 - Mathematical modelling as a proof of concept for MPNs as a human inflammation model for cancer development Visualisation
+description: Oncology visualisation for Andersen2017 - Mathematical modelling as a proof of concept for MPNs as a human inflammation model for cancer development.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- oncology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Andersen2017 - Mathematical modelling as a proof of concept for MPNs as a human inflammation model for cancer development
+    question: What oncology-relevant state dominates the bundled SBML simulation over the baseline run?
+    answer_focus: Compares the largest-changing and peak observables with selected source states.
+    visual_scope: Tumor-system state trajectories and dominant observable changes
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_andersen2017_mathematical_modelling_as_a_proof_o_biomd0000000852_model
+      title: Andersen2017 - Mathematical modelling as a proof of concept for MPNs as a human inflammation model for cancer development
+      state_observables:
+      - x0
+      - x1
+      - y0
+      - y1
+      - a
+      - s
+      observables:
+      - id: x0
+        port: model_state_1
+        label: X0
+        group: tumor_system
+      - id: x1
+        port: model_state_2
+        label: X1
+        group: tumor_system
+      - id: a
+        port: model_state_3
+        label: A
+        group: tumor_system
+      - id: s
+        port: model_state_4
+        label: S
+        group: tumor_system
+      - id: y0
+        port: model_state_5
+        label: Y0
+        group: tumor_system
+      - id: y1
+        port: model_state_6
+        label: Y1
+        group: tumor_system
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_andersen2017_mathematical_modelling_as_a_proof_o_biomd0000000852_model_state
+    schema:
+      x0: float
+      x1: float
+      y0: float
+      y1: float
+      a: float
+      s: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_andersen2017_mathematical_modelling_as_a_proof_o_biomd0000000852_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_andersen2017_mathematical_modelling_as_a_proof_o_biomd0000000852_model_species_labels
+    schema:
+      x0: str
+      x1: str
+      a: str
+      s: str
+      y0: str
+      y1: str
+    description: Display labels for selected source states.
+  outputs: []

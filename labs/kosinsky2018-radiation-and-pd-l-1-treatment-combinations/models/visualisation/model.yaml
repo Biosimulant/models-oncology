@@ -1,0 +1,98 @@
+schema_version: '2.0'
+title: Kosinsky2018 - Radiation and PD-(L)1 treatment combinations Visualisation
+description: Oncology visualisation for Kosinsky2018 - Radiation and PD-(L)1 treatment combinations.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- radiotherapy
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Kosinsky2018 - Radiation and PD-(L)1 treatment combinations
+    question: Does the radiotherapy-linked model show tumour response under baseline source conditions?
+    answer_focus: Compares radiation/treatment and tumour observables where present.
+    visual_scope: Radiotherapy-linked tumour response
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_kosinsky2018_radiation_and_pd_l_1_treatment_comb_biomd0000000863_model
+      title: Kosinsky2018 - Radiation and PD-(L)1 treatment combinations
+      state_observables:
+      - TV
+      - U
+      - nTeff
+      - dTeff
+      - PDL1
+      - TVd
+      observables:
+      - id: TV
+        port: model_state_1
+        label: TV
+        group: radiotherapy
+      - id: U
+        port: dsb
+        label: DSB
+        group: radiotherapy
+      - id: PDL1
+        port: pdl1
+        label: PDL1
+        group: radiotherapy
+      - id: TVd
+        port: tvd
+        label: TVD
+        group: radiotherapy
+      - id: nTeff
+        port: tc_nd
+        label: TC ND
+        group: radiotherapy
+      - id: dTeff
+        port: tc_d
+        label: TC D
+        group: radiotherapy
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_kosinsky2018_radiation_and_pd_l_1_treatment_comb_biomd0000000863_model_state
+    schema:
+      TV: float
+      U: float
+      nTeff: float
+      dTeff: float
+      PDL1: float
+      TVd: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_kosinsky2018_radiation_and_pd_l_1_treatment_comb_biomd0000000863_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_kosinsky2018_radiation_and_pd_l_1_treatment_comb_biomd0000000863_model_species_labels
+    schema:
+      TV: str
+      U: str
+      PDL1: str
+      TVd: str
+      nTeff: str
+      dTeff: str
+    description: Display labels for selected source states.
+  outputs: []

@@ -1,0 +1,101 @@
+schema_version: '2.0'
+title: Dorvash2019 - Dynamic modeling of signal transduction by mTOR complexes in cancer Lab
+description: This model is based on:Dynamic modeling of signal transduction by mTOR complexes in cancerAuthor:Mohammadreza Dorvash, Mohammad Farahmandnia, Pouria Mosaddeghi, Mitra Farahmandnejad, Hosein Saber, Moh. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: rapamycin_dose
+    maps_to: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.rapamycin_dose
+    label: Rapamycin Dose source parameter
+    default: 0.0
+    units: native SBML value
+    description: Rapamycin Dose source parameter. Maps to bundled SBML parameter `Rapamycin_Dose`.
+  - name: initial_mtor
+    maps_to: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.initial_mtor
+    label: MTOR
+    default: 3.756228e-07
+    units: native SBML value
+    description: Initial MTOR. Sets the initial value of bundled SBML symbol `mTOR`.
+  - name: initial_raptor
+    maps_to: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.initial_raptor
+    label: Raptor
+    default: 3.201594e-07
+    units: native SBML value
+    description: Initial Raptor. Sets the initial value of bundled SBML symbol `Raptor`.
+  - name: initial_rictor
+    maps_to: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.initial_rictor
+    label: Rictor
+    default: 8.834274e-08
+    units: native SBML value
+    description: Initial Rictor. Sets the initial value of bundled SBML symbol `Rictor`.
+  - name: initial_cytosolic_rapamycin
+    maps_to: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.initial_cytosolic_rapamycin
+    label: Cytosolic Rapamycin
+    default: 0.0
+    units: native SBML value
+    description: Initial Cytosolic Rapamycin. Sets the initial value of bundled SBML symbol `Cytosolic_Rapamycin`.
+  - name: initial_mtorc1
+    maps_to: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.initial_mtorc1
+    label: MTORC1
+    default: 0.0
+    units: native SBML value
+    description: Initial MTORC1. Sets the initial value of bundled SBML symbol `mTORC1`.
+  outputs:
+  - name: mtor
+    maps_to: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.mtor
+    description: MTOR observable. Maps to SBML symbol `mTOR`.
+  - name: raptor
+    maps_to: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.raptor
+    description: Raptor observable. Maps to SBML symbol `Raptor`.
+  - name: rictor
+    maps_to: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.rictor
+    description: Rictor observable. Maps to SBML symbol `Rictor`.
+  - name: cytosolic_rapamycin
+    maps_to: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.cytosolic_rapamycin
+    description: Cytosolic Rapamycin observable. Maps to SBML symbol `Cytosolic_Rapamycin`.
+  - name: mtorc1
+    maps_to: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.mtorc1
+    description: MTORC1 observable. Maps to SBML symbol `mTORC1`.
+  - name: mtorc2
+    maps_to: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.mtorc2
+    description: MTORC2 observable. Maps to SBML symbol `mTORC2`.
+  - name: state
+    maps_to: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.state
+  to:
+  - visualisation.oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model_state
+- from: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.summary
+  to:
+  - visualisation.oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model_summary
+- from: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.species_labels
+  to:
+  - visualisation.oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

@@ -1,0 +1,123 @@
+schema_version: '2.0'
+title: Rouhimoghadam2018 - GPR30/PI3K/MAPK/STAT signaling pathway in normal and cancer cells
+description: In the current study, we aimed to simulate the GPR30/PI3K/MAPK/STAT signaling pathway in normal and cancer cells by the use of ordinary differential equation modeling. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Milad Rouhimoghadam
+- Shahrokh Safarian
+- Jason S. Carroll
+- Nader Sheibani
+- Gholamreza Bidkhori
+upstream:
+  id: biomodels_ebi:MODEL1807040001
+  source_db: biomodels_ebi
+  source_id: MODEL1807040001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1807040001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1807040001?filename=Rouhi 2018-GPR30 Axis - Normal Model.xml
+  license: CC0
+biosim:
+  entrypoint: src.rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model1807040001_model:Rouhimoghadam2018Gpr30Pi3kMapkStatSignalingModel1807040001Model
+  init_kwargs:
+    model_path: data/MODEL1807040001.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/MODEL1807040001.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_pegf_egfr2_pshc_grb2_sos_ras_gdp
+    maps_to: mwf40d6176_abfc_4a30_886f_83a19fcffc48
+    label: PEGF EGFR2 pShc Grb2 SOS Ras GDP
+    default: 0.0
+    units: native SBML value
+    description: Initial PEGF EGFR2 pShc Grb2 SOS Ras GDP. Sets the initial value of bundled SBML symbol `mwf40d6176_abfc_4a30_886f_83a19fcffc48`.
+  - name: initial_pegf_egfr2_grb2_sos_ras_gdp
+    maps_to: mw28464aad_8013_4a23_ae09_a406954859a6
+    label: PEGF EGFR2 Grb2 SOS Ras GDP
+    default: 0.0
+    units: native SBML value
+    description: Initial PEGF EGFR2 Grb2 SOS Ras GDP. Sets the initial value of bundled SBML symbol `mw28464aad_8013_4a23_ae09_a406954859a6`.
+  - name: initial_pegf_egfr2_ras_gap
+    maps_to: mwd39388fd_4f85_4d1c_b2a3_37857c595a2d
+    label: PEGF EGFR2 Ras GAP
+    default: 0.0
+    units: native SBML value
+    description: Initial PEGF EGFR2 Ras GAP. Sets the initial value of bundled SBML symbol `mwd39388fd_4f85_4d1c_b2a3_37857c595a2d`.
+  - name: initial_pegf_egfr2_ras_gap_ras_gtp
+    maps_to: mwd7bf31ba_b05c_4c45_bb2f_6a2468a2a507
+    label: PEGF EGFR2 Ras GAP Ras GTP
+    default: 0.0
+    units: native SBML value
+    description: Initial PEGF EGFR2 Ras GAP Ras GTP. Sets the initial value of bundled SBML symbol `mwd7bf31ba_b05c_4c45_bb2f_6a2468a2a507`.
+  - name: initial_pegf_egfr2_ras_gap_shp2
+    maps_to: mwbf5cb039_b830_4282_aa22_a3dda6272ec1
+    label: PEGF EGFR2 Ras GAP SHP2
+    default: 0.0
+    units: native SBML value
+    description: Initial PEGF EGFR2 Ras GAP SHP2. Sets the initial value of bundled SBML symbol `mwbf5cb039_b830_4282_aa22_a3dda6272ec1`.
+  - name: initial_pperk_pegf_egfr2_pshc_grb2_sos
+    maps_to: mw5babe3d5_a9af_4dfd_ac01_35474ef64af2
+    label: PpERK pEGF EGFR2 pShc Grb2 SOS
+    default: 0.0
+    units: native SBML value
+    description: Initial PpERK pEGF EGFR2 pShc Grb2 SOS. Sets the initial value of bundled SBML symbol `mw5babe3d5_a9af_4dfd_ac01_35474ef64af2`.
+  outputs:
+  - name: pegf_egfr2_pshc_grb2_sos_ras_gdp
+    maps_to: mwf40d6176_abfc_4a30_886f_83a19fcffc48
+    label: PEGF EGFR2 pShc Grb2 SOS Ras GDP
+    description: PEGF EGFR2 pShc Grb2 SOS Ras GDP observable. Maps to SBML symbol `mwf40d6176_abfc_4a30_886f_83a19fcffc48`.
+  - name: pegf_egfr2_grb2_sos_ras_gdp
+    maps_to: mw28464aad_8013_4a23_ae09_a406954859a6
+    label: PEGF EGFR2 Grb2 SOS Ras GDP
+    description: PEGF EGFR2 Grb2 SOS Ras GDP observable. Maps to SBML symbol `mw28464aad_8013_4a23_ae09_a406954859a6`.
+  - name: pegf_egfr2_ras_gap
+    maps_to: mwd39388fd_4f85_4d1c_b2a3_37857c595a2d
+    label: PEGF EGFR2 Ras GAP
+    description: PEGF EGFR2 Ras GAP observable. Maps to SBML symbol `mwd39388fd_4f85_4d1c_b2a3_37857c595a2d`.
+  - name: pegf_egfr2_ras_gap_ras_gtp
+    maps_to: mwd7bf31ba_b05c_4c45_bb2f_6a2468a2a507
+    label: PEGF EGFR2 Ras GAP Ras GTP
+    description: PEGF EGFR2 Ras GAP Ras GTP observable. Maps to SBML symbol `mwd7bf31ba_b05c_4c45_bb2f_6a2468a2a507`.
+  - name: pegf_egfr2_ras_gap_shp2
+    maps_to: mwbf5cb039_b830_4282_aa22_a3dda6272ec1
+    label: PEGF EGFR2 Ras GAP SHP2
+    description: PEGF EGFR2 Ras GAP SHP2 observable. Maps to SBML symbol `mwbf5cb039_b830_4282_aa22_a3dda6272ec1`.
+  - name: pperk_pegf_egfr2_pshc_grb2_sos
+    maps_to: mw5babe3d5_a9af_4dfd_ac01_35474ef64af2
+    label: PpERK pEGF EGFR2 pShc Grb2 SOS
+    description: PpERK pEGF EGFR2 pShc Grb2 SOS observable. Maps to SBML symbol `mw5babe3d5_a9af_4dfd_ac01_35474ef64af2`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

@@ -1,0 +1,99 @@
+schema_version: '2.0'
+title: Lolas2016 - tumour-induced neoneurogenesis and perineural tumour growth Visualisation
+description: Oncology visualisation for Lolas2016 - tumour-induced neoneurogenesis and perineural tumour growth.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- oncology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Lolas2016 - tumour-induced neoneurogenesis and perineural tumour growth
+    question: What oncology-relevant state dominates the bundled SBML simulation over the baseline run?
+    answer_focus: Compares the largest-changing and peak observables with selected source states.
+    visual_scope: Tumor-system state trajectories and dominant observable changes
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_lolas2016_tumour_induced_neoneurogenesis_and_per_biomd0000000750_model
+      title: Lolas2016 - tumour-induced neoneurogenesis and perineural tumour growth
+      state_observables:
+      - Tp
+      - Tm
+      - G
+      - A
+      - S
+      - P
+      - Nn
+      - Na
+      observables:
+      - id: Tp
+        port: model_state_1
+        label: Tp
+        group: tumor_system
+      - id: S
+        port: model_state_2
+        label: S
+        group: tumor_system
+      - id: P
+        port: model_state_3
+        label: P
+        group: tumor_system
+      - id: Nn
+        port: model_state_4
+        label: Nn
+        group: tumor_system
+      - id: Na
+        port: model_state_5
+        label: Na
+        group: tumor_system
+      - id: Tm
+        port: model_state_6
+        label: Tm
+        group: tumor_system
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_lolas2016_tumour_induced_neoneurogenesis_and_per_biomd0000000750_model_state
+    schema:
+      Tp: float
+      Tm: float
+      G: float
+      A: float
+      S: float
+      P: float
+      Nn: float
+      Na: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_lolas2016_tumour_induced_neoneurogenesis_and_per_biomd0000000750_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_lolas2016_tumour_induced_neoneurogenesis_and_per_biomd0000000750_model_species_labels
+    schema:
+      Tp: str
+      S: str
+      P: str
+      Nn: str
+      Na: str
+      Tm: str
+    description: Display labels for selected source states.
+  outputs: []

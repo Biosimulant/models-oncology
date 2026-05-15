@@ -1,0 +1,85 @@
+schema_version: '2.0'
+title: Greene2019 - Differentiate Spontaneous and Induced Evolution to Drug Resistance During Cancer Treatment
+description: This model is built by COPASI 4.24(Build 197), based on paper:Mathematical Approach to Differentiate Spontaneous and Induced Evolution to Drug Resistance During Cancer Treatment.Author:James M. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- James M Greene
+- Jana L Gevertz
+- Sontag ED
+upstream:
+  id: biomodels_ebi:BIOMD0000000825
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000825
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000825
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000825?filename=Greene2019 - Differentiate Spontaneous and Induced Evolution to Drug Resistance During Cancer Treatment.xml
+  license: CC0
+biosim:
+  entrypoint: src.greene2019_differentiate_spontaneous_and_induced_biomd0000000825_model:Greene2019DifferentiateSpontaneousAndInducedBiomd0000000825Model
+  init_kwargs:
+    model_path: data/BIOMD0000000825.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000825.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: epsilon_level
+    maps_to: epsilon
+    label: Epsilon source parameter
+    default: 1.0e-06
+    units: native SBML value
+    description: Epsilon source parameter. Maps to bundled SBML parameter `epsilon`.
+  - name: initial_sensitive_tumor_s
+    maps_to: Sensitive_tumor_S
+    label: Sensitive tumor S
+    default: 0.01
+    units: native SBML value
+    description: Initial Sensitive tumor S. Sets the initial value of bundled SBML symbol `Sensitive_tumor_S`.
+  - name: initial_resistant_tumor_r
+    maps_to: Resistant_tumor_R
+    label: Resistant tumor R
+    default: 0.0
+    units: native SBML value
+    description: Initial Resistant tumor R. Sets the initial value of bundled SBML symbol `Resistant_tumor_R`.
+  outputs:
+  - name: sensitive_tumor_s
+    maps_to: Sensitive_tumor_S
+    label: Sensitive tumor S
+    description: Sensitive tumor S observable. Maps to SBML symbol `Sensitive_tumor_S`.
+  - name: resistant_tumor_r
+    maps_to: Resistant_tumor_R
+    label: Resistant tumor R
+    description: Resistant tumor R observable. Maps to SBML symbol `Resistant_tumor_R`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

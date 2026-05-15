@@ -1,0 +1,120 @@
+schema_version: '2.0'
+title: 'Nguyen2016 - Feedback regulation in cell signalling: Lessons for cancer therapeutics'
+description: 'Feedback regulation in cell signalling: Lessons for cancer therapeutics This model is described in the article: Feedback regulation in cell signalling: Lessons for cancer therapeutics. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Lan K Nguyen
+- Boris N Kholodenko
+upstream:
+  id: biomodels_ebi:BIOMD0000000651
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000651
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000651
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000651?filename=BIOMD0000000651_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model:Nguyen2016FeedbackRegulationInCellSignallinBiomd0000000651Model
+  init_kwargs:
+    model_path: data/BIOMD0000000651.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000651.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_pi3k
+    maps_to: PI3K
+    label: PI3K
+    default: 100.0
+    units: native SBML value
+    description: Initial PI3K. Sets the initial value of bundled SBML symbol `PI3K`.
+  - name: initial_akt
+    maps_to: Akt
+    label: AKT
+    default: 100.0
+    units: native SBML value
+    description: Initial AKT. Sets the initial value of bundled SBML symbol `Akt`.
+  - name: initial_raf
+    maps_to: Raf
+    label: Raf
+    default: 100.0
+    units: native SBML value
+    description: Initial Raf. Sets the initial value of bundled SBML symbol `Raf`.
+  - name: initial_erk
+    maps_to: ERK
+    label: ERK
+    default: 899.999999999996
+    units: native SBML value
+    description: Initial ERK. Sets the initial value of bundled SBML symbol `ERK`.
+  - name: initial_aakt
+    maps_to: aAkt
+    label: AAkt
+    default: 0.0
+    units: native SBML value
+    description: Initial AAkt. Sets the initial value of bundled SBML symbol `aAkt`.
+  - name: initial_rasgdp
+    maps_to: RasGDP
+    label: RasGDP
+    default: 100.0
+    units: native SBML value
+    description: Initial RasGDP. Sets the initial value of bundled SBML symbol `RasGDP`.
+  outputs:
+  - name: pi3k
+    maps_to: PI3K
+    label: PI3K
+    description: PI3K observable. Maps to SBML symbol `PI3K`.
+  - name: akt
+    maps_to: Akt
+    label: AKT
+    description: AKT observable. Maps to SBML symbol `Akt`.
+  - name: raf
+    maps_to: Raf
+    label: Raf
+    description: Raf observable. Maps to SBML symbol `Raf`.
+  - name: erk
+    maps_to: ERK
+    label: ERK
+    description: ERK observable. Maps to SBML symbol `ERK`.
+  - name: aakt
+    maps_to: aAkt
+    label: AAkt
+    description: AAkt observable. Maps to SBML symbol `aAkt`.
+  - name: rasgdp
+    maps_to: RasGDP
+    label: RasGDP
+    description: RasGDP observable. Maps to SBML symbol `RasGDP`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

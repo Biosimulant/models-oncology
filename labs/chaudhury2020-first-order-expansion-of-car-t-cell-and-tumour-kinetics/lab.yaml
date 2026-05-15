@@ -1,0 +1,51 @@
+schema_version: '2.0'
+title: Chaudhury2020 - First order expansion model of CAR-T cell and tumour kinetics Lab
+description: This ordinary differential equation model of the cellular kinetics and pharmacodynamics of CAR-T cell therapy is described in the publication:Chaudhury, A., Zhu, X., Chu, L., Goliaei, A., June, C., Ke. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- car-t
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs: []
+  outputs:
+  - name: model_state_1
+    maps_to: oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model.model_state_1
+    description: U observable. Maps to SBML symbol `U`.
+  - name: state
+    maps_to: oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model.state
+  to:
+  - visualisation.oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model_state
+- from: oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model.summary
+  to:
+  - visualisation.oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model_summary
+- from: oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model.species_labels
+  to:
+  - visualisation.oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

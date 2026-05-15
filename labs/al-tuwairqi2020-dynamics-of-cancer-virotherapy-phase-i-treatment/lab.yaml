@@ -1,0 +1,74 @@
+schema_version: '2.0'
+title: Al-Tuwairqi2020 - Dynamics of cancer virotherapy - Phase I treatment Lab
+description: This ordinary differential equation model of cancer virotherapy dynamics is described in the publication:Salma M. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunotherapy
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- virotherapy
+io:
+  inputs:
+  - name: initial_uninfected_cancer_cells
+    maps_to: oncology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_p_biomd0000001031_model.initial_uninfected_cancer_cells
+    label: Uninfected cancer cells
+    default: 0.6
+    units: native SBML value
+    description: Initial Uninfected cancer cells. Sets the initial value of bundled SBML symbol `uninfected_cancer_cells`.
+  - name: initial_infected_cancer_cells
+    maps_to: oncology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_p_biomd0000001031_model.initial_infected_cancer_cells
+    label: Infected cancer cells
+    default: 0.0
+    units: native SBML value
+    description: Initial Infected cancer cells. Sets the initial value of bundled SBML symbol `infected_cancer_cells`.
+  - name: initial_free_virus
+    maps_to: oncology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_p_biomd0000001031_model.initial_free_virus
+    label: Free virus
+    default: 0.5
+    units: native SBML value
+    description: Initial Free virus. Sets the initial value of bundled SBML symbol `free_virus`.
+  outputs:
+  - name: uninfected_cancer_cells
+    maps_to: oncology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_p_biomd0000001031_model.uninfected_cancer_cells
+    description: Uninfected cancer cells observable. Maps to SBML symbol `uninfected_cancer_cells`.
+  - name: infected_cancer_cells
+    maps_to: oncology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_p_biomd0000001031_model.infected_cancer_cells
+    description: Infected cancer cells observable. Maps to SBML symbol `infected_cancer_cells`.
+  - name: free_virus
+    maps_to: oncology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_p_biomd0000001031_model.free_virus
+    description: Free virus observable. Maps to SBML symbol `free_virus`.
+  - name: state
+    maps_to: oncology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_p_biomd0000001031_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_p_biomd0000001031_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_p_biomd0000001031_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_p_biomd0000001031_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_p_biomd0000001031_model.state
+  to:
+  - visualisation.oncology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_p_biomd0000001031_model_state
+- from: oncology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_p_biomd0000001031_model.summary
+  to:
+  - visualisation.oncology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_p_biomd0000001031_model_summary
+- from: oncology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_p_biomd0000001031_model.species_labels
+  to:
+  - visualisation.oncology_sbml_al_tuwairqi2020_dynamics_of_cancer_virotherapy_p_biomd0000001031_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

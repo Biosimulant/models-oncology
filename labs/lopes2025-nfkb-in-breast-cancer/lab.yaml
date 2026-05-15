@@ -1,0 +1,87 @@
+schema_version: '2.0'
+title: Lopes2025 - NFkB model in Breast Cancer Lab
+description: "Model for the activation of SLUG, SIP1, TWIST1, and NF-\u03BAB (subunits p50 and p65). The model exhibits two stationary states (bistability), each corresponding to the gene expression profiles we determin."
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- oncology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: initial_nf_kb
+    maps_to: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.initial_nf_kb
+    label: NF-kB
+    default: 5893.41991828698
+    units: native SBML value
+    description: Initial NF-kB. Sets the initial value of bundled SBML symbol `NFkB`.
+  - name: initial_slug
+    maps_to: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.initial_slug
+    label: SLUG
+    default: 7789508.97608121
+    units: native SBML value
+    description: Initial SLUG. Sets the initial value of bundled SBML symbol `SLUG`.
+  - name: initial_sip1
+    maps_to: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.initial_sip1
+    label: SIP1
+    default: 23581097.7152633
+    units: native SBML value
+    description: Initial SIP1. Sets the initial value of bundled SBML symbol `SIP1`.
+  - name: initial_twist1
+    maps_to: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.initial_twist1
+    label: TWIST1
+    default: 200834985.025365
+    units: native SBML value
+    description: Initial TWIST1. Sets the initial value of bundled SBML symbol `TWIST1`.
+  outputs:
+  - name: nf_kb
+    maps_to: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.nf_kb
+    description: NF-kB observable. Maps to SBML symbol `NFkB`.
+  - name: slug
+    maps_to: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.slug
+    description: SLUG observable. Maps to SBML symbol `SLUG`.
+  - name: sip1
+    maps_to: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.sip1
+    description: SIP1 observable. Maps to SBML symbol `SIP1`.
+  - name: p65
+    maps_to: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.p65
+    description: P65 observable. Maps to SBML symbol `p65`.
+  - name: p50
+    maps_to: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.p50
+    description: P50 observable. Maps to SBML symbol `p50`.
+  - name: twist1
+    maps_to: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.twist1
+    description: TWIST1 observable. Maps to SBML symbol `TWIST1`.
+  - name: state
+    maps_to: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.state
+  to:
+  - visualisation.oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model_state
+- from: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.summary
+  to:
+  - visualisation.oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model_summary
+- from: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.species_labels
+  to:
+  - visualisation.oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

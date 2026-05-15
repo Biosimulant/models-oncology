@@ -1,0 +1,101 @@
+schema_version: '2.0'
+title: Raia2010 - IL13 Signalling MedB1 Lab
+description: 'This is the model of IL13 induced signalling in MedB-1 cell described in the article: Dynamic Mathematical Modeling of IL13-Induced Signaling in Hodgkin and Primary Mediastinal B-Cell Lymphoma Allows. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: kon_il13rec_level
+    maps_to: oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model.kon_il13rec_level
+    label: Kon IL13Rec source parameter
+    default: 0.00341992
+    units: native SBML value
+    description: Kon IL13Rec source parameter. Maps to bundled SBML parameter `Kon_IL13Rec`.
+  - name: il13stimulation_level
+    maps_to: oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model.il13stimulation_level
+    label: IL13stimulation source parameter
+    default: 1.0
+    units: native SBML value
+    description: IL13stimulation source parameter. Maps to bundled SBML parameter `IL13stimulation`.
+  - name: initial_stat5
+    maps_to: oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model.initial_stat5
+    label: STAT5
+    default: 165.0
+    units: native SBML value
+    description: Initial STAT5. Sets the initial value of bundled SBML symbol `STAT5`.
+  - name: initial_pstat5
+    maps_to: oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model.initial_pstat5
+    label: PSTAT5
+    default: 0.0
+    units: native SBML value
+    description: Initial PSTAT5. Sets the initial value of bundled SBML symbol `pSTAT5`.
+  - name: initial_rec
+    maps_to: oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model.initial_rec
+    label: Rec
+    default: 1.3
+    units: native SBML value
+    description: Initial Rec. Sets the initial value of bundled SBML symbol `Rec`.
+  - name: initial_jak2
+    maps_to: oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model.initial_jak2
+    label: JAK2
+    default: 2.8
+    units: native SBML value
+    description: Initial JAK2. Sets the initial value of bundled SBML symbol `JAK2`.
+  outputs:
+  - name: stat5
+    maps_to: oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model.stat5
+    description: STAT5 observable. Maps to SBML symbol `STAT5`.
+  - name: pstat5
+    maps_to: oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model.pstat5
+    description: PSTAT5 observable. Maps to SBML symbol `pSTAT5`.
+  - name: rec
+    maps_to: oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model.rec
+    description: Rec observable. Maps to SBML symbol `Rec`.
+  - name: jak2
+    maps_to: oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model.jak2
+    description: JAK2 observable. Maps to SBML symbol `JAK2`.
+  - name: shp1
+    maps_to: oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model.shp1
+    description: SHP1 observable. Maps to SBML symbol `SHP1`.
+  - name: rec_i
+    maps_to: oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model.rec_i
+    description: Rec i observable. Maps to SBML symbol `Rec_i`.
+  - name: state
+    maps_to: oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model.state
+  to:
+  - visualisation.oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model_state
+- from: oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model.summary
+  to:
+  - visualisation.oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model_summary
+- from: oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model.species_labels
+  to:
+  - visualisation.oncology_sbml_raia2010_il13_signalling_medb1_biomd0000000313_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

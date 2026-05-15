@@ -1,0 +1,85 @@
+schema_version: '2.0'
+title: Rommelfanger2011 - Gompertz model of melanoma tumor therapy with vesicular stomatitis virus Visualisation
+description: Oncology visualisation for Rommelfanger2011 - Gompertz model of melanoma tumor therapy with vesicular stomatitis virus.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunotherapy
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- virotherapy
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Rommelfanger2011 - Gompertz model of melanoma tumor therapy with vesicular stomatitis virus
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_rommelfanger2011_gompertz_model_of_melanoma_tumo_model2109110003_model
+      title: Rommelfanger2011 - Gompertz model of melanoma tumor therapy with vesicular stomatitis virus
+      state_observables:
+      - x
+      - y
+      - z
+      - v_i
+      observables:
+      - id: y
+        port: model_state_1
+        label: Y
+        group: drug_response
+      - id: v_i
+        port: model_state_2
+        label: V i
+        group: drug_response
+      - id: x
+        port: model_state_3
+        label: X
+        group: drug_response
+      - id: z
+        port: model_state_4
+        label: Z
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_rommelfanger2011_gompertz_model_of_melanoma_tumo_model2109110003_model_state
+    schema:
+      x: float
+      y: float
+      z: float
+      v_i: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_rommelfanger2011_gompertz_model_of_melanoma_tumo_model2109110003_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_rommelfanger2011_gompertz_model_of_melanoma_tumo_model2109110003_model_species_labels
+    schema:
+      y: str
+      v_i: str
+      x: str
+      z: str
+    description: Display labels for selected source states.
+  outputs: []

@@ -1,0 +1,102 @@
+schema_version: '2.0'
+title: Nave2018 - prostate cancer model Visualisation
+description: Oncology visualisation for Nave2018 - prostate cancer model.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Nave2018 - prostate cancer model
+    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
+    visual_scope: Cancer signaling pathway activity and dominant source states
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_nave2018_prostate_cancer_model_model1910030001_model
+      title: Nave2018 - prostate cancer model
+      state_observables:
+      - N_1
+      - T
+      - A
+      - N_2
+      - D
+      - I_L
+      observables:
+      - id: N_1
+        port: model_state_1
+        label: N 1
+        group: signaling
+      - id: A
+        port: model_state_2
+        label: A
+        group: signaling
+      - id: N_2
+        port: model_state_3
+        label: N 2
+        group: signaling
+      - id: D
+        port: model_state_4
+        label: D
+        group: signaling
+      - id: T
+        port: model_state_5
+        label: T
+        group: signaling
+      - id: I_L
+        port: model_state_6
+        label: I L
+        group: signaling
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_nave2018_prostate_cancer_model_model1910030001_model_state
+    schema:
+      N_1: float
+      T: float
+      A: float
+      N_2: float
+      D: float
+      I_L: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_nave2018_prostate_cancer_model_model1910030001_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_nave2018_prostate_cancer_model_model1910030001_model_species_labels
+    schema:
+      N_1: str
+      A: str
+      N_2: str
+      D: str
+      T: str
+      I_L: str
+    description: Display labels for selected source states.
+  outputs: []

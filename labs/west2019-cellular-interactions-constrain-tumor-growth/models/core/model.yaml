@@ -1,0 +1,116 @@
+schema_version: '2.0'
+title: West2019 - Cellular interactions constrain tumor growth
+description: These selections of models are described in the paper:Cellular interactions constrain tumor growthby Jeffrey West and Paul K. NewtonSignificance:A mathematical model relating tumor heterogeneity at th.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- oncology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Jeffrey West
+- Paul K Newton
+upstream:
+  id: biomodels_ebi:BIOMD0000000820
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000820
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000820
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000820?filename=West2019 - Cellular interactions constrain tumor growth.xml
+  license: CC0
+biosim:
+  entrypoint: src.west2019_cellular_interactions_constrain_tumor_g_biomd0000000820_model:West2019CellularInteractionsConstrainTumorGBiomd0000000820Model
+  init_kwargs:
+    model_path: data/BIOMD0000000820.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000820.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_tumor_at_exp_lin_growth
+    maps_to: tumor_at_Exp_Lin_growth
+    label: Tumor at Exp Lin growth
+    default: 1.0
+    units: native SBML value
+    description: Initial Tumor at Exp Lin growth. Sets the initial value of bundled SBML symbol `tumor_at_Exp_Lin_growth`.
+  - name: initial_tumor_at_gen_logistic_growth
+    maps_to: tumor_at_Gen__logistic_growth
+    label: Tumor at Gen
+    default: 1.0
+    units: native SBML value
+    description: Initial Tumor at Gen. logistic growth. Sets the initial value of bundled SBML symbol `tumor_at_Gen__logistic_growth`.
+  - name: initial_tumor_at_gomp_growth
+    maps_to: tumor_at_Gomp__growth
+    label: Tumor at Gomp
+    default: 1.0
+    units: native SBML value
+    description: Initial Tumor at Gomp. growth. Sets the initial value of bundled SBML symbol `tumor_at_Gomp__growth`.
+  - name: initial_tumor_at_power_growth
+    maps_to: tumor_at_Power_growth
+    label: Tumor at Power growth
+    default: 1.0
+    units: native SBML value
+    description: Initial Tumor at Power growth. Sets the initial value of bundled SBML symbol `tumor_at_Power_growth`.
+  - name: initial_tumor_at_von_bert_growth
+    maps_to: tumor_at_Von_Bert__growth
+    label: Tumor at Von Bert
+    default: 1.0
+    units: native SBML value
+    description: Initial Tumor at Von Bert. growth. Sets the initial value of bundled SBML symbol `tumor_at_Von_Bert__growth`.
+  - name: initial_tumor_at_exp_growth
+    maps_to: tumor_at_Exp_growth
+    label: Tumor at Exp growth
+    default: 1.0
+    units: native SBML value
+    description: Initial Tumor at Exp growth. Sets the initial value of bundled SBML symbol `tumor_at_Exp_growth`.
+  outputs:
+  - name: tumor_at_exp_lin_growth
+    maps_to: tumor_at_Exp_Lin_growth
+    label: Tumor at Exp Lin growth
+    description: Tumor at Exp Lin growth observable. Maps to SBML symbol `tumor_at_Exp_Lin_growth`.
+  - name: tumor_at_gen_logistic_growth
+    maps_to: tumor_at_Gen__logistic_growth
+    label: Tumor at Gen. logistic growth
+    description: Tumor at Gen. logistic growth observable. Maps to SBML symbol `tumor_at_Gen__logistic_growth`.
+  - name: tumor_at_gomp_growth
+    maps_to: tumor_at_Gomp__growth
+    label: Tumor at Gomp. growth
+    description: Tumor at Gomp. growth observable. Maps to SBML symbol `tumor_at_Gomp__growth`.
+  - name: tumor_at_power_growth
+    maps_to: tumor_at_Power_growth
+    label: Tumor at Power growth
+    description: Tumor at Power growth observable. Maps to SBML symbol `tumor_at_Power_growth`.
+  - name: tumor_at_von_bert_growth
+    maps_to: tumor_at_Von_Bert__growth
+    label: Tumor at Von Bert. growth
+    description: Tumor at Von Bert. growth observable. Maps to SBML symbol `tumor_at_Von_Bert__growth`.
+  - name: tumor_at_exp_growth
+    maps_to: tumor_at_Exp_growth
+    label: Tumor at Exp growth
+    description: Tumor at Exp growth observable. Maps to SBML symbol `tumor_at_Exp_growth`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

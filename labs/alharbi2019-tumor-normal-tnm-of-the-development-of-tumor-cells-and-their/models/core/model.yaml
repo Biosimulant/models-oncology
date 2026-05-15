@@ -1,0 +1,78 @@
+schema_version: '2.0'
+title: Alharbi2019 - Tumor-normal model (TNM) of the development of tumor cells and their impact on normal cell dynamics
+description: This ordinary differential equation model of the interactions between tumor and normal cells is based on the publication:S. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Sana Abdulkream Alharbi
+- Azmin Sham Rambely
+upstream:
+  id: biomodels_ebi:BIOMD0000001037
+  source_db: biomodels_ebi
+  source_id: BIOMD0000001037
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001037
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001037?filename=Alharbi2019 TNM.xml
+  license: CC0
+biosim:
+  entrypoint: src.alharbi2019_tumor_normal_model_tnm_of_the_develo_biomd0000001037_model:Alharbi2019TumorNormalModelTnmOfTheDeveloBiomd0000001037Model
+  init_kwargs:
+    model_path: data/BIOMD0000001037.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000001037.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_tumor_cells
+    maps_to: Tumor_cells
+    label: Tumor cells
+    default: 1.0
+    units: native SBML value
+    description: Initial Tumor cells. Sets the initial value of bundled SBML symbol `Tumor_cells`.
+  - name: initial_normal_cells
+    maps_to: Normal_cells
+    label: Normal cells
+    default: 1.0
+    units: native SBML value
+    description: Initial Normal cells. Sets the initial value of bundled SBML symbol `Normal_cells`.
+  outputs:
+  - name: tumor_cells
+    maps_to: Tumor_cells
+    label: Tumor cells
+    description: Tumor cells observable. Maps to SBML symbol `Tumor_cells`.
+  - name: normal_cells
+    maps_to: Normal_cells
+    label: Normal cells
+    description: Normal cells observable. Maps to SBML symbol `Normal_cells`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

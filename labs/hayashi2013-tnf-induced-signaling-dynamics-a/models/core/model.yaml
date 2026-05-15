@@ -1,0 +1,123 @@
+schema_version: '2.0'
+title: Hayashi2013 - TNF-induced Signaling Dynamics (Model A)
+description: Hayashi2013 - TNF-induced Signaling Dynamics Model (Model A)Tumor necrosis factor (TNF) plays a crucial role in inflammation and is associated with diseases such as rheumatoid arthritis and cancer. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Kentaro Hayashi
+- Vincent Piras
+- Sho Tabata
+- Masaru Tomita
+- Kumar Selvarajoo
+upstream:
+  id: biomodels_ebi:MODEL2502170001
+  source_db: biomodels_ebi
+  source_id: MODEL2502170001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2502170001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2502170001?filename=Hayashi2013_modelA.xml
+  license: CC0
+biosim:
+  entrypoint: src.hayashi2013_tnf_induced_signaling_dynamics_model_model2502170001_model:Hayashi2013TnfInducedSignalingDynamicsModelModel2502170001Model
+  init_kwargs:
+    model_path: data/MODEL2502170001.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/MODEL2502170001.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_tnfr1
+    maps_to: species_3
+    label: TNFR1
+    default: 1.0
+    units: native SBML value
+    description: Initial TNFR1. Sets the initial value of bundled SBML symbol `species_3`.
+  - name: initial_nfkbc
+    maps_to: species_2
+    label: NFkBc
+    default: 0.0
+    units: native SBML value
+    description: Initial NFkBc. Sets the initial value of bundled SBML symbol `species_2`.
+  - name: initial_traf6
+    maps_to: species_6
+    label: TRAF6
+    default: 0.0
+    units: native SBML value
+    description: Initial TRAF6. Sets the initial value of bundled SBML symbol `species_6`.
+  - name: initial_traf5
+    maps_to: species_7
+    label: TRAF5
+    default: 0.0
+    units: native SBML value
+    description: Initial TRAF5. Sets the initial value of bundled SBML symbol `species_7`.
+  - name: initial_traf2
+    maps_to: species_9
+    label: TRAF2
+    default: 0.0
+    units: native SBML value
+    description: Initial TRAF2. Sets the initial value of bundled SBML symbol `species_9`.
+  - name: initial_erkc
+    maps_to: species_16
+    label: ERKc
+    default: 0.0
+    units: native SBML value
+    description: Initial ERKc. Sets the initial value of bundled SBML symbol `species_16`.
+  outputs:
+  - name: tnfr1
+    maps_to: species_3
+    label: TNFR1
+    description: TNFR1 observable. Maps to SBML symbol `species_3`.
+  - name: nfkbc
+    maps_to: species_2
+    label: NFkBc
+    description: NFkBc observable. Maps to SBML symbol `species_2`.
+  - name: traf6
+    maps_to: species_6
+    label: TRAF6
+    description: TRAF6 observable. Maps to SBML symbol `species_6`.
+  - name: traf5
+    maps_to: species_7
+    label: TRAF5
+    description: TRAF5 observable. Maps to SBML symbol `species_7`.
+  - name: traf2
+    maps_to: species_9
+    label: TRAF2
+    description: TRAF2 observable. Maps to SBML symbol `species_9`.
+  - name: erkc
+    maps_to: species_16
+    label: ERKc
+    description: ERKc observable. Maps to SBML symbol `species_16`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

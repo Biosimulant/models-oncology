@@ -1,0 +1,64 @@
+schema_version: '2.0'
+title: Evans2005 - Compartmental model for antineoplastic drug topotecan in breast cancer cells Lab
+description: Compartment model for the antineoplastic drug topotecan. Modelling drug in its active lactone and inactive hydroxy acid forms in the medium, extracellular, cytoplasm and nucleus.
+tags:
+- biomodels_ebi
+- chemotherapy
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs: []
+  outputs:
+  - name: model_state_1
+    maps_to: oncology_sbml_evans2005_compartmental_model_for_antineoplastic_biomd0000000946_model.model_state_1
+    description: L m observable. Maps to SBML symbol `L_m`.
+  - name: model_state_2
+    maps_to: oncology_sbml_evans2005_compartmental_model_for_antineoplastic_biomd0000000946_model.model_state_2
+    description: H m observable. Maps to SBML symbol `H_m`.
+  - name: model_state_3
+    maps_to: oncology_sbml_evans2005_compartmental_model_for_antineoplastic_biomd0000000946_model.model_state_3
+    description: L e observable. Maps to SBML symbol `L_e`.
+  - name: model_state_4
+    maps_to: oncology_sbml_evans2005_compartmental_model_for_antineoplastic_biomd0000000946_model.model_state_4
+    description: H e observable. Maps to SBML symbol `H_e`.
+  - name: model_state_5
+    maps_to: oncology_sbml_evans2005_compartmental_model_for_antineoplastic_biomd0000000946_model.model_state_5
+    description: L c observable. Maps to SBML symbol `L_c`.
+  - name: model_state_6
+    maps_to: oncology_sbml_evans2005_compartmental_model_for_antineoplastic_biomd0000000946_model.model_state_6
+    description: H c observable. Maps to SBML symbol `H_c`.
+  - name: state
+    maps_to: oncology_sbml_evans2005_compartmental_model_for_antineoplastic_biomd0000000946_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_evans2005_compartmental_model_for_antineoplastic_biomd0000000946_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_evans2005_compartmental_model_for_antineoplastic_biomd0000000946_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_evans2005_compartmental_model_for_antineoplastic_biomd0000000946_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_evans2005_compartmental_model_for_antineoplastic_biomd0000000946_model.state
+  to:
+  - visualisation.oncology_sbml_evans2005_compartmental_model_for_antineoplastic_biomd0000000946_model_state
+- from: oncology_sbml_evans2005_compartmental_model_for_antineoplastic_biomd0000000946_model.summary
+  to:
+  - visualisation.oncology_sbml_evans2005_compartmental_model_for_antineoplastic_biomd0000000946_model_summary
+- from: oncology_sbml_evans2005_compartmental_model_for_antineoplastic_biomd0000000946_model.species_labels
+  to:
+  - visualisation.oncology_sbml_evans2005_compartmental_model_for_antineoplastic_biomd0000000946_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

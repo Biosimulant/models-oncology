@@ -1,0 +1,82 @@
+schema_version: '2.0'
+title: Al-Husari2013 - pH and lactate in tumor Visualisation
+description: Oncology visualisation for Al-Husari2013 - pH and lactate in tumor.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- metabolism
+- oncology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Al-Husari2013 - pH and lactate in tumor
+    question: Which metabolic states dominate the baseline oncology-associated metabolic model?
+    answer_focus: Compares selected metabolic observables and peak source states.
+    visual_scope: Cancer metabolism and metabolic-state changes
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_al_husari2013_ph_and_lactate_in_tumor_biomd0000000805_model
+      title: Al-Husari2013 - pH and lactate in tumor
+      state_observables:
+      - Hi
+      - He
+      - Li
+      - Le
+      observables:
+      - id: Hi
+        port: model_state_1
+        label: Hi
+        group: metabolism
+      - id: He
+        port: model_state_2
+        label: He
+        group: metabolism
+      - id: Li
+        port: model_state_3
+        label: Li
+        group: metabolism
+      - id: Le
+        port: model_state_4
+        label: Le
+        group: metabolism
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_al_husari2013_ph_and_lactate_in_tumor_biomd0000000805_model_state
+    schema:
+      Hi: float
+      He: float
+      Li: float
+      Le: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_al_husari2013_ph_and_lactate_in_tumor_biomd0000000805_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_al_husari2013_ph_and_lactate_in_tumor_biomd0000000805_model_species_labels
+    schema:
+      Hi: str
+      He: str
+      Li: str
+      Le: str
+    description: Display labels for selected source states.
+  outputs: []

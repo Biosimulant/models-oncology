@@ -1,0 +1,78 @@
+schema_version: '2.0'
+title: Ghaffari2019 - Thrombomodulin Gene Expression after Retinoic Acid Treatment for Cancer Patients with Coagulation Disorders Lab
+description: Publication includes a mathematical model for how retinoic acid affects thrombomodulin gene and mRNA expression as well as a two-compartment pharmacokinetic model for retinoic acid. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: initial_stm
+    maps_to: oncology_sbml_ghaffari2019_thrombomodulin_gene_expression_afte_model1907140001_model.initial_stm
+    label: STM
+    default: 1.0
+    units: native SBML value
+    description: Initial STM. Sets the initial value of bundled SBML symbol `sTM`.
+  - name: initial_rec1t
+    maps_to: oncology_sbml_ghaffari2019_thrombomodulin_gene_expression_afte_model1907140001_model.initial_rec1t
+    label: REC1t
+    default: 1.0e-06
+    units: native SBML value
+    description: Initial REC1t. Sets the initial value of bundled SBML symbol `REC1t`.
+  - name: initial_tm_mrna
+    maps_to: oncology_sbml_ghaffari2019_thrombomodulin_gene_expression_afte_model1907140001_model.initial_tm_mrna
+    label: TM mRNA
+    default: 0.0
+    units: native SBML value
+    description: Initial TM mRNA. Sets the initial value of bundled SBML symbol `TM_mRNA`.
+  outputs:
+  - name: model_state_1
+    maps_to: oncology_sbml_ghaffari2019_thrombomodulin_gene_expression_afte_model1907140001_model.model_state_1
+    description: TM observable. Maps to SBML symbol `TM`.
+  - name: model_state_2
+    maps_to: oncology_sbml_ghaffari2019_thrombomodulin_gene_expression_afte_model1907140001_model.model_state_2
+    description: RA observable. Maps to SBML symbol `RA`.
+  - name: stm
+    maps_to: oncology_sbml_ghaffari2019_thrombomodulin_gene_expression_afte_model1907140001_model.stm
+    description: STM observable. Maps to SBML symbol `sTM`.
+  - name: rec1t
+    maps_to: oncology_sbml_ghaffari2019_thrombomodulin_gene_expression_afte_model1907140001_model.rec1t
+    description: REC1t observable. Maps to SBML symbol `REC1t`.
+  - name: tm_mrna
+    maps_to: oncology_sbml_ghaffari2019_thrombomodulin_gene_expression_afte_model1907140001_model.tm_mrna
+    description: TM mRNA observable. Maps to SBML symbol `TM_mRNA`.
+  - name: state
+    maps_to: oncology_sbml_ghaffari2019_thrombomodulin_gene_expression_afte_model1907140001_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_ghaffari2019_thrombomodulin_gene_expression_afte_model1907140001_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_ghaffari2019_thrombomodulin_gene_expression_afte_model1907140001_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_ghaffari2019_thrombomodulin_gene_expression_afte_model1907140001_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_ghaffari2019_thrombomodulin_gene_expression_afte_model1907140001_model.state
+  to:
+  - visualisation.oncology_sbml_ghaffari2019_thrombomodulin_gene_expression_afte_model1907140001_model_state
+- from: oncology_sbml_ghaffari2019_thrombomodulin_gene_expression_afte_model1907140001_model.summary
+  to:
+  - visualisation.oncology_sbml_ghaffari2019_thrombomodulin_gene_expression_afte_model1907140001_model_summary
+- from: oncology_sbml_ghaffari2019_thrombomodulin_gene_expression_afte_model1907140001_model.species_labels
+  to:
+  - visualisation.oncology_sbml_ghaffari2019_thrombomodulin_gene_expression_afte_model1907140001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

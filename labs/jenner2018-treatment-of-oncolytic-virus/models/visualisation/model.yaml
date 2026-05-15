@@ -1,0 +1,78 @@
+schema_version: '2.0'
+title: Jenner2018 - treatment of oncolytic virus Visualisation
+description: Oncology visualisation for Jenner2018 - treatment of oncolytic virus.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunotherapy
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- virotherapy
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Jenner2018 - treatment of oncolytic virus
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_jenner2018_treatment_of_oncolytic_virus_biomd0000000789_model
+      title: Jenner2018 - treatment of oncolytic virus
+      state_observables:
+      - V
+      - S
+      - I
+      observables:
+      - id: S
+        port: model_state_1
+        label: S
+        group: drug_response
+      - id: V
+        port: model_state_2
+        label: V
+        group: drug_response
+      - id: I
+        port: model_state_3
+        label: I
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_jenner2018_treatment_of_oncolytic_virus_biomd0000000789_model_state
+    schema:
+      V: float
+      S: float
+      I: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_jenner2018_treatment_of_oncolytic_virus_biomd0000000789_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_jenner2018_treatment_of_oncolytic_virus_biomd0000000789_model_species_labels
+    schema:
+      S: str
+      V: str
+      I: str
+    description: Display labels for selected source states.
+  outputs: []

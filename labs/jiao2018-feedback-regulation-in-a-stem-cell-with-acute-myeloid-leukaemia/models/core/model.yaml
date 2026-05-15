@@ -1,0 +1,109 @@
+schema_version: '2.0'
+title: Jiao2018 - Feedback regulation in a stem cell model with acute myeloid leukaemia
+description: This is a mathematical model describing the hematopoietic lineages with leukemia lineages, as controlled by end-product negative feedback inhibition. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Jianfeng Jiao
+- Min Luo
+- Ruiqi Wang
+upstream:
+  id: biomodels_ebi:BIOMD0000000898
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000898
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000898
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000898?filename=Jiao2018.xml
+  license: CC0
+biosim:
+  entrypoint: src.jiao2018_feedback_regulation_in_a_stem_cell_mode_biomd0000000898_model:Jiao2018FeedbackRegulationInAStemCellModeBiomd0000000898Model
+  init_kwargs:
+    model_path: data/BIOMD0000000898.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000898.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_s_hsc
+    maps_to: S_HSC
+    label: S HSC
+    default: 10.0
+    units: native SBML value
+    description: Initial S HSC. Sets the initial value of bundled SBML symbol `S_HSC`.
+  - name: initial_a_pc
+    maps_to: A_PC
+    label: A PC
+    default: 0.0
+    units: native SBML value
+    description: Initial A PC. Sets the initial value of bundled SBML symbol `A_PC`.
+  - name: initial_l_lsc
+    maps_to: L_LSC
+    label: L LSC
+    default: 10.0
+    units: native SBML value
+    description: Initial L LSC. Sets the initial value of bundled SBML symbol `L_LSC`.
+  - name: initial_d_tdsc
+    maps_to: D_TDSC
+    label: D TDSC
+    default: 0.0
+    units: native SBML value
+    description: Initial D TDSC. Sets the initial value of bundled SBML symbol `D_TDSC`.
+  - name: initial_t_tdlc
+    maps_to: T_TDLC
+    label: T TDLC
+    default: 0.0
+    units: native SBML value
+    description: Initial T TDLC. Sets the initial value of bundled SBML symbol `T_TDLC`.
+  outputs:
+  - name: s_hsc
+    maps_to: S_HSC
+    label: S HSC
+    description: S HSC observable. Maps to SBML symbol `S_HSC`.
+  - name: a_pc
+    maps_to: A_PC
+    label: A PC
+    description: A PC observable. Maps to SBML symbol `A_PC`.
+  - name: l_lsc
+    maps_to: L_LSC
+    label: L LSC
+    description: L LSC observable. Maps to SBML symbol `L_LSC`.
+  - name: d_tdsc
+    maps_to: D_TDSC
+    label: D TDSC
+    description: D TDSC observable. Maps to SBML symbol `D_TDSC`.
+  - name: t_tdlc
+    maps_to: T_TDLC
+    label: T TDLC
+    description: T TDLC observable. Maps to SBML symbol `T_TDLC`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

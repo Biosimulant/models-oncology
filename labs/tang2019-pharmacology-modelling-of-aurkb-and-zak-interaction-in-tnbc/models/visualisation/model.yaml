@@ -1,0 +1,125 @@
+schema_version: '2.0'
+title: Tang2019 - Pharmacology modelling of AURKB and ZAK interaction in TNBC Visualisation
+description: Oncology visualisation for Tang2019 - Pharmacology modelling of AURKB and ZAK interaction in TNBC.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Tang2019 - Pharmacology modelling of AURKB and ZAK interaction in TNBC
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_tang2019_pharmacology_modelling_of_aurkb_and_zak_biomd0000000940_model
+      title: Tang2019 - Pharmacology modelling of AURKB and ZAK interaction in TNBC
+      state_observables:
+      - PKN1
+      - ZAK
+      - MAP2K3
+      - MAPK14
+      - MAP2K4
+      - TP53
+      - ATM
+      - MAPK13
+      - PRKACA
+      - SRC
+      - BAD
+      - PTEN
+      - SHC1
+      - PIK3R1
+      - PARP1
+      - AURKB
+      - BRCA1
+      - YWHAZ
+      - TGFBR1
+      - CSF1R
+      observables:
+      - id: ATM
+        port: atm
+        label: ATM
+        group: drug_response
+      - id: SRC
+        port: src
+        label: SRC
+        group: drug_response
+      - id: BAD
+        port: bad
+        label: BAD
+        group: drug_response
+      - id: PTEN
+        port: pten
+        label: PTEN
+        group: drug_response
+      - id: SHC1
+        port: shc1
+        label: SHC1
+        group: drug_response
+      - id: PKN1
+        port: pkn1
+        label: PKN1
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_tang2019_pharmacology_modelling_of_aurkb_and_zak_biomd0000000940_model_state
+    schema:
+      PKN1: float
+      ZAK: float
+      MAP2K3: float
+      MAPK14: float
+      MAP2K4: float
+      TP53: float
+      ATM: float
+      MAPK13: float
+      PRKACA: float
+      SRC: float
+      BAD: float
+      PTEN: float
+      SHC1: float
+      PIK3R1: float
+      PARP1: float
+      AURKB: float
+      BRCA1: float
+      YWHAZ: float
+      TGFBR1: float
+      CSF1R: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_tang2019_pharmacology_modelling_of_aurkb_and_zak_biomd0000000940_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_tang2019_pharmacology_modelling_of_aurkb_and_zak_biomd0000000940_model_species_labels
+    schema:
+      ATM: str
+      SRC: str
+      BAD: str
+      PTEN: str
+      SHC1: str
+      PKN1: str
+    description: Display labels for selected source states.
+  outputs: []

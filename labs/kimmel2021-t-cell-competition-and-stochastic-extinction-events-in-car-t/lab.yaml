@@ -1,0 +1,75 @@
+schema_version: '2.0'
+title: Kimmel2021 - T cell competition and stochastic extinction events in CAR T cell therapy Lab
+description: This mathematical model of T cell-tumour interactions considering the roles of T cell competition and stochastic extinction events in CAR T cell therapy is described by the publication:Kimmel GJ, Lock. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: initial_antigen_presenting_tumour_cells
+    maps_to: oncology_sbml_kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model.initial_antigen_presenting_tumour_cells
+    label: Antigen presenting tumour cells
+    default: 94.86
+    units: native SBML value
+    description: Initial Antigen presenting tumour cells. Sets the initial value of bundled SBML symbol `Antigen_presenting_tumour_cells`.
+  - name: initial_normal_t_cells
+    maps_to: oncology_sbml_kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model.initial_normal_t_cells
+    label: Normal T cells
+    default: 6.0
+    units: native SBML value
+    description: Initial Normal T cells. Sets the initial value of bundled SBML symbol `Normal_T_cells`.
+  - name: initial_car_t_cells
+    maps_to: oncology_sbml_kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model.initial_car_t_cells
+    label: CAR T cells
+    default: 0.36
+    units: native SBML value
+    description: Initial CAR T cells. Sets the initial value of bundled SBML symbol `CAR_T_cells`.
+  outputs:
+  - name: antigen_presenting_tumour_cells
+    maps_to: oncology_sbml_kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model.antigen_presenting_tumour_cells
+    description: Antigen presenting tumour cells observable. Maps to SBML symbol `Antigen_presenting_tumour_cells`.
+  - name: normal_t_cells
+    maps_to: oncology_sbml_kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model.normal_t_cells
+    description: Normal T cells observable. Maps to SBML symbol `Normal_T_cells`.
+  - name: car_t_cells
+    maps_to: oncology_sbml_kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model.car_t_cells
+    description: CAR T cells observable. Maps to SBML symbol `CAR_T_cells`.
+  - name: state
+    maps_to: oncology_sbml_kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model.state
+  to:
+  - visualisation.oncology_sbml_kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model_state
+- from: oncology_sbml_kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model.summary
+  to:
+  - visualisation.oncology_sbml_kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model_summary
+- from: oncology_sbml_kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model.species_labels
+  to:
+  - visualisation.oncology_sbml_kimmel2021_t_cell_competition_and_stochastic_ext_biomd0000001041_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

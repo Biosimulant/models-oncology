@@ -1,0 +1,99 @@
+schema_version: '2.0'
+title: Morrison1989 - Folate Cycle
+description: 'Morrison1989 - Folate Cycle The model describes the folate cyclekinetics in breast cancer cells. This model is described in the article: Folate cycle kinetics in human breast cancer cells.'
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- metabolism
+- oncology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- P F Morrison
+- C J Allegra
+upstream:
+  id: biomodels_ebi:BIOMD0000000018
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000018
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000018
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000018?filename=BIOMD0000000018_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.morrison1989_folate_cycle_biomd0000000018_model:Morrison1989FolateCycleBiomd0000000018Model
+  init_kwargs:
+    model_path: data/BIOMD0000000018.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000018.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_dihydrofolate_free
+    maps_to: FH2f
+    label: Dihydrofolate free
+    default: 0.0012
+    units: native SBML value
+    description: Initial Dihydrofolate free. Sets the initial value of bundled SBML symbol `FH2f`.
+  - name: initial_tetrahydrofolate
+    maps_to: FH4
+    label: Tetrahydrofolate
+    default: 0.46
+    units: native SBML value
+    description: Initial Tetrahydrofolate. Sets the initial value of bundled SBML symbol `FH4`.
+  - name: initial_dihydrofolate_reductase_free
+    maps_to: DHFRf
+    label: Dihydrofolate reductase free
+    default: 0.64
+    units: native SBML value
+    description: Initial Dihydrofolate reductase free. Sets the initial value of bundled SBML symbol `DHFRf`.
+  outputs:
+  - name: dihydrofolate_free
+    maps_to: FH2f
+    label: Dihydrofolate free
+    description: Dihydrofolate free observable. Maps to SBML symbol `FH2f`.
+  - name: tetrahydrofolate
+    maps_to: FH4
+    label: Tetrahydrofolate
+    description: Tetrahydrofolate observable. Maps to SBML symbol `FH4`.
+  - name: model_state_3
+    maps_to: FFH2
+    label: 10 formyl dihydrofolate
+    description: 10 formyl dihydrofolate observable. Maps to SBML symbol `FFH2`.
+  - name: dihydrofolate_reductase_free
+    maps_to: DHFRf
+    label: Dihydrofolate reductase free
+    description: Dihydrofolate reductase free observable. Maps to SBML symbol `DHFRf`.
+  - name: model_state_5
+    maps_to: CH2FH4
+    label: 5,10 methylene tetrahydrofolate
+    description: 5,10 methylene tetrahydrofolate observable. Maps to SBML symbol `CH2FH4`.
+  - name: model_state_6
+    maps_to: CH3FH4
+    label: 5 methyl tetrahydrofolate
+    description: 5 methyl tetrahydrofolate observable. Maps to SBML symbol `CH3FH4`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

@@ -1,0 +1,89 @@
+schema_version: '2.0'
+title: Wodarz2001 - Viruses as antitumor weapons
+description: 'This mathematical model of the dynamics between tumor, virus and virus-specific CTL populations is described by the publication:Wodarz D. ''Viruses as antitumor weapons: defining conditions for tumor r.'
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- virotherapy
+authors:
+- Biosimulant Team
+- D Wodarz
+upstream:
+  id: biomodels_ebi:BIOMD0000001043
+  source_db: biomodels_ebi
+  source_id: BIOMD0000001043
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001043
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001043?filename=Wodarz2001.xml
+  license: CC0
+biosim:
+  entrypoint: src.wodarz2001_viruses_as_antitumor_weapons_biomd0000001043_model:Wodarz2001VirusesAsAntitumorWeaponsBiomd0000001043Model
+  init_kwargs:
+    model_path: data/BIOMD0000001043.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000001043.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_uninfected_tumor_cells
+    maps_to: uninfected_tumor_cells
+    label: Uninfected tumor cells
+    default: 0.01
+    units: native SBML value
+    description: Initial Uninfected tumor cells. Sets the initial value of bundled SBML symbol `uninfected_tumor_cells`.
+  - name: initial_infected_tumor_cells
+    maps_to: infected_tumor_cells
+    label: Infected tumor cells
+    default: 0.0001
+    units: native SBML value
+    description: Initial Infected tumor cells. Sets the initial value of bundled SBML symbol `infected_tumor_cells`.
+  - name: initial_virus_specific_ctls
+    maps_to: virus_specific_CTLs
+    label: Virus specific CTLs
+    default: 0.0
+    units: native SBML value
+    description: Initial Virus specific CTLs. Sets the initial value of bundled SBML symbol `virus_specific_CTLs`.
+  outputs:
+  - name: uninfected_tumor_cells
+    maps_to: uninfected_tumor_cells
+    label: Uninfected tumor cells
+    description: Uninfected tumor cells observable. Maps to SBML symbol `uninfected_tumor_cells`.
+  - name: infected_tumor_cells
+    maps_to: infected_tumor_cells
+    label: Infected tumor cells
+    description: Infected tumor cells observable. Maps to SBML symbol `infected_tumor_cells`.
+  - name: virus_specific_ctls
+    maps_to: virus_specific_CTLs
+    label: Virus specific CTLs
+    description: Virus specific CTLs observable. Maps to SBML symbol `virus_specific_CTLs`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

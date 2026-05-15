@@ -1,0 +1,63 @@
+schema_version: '2.0'
+title: Hu2019 - Pancreatic cancer dynamics Lab
+description: 'The paper describes a model on the size of pancreatic tumour. Created by COPASI 4.25 (Build 207) This model is described in the article: Modeling Pancreatic Cancer Dynamics with Immunotherapy Xiaochua.'
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs: []
+  outputs:
+  - name: model_state_1
+    maps_to: oncology_sbml_hu2019_pancreatic_cancer_dynamics_biomd0000000744_model.model_state_1
+    description: X observable. Maps to SBML symbol `x`.
+  - name: model_state_2
+    maps_to: oncology_sbml_hu2019_pancreatic_cancer_dynamics_biomd0000000744_model.model_state_2
+    description: Y observable. Maps to SBML symbol `y`.
+  - name: model_state_3
+    maps_to: oncology_sbml_hu2019_pancreatic_cancer_dynamics_biomd0000000744_model.model_state_3
+    description: Z observable. Maps to SBML symbol `z`.
+  - name: model_state_4
+    maps_to: oncology_sbml_hu2019_pancreatic_cancer_dynamics_biomd0000000744_model.model_state_4
+    description: W observable. Maps to SBML symbol `w`.
+  - name: model_state_5
+    maps_to: oncology_sbml_hu2019_pancreatic_cancer_dynamics_biomd0000000744_model.model_state_5
+    description: V observable. Maps to SBML symbol `v`.
+  - name: state
+    maps_to: oncology_sbml_hu2019_pancreatic_cancer_dynamics_biomd0000000744_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_hu2019_pancreatic_cancer_dynamics_biomd0000000744_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_hu2019_pancreatic_cancer_dynamics_biomd0000000744_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_hu2019_pancreatic_cancer_dynamics_biomd0000000744_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_hu2019_pancreatic_cancer_dynamics_biomd0000000744_model.state
+  to:
+  - visualisation.oncology_sbml_hu2019_pancreatic_cancer_dynamics_biomd0000000744_model_state
+- from: oncology_sbml_hu2019_pancreatic_cancer_dynamics_biomd0000000744_model.summary
+  to:
+  - visualisation.oncology_sbml_hu2019_pancreatic_cancer_dynamics_biomd0000000744_model_summary
+- from: oncology_sbml_hu2019_pancreatic_cancer_dynamics_biomd0000000744_model.species_labels
+  to:
+  - visualisation.oncology_sbml_hu2019_pancreatic_cancer_dynamics_biomd0000000744_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

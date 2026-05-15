@@ -1,0 +1,98 @@
+schema_version: '2.0'
+title: Melhem 2017 - Neutropenia Model
+description: "The objective of the present study was to use pharmacokinetic\u2013pharmacodynamic modelling to characterize the effects of chemotherapy on the granulopoietic system and to predict the absolute neutrophil. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
+standard: other
+tags:
+- biomodels_ebi
+- chemotherapy
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Melhem M
+- Delor I
+- "P\xE9rez-Ruixo JJ"
+- Harrold J
+- Chow A
+upstream:
+  id: biomodels_ebi:MODEL2211040001
+  source_db: biomodels_ebi
+  source_id: MODEL2211040001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2211040001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2211040001?filename=Neutropenia.xml
+  license: CC0
+biosim:
+  entrypoint: src.melhem_2017_neutropenia_model_model2211040001_model:Melhem2017NeutropeniaModelModel2211040001Model
+  init_kwargs:
+    model_path: data/MODEL2211040001.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/MODEL2211040001.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_chm
+    maps_to: Chm
+    label: Chm
+    default: 0.0
+    units: native SBML value
+    description: Initial Chm. Sets the initial value of bundled SBML symbol `Chm`.
+  - name: initial_crt
+    maps_to: Crt
+    label: Crt
+    default: 0.0
+    units: native SBML value
+    description: Initial Crt. Sets the initial value of bundled SBML symbol `Crt`.
+  outputs:
+  - name: chm
+    maps_to: Chm
+    label: Chm
+    description: Chm observable. Maps to SBML symbol `Chm`.
+  - name: crt
+    maps_to: Crt
+    label: Crt
+    description: Crt observable. Maps to SBML symbol `Crt`.
+  - name: model_state_3
+    maps_to: Dt
+    label: Dt
+    description: Dt observable. Maps to SBML symbol `Dt`.
+  - name: model_state_4
+    maps_to: Mt
+    label: Mt
+    description: Mt observable. Maps to SBML symbol `Mt`.
+  - name: pm1
+    maps_to: Pm1
+    label: Pm1
+    description: Pm1 observable. Maps to SBML symbol `Pm1`.
+  - name: pm2
+    maps_to: Pm2
+    label: Pm2
+    description: Pm2 observable. Maps to SBML symbol `Pm2`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

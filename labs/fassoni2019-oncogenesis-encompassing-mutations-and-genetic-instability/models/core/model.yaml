@@ -1,0 +1,88 @@
+schema_version: '2.0'
+title: Fassoni2019 - Oncogenesis encompassing mutations and genetic instability
+description: 'This model describes the multistep process that transform a normal cell and its descendants into a malignant tumour by considering three populations: normal, premalignant and cancer cells. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Artur C Fassoni
+- Hyun M Yang
+upstream:
+  id: biomodels_ebi:BIOMD0000000807
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000807
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000807
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000807?filename=model.xml
+  license: CC0
+biosim:
+  entrypoint: src.fassoni2019_oncogenesis_encompassing_mutations_a_biomd0000000807_model:Fassoni2019OncogenesisEncompassingMutationsABiomd0000000807Model
+  init_kwargs:
+    model_path: data/BIOMD0000000807.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000807.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_normalized_normal_cell_n
+    maps_to: normalized_normal_cell_n
+    label: Normalized normal cell n
+    default: 0.99999999
+    units: native SBML value
+    description: Initial Normalized normal cell n. Sets the initial value of bundled SBML symbol `normalized_normal_cell_n`.
+  - name: initial_normalized_pre_cancer_cell_g
+    maps_to: normalized_pre_cancer_cell_g
+    label: Normalized pre cancer cell g
+    default: 1.0e-08
+    units: native SBML value
+    description: Initial Normalized pre cancer cell g. Sets the initial value of bundled SBML symbol `normalized_pre_cancer_cell_g`.
+  - name: initial_normalized_cancer_cell_a
+    maps_to: normalized_cancer_cell_a
+    label: Normalized cancer cell a
+    default: 0.0
+    units: native SBML value
+    description: Initial Normalized cancer cell a. Sets the initial value of bundled SBML symbol `normalized_cancer_cell_a`.
+  outputs:
+  - name: normalized_normal_cell_n
+    maps_to: normalized_normal_cell_n
+    label: Normalized normal cell n
+    description: Normalized normal cell n observable. Maps to SBML symbol `normalized_normal_cell_n`.
+  - name: normalized_pre_cancer_cell_g
+    maps_to: normalized_pre_cancer_cell_g
+    label: Normalized pre cancer cell g
+    description: Normalized pre cancer cell g observable. Maps to SBML symbol `normalized_pre_cancer_cell_g`.
+  - name: normalized_cancer_cell_a
+    maps_to: normalized_cancer_cell_a
+    label: Normalized cancer cell a
+    description: Normalized cancer cell a observable. Maps to SBML symbol `normalized_cancer_cell_a`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

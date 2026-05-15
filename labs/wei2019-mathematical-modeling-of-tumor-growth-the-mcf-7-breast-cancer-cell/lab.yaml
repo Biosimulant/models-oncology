@@ -1,0 +1,61 @@
+schema_version: '2.0'
+title: Wei2019 - Mathematical modeling of tumor growth The MCF-7 breast cancer cell line Lab
+description: This is a mathematical model describing MCF-7 cancer cell growth with interaction between tumor cells, estradiol (hormone-dependent tumor growth), natural killer cells, cytotoxic T lymphocytes and whi. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- radiotherapy
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs: []
+  outputs:
+  - name: model_state_1
+    maps_to: oncology_sbml_wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model.model_state_1
+    description: T observable. Maps to SBML symbol `T`.
+  - name: model_state_2
+    maps_to: oncology_sbml_wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model.model_state_2
+    description: N observable. Maps to SBML symbol `N`.
+  - name: model_state_3
+    maps_to: oncology_sbml_wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model.model_state_3
+    description: C observable. Maps to SBML symbol `C`.
+  - name: model_state_4
+    maps_to: oncology_sbml_wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model.model_state_4
+    description: E observable. Maps to SBML symbol `E`.
+  - name: model_state_5
+    maps_to: oncology_sbml_wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model.model_state_5
+    description: L observable. Maps to SBML symbol `L`.
+  - name: state
+    maps_to: oncology_sbml_wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model.state
+  to:
+  - visualisation.oncology_sbml_wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model_state
+- from: oncology_sbml_wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model.summary
+  to:
+  - visualisation.oncology_sbml_wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model_summary
+- from: oncology_sbml_wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model.species_labels
+  to:
+  - visualisation.oncology_sbml_wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

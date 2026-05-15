@@ -1,0 +1,104 @@
+schema_version: '2.0'
+title: 'Boer1986 - Interactions between Macrophages and T-lymphocytes: Tumor Sneaking Through Intrinsic to Helper T cell Dynamics Visualisation'
+description: 'Oncology visualisation for Boer1986 - Interactions between Macrophages and T-lymphocytes: Tumor Sneaking Through Intrinsic to Helper T cell Dynamics.'
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: 'Boer1986 - Interactions between Macrophages and T-lymphocytes: Tumor Sneaking Through Intrinsic to Helper T cell Dynamics'
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model
+      title: 'Boer1986 - Interactions between Macrophages and T-lymphocytes: Tumor Sneaking Through Intrinsic to Helper T cell Dynamics'
+      state_observables:
+      - CTLP
+      - HTLP
+      - MPH
+      - CTL
+      - HTL
+      - ANGRY
+      - TUMOR
+      - DEBRIS
+      observables:
+      - id: TUMOR
+        port: tumor
+        label: TUMOR
+        group: drug_response
+      - id: CTLP
+        port: ctlp
+        label: CTLP
+        group: drug_response
+      - id: HTLP
+        port: htlp
+        label: HTLP
+        group: drug_response
+      - id: MPH
+        port: mph
+        label: MPH
+        group: drug_response
+      - id: CTL
+        port: ctl
+        label: CTL
+        group: drug_response
+      - id: HTL
+        port: htl
+        label: HTL
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model_state
+    schema:
+      CTLP: float
+      HTLP: float
+      MPH: float
+      CTL: float
+      HTL: float
+      ANGRY: float
+      TUMOR: float
+      DEBRIS: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model_species_labels
+    schema:
+      TUMOR: str
+      CTLP: str
+      HTLP: str
+      MPH: str
+      CTL: str
+      HTL: str
+    description: Display labels for selected source states.
+  outputs: []

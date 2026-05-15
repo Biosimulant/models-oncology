@@ -1,0 +1,101 @@
+schema_version: '2.0'
+title: Shin_2018_EGFR-PYK2-c-Met interaction network_model Lab
+description: Systems modelling of the EGFR-PYK2-c-Met interaction network predicted and prioritized synergistic drug combinations for Triple-negative breast cancer. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: egfrtot_level
+    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.egfrtot_level
+    label: EGFRtot source parameter
+    default: 398.107
+    units: native SBML value
+    description: EGFRtot source parameter. Maps to bundled SBML parameter `EGFRtot`.
+  - name: caegf_level
+    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.caegf_level
+    label: CaEGF source parameter
+    default: 0.0891251
+    units: native SBML value
+    description: CaEGF source parameter. Maps to bundled SBML parameter `caEGF`.
+  - name: egf_level
+    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.egf_level
+    label: EGF source parameter
+    default: 10.0
+    units: native SBML value
+    description: EGF source parameter. Maps to bundled SBML parameter `EGF`.
+  - name: initial_pegfr
+    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.initial_pegfr
+    label: PEGFR
+    default: 0.109014
+    units: native SBML value
+    description: Initial PEGFR. Sets the initial value of bundled SBML symbol `pEGFR`.
+  - name: initial_egfrub
+    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.initial_egfrub
+    label: EGFRub
+    default: 6.93991
+    units: native SBML value
+    description: Initial EGFRub. Sets the initial value of bundled SBML symbol `EGFRub`.
+  - name: initial_perk
+    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.initial_perk
+    label: PERK
+    default: 0.669043
+    units: native SBML value
+    description: Initial PERK. Sets the initial value of bundled SBML symbol `pERK`.
+  outputs:
+  - name: pegfr
+    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.pegfr
+    description: PEGFR observable. Maps to SBML symbol `pEGFR`.
+  - name: egfrub
+    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.egfrub
+    description: EGFRub observable. Maps to SBML symbol `EGFRub`.
+  - name: perk
+    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.perk
+    description: PERK observable. Maps to SBML symbol `pERK`.
+  - name: pstat3
+    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.pstat3
+    description: PSTAT3 observable. Maps to SBML symbol `pSTAT3`.
+  - name: stat3ustattic
+    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.stat3ustattic
+    description: STAT3uStattic observable. Maps to SBML symbol `STAT3uStattic`.
+  - name: pyk2
+    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.pyk2
+    description: PYK2 observable. Maps to SBML symbol `PYK2`.
+  - name: state
+    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.state
+  to:
+  - visualisation.oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model_state
+- from: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.summary
+  to:
+  - visualisation.oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model_summary
+- from: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.species_labels
+  to:
+  - visualisation.oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

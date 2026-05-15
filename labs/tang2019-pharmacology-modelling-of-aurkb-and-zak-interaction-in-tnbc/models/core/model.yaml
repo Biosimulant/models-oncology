@@ -1,0 +1,121 @@
+schema_version: '2.0'
+title: Tang2019 - Pharmacology modelling of AURKB and ZAK interaction in TNBC
+description: Aurora Kinase B and ZAK interaction model Equivalent of the stochastic model used in 'Network pharmacology model predicts combined Aurora B and ZAK inhibition in MDA-MB-231 breast cancer cells' by Tan. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Jing Tang
+- Prson Gautam
+- Abhishekh Gupta
+- Liye He
+- Sanna Timonen
+upstream:
+  id: biomodels_ebi:BIOMD0000000940
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000940
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000940
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000940?filename=Tang2019.xml
+  license: CC0
+biosim:
+  entrypoint: src.tang2019_pharmacology_modelling_of_aurkb_and_zak_biomd0000000940_model:Tang2019PharmacologyModellingOfAurkbAndZakBiomd0000000940Model
+  init_kwargs:
+    model_path: data/BIOMD0000000940.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000940.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: kd_tgfbr1_level
+    maps_to: kd_tgfbr1
+    label: Kd tgfbr1 source parameter
+    default: 0.45
+    units: native SBML value
+    description: Kd tgfbr1 source parameter. Maps to bundled SBML parameter `kd_tgfbr1`.
+  - name: k_tgfbr1_level
+    maps_to: k_tgfbr1
+    label: K tgfbr1 source parameter
+    default: 0.5
+    units: native SBML value
+    description: K tgfbr1 source parameter. Maps to bundled SBML parameter `k_tgfbr1`.
+  - name: initial_atm
+    maps_to: ATM
+    label: ATM
+    default: 1.0
+    units: native SBML value
+    description: Initial ATM. Sets the initial value of bundled SBML symbol `ATM`.
+  - name: initial_src
+    maps_to: SRC
+    label: SRC
+    default: 1.0
+    units: native SBML value
+    description: Initial SRC. Sets the initial value of bundled SBML symbol `SRC`.
+  - name: initial_bad
+    maps_to: BAD
+    label: BAD
+    default: 1.0
+    units: native SBML value
+    description: Initial BAD. Sets the initial value of bundled SBML symbol `BAD`.
+  - name: initial_pten
+    maps_to: PTEN
+    label: PTEN
+    default: 1.0
+    units: native SBML value
+    description: Initial PTEN. Sets the initial value of bundled SBML symbol `PTEN`.
+  outputs:
+  - name: atm
+    maps_to: ATM
+    label: ATM
+    description: ATM observable. Maps to SBML symbol `ATM`.
+  - name: src
+    maps_to: SRC
+    label: SRC
+    description: SRC observable. Maps to SBML symbol `SRC`.
+  - name: bad
+    maps_to: BAD
+    label: BAD
+    description: BAD observable. Maps to SBML symbol `BAD`.
+  - name: pten
+    maps_to: PTEN
+    label: PTEN
+    description: PTEN observable. Maps to SBML symbol `PTEN`.
+  - name: shc1
+    maps_to: SHC1
+    label: SHC1
+    description: SHC1 observable. Maps to SBML symbol `SHC1`.
+  - name: pkn1
+    maps_to: PKN1
+    label: PKN1
+    description: PKN1 observable. Maps to SBML symbol `PKN1`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

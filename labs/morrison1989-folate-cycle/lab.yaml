@@ -1,0 +1,80 @@
+schema_version: '2.0'
+title: Morrison1989 - Folate Cycle Lab
+description: 'Morrison1989 - Folate Cycle The model describes the folate cyclekinetics in breast cancer cells. This model is described in the article: Folate cycle kinetics in human breast cancer cells.'
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- metabolism
+- oncology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: initial_dihydrofolate_free
+    maps_to: oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model.initial_dihydrofolate_free
+    label: Dihydrofolate free
+    default: 0.0012
+    units: native SBML value
+    description: Initial Dihydrofolate free. Sets the initial value of bundled SBML symbol `FH2f`.
+  - name: initial_tetrahydrofolate
+    maps_to: oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model.initial_tetrahydrofolate
+    label: Tetrahydrofolate
+    default: 0.46
+    units: native SBML value
+    description: Initial Tetrahydrofolate. Sets the initial value of bundled SBML symbol `FH4`.
+  - name: initial_dihydrofolate_reductase_free
+    maps_to: oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model.initial_dihydrofolate_reductase_free
+    label: Dihydrofolate reductase free
+    default: 0.64
+    units: native SBML value
+    description: Initial Dihydrofolate reductase free. Sets the initial value of bundled SBML symbol `DHFRf`.
+  outputs:
+  - name: dihydrofolate_free
+    maps_to: oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model.dihydrofolate_free
+    description: Dihydrofolate free observable. Maps to SBML symbol `FH2f`.
+  - name: tetrahydrofolate
+    maps_to: oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model.tetrahydrofolate
+    description: Tetrahydrofolate observable. Maps to SBML symbol `FH4`.
+  - name: model_state_3
+    maps_to: oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model.model_state_3
+    description: 10 formyl dihydrofolate observable. Maps to SBML symbol `FFH2`.
+  - name: dihydrofolate_reductase_free
+    maps_to: oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model.dihydrofolate_reductase_free
+    description: Dihydrofolate reductase free observable. Maps to SBML symbol `DHFRf`.
+  - name: model_state_5
+    maps_to: oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model.model_state_5
+    description: 5,10 methylene tetrahydrofolate observable. Maps to SBML symbol `CH2FH4`.
+  - name: model_state_6
+    maps_to: oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model.model_state_6
+    description: 5 methyl tetrahydrofolate observable. Maps to SBML symbol `CH3FH4`.
+  - name: state
+    maps_to: oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model.state
+  to:
+  - visualisation.oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model_state
+- from: oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model.summary
+  to:
+  - visualisation.oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model_summary
+- from: oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model.species_labels
+  to:
+  - visualisation.oncology_sbml_morrison1989_folate_cycle_biomd0000000018_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

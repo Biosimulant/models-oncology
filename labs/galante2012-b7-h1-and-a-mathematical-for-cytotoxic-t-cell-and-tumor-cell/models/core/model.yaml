@@ -1,0 +1,102 @@
+schema_version: '2.0'
+title: Galante2012 - B7-H1 and a Mathematical Model for Cytotoxic T Cell and Tumor Cell Interaction
+description: This is a mathematical model that describes the interactions between cytotoxic T cells and tumor cells as influenced by B7-H1 (PD-L1) activity, with a focus on how B7-H1 affects cancer cells apoptosis. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Amanda Galante
+- Koji Tamada
+- Doron Levy
+upstream:
+  id: biomodels_ebi:BIOMD0000000812
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000812
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000812
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000812?filename=Galante2012.xml
+  license: CC0
+biosim:
+  entrypoint: src.galante2012_b7_h1_and_a_mathematical_model_for_c_biomd0000000812_model:Galante2012B7H1AndAMathematicalModelForCBiomd0000000812Model
+  init_kwargs:
+    model_path: data/BIOMD0000000812.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000812.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_p_perforin
+    maps_to: P_Perforin
+    label: P Perforin
+    default: 0.315
+    units: native SBML value
+    description: Initial P Perforin. Sets the initial value of bundled SBML symbol `P_Perforin`.
+  - name: initial_c_cancer_uncomplexed
+    maps_to: C_Cancer_Uncomplexed
+    label: C Cancer Uncomplexed
+    default: 1.0
+    units: native SBML value
+    description: Initial C Cancer Uncomplexed. Sets the initial value of bundled SBML symbol `C_Cancer_Uncomplexed`.
+  - name: initial_t_ast
+    maps_to: T_ast
+    label: T ast
+    default: 1.0
+    units: native SBML value
+    description: Initial T ast. Sets the initial value of bundled SBML symbol `T_ast`.
+  - name: initial_x_complex
+    maps_to: X_Complex
+    label: X Complex
+    default: 0.0
+    units: native SBML value
+    description: Initial X Complex. Sets the initial value of bundled SBML symbol `X_Complex`.
+  outputs:
+  - name: p_perforin
+    maps_to: P_Perforin
+    label: P Perforin
+    description: P Perforin observable. Maps to SBML symbol `P_Perforin`.
+  - name: c_cancer_uncomplexed
+    maps_to: C_Cancer_Uncomplexed
+    label: C Cancer Uncomplexed
+    description: C Cancer Uncomplexed observable. Maps to SBML symbol `C_Cancer_Uncomplexed`.
+  - name: t_ast
+    maps_to: T_ast
+    label: T ast
+    description: T ast observable. Maps to SBML symbol `T_ast`.
+  - name: x_complex
+    maps_to: X_Complex
+    label: X Complex
+    description: X Complex observable. Maps to SBML symbol `X_Complex`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

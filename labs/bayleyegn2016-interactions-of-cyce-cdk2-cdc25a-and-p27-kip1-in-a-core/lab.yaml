@@ -1,0 +1,53 @@
+schema_version: '2.0'
+title: Bayleyegn2016 - interactions of CycE/Cdk2, Cdc25A, and P27 Kip1 in a core cancer subnetwork Lab
+description: Mathematical description of the interactions of CycE/Cdk2, Cdc25A, and P27Kip1 in a core cancer subnetwork. Model is encoded by Matthieu Maire/partially by Krishna Kumar Tiwari and submitted to BioMod.
+tags:
+- biomodels_ebi
+- cellcycle
+- curated
+- faithful
+- oncology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs: []
+  outputs:
+  - name: cyce_cdk2
+    maps_to: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model.cyce_cdk2
+    description: CycE CDK2 observable. Maps to SBML symbol `CycE_CDK2`.
+  - name: p27_kip1
+    maps_to: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model.p27_kip1
+    description: P27 kip1 observable. Maps to SBML symbol `p27_kip1`.
+  - name: cdc25a
+    maps_to: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model.cdc25a
+    description: Cdc25A observable. Maps to SBML symbol `Cdc25A`.
+  - name: state
+    maps_to: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model.state
+  to:
+  - visualisation.oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model_state
+- from: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model.summary
+  to:
+  - visualisation.oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model_summary
+- from: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model.species_labels
+  to:
+  - visualisation.oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

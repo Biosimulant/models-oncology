@@ -1,0 +1,183 @@
+schema_version: '2.0'
+title: Jafarnejad2019 - Mechanistically detailed systems biology modeling of the HGF/Met pathway in hepatocellular carcinoma Visualisation
+description: Oncology visualisation for Jafarnejad2019 - Mechanistically detailed systems biology modeling of the HGF/Met pathway in hepatocellular carcinoma.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- oncology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Jafarnejad2019 - Mechanistically detailed systems biology modeling of the HGF/Met pathway in hepatocellular carcinoma
+    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
+    visual_scope: Cancer signaling pathway activity and dominant source states
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model
+      title: Jafarnejad2019 - Mechanistically detailed systems biology modeling of the HGF/Met pathway in hepatocellular carcinoma
+      state_observables:
+      - Itg
+      - Met_Itg
+      - pMet
+      - pMet_i
+      - pMet_Itg
+      - pMet_Itg_i
+      - pMet_total
+      - pMet_i_total
+      - Met_pMet_s_total
+      - pMet_s_total
+      - Gab1
+      - Gab1_pMet
+      - PI3K
+      - PI3K_active
+      - Akt
+      - pAkt
+      - Rac
+      - Rac_active
+      - PAK1
+      - pPAK1
+      - SOS
+      - mSOS_pMet
+      - Ras
+      - Ras_active
+      - Raf
+      - pRaf
+      - MEK
+      - pMEK
+      - ERK
+      - pERK
+      - RSK
+      - pRSK
+      - ppRSK
+      - PDK1
+      - Peptide_Itg
+      - Sorafenib_Raf
+      - Cabozantinib_Met
+      - Cabozantinib_Met_Itg
+      - Met_max
+      - Itg_max
+      - Akt_max
+      - Raf_max
+      - MEK_max
+      - ERK_max
+      - RSK_max
+      - Peptide
+      - Sorafenib
+      - Cabozantinib
+      - Met
+      observables:
+      - id: PI3K
+        port: pi3k
+        label: PI3K
+        group: signaling
+      - id: Akt
+        port: akt
+        label: AKT
+        group: signaling
+      - id: Ras
+        port: ras
+        label: Ras
+        group: signaling
+      - id: Raf
+        port: raf
+        label: Raf
+        group: signaling
+      - id: ERK
+        port: erk
+        label: ERK
+        group: signaling
+      - id: pAkt
+        port: pakt
+        label: PAkt
+        group: signaling
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model_state
+    schema:
+      Itg: float
+      Met_Itg: float
+      pMet: float
+      pMet_i: float
+      pMet_Itg: float
+      pMet_Itg_i: float
+      pMet_total: float
+      pMet_i_total: float
+      Met_pMet_s_total: float
+      pMet_s_total: float
+      Gab1: float
+      Gab1_pMet: float
+      PI3K: float
+      PI3K_active: float
+      Akt: float
+      pAkt: float
+      Rac: float
+      Rac_active: float
+      PAK1: float
+      pPAK1: float
+      SOS: float
+      mSOS_pMet: float
+      Ras: float
+      Ras_active: float
+      Raf: float
+      pRaf: float
+      MEK: float
+      pMEK: float
+      ERK: float
+      pERK: float
+      RSK: float
+      pRSK: float
+      ppRSK: float
+      PDK1: float
+      Peptide_Itg: float
+      Sorafenib_Raf: float
+      Cabozantinib_Met: float
+      Cabozantinib_Met_Itg: float
+      Met_max: float
+      Itg_max: float
+      Akt_max: float
+      Raf_max: float
+      MEK_max: float
+      ERK_max: float
+      RSK_max: float
+      Peptide: float
+      Sorafenib: float
+      Cabozantinib: float
+      Met: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model_species_labels
+    schema:
+      PI3K: str
+      Akt: str
+      Ras: str
+      Raf: str
+      ERK: str
+      pAkt: str
+    description: Display labels for selected source states.
+  outputs: []

@@ -1,0 +1,78 @@
+schema_version: '2.0'
+title: Wei2019 - Mathematical modeling of tumor growth The MCF-7 breast cancer cell line
+description: This is a mathematical model describing MCF-7 cancer cell growth with interaction between tumor cells, estradiol (hormone-dependent tumor growth), natural killer cells, cytotoxic T lymphocytes and whi. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- radiotherapy
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Wei, H.C.
+upstream:
+  id: biomodels_ebi:MODEL1909090002
+  source_db: biomodels_ebi
+  source_id: MODEL1909090002
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1909090002
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1909090002?filename=Wei2019.xml
+  license: CC0
+biosim:
+  entrypoint: src.wei2019_mathematical_modeling_of_tumor_growth_th_model1909090002_model:Wei2019MathematicalModelingOfTumorGrowthThModel1909090002Model
+  init_kwargs:
+    model_path: data/MODEL1909090002.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/MODEL1909090002.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations. No scientifically safe external input was exposed by the cleanup.
+io:
+  inputs: []
+  outputs:
+  - name: model_state_1
+    maps_to: T
+    label: T
+    description: T observable. Maps to SBML symbol `T`.
+  - name: model_state_2
+    maps_to: N
+    label: N
+    description: N observable. Maps to SBML symbol `N`.
+  - name: model_state_3
+    maps_to: C
+    label: C
+    description: C observable. Maps to SBML symbol `C`.
+  - name: model_state_4
+    maps_to: E
+    label: E
+    description: E observable. Maps to SBML symbol `E`.
+  - name: model_state_5
+    maps_to: L
+    label: L
+    description: L observable. Maps to SBML symbol `L`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

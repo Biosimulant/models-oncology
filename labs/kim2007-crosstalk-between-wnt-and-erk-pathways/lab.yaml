@@ -1,0 +1,101 @@
+schema_version: '2.0'
+title: Kim2007 - Crosstalk between Wnt and ERK pathways Lab
+description: Kim2007 - Crosstalk between Wnt and ERK pathways Experimental studies have shown that both Wnt and the MAPK pathways are involved in the pathogenesis of various kinds of cancers (eg. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: initial_rasi
+    maps_to: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model.initial_rasi
+    label: Rasi
+    default: 200.0
+    units: native SBML value
+    description: Initial Rasi. Sets the initial value of bundled SBML symbol `X16`.
+  - name: initial_raf_1
+    maps_to: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model.initial_raf_1
+    label: Raf 1
+    default: 112.5585
+    units: native SBML value
+    description: Initial Raf 1. Sets the initial value of bundled SBML symbol `X18`.
+  - name: initial_raf_1_ast
+    maps_to: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model.initial_raf_1_ast
+    label: Raf 1 ast
+    default: 6.486
+    units: native SBML value
+    description: Initial Raf 1 ast. Sets the initial value of bundled SBML symbol `X19`.
+  - name: initial_erk
+    maps_to: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model.initial_erk
+    label: ERK
+    default: 297.8897
+    units: native SBML value
+    description: Initial ERK. Sets the initial value of bundled SBML symbol `X22`.
+  - name: initial_erk_ast
+    maps_to: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model.initial_erk_ast
+    label: ERK ast
+    default: 2.1103
+    units: native SBML value
+    description: Initial ERK ast. Sets the initial value of bundled SBML symbol `X23`.
+  - name: initial_raf1_rkip
+    maps_to: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model.initial_raf1_rkip
+    label: Raf1/RKIP
+    default: 180.9595
+    units: native SBML value
+    description: Initial Raf1/RKIP. Sets the initial value of bundled SBML symbol `X24`.
+  outputs:
+  - name: rasi
+    maps_to: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model.rasi
+    description: Rasi observable. Maps to SBML symbol `X16`.
+  - name: raf_1
+    maps_to: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model.raf_1
+    description: Raf 1 observable. Maps to SBML symbol `X18`.
+  - name: raf_1_ast
+    maps_to: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model.raf_1_ast
+    description: Raf 1 ast observable. Maps to SBML symbol `X19`.
+  - name: erk
+    maps_to: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model.erk
+    description: ERK observable. Maps to SBML symbol `X22`.
+  - name: erk_ast
+    maps_to: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model.erk_ast
+    description: ERK ast observable. Maps to SBML symbol `X23`.
+  - name: raf1_rkip
+    maps_to: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model.raf1_rkip
+    description: Raf1/RKIP observable. Maps to SBML symbol `X24`.
+  - name: state
+    maps_to: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model.state
+  to:
+  - visualisation.oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model_state
+- from: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model.summary
+  to:
+  - visualisation.oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model_summary
+- from: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model.species_labels
+  to:
+  - visualisation.oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

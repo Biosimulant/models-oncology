@@ -1,0 +1,93 @@
+schema_version: '2.0'
+title: Hutchinson2016 - Vascular phenotype identification and anti-angiogenic treatment recommendation
+description: This is a spatially averaged multiscale mathematical model of tumor angiogenesis. The model describes the dynamics of VEGF, Ang1, Ang2, and PDGF, coupled with those of mature and immature endothelial.
+standard: other
+tags:
+- angiogenesis
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- L G Hutchinson
+- E A Gaffney
+- P K Maini
+- J Wagg
+- A Phipps
+upstream:
+  id: biomodels_ebi:MODEL1911130007
+  source_db: biomodels_ebi
+  source_id: MODEL1911130007
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1911130007
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1911130007?filename=Hutchinson2016.xml
+  license: CC0
+biosim:
+  entrypoint: src.hutchinson2016_vascular_phenotype_identification_model1911130007_model:Hutchinson2016VascularPhenotypeIdentificationModel1911130007Model
+  init_kwargs:
+    model_path: data/MODEL1911130007.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/MODEL1911130007.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: epsilon_level
+    maps_to: epsilon
+    label: Epsilon source parameter
+    default: 0.04
+    units: native SBML value
+    description: Epsilon source parameter. Maps to bundled SBML parameter `epsilon`.
+  outputs:
+  - name: model_state_1
+    maps_to: v
+    label: V
+    description: V observable. Maps to SBML symbol `v`.
+  - name: model_state_2
+    maps_to: rv
+    label: Rv
+    description: Rv observable. Maps to SBML symbol `rv`.
+  - name: model_state_3
+    maps_to: bv
+    label: Bv
+    description: Bv observable. Maps to SBML symbol `bv`.
+  - name: model_state_4
+    maps_to: a1
+    label: A1
+    description: A1 observable. Maps to SBML symbol `a1`.
+  - name: model_state_5
+    maps_to: aw
+    label: Aw
+    description: Aw observable. Maps to SBML symbol `aw`.
+  - name: model_state_6
+    maps_to: a2
+    label: A2
+    description: A2 observable. Maps to SBML symbol `a2`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

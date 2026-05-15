@@ -1,0 +1,118 @@
+schema_version: '2.0'
+title: Talemi2015 - Persistent telomere-associated DNA damage foci (TAF), a measure to predict cancer risks
+description: A Robust Model of DNA Damage Dynamics.Rasgou Talemi and Schaber, 12.20.2014. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- cellcycle
+- curated
+- dna-damage
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Soheil Rastgou Talemi
+- Gabriel Kollarovic
+- Anastasiya Lapytsko
+- "J\xF6rg Schaber"
+upstream:
+  id: biomodels_ebi:MODEL1412200000
+  source_db: biomodels_ebi
+  source_id: MODEL1412200000
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1412200000
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1412200000?filename=MODEL1412200000_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.talemi2015_persistent_telomere_associated_dna_da_model1412200000_model:Talemi2015PersistentTelomereAssociatedDnaDaModel1412200000Model
+  init_kwargs:
+    model_path: data/MODEL1412200000.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/MODEL1412200000.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: dnadamagefoci_0_level
+    maps_to: DNAdamagefoci_0
+    label: DNAdamagefoci 0 source parameter
+    default: 750.500039901129
+    units: native SBML value
+    description: DNAdamagefoci 0 source parameter. Maps to bundled SBML parameter `DNAdamagefoci_0`.
+  - name: basednadamage_level
+    maps_to: BaseDNAdamage
+    label: BaseDNAdamage source parameter
+    default: 0.989191113985894
+    units: native SBML value
+    description: BaseDNAdamage source parameter. Maps to bundled SBML parameter `BaseDNAdamage`.
+  - name: initial_fast
+    maps_to: FAST
+    label: FAST
+    default: 0.0
+    units: native SBML value
+    description: Initial FAST. Sets the initial value of bundled SBML symbol `FAST`.
+  - name: initial_slow
+    maps_to: SLOW
+    label: SLOW
+    default: 0.0
+    units: native SBML value
+    description: Initial SLOW. Sets the initial value of bundled SBML symbol `SLOW`.
+  - name: initial_fasti
+    maps_to: FASTi
+    label: FASTi
+    default: 0.0
+    units: native SBML value
+    description: Initial FASTi. Sets the initial value of bundled SBML symbol `FASTi`.
+  - name: initial_slowi
+    maps_to: SLOWi
+    label: SLOWi
+    default: 0.0
+    units: native SBML value
+    description: Initial SLOWi. Sets the initial value of bundled SBML symbol `SLOWi`.
+  outputs:
+  - name: model_state_1
+    maps_to: RP
+    label: RP
+    description: RP observable. Maps to SBML symbol `RP`.
+  - name: fast
+    maps_to: FAST
+    label: FAST
+    description: FAST observable. Maps to SBML symbol `FAST`.
+  - name: slow
+    maps_to: SLOW
+    label: SLOW
+    description: SLOW observable. Maps to SBML symbol `SLOW`.
+  - name: fasti
+    maps_to: FASTi
+    label: FASTi
+    description: FASTi observable. Maps to SBML symbol `FASTi`.
+  - name: slowi
+    maps_to: SLOWi
+    label: SLOWi
+    description: SLOWi observable. Maps to SBML symbol `SLOWi`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

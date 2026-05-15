@@ -1,0 +1,86 @@
+schema_version: '2.0'
+title: Al-Tuwairqi2020 - Dynamics of cancer radiovirotherapy - Phase II treatment Visualisation
+description: Oncology visualisation for Al-Tuwairqi2020 - Dynamics of cancer radiovirotherapy - Phase II treatment.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunotherapy
+- oncology
+- pharmacology
+- physiology
+- radiotherapy
+- sbml
+- systemsbiology
+- tumor-growth
+- virotherapy
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Al-Tuwairqi2020 - Dynamics of cancer radiovirotherapy - Phase II treatment
+    question: Does the radiotherapy-linked model show tumour response under baseline source conditions?
+    answer_focus: Compares radiation/treatment and tumour observables where present.
+    visual_scope: Radiotherapy-linked tumour response
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_al_tuwairqi2020_dynamics_of_cancer_radiovirother_biomd0000001032_model
+      title: Al-Tuwairqi2020 - Dynamics of cancer radiovirotherapy - Phase II treatment
+      state_observables:
+      - uninfected_cancer_cells
+      - infected_cancer_cells
+      - free_virus
+      - damaged_cancer_cells
+      observables:
+      - id: damaged_cancer_cells
+        port: damaged_cancer_cells
+        label: Damaged cancer cells
+        group: radiotherapy
+      - id: uninfected_cancer_cells
+        port: uninfected_cancer_cells
+        label: Uninfected cancer cells
+        group: radiotherapy
+      - id: free_virus
+        port: free_virus
+        label: Free virus
+        group: radiotherapy
+      - id: infected_cancer_cells
+        port: infected_cancer_cells
+        label: Infected cancer cells
+        group: radiotherapy
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_al_tuwairqi2020_dynamics_of_cancer_radiovirother_biomd0000001032_model_state
+    schema:
+      uninfected_cancer_cells: float
+      infected_cancer_cells: float
+      free_virus: float
+      damaged_cancer_cells: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_al_tuwairqi2020_dynamics_of_cancer_radiovirother_biomd0000001032_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_al_tuwairqi2020_dynamics_of_cancer_radiovirother_biomd0000001032_model_species_labels
+    schema:
+      damaged_cancer_cells: str
+      uninfected_cancer_cells: str
+      free_virus: str
+      infected_cancer_cells: str
+    description: Display labels for selected source states.
+  outputs: []

@@ -1,0 +1,143 @@
+schema_version: '2.0'
+title: Kim2007 - Crosstalk between Wnt and ERK pathways Visualisation
+description: Oncology visualisation for Kim2007 - Crosstalk between Wnt and ERK pathways.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Kim2007 - Crosstalk between Wnt and ERK pathways
+    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
+    visual_scope: Cancer signaling pathway activity and dominant source states
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model
+      title: Kim2007 - Crosstalk between Wnt and ERK pathways
+      state_observables:
+      - X1
+      - X2
+      - X3
+      - X4
+      - X5
+      - X6
+      - X7
+      - X8
+      - X9
+      - X10
+      - X11
+      - X12
+      - X13
+      - X14
+      - X15
+      - X16
+      - X17
+      - X18
+      - X19
+      - X20
+      - X21
+      - X22
+      - X23
+      - X24
+      - X25
+      - X26
+      - X27
+      - X28
+      observables:
+      - id: X16
+        port: rasi
+        label: Rasi
+        group: signaling
+      - id: X18
+        port: raf_1
+        label: Raf 1
+        group: signaling
+      - id: X19
+        port: raf_1_ast
+        label: Raf 1 ast
+        group: signaling
+      - id: X22
+        port: erk
+        label: ERK
+        group: signaling
+      - id: X23
+        port: erk_ast
+        label: ERK ast
+        group: signaling
+      - id: X24
+        port: raf1_rkip
+        label: Raf1/RKIP
+        group: signaling
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model_state
+    schema:
+      X1: float
+      X2: float
+      X3: float
+      X4: float
+      X5: float
+      X6: float
+      X7: float
+      X8: float
+      X9: float
+      X10: float
+      X11: float
+      X12: float
+      X13: float
+      X14: float
+      X15: float
+      X16: float
+      X17: float
+      X18: float
+      X19: float
+      X20: float
+      X21: float
+      X22: float
+      X23: float
+      X24: float
+      X25: float
+      X26: float
+      X27: float
+      X28: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_kim2007_crosstalk_between_wnt_and_erk_pathways_biomd0000000149_model_species_labels
+    schema:
+      X16: str
+      X18: str
+      X19: str
+      X22: str
+      X23: str
+      X24: str
+    description: Display labels for selected source states.
+  outputs: []

@@ -1,0 +1,100 @@
+schema_version: '2.0'
+title: Chance1960_Glycolysis_Respiration Lab
+description: 'This model is described inthe article: Metabolic control mechanisms. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- metabolism
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: initial_lac_lactate
+    maps_to: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model.initial_lac_lactate
+    label: (LAC) lactate
+    default: 0.001
+    units: native SBML value
+    description: Initial (LAC) lactate. Sets the initial value of bundled SBML symbol `LAC`.
+  - name: initial_pue_enzyme_concerned_in_atp_utilization
+    maps_to: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model.initial_pue_enzyme_concerned_in_atp_utilization
+    label: (PUE) enzyme concerned in ATP utilization
+    default: 2.0e-06
+    units: native SBML value
+    description: Initial (PUE) enzyme concerned in ATP utilization. Sets the initial value of bundled SBML symbol `PUE`.
+  - name: initial_ppp_enzyme_intermediate_concerned_in_atp_utilization
+    maps_to: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model.initial_ppp_enzyme_intermediate_concerned_in_atp_utilization
+    label: (PPP) enzyme intermediate concerned in ATP utilization
+    default: 1.0e-06
+    units: native SBML value
+    description: Initial (PPP) enzyme intermediate concerned in ATP utilization. Sets the initial value of bundled SBML symbol `PPP`.
+  - name: initial_glu_glucose
+    maps_to: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model.initial_glu_glucose
+    label: (GLU) glucose
+    default: 0.0
+    units: native SBML value
+    description: Initial (GLU) glucose. Sets the initial value of bundled SBML symbol `GLU`.
+  - name: initial_eng_hexokinase_glucose_intermediate
+    maps_to: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model.initial_eng_hexokinase_glucose_intermediate
+    label: (ENG) hexokinase glucose intermediate
+    default: 0.0
+    units: native SBML value
+    description: Initial (ENG) hexokinase glucose intermediate. Sets the initial value of bundled SBML symbol `ENG`.
+  - name: initial_glp_glucose_6_phosphate
+    maps_to: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model.initial_glp_glucose_6_phosphate
+    label: (GLP) glucose 6 phosphate
+    default: 0.0
+    units: native SBML value
+    description: Initial (GLP) glucose 6 phosphate. Sets the initial value of bundled SBML symbol `GLP`.
+  outputs:
+  - name: lac_lactate
+    maps_to: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model.lac_lactate
+    description: (LAC) lactate observable. Maps to SBML symbol `LAC`.
+  - name: pue_enzyme_concerned_in_atp_utilization
+    maps_to: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model.pue_enzyme_concerned_in_atp_utilization
+    description: (PUE) enzyme concerned in ATP utilization observable. Maps to SBML symbol `PUE`.
+  - name: ppp_enzyme_intermediate_concerned_in_atp_utilization
+    maps_to: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model.ppp_enzyme_intermediate_concerned_in_atp_utilization
+    description: (PPP) enzyme intermediate concerned in ATP utilization observable. Maps to SBML symbol `PPP`.
+  - name: glu_glucose
+    maps_to: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model.glu_glucose
+    description: (GLU) glucose observable. Maps to SBML symbol `GLU`.
+  - name: eng_hexokinase_glucose_intermediate
+    maps_to: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model.eng_hexokinase_glucose_intermediate
+    description: (ENG) hexokinase glucose intermediate observable. Maps to SBML symbol `ENG`.
+  - name: glp_glucose_6_phosphate
+    maps_to: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model.glp_glucose_6_phosphate
+    description: (GLP) glucose 6 phosphate observable. Maps to SBML symbol `GLP`.
+  - name: state
+    maps_to: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model.state
+  to:
+  - visualisation.oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model_state
+- from: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model.summary
+  to:
+  - visualisation.oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model_summary
+- from: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model.species_labels
+  to:
+  - visualisation.oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

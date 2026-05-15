@@ -1,0 +1,76 @@
+schema_version: '2.0'
+title: Fassoni2019 - Oncogenesis encompassing mutations and genetic instability Visualisation
+description: Oncology visualisation for Fassoni2019 - Oncogenesis encompassing mutations and genetic instability.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Fassoni2019 - Oncogenesis encompassing mutations and genetic instability
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_fassoni2019_oncogenesis_encompassing_mutations_a_biomd0000000807_model
+      title: Fassoni2019 - Oncogenesis encompassing mutations and genetic instability
+      state_observables:
+      - normalized_normal_cell_n
+      - normalized_pre_cancer_cell_g
+      - normalized_cancer_cell_a
+      observables:
+      - id: normalized_normal_cell_n
+        port: normalized_normal_cell_n
+        label: Normalized normal cell n
+        group: drug_response
+      - id: normalized_pre_cancer_cell_g
+        port: normalized_pre_cancer_cell_g
+        label: Normalized pre cancer cell g
+        group: drug_response
+      - id: normalized_cancer_cell_a
+        port: normalized_cancer_cell_a
+        label: Normalized cancer cell a
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_fassoni2019_oncogenesis_encompassing_mutations_a_biomd0000000807_model_state
+    schema:
+      normalized_normal_cell_n: float
+      normalized_pre_cancer_cell_g: float
+      normalized_cancer_cell_a: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_fassoni2019_oncogenesis_encompassing_mutations_a_biomd0000000807_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_fassoni2019_oncogenesis_encompassing_mutations_a_biomd0000000807_model_species_labels
+    schema:
+      normalized_normal_cell_n: str
+      normalized_pre_cancer_cell_g: str
+      normalized_cancer_cell_a: str
+    description: Display labels for selected source states.
+  outputs: []

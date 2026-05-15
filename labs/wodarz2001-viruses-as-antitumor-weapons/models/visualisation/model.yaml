@@ -1,0 +1,78 @@
+schema_version: '2.0'
+title: Wodarz2001 - Viruses as antitumor weapons Visualisation
+description: Oncology visualisation for Wodarz2001 - Viruses as antitumor weapons.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- virotherapy
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Wodarz2001 - Viruses as antitumor weapons
+    question: Does the oncolytic-virus model shift tumour burden or viral activity over the simulated run?
+    answer_focus: Tracks tumour, virus, and infection-related observables where available.
+    visual_scope: Oncolytic virus, infected tumour, and treatment response dynamics
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_wodarz2001_viruses_as_antitumor_weapons_biomd0000001043_model
+      title: Wodarz2001 - Viruses as antitumor weapons
+      state_observables:
+      - uninfected_tumor_cells
+      - infected_tumor_cells
+      - virus_specific_CTLs
+      observables:
+      - id: uninfected_tumor_cells
+        port: uninfected_tumor_cells
+        label: Uninfected tumor cells
+        group: virotherapy
+      - id: infected_tumor_cells
+        port: infected_tumor_cells
+        label: Infected tumor cells
+        group: virotherapy
+      - id: virus_specific_CTLs
+        port: virus_specific_ctls
+        label: Virus specific CTLs
+        group: virotherapy
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_wodarz2001_viruses_as_antitumor_weapons_biomd0000001043_model_state
+    schema:
+      uninfected_tumor_cells: float
+      infected_tumor_cells: float
+      virus_specific_CTLs: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_wodarz2001_viruses_as_antitumor_weapons_biomd0000001043_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_wodarz2001_viruses_as_antitumor_weapons_biomd0000001043_model_species_labels
+    schema:
+      uninfected_tumor_cells: str
+      infected_tumor_cells: str
+      virus_specific_CTLs: str
+    description: Display labels for selected source states.
+  outputs: []

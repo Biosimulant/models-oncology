@@ -1,0 +1,123 @@
+schema_version: '2.0'
+title: Orton2009 - Modelling cancerous mutations in the EGFR/ERK pathway - EGF Model
+description: Orton2009 - Modelling cancerous mutations inthe EGFR/ERK pathway - EGF Model This model studies the aberrations inERK signalling for different cancer mutations. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Richard J Orton
+- Michiel E Adriaens
+- Amelie Gormand
+- Oliver E Sturm
+- Walter Kolch
+upstream:
+  id: biomodels_ebi:BIOMD0000000623
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000623
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000623
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000623?filename=BIOMD0000000623_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.orton2009_modelling_cancerous_mutations_in_the_e_biomd0000000623_model:Orton2009ModellingCancerousMutationsInTheEBiomd0000000623Model
+  init_kwargs:
+    model_path: data/BIOMD0000000623.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000623.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_freeegfreceptor
+    maps_to: species_1
+    label: FreeEGFReceptor
+    default: 80000.0
+    units: native SBML value
+    description: Initial FreeEGFReceptor. Sets the initial value of bundled SBML symbol `species_1`.
+  - name: initial_boundegfreceptor
+    maps_to: species_0
+    label: BoundEGFReceptor
+    default: 0.0
+    units: native SBML value
+    description: Initial BoundEGFReceptor. Sets the initial value of bundled SBML symbol `species_0`.
+  - name: initial_degradedegfreceptor
+    maps_to: species_18
+    label: DegradedEGFReceptor
+    default: 0.0
+    units: native SBML value
+    description: Initial DegradedEGFReceptor. Sets the initial value of bundled SBML symbol `species_18`.
+  - name: initial_rasinactive
+    maps_to: species_5
+    label: RasInactive
+    default: 120000.0
+    units: native SBML value
+    description: Initial RasInactive. Sets the initial value of bundled SBML symbol `species_5`.
+  - name: initial_raf1inactive
+    maps_to: species_7
+    label: Raf1Inactive
+    default: 120000.0
+    units: native SBML value
+    description: Initial Raf1Inactive. Sets the initial value of bundled SBML symbol `species_7`.
+  - name: initial_erkinactive
+    maps_to: species_11
+    label: ErkInactive
+    default: 600000.0
+    units: native SBML value
+    description: Initial ErkInactive. Sets the initial value of bundled SBML symbol `species_11`.
+  outputs:
+  - name: freeegfreceptor
+    maps_to: species_1
+    label: FreeEGFReceptor
+    description: FreeEGFReceptor observable. Maps to SBML symbol `species_1`.
+  - name: boundegfreceptor
+    maps_to: species_0
+    label: BoundEGFReceptor
+    description: BoundEGFReceptor observable. Maps to SBML symbol `species_0`.
+  - name: degradedegfreceptor
+    maps_to: species_18
+    label: DegradedEGFReceptor
+    description: DegradedEGFReceptor observable. Maps to SBML symbol `species_18`.
+  - name: rasinactive
+    maps_to: species_5
+    label: RasInactive
+    description: RasInactive observable. Maps to SBML symbol `species_5`.
+  - name: raf1inactive
+    maps_to: species_7
+    label: Raf1Inactive
+    description: Raf1Inactive observable. Maps to SBML symbol `species_7`.
+  - name: erkinactive
+    maps_to: species_11
+    label: ErkInactive
+    description: ErkInactive observable. Maps to SBML symbol `species_11`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

@@ -1,0 +1,99 @@
+schema_version: '2.0'
+title: Giani2019 - Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells Lab
+description: Computational modeling to predict MAP3K8 effects as mediator of resistance to vemurafenib in thyroid cancer stem cells. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: initial_free_egfr
+    maps_to: oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model.initial_free_egfr
+    label: Free EGFR
+    default: 10.0
+    units: native SBML value
+    description: Initial Free EGFR. Sets the initial value of bundled SBML symbol `species_1`.
+  - name: initial_sos_inactive
+    maps_to: oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model.initial_sos_inactive
+    label: Sos Inactive
+    default: 10.0
+    units: native SBML value
+    description: Initial Sos Inactive. Sets the initial value of bundled SBML symbol `species_3`.
+  - name: initial_ras_inactive
+    maps_to: oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model.initial_ras_inactive
+    label: Ras Inactive
+    default: 10.0
+    units: native SBML value
+    description: Initial Ras Inactive. Sets the initial value of bundled SBML symbol `species_5`.
+  - name: initial_raf1_inactive
+    maps_to: oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model.initial_raf1_inactive
+    label: Raf1 Inactive
+    default: 10.0
+    units: native SBML value
+    description: Initial Raf1 Inactive. Sets the initial value of bundled SBML symbol `species_7`.
+  - name: initial_mek_inactive
+    maps_to: oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model.initial_mek_inactive
+    label: Mek Inactive
+    default: 10.0
+    units: native SBML value
+    description: Initial Mek Inactive. Sets the initial value of bundled SBML symbol `species_9`.
+  - name: initial_erk
+    maps_to: oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model.initial_erk
+    label: ERK
+    default: 10.0
+    units: native SBML value
+    description: Initial ERK. Sets the initial value of bundled SBML symbol `species_11`.
+  outputs:
+  - name: free_egfr
+    maps_to: oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model.free_egfr
+    description: Free EGFR observable. Maps to SBML symbol `species_1`.
+  - name: sos_inactive
+    maps_to: oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model.sos_inactive
+    description: Sos Inactive observable. Maps to SBML symbol `species_3`.
+  - name: ras_inactive
+    maps_to: oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model.ras_inactive
+    description: Ras Inactive observable. Maps to SBML symbol `species_5`.
+  - name: raf1_inactive
+    maps_to: oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model.raf1_inactive
+    description: Raf1 Inactive observable. Maps to SBML symbol `species_7`.
+  - name: mek_inactive
+    maps_to: oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model.mek_inactive
+    description: Mek Inactive observable. Maps to SBML symbol `species_9`.
+  - name: erk
+    maps_to: oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model.erk
+    description: ERK observable. Maps to SBML symbol `species_11`.
+  - name: state
+    maps_to: oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model.state
+  to:
+  - visualisation.oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model_state
+- from: oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model.summary
+  to:
+  - visualisation.oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model_summary
+- from: oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model.species_labels
+  to:
+  - visualisation.oncology_sbml_giani2019_computational_modeling_to_predict_map3_biomd0000000883_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

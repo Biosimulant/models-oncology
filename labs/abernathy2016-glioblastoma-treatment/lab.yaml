@@ -1,0 +1,99 @@
+schema_version: '2.0'
+title: Abernathy2016 - glioblastoma treatment Lab
+description: 'The paper describes a model of glioblastoma. Created by COPASI 4.25 (Build 207) This model is described in the article: Modeling the Treatment of Glioblastoma Multiforme and Cancer Stem Cells with Ord.'
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: initial_tumor
+    maps_to: oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model.initial_tumor
+    label: Tumor
+    default: 70.0
+    units: native SBML value
+    description: Initial Tumor. Sets the initial value of bundled SBML symbol `Tumor`.
+  - name: initial_cancerstemcell
+    maps_to: oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model.initial_cancerstemcell
+    label: CancerStemCell
+    default: 30.0
+    units: native SBML value
+    description: Initial CancerStemCell. Sets the initial value of bundled SBML symbol `CancerStemCell`.
+  - name: initial_cytotoxictcell
+    maps_to: oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model.initial_cytotoxictcell
+    label: CytotoxicTcell
+    default: 250.0
+    units: native SBML value
+    description: Initial CytotoxicTcell. Sets the initial value of bundled SBML symbol `CytotoxicTcell`.
+  - name: initial_tgfb
+    maps_to: oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model.initial_tgfb
+    label: TGFb
+    default: 50.0
+    units: native SBML value
+    description: Initial TGFb. Sets the initial value of bundled SBML symbol `TGFb`.
+  - name: initial_ifny
+    maps_to: oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model.initial_ifny
+    label: IFNy
+    default: 50.0
+    units: native SBML value
+    description: Initial IFNy. Sets the initial value of bundled SBML symbol `IFNy`.
+  - name: initial_mhc1
+    maps_to: oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model.initial_mhc1
+    label: MHC1
+    default: 50.0
+    units: native SBML value
+    description: Initial MHC1. Sets the initial value of bundled SBML symbol `MHC1`.
+  outputs:
+  - name: tumor
+    maps_to: oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model.tumor
+    description: Tumor observable. Maps to SBML symbol `Tumor`.
+  - name: cancerstemcell
+    maps_to: oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model.cancerstemcell
+    description: CancerStemCell observable. Maps to SBML symbol `CancerStemCell`.
+  - name: cytotoxictcell
+    maps_to: oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model.cytotoxictcell
+    description: CytotoxicTcell observable. Maps to SBML symbol `CytotoxicTcell`.
+  - name: tgfb
+    maps_to: oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model.tgfb
+    description: TGFb observable. Maps to SBML symbol `TGFb`.
+  - name: ifny
+    maps_to: oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model.ifny
+    description: IFNy observable. Maps to SBML symbol `IFNy`.
+  - name: mhc1
+    maps_to: oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model.mhc1
+    description: MHC1 observable. Maps to SBML symbol `MHC1`.
+  - name: state
+    maps_to: oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model.state
+  to:
+  - visualisation.oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model_state
+- from: oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model.summary
+  to:
+  - visualisation.oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model_summary
+- from: oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model.species_labels
+  to:
+  - visualisation.oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

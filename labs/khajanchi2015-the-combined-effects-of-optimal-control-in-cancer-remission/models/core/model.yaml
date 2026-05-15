@@ -1,0 +1,69 @@
+schema_version: '2.0'
+title: Khajanchi2015 - The combined effects of optimal control in cancer remission
+description: The combined effects of optimal control in cancer remissionSubhasKhajanchiDibakarGhoshAbstractWe investigate a mathematical model depicting the nonlinear dynamics of immunogenic tumors as envisioned b. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- SubhasKhajanchi a,b
+- DibakarGhosh c
+upstream:
+  id: biomodels_ebi:BIOMD0000000897
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000897
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000897
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000897?filename=Khajanchi2015.xml
+  license: CC0
+biosim:
+  entrypoint: src.khajanchi2015_the_combined_effects_of_optimal_co_biomd0000000897_model:Khajanchi2015TheCombinedEffectsOfOptimalCoBiomd0000000897Model
+  init_kwargs:
+    model_path: data/BIOMD0000000897.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000897.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations. No scientifically safe external input was exposed by the cleanup.
+io:
+  inputs: []
+  outputs:
+  - name: model_state_1
+    maps_to: E
+    label: E
+    description: E observable. Maps to SBML symbol `E`.
+  - name: model_state_2
+    maps_to: T
+    label: T
+    description: T observable. Maps to SBML symbol `T`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

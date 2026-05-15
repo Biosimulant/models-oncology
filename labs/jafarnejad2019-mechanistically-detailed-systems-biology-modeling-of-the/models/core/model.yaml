@@ -1,0 +1,121 @@
+schema_version: '2.0'
+title: Jafarnejad2019 - Mechanistically detailed systems biology modeling of the HGF/Met pathway in hepatocellular carcinoma
+description: Hepatocyte growth factor (HGF) signaling through its receptor Met has been implicated in hepatocellular carcinoma tumorigenesis and progression. Met interaction with integrins is shown to modulate the.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- oncology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Mohammad Jafarnejad
+- "Richard J Sov\xE9"
+- Ludmila Danilova
+- Adam C Mirando
+- Yu Zhang
+upstream:
+  id: biomodels_ebi:MODEL2003200001
+  source_db: biomodels_ebi
+  source_id: MODEL2003200001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2003200001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2003200001?filename=Jafarnejad2019.2.xml
+  license: CC0
+biosim:
+  entrypoint: src.jafarnejad2019_mechanistically_detailed_systems_model2003200001_model:Jafarnejad2019MechanisticallyDetailedSystemsModel2003200001Model
+  init_kwargs:
+    model_path: data/MODEL2003200001.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/MODEL2003200001.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: kd_rilotumumab_level
+    maps_to: KD_Rilotumumab
+    label: KD Rilotumumab source parameter
+    default: 0.22
+    units: native SBML value
+    description: KD Rilotumumab source parameter. Maps to bundled SBML parameter `KD_Rilotumumab`.
+  - name: initial_pi3k
+    maps_to: PI3K
+    label: PI3K
+    default: 1976.0
+    units: native SBML value
+    description: Initial PI3K. Sets the initial value of bundled SBML symbol `PI3K`.
+  - name: initial_akt
+    maps_to: Akt
+    label: AKT
+    default: 32983.0
+    units: native SBML value
+    description: Initial AKT. Sets the initial value of bundled SBML symbol `Akt`.
+  - name: initial_ras
+    maps_to: Ras
+    label: Ras
+    default: 30826.0
+    units: native SBML value
+    description: Initial Ras. Sets the initial value of bundled SBML symbol `Ras`.
+  - name: initial_raf
+    maps_to: Raf
+    label: Raf
+    default: 89608.0
+    units: native SBML value
+    description: Initial Raf. Sets the initial value of bundled SBML symbol `Raf`.
+  - name: initial_erk
+    maps_to: ERK
+    label: ERK
+    default: 232907.0
+    units: native SBML value
+    description: Initial ERK. Sets the initial value of bundled SBML symbol `ERK`.
+  outputs:
+  - name: pi3k
+    maps_to: PI3K
+    label: PI3K
+    description: PI3K observable. Maps to SBML symbol `PI3K`.
+  - name: akt
+    maps_to: Akt
+    label: AKT
+    description: AKT observable. Maps to SBML symbol `Akt`.
+  - name: ras
+    maps_to: Ras
+    label: Ras
+    description: Ras observable. Maps to SBML symbol `Ras`.
+  - name: raf
+    maps_to: Raf
+    label: Raf
+    description: Raf observable. Maps to SBML symbol `Raf`.
+  - name: erk
+    maps_to: ERK
+    label: ERK
+    description: ERK observable. Maps to SBML symbol `ERK`.
+  - name: pakt
+    maps_to: pAkt
+    label: PAkt
+    description: PAkt observable. Maps to SBML symbol `pAkt`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

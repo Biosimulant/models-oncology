@@ -1,0 +1,101 @@
+schema_version: '2.0'
+title: 'Nguyen2016 - Feedback regulation in cell signalling: Lessons for cancer therapeutics Lab'
+description: 'Feedback regulation in cell signalling: Lessons for cancer therapeutics This model is described in the article: Feedback regulation in cell signalling: Lessons for cancer therapeutics. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: initial_pi3k
+    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.initial_pi3k
+    label: PI3K
+    default: 100.0
+    units: native SBML value
+    description: Initial PI3K. Sets the initial value of bundled SBML symbol `PI3K`.
+  - name: initial_akt
+    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.initial_akt
+    label: AKT
+    default: 100.0
+    units: native SBML value
+    description: Initial AKT. Sets the initial value of bundled SBML symbol `Akt`.
+  - name: initial_raf
+    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.initial_raf
+    label: Raf
+    default: 100.0
+    units: native SBML value
+    description: Initial Raf. Sets the initial value of bundled SBML symbol `Raf`.
+  - name: initial_erk
+    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.initial_erk
+    label: ERK
+    default: 899.999999999996
+    units: native SBML value
+    description: Initial ERK. Sets the initial value of bundled SBML symbol `ERK`.
+  - name: initial_aakt
+    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.initial_aakt
+    label: AAkt
+    default: 0.0
+    units: native SBML value
+    description: Initial AAkt. Sets the initial value of bundled SBML symbol `aAkt`.
+  - name: initial_rasgdp
+    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.initial_rasgdp
+    label: RasGDP
+    default: 100.0
+    units: native SBML value
+    description: Initial RasGDP. Sets the initial value of bundled SBML symbol `RasGDP`.
+  outputs:
+  - name: pi3k
+    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.pi3k
+    description: PI3K observable. Maps to SBML symbol `PI3K`.
+  - name: akt
+    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.akt
+    description: AKT observable. Maps to SBML symbol `Akt`.
+  - name: raf
+    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.raf
+    description: Raf observable. Maps to SBML symbol `Raf`.
+  - name: erk
+    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.erk
+    description: ERK observable. Maps to SBML symbol `ERK`.
+  - name: aakt
+    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.aakt
+    description: AAkt observable. Maps to SBML symbol `aAkt`.
+  - name: rasgdp
+    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.rasgdp
+    description: RasGDP observable. Maps to SBML symbol `RasGDP`.
+  - name: state
+    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.state
+  to:
+  - visualisation.oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model_state
+- from: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.summary
+  to:
+  - visualisation.oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model_summary
+- from: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.species_labels
+  to:
+  - visualisation.oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

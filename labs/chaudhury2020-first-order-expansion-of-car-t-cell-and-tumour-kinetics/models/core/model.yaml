@@ -1,0 +1,68 @@
+schema_version: '2.0'
+title: Chaudhury2020 - First order expansion model of CAR-T cell and tumour kinetics
+description: This ordinary differential equation model of the cellular kinetics and pharmacodynamics of CAR-T cell therapy is described in the publication:Chaudhury, A., Zhu, X., Chu, L., Goliaei, A., June, C., Ke. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- car-t
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Anwesha Chaudhury
+- Xu Zhu
+- Lulu Chu
+- Ardeshir Goliaei
+- Carl H June
+upstream:
+  id: biomodels_ebi:MODEL2109110005
+  source_db: biomodels_ebi
+  source_id: MODEL2109110005
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2109110005
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2109110005?filename=Chaudhury2020 Eq S1-S3.xml
+  license: CC0
+biosim:
+  entrypoint: src.chaudhury2020_first_order_expansion_model_of_car_model2109110005_model:Chaudhury2020FirstOrderExpansionModelOfCarModel2109110005Model
+  init_kwargs:
+    model_path: data/MODEL2109110005.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/MODEL2109110005.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations. No scientifically safe external input was exposed by the cleanup.
+io:
+  inputs: []
+  outputs:
+  - name: model_state_1
+    maps_to: U
+    label: U
+    description: U observable. Maps to SBML symbol `U`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

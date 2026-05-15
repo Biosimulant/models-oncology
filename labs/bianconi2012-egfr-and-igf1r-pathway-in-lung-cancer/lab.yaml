@@ -1,0 +1,104 @@
+schema_version: '2.0'
+title: Bianconi2012 - EGFR and IGF1R pathway in lung cancer Lab
+description: Bianconi2012 - EGFR and IGF1R pathway in lung cancer EGFR and IGF1R pathways play a key role in various human cancers and are crucial for tumour transformation and survival of malignant cells. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: gamma_egfr_level
+    maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.gamma_egfr_level
+    label: Gamma EGFR source parameter
+    default: 0.02
+    units: native SBML value
+    description: Gamma EGFR source parameter. Maps to bundled SBML parameter `gamma_EGFR`.
+  - name: initial_egfr_active
+    maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.initial_egfr_active
+    label: EGFR active
+    default: 8000.0
+    units: native SBML value
+    description: Initial EGFR active. Sets the initial value of bundled SBML symbol `EGFR_active`.
+  - name: initial_raf
+    maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.initial_raf
+    label: Raf
+    default: 120000.0
+    units: native SBML value
+    description: Initial Raf. Sets the initial value of bundled SBML symbol `Raf`.
+  - name: initial_erk
+    maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.initial_erk
+    label: ERK
+    default: 600000.0
+    units: native SBML value
+    description: Initial ERK. Sets the initial value of bundled SBML symbol `ERK`.
+  - name: initial_akt
+    maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.initial_akt
+    label: AKT
+    default: 600000.0
+    units: native SBML value
+    description: Initial AKT. Sets the initial value of bundled SBML symbol `AKT`.
+  - name: initial_ras
+    maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.initial_ras
+    label: Ras
+    default: 120000.0
+    units: native SBML value
+    description: Initial Ras. Sets the initial value of bundled SBML symbol `Ras`.
+  outputs:
+  - name: egfr_active
+    maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.egfr_active
+    description: EGFR active observable. Maps to SBML symbol `EGFR_active`.
+  - name: raf
+    maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.raf
+    description: Raf observable. Maps to SBML symbol `Raf`.
+  - name: erk
+    maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.erk
+    description: ERK observable. Maps to SBML symbol `ERK`.
+  - name: akt
+    maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.akt
+    description: AKT observable. Maps to SBML symbol `AKT`.
+  - name: ras
+    maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.ras
+    description: Ras observable. Maps to SBML symbol `Ras`.
+  - name: pi3kca
+    maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.pi3kca
+    description: PI3KCA observable. Maps to SBML symbol `PI3KCA`.
+  - name: state
+    maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.state
+  to:
+  - visualisation.oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model_state
+- from: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.summary
+  to:
+  - visualisation.oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model_summary
+- from: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.species_labels
+  to:
+  - visualisation.oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

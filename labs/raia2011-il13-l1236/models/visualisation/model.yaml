@@ -1,0 +1,109 @@
+schema_version: '2.0'
+title: Raia2011 - IL13 L1236 Visualisation
+description: Oncology visualisation for Raia2011 - IL13 L1236.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Raia2011 - IL13 L1236
+    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
+    visual_scope: Cancer signaling pathway activity and dominant source states
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_raia2011_il13_l1236_biomd0000000314_model
+      title: Raia2011 - IL13 L1236
+      state_observables:
+      - Rec
+      - Rec_i
+      - IL13_Rec
+      - p_IL13_Rec
+      - p_IL13_Rec_i
+      - JAK2
+      - pJAK2
+      - SHP1
+      - STAT5
+      - pSTAT5
+      - CD274mRNA
+      observables:
+      - id: STAT5
+        port: stat5
+        label: STAT5
+        group: signaling
+      - id: pSTAT5
+        port: pstat5
+        label: PSTAT5
+        group: signaling
+      - id: Rec
+        port: rec
+        label: Rec
+        group: signaling
+      - id: JAK2
+        port: jak2
+        label: JAK2
+        group: signaling
+      - id: SHP1
+        port: shp1
+        label: SHP1
+        group: signaling
+      - id: Rec_i
+        port: rec_i
+        label: Rec i
+        group: signaling
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_raia2011_il13_l1236_biomd0000000314_model_state
+    schema:
+      Rec: float
+      Rec_i: float
+      IL13_Rec: float
+      p_IL13_Rec: float
+      p_IL13_Rec_i: float
+      JAK2: float
+      pJAK2: float
+      SHP1: float
+      STAT5: float
+      pSTAT5: float
+      CD274mRNA: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_raia2011_il13_l1236_biomd0000000314_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_raia2011_il13_l1236_biomd0000000314_model_species_labels
+    schema:
+      STAT5: str
+      pSTAT5: str
+      Rec: str
+      JAK2: str
+      SHP1: str
+      Rec_i: str
+    description: Display labels for selected source states.
+  outputs: []

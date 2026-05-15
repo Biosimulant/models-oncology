@@ -1,0 +1,88 @@
+schema_version: '2.0'
+title: Chakrabarty2010 - A control theory approach to cancer remission aided by an optimal therapy
+description: This is a reinvestigation of a previous model depicting cancer remission. It involves application of mathematical tools from control theory to assess the optimal approach during the use of Adaptive Ce.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- SIDDHARTHA P. CHAKRABARTY
+- SANDIP BANERJEE
+upstream:
+  id: biomodels_ebi:BIOMD0000000777
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000777
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000777
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000777?filename=Chakrabarty2010.xml
+  license: CC0
+biosim:
+  entrypoint: src.chakrabarty2010_a_control_theory_approach_to_can_biomd0000000777_model:Chakrabarty2010AControlTheoryApproachToCanBiomd0000000777Model
+  init_kwargs:
+    model_path: data/BIOMD0000000777.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000777.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_m_tumor_cells
+    maps_to: M_Tumor_Cells
+    label: M Tumor Cells
+    default: 2750000.0
+    units: native SBML value
+    description: Initial M Tumor Cells. Sets the initial value of bundled SBML symbol `M_Tumor_Cells`.
+  - name: initial_n_ctl
+    maps_to: N_CTL
+    label: N CTL
+    default: 200000.0
+    units: native SBML value
+    description: Initial N CTL. Sets the initial value of bundled SBML symbol `N_CTL`.
+  - name: initial_z_thl
+    maps_to: Z_THL
+    label: Z THL
+    default: 7200000.0
+    units: native SBML value
+    description: Initial Z THL. Sets the initial value of bundled SBML symbol `Z_THL`.
+  outputs:
+  - name: m_tumor_cells
+    maps_to: M_Tumor_Cells
+    label: M Tumor Cells
+    description: M Tumor Cells observable. Maps to SBML symbol `M_Tumor_Cells`.
+  - name: n_ctl
+    maps_to: N_CTL
+    label: N CTL
+    description: N CTL observable. Maps to SBML symbol `N_CTL`.
+  - name: z_thl
+    maps_to: Z_THL
+    label: Z THL
+    description: Z THL observable. Maps to SBML symbol `Z_THL`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

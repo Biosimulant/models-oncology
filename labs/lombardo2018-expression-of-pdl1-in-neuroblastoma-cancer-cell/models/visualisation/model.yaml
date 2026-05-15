@@ -1,0 +1,241 @@
+schema_version: '2.0'
+title: Lombardo2018 - Expression of PDL1 in Neuroblastoma Cancer Cell Visualisation
+description: Oncology visualisation for Lombardo2018 - Expression of PDL1 in Neuroblastoma Cancer Cell.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Lombardo2018 - Expression of PDL1 in Neuroblastoma Cancer Cell
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_lombardo2018_expression_of_pdl1_in_neuroblastoma_model1812070002_model
+      title: Lombardo2018 - Expression of PDL1 in Neuroblastoma Cancer Cell
+      state_observables:
+      - EGFR_f
+      - EGFR_di_p
+      - SOS_active
+      - SOS_inactive
+      - bNGFR
+      - NGFR
+      - P90Rsk_active
+      - P90Rsk_inactive
+      - RAS_active
+      - RAS_inactive
+      - PTENActive
+      - S6K1Inactive
+      - mTORC1Inactive
+      - PDK1Inactive
+      - IRS1Inactive
+      - PDK1Active
+      - mTORC1Active
+      - S6K1Active
+      - IRS1Active
+      - AktInactive
+      - C3GInactive
+      - Raf1Inactive
+      - degradedEGFR
+      - AktActive
+      - C3GActive
+      - Rap1Active
+      - Rap1Inactive
+      - bRafActive
+      - PP2AActive
+      - MekActive
+      - bRafInactive
+      - ERK_inactive
+      - PI3KActive
+      - PI3KInactive
+      - ERK_active
+      - Raf1Active
+      - MekInactive
+      - degradedNGFR
+      - STAT1
+      - STAT1_p
+      - STAT3
+      - STAT3_ac
+      - STAT3_ac_p
+      - STAT3_p
+      - PDL1_mRNA
+      - degraded_PDL1_mRNA
+      - ASK_MLK_active
+      - ASK_MLK_inactive
+      - JNK_active
+      - MKK3_6_active
+      - MKK3_6_inactive
+      - p38_active
+      - p38_inactive
+      - PP2A_inactive
+      - DUSP4_6_active
+      - DUSP4_6_inactive
+      - JNK_inactive
+      - MKK4_7_active
+      - MKK4_7_inactive
+      - DUSP2_active
+      - DUSP2_inactive
+      - MYCN_mRNA
+      - GSK3b_active
+      - GSK3b_inactive
+      - N_MYC
+      - MYCN_mRNA_degraded
+      - N_MYC_pp
+      - ALK_Mutated
+      - Akt_Thr308
+      - Akt_conformational_change
+      - PIP3
+      - PIP2
+      - AMPK_active
+      - AMPK_inactive
+      - PTEN_inactive
+      - Crizotinib
+      - EGFR_inhibited
+      - Gefitinib
+      observables:
+      - id: NGFR
+        port: ngfr
+        label: NGFR
+        group: drug_response
+      - id: PIP3
+        port: pip3
+        label: PIP3
+        group: drug_response
+      - id: EGFR_f
+        port: egfr_free
+        label: EGFR free
+        group: drug_response
+      - id: SOS_inactive
+        port: sos_inactive
+        label: SOS inactive
+        group: drug_response
+      - id: P90Rsk_inactive
+        port: p90rsk_inactive
+        label: P90Rsk inactive
+        group: drug_response
+      - id: RAS_inactive
+        port: ras_inactive
+        label: RAS inactive
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_lombardo2018_expression_of_pdl1_in_neuroblastoma_model1812070002_model_state
+    schema:
+      EGFR_f: float
+      EGFR_di_p: float
+      SOS_active: float
+      SOS_inactive: float
+      bNGFR: float
+      NGFR: float
+      P90Rsk_active: float
+      P90Rsk_inactive: float
+      RAS_active: float
+      RAS_inactive: float
+      PTENActive: float
+      S6K1Inactive: float
+      mTORC1Inactive: float
+      PDK1Inactive: float
+      IRS1Inactive: float
+      PDK1Active: float
+      mTORC1Active: float
+      S6K1Active: float
+      IRS1Active: float
+      AktInactive: float
+      C3GInactive: float
+      Raf1Inactive: float
+      degradedEGFR: float
+      AktActive: float
+      C3GActive: float
+      Rap1Active: float
+      Rap1Inactive: float
+      bRafActive: float
+      PP2AActive: float
+      MekActive: float
+      bRafInactive: float
+      ERK_inactive: float
+      PI3KActive: float
+      PI3KInactive: float
+      ERK_active: float
+      Raf1Active: float
+      MekInactive: float
+      degradedNGFR: float
+      STAT1: float
+      STAT1_p: float
+      STAT3: float
+      STAT3_ac: float
+      STAT3_ac_p: float
+      STAT3_p: float
+      PDL1_mRNA: float
+      degraded_PDL1_mRNA: float
+      ASK_MLK_active: float
+      ASK_MLK_inactive: float
+      JNK_active: float
+      MKK3_6_active: float
+      MKK3_6_inactive: float
+      p38_active: float
+      p38_inactive: float
+      PP2A_inactive: float
+      DUSP4_6_active: float
+      DUSP4_6_inactive: float
+      JNK_inactive: float
+      MKK4_7_active: float
+      MKK4_7_inactive: float
+      DUSP2_active: float
+      DUSP2_inactive: float
+      MYCN_mRNA: float
+      GSK3b_active: float
+      GSK3b_inactive: float
+      N_MYC: float
+      MYCN_mRNA_degraded: float
+      N_MYC_pp: float
+      ALK_Mutated: float
+      Akt_Thr308: float
+      Akt_conformational_change: float
+      PIP3: float
+      PIP2: float
+      AMPK_active: float
+      AMPK_inactive: float
+      PTEN_inactive: float
+      Crizotinib: float
+      EGFR_inhibited: float
+      Gefitinib: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_lombardo2018_expression_of_pdl1_in_neuroblastoma_model1812070002_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_lombardo2018_expression_of_pdl1_in_neuroblastoma_model1812070002_model_species_labels
+    schema:
+      NGFR: str
+      PIP3: str
+      EGFR_f: str
+      SOS_inactive: str
+      P90Rsk_inactive: str
+      RAS_inactive: str
+    description: Display labels for selected source states.
+  outputs: []

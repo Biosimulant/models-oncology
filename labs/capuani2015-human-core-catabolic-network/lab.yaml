@@ -1,0 +1,64 @@
+schema_version: '2.0'
+title: Capuani2015 - Human Core Catabolic Network Lab
+description: 'Capuani2015 - Human Core CatabolicNetwork This model is described in the article: Quantitative constraint-based computational model of tumor-to-stroma coupling via lactate shuttle Fabrizio Capuani, Da. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- metabolism
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs: []
+  outputs:
+  - name: atp
+    maps_to: oncology_sbml_capuani2015_human_core_catabolic_network_model1506170000_model.atp
+    description: ATP observable. Maps to SBML symbol `M_atp_e`.
+  - name: d_glucose_6_phosphate
+    maps_to: oncology_sbml_capuani2015_human_core_catabolic_network_model1506170000_model.d_glucose_6_phosphate
+    description: D Glucose 6 phosphate observable. Maps to SBML symbol `M_g6p_e`.
+  - name: d_glucose
+    maps_to: oncology_sbml_capuani2015_human_core_catabolic_network_model1506170000_model.d_glucose
+    description: D Glucose observable. Maps to SBML symbol `M_glc_DASH_D_e`.
+  - name: l_lactate
+    maps_to: oncology_sbml_capuani2015_human_core_catabolic_network_model1506170000_model.l_lactate
+    description: L Lactate observable. Maps to SBML symbol `M_lac_DASH_L_e`.
+  - name: nicotinamide_adenine_dinucleotide
+    maps_to: oncology_sbml_capuani2015_human_core_catabolic_network_model1506170000_model.nicotinamide_adenine_dinucleotide
+    description: Nicotinamide adenine dinucleotide observable. Maps to SBML symbol `M_nad_e`.
+  - name: nicotinamide_adenine_dinucleotide_reduced
+    maps_to: oncology_sbml_capuani2015_human_core_catabolic_network_model1506170000_model.nicotinamide_adenine_dinucleotide_reduced
+    description: Nicotinamide adenine dinucleotide reduced observable. Maps to SBML symbol `M_nadh_e`.
+  - name: state
+    maps_to: oncology_sbml_capuani2015_human_core_catabolic_network_model1506170000_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_capuani2015_human_core_catabolic_network_model1506170000_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_capuani2015_human_core_catabolic_network_model1506170000_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_capuani2015_human_core_catabolic_network_model1506170000_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_capuani2015_human_core_catabolic_network_model1506170000_model.state
+  to:
+  - visualisation.oncology_sbml_capuani2015_human_core_catabolic_network_model1506170000_model_state
+- from: oncology_sbml_capuani2015_human_core_catabolic_network_model1506170000_model.summary
+  to:
+  - visualisation.oncology_sbml_capuani2015_human_core_catabolic_network_model1506170000_model_summary
+- from: oncology_sbml_capuani2015_human_core_catabolic_network_model1506170000_model.species_labels
+  to:
+  - visualisation.oncology_sbml_capuani2015_human_core_catabolic_network_model1506170000_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

@@ -1,0 +1,68 @@
+schema_version: '2.0'
+title: Nave2018 - prostate cancer model Lab
+description: This model is based on paper:Combination of singularly perturbed vector field method and method of directly defining the inverse mapping applied to complex ODE system prostate cancer modelAuthor:Ophir. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+io:
+  inputs: []
+  outputs:
+  - name: model_state_1
+    maps_to: oncology_sbml_nave2018_prostate_cancer_model_model1910030001_model.model_state_1
+    description: N 1 observable. Maps to SBML symbol `N_1`.
+  - name: model_state_2
+    maps_to: oncology_sbml_nave2018_prostate_cancer_model_model1910030001_model.model_state_2
+    description: A observable. Maps to SBML symbol `A`.
+  - name: model_state_3
+    maps_to: oncology_sbml_nave2018_prostate_cancer_model_model1910030001_model.model_state_3
+    description: N 2 observable. Maps to SBML symbol `N_2`.
+  - name: model_state_4
+    maps_to: oncology_sbml_nave2018_prostate_cancer_model_model1910030001_model.model_state_4
+    description: D observable. Maps to SBML symbol `D`.
+  - name: model_state_5
+    maps_to: oncology_sbml_nave2018_prostate_cancer_model_model1910030001_model.model_state_5
+    description: T observable. Maps to SBML symbol `T`.
+  - name: model_state_6
+    maps_to: oncology_sbml_nave2018_prostate_cancer_model_model1910030001_model.model_state_6
+    description: I L observable. Maps to SBML symbol `I_L`.
+  - name: state
+    maps_to: oncology_sbml_nave2018_prostate_cancer_model_model1910030001_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_nave2018_prostate_cancer_model_model1910030001_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_nave2018_prostate_cancer_model_model1910030001_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_nave2018_prostate_cancer_model_model1910030001_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_nave2018_prostate_cancer_model_model1910030001_model.state
+  to:
+  - visualisation.oncology_sbml_nave2018_prostate_cancer_model_model1910030001_model_state
+- from: oncology_sbml_nave2018_prostate_cancer_model_model1910030001_model.summary
+  to:
+  - visualisation.oncology_sbml_nave2018_prostate_cancer_model_model1910030001_model_summary
+- from: oncology_sbml_nave2018_prostate_cancer_model_model1910030001_model.species_labels
+  to:
+  - visualisation.oncology_sbml_nave2018_prostate_cancer_model_model1910030001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

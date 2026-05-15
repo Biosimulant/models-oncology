@@ -1,0 +1,102 @@
+schema_version: '2.0'
+title: 'Boer1986 - Interactions between Macrophages and T-lymphocytes: Tumor Sneaking Through Intrinsic to Helper T cell Dynamics Lab'
+description: 'Interactions between Macrophages and T-lymphocytes: TumorSneaking Through Intrinsic to Helper T cell DynamicsROB J. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: kill_level
+    maps_to: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.kill_level
+    label: KILL source parameter
+    default: 10.0
+    units: native SBML value
+    description: KILL source parameter. Maps to bundled SBML parameter `KILL`.
+  - name: initial_tumor
+    maps_to: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.initial_tumor
+    label: TUMOR
+    default: 1000.0
+    units: native SBML value
+    description: Initial TUMOR. Sets the initial value of bundled SBML symbol `TUMOR`.
+  - name: initial_ctlp
+    maps_to: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.initial_ctlp
+    label: CTLP
+    default: 1.0
+    units: native SBML value
+    description: Initial CTLP. Sets the initial value of bundled SBML symbol `CTLP`.
+  - name: initial_htlp
+    maps_to: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.initial_htlp
+    label: HTLP
+    default: 15.0
+    units: native SBML value
+    description: Initial HTLP. Sets the initial value of bundled SBML symbol `HTLP`.
+  - name: initial_mph
+    maps_to: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.initial_mph
+    label: MPH
+    default: 3000000.0
+    units: native SBML value
+    description: Initial MPH. Sets the initial value of bundled SBML symbol `MPH`.
+  - name: initial_ctl
+    maps_to: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.initial_ctl
+    label: CTL
+    default: 3909.0
+    units: native SBML value
+    description: Initial CTL. Sets the initial value of bundled SBML symbol `CTL`.
+  outputs:
+  - name: tumor
+    maps_to: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.tumor
+    description: TUMOR observable. Maps to SBML symbol `TUMOR`.
+  - name: ctlp
+    maps_to: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.ctlp
+    description: CTLP observable. Maps to SBML symbol `CTLP`.
+  - name: htlp
+    maps_to: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.htlp
+    description: HTLP observable. Maps to SBML symbol `HTLP`.
+  - name: mph
+    maps_to: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.mph
+    description: MPH observable. Maps to SBML symbol `MPH`.
+  - name: ctl
+    maps_to: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.ctl
+    description: CTL observable. Maps to SBML symbol `CTL`.
+  - name: htl
+    maps_to: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.htl
+    description: HTL observable. Maps to SBML symbol `HTL`.
+  - name: state
+    maps_to: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.state
+  to:
+  - visualisation.oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model_state
+- from: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.summary
+  to:
+  - visualisation.oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model_summary
+- from: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.species_labels
+  to:
+  - visualisation.oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

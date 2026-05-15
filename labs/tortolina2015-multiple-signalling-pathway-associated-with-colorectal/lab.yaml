@@ -1,0 +1,100 @@
+schema_version: '2.0'
+title: Tortolina2015 - Multiple signalling pathway associated with colorectal cancer Lab
+description: Oncology Tortolina2015Multiple Signalling Pathway Associ Model1601250000Model models core biological dynamics as a OTHER simulation curated from biomodels_ebi (biomodels_ebi:MODEL1601250000), focused on oncolog. When you run it, you can track state over time and compare response patterns across parameter settings.
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- logical-model
+- oncology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: initial_raf_ras_gtp
+    maps_to: oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model.initial_raf_ras_gtp
+    label: Raf Ras GTP
+    default: 0.0
+    units: native SBML value
+    description: Initial Raf Ras GTP. Sets the initial value of bundled SBML symbol `mw813e3a30_3dd2_48dc_9b30_f8392d171ad5`.
+  - name: initial_raf_aktp
+    maps_to: oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model.initial_raf_aktp
+    label: Raf* AKTP
+    default: 0.0
+    units: native SBML value
+    description: Initial Raf* AKTP. Sets the initial value of bundled SBML symbol `mwfabf208d_3879_4a2a_b1dc_568efc0f00d8`.
+  - name: initial_ras
+    maps_to: oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model.initial_ras
+    label: Ras
+    default: 85.0
+    units: native SBML value
+    description: Initial Ras. Sets the initial value of bundled SBML symbol `mw33086e75_6e6c_406a_8e47_9e8290ec6c71`.
+  - name: initial_raf
+    maps_to: oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model.initial_raf
+    label: Raf
+    default: 50.0
+    units: native SBML value
+    description: Initial Raf. Sets the initial value of bundled SBML symbol `mw020aa876_35fd_48bc_a111_b4d2c8e30189`.
+  - name: initial_erk
+    maps_to: oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model.initial_erk
+    label: ERK
+    default: 200.0
+    units: native SBML value
+    description: Initial ERK. Sets the initial value of bundled SBML symbol `mw2b09949a_fc27_4cec_a09a_533d7c925f21`.
+  - name: initial_akt
+    maps_to: oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model.initial_akt
+    label: AKT
+    default: 100.0
+    units: native SBML value
+    description: Initial AKT. Sets the initial value of bundled SBML symbol `mwb39c51c6_1b77_4c59_a689_81c9c728255a`.
+  outputs:
+  - name: raf_ras_gtp
+    maps_to: oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model.raf_ras_gtp
+    description: Raf Ras GTP observable. Maps to SBML symbol `mw813e3a30_3dd2_48dc_9b30_f8392d171ad5`.
+  - name: raf_aktp
+    maps_to: oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model.raf_aktp
+    description: Raf* AKTP observable. Maps to SBML symbol `mwfabf208d_3879_4a2a_b1dc_568efc0f00d8`.
+  - name: ras
+    maps_to: oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model.ras
+    description: Ras observable. Maps to SBML symbol `mw33086e75_6e6c_406a_8e47_9e8290ec6c71`.
+  - name: raf
+    maps_to: oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model.raf
+    description: Raf observable. Maps to SBML symbol `mw020aa876_35fd_48bc_a111_b4d2c8e30189`.
+  - name: erk
+    maps_to: oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model.erk
+    description: ERK observable. Maps to SBML symbol `mw2b09949a_fc27_4cec_a09a_533d7c925f21`.
+  - name: akt
+    maps_to: oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model.akt
+    description: AKT observable. Maps to SBML symbol `mwb39c51c6_1b77_4c59_a689_81c9c728255a`.
+  - name: state
+    maps_to: oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model.state
+  to:
+  - visualisation.oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model_state
+- from: oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model.summary
+  to:
+  - visualisation.oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model_summary
+- from: oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model.species_labels
+  to:
+  - visualisation.oncology_sbml_tortolina2015_multiple_signalling_pathway_associ_model1601250000_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

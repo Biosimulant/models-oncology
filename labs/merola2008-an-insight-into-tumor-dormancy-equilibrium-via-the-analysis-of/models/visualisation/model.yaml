@@ -1,0 +1,76 @@
+schema_version: '2.0'
+title: Merola2008 - An insight into tumor dormancy equilibrium via the analysis of its domain of attraction Visualisation
+description: Oncology visualisation for Merola2008 - An insight into tumor dormancy equilibrium via the analysis of its domain of attraction.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Merola2008 - An insight into tumor dormancy equilibrium via the analysis of its domain of attraction
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_merola2008_an_insight_into_tumor_dormancy_equili_biomd0000000911_model
+      title: Merola2008 - An insight into tumor dormancy equilibrium via the analysis of its domain of attraction
+      state_observables:
+      - M
+      - N
+      - Z
+      observables:
+      - id: M
+        port: model_state_1
+        label: M
+        group: drug_response
+      - id: N
+        port: model_state_2
+        label: N
+        group: drug_response
+      - id: Z
+        port: model_state_3
+        label: Z
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_merola2008_an_insight_into_tumor_dormancy_equili_biomd0000000911_model_state
+    schema:
+      M: float
+      N: float
+      Z: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_merola2008_an_insight_into_tumor_dormancy_equili_biomd0000000911_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_merola2008_an_insight_into_tumor_dormancy_equili_biomd0000000911_model_species_labels
+    schema:
+      M: str
+      N: str
+      Z: str
+    description: Display labels for selected source states.
+  outputs: []

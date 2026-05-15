@@ -1,0 +1,145 @@
+schema_version: '2.0'
+title: 'Nguyen2016 - Feedback regulation in cell signalling: Lessons for cancer therapeutics Visualisation'
+description: 'Oncology visualisation for Nguyen2016 - Feedback regulation in cell signalling: Lessons for cancer therapeutics.'
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: 'Nguyen2016 - Feedback regulation in cell signalling: Lessons for cancer therapeutics'
+    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
+    visual_scope: Cancer signaling pathway activity and dominant source states
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model
+      title: 'Nguyen2016 - Feedback regulation in cell signalling: Lessons for cancer therapeutics'
+      state_observables:
+      - IRS
+      - aIRS
+      - iIRS
+      - PI3K
+      - aPI3K
+      - Akt
+      - aAkt
+      - mTORC1
+      - amTORC1
+      - S6K
+      - aS6K
+      - FOXO
+      - iFOXO
+      - RTK
+      - aRTK
+      - iRTK
+      - RasGDP
+      - RasGTP
+      - Raf
+      - aRaf
+      - iRaf
+      - MEK
+      - aMEK
+      - ERK
+      - aERK
+      - AktI
+      - iAkt
+      - MEKI
+      - iMEK
+      observables:
+      - id: PI3K
+        port: pi3k
+        label: PI3K
+        group: signaling
+      - id: Akt
+        port: akt
+        label: AKT
+        group: signaling
+      - id: Raf
+        port: raf
+        label: Raf
+        group: signaling
+      - id: ERK
+        port: erk
+        label: ERK
+        group: signaling
+      - id: aAkt
+        port: aakt
+        label: AAkt
+        group: signaling
+      - id: RasGDP
+        port: rasgdp
+        label: RasGDP
+        group: signaling
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model_state
+    schema:
+      IRS: float
+      aIRS: float
+      iIRS: float
+      PI3K: float
+      aPI3K: float
+      Akt: float
+      aAkt: float
+      mTORC1: float
+      amTORC1: float
+      S6K: float
+      aS6K: float
+      FOXO: float
+      iFOXO: float
+      RTK: float
+      aRTK: float
+      iRTK: float
+      RasGDP: float
+      RasGTP: float
+      Raf: float
+      aRaf: float
+      iRaf: float
+      MEK: float
+      aMEK: float
+      ERK: float
+      aERK: float
+      AktI: float
+      iAkt: float
+      MEKI: float
+      iMEK: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model_species_labels
+    schema:
+      PI3K: str
+      Akt: str
+      Raf: str
+      ERK: str
+      aAkt: str
+      RasGDP: str
+    description: Display labels for selected source states.
+  outputs: []

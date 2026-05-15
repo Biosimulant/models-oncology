@@ -1,0 +1,189 @@
+schema_version: '2.0'
+title: Hayashi2013 - TNF-induced Signaling Dynamics (Model A) Visualisation
+description: Oncology visualisation for Hayashi2013 - TNF-induced Signaling Dynamics (Model A).
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Hayashi2013 - TNF-induced Signaling Dynamics (Model A)
+    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
+    visual_scope: Cancer signaling pathway activity and dominant source states
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_hayashi2013_tnf_induced_signaling_dynamics_model_model2502170001_model
+      title: Hayashi2013 - TNF-induced Signaling Dynamics (Model A)
+      state_observables:
+      - species_1
+      - species_2
+      - species_3
+      - species_4
+      - species_5
+      - species_6
+      - species_7
+      - species_8
+      - species_9
+      - species_10
+      - species_11
+      - species_12
+      - species_13
+      - species_14
+      - species_15
+      - species_16
+      - species_17
+      - species_18
+      - species_19
+      - species_20
+      - species_21
+      - species_22
+      - species_23
+      - species_24
+      - species_25
+      - species_26
+      - species_27
+      - species_28
+      - species_29
+      - species_30
+      - species_31
+      - species_32
+      - species_33
+      - species_34
+      - species_35
+      - species_36
+      - species_37
+      - species_38
+      - species_39
+      - species_40
+      - species_41
+      - species_42
+      - species_43
+      - species_44
+      - species_45
+      - species_46
+      - species_47
+      - species_48
+      - species_49
+      - species_50
+      - species_51
+      observables:
+      - id: species_3
+        port: tnfr1
+        label: TNFR1
+        group: signaling
+      - id: species_2
+        port: nfkbc
+        label: NFkBc
+        group: signaling
+      - id: species_6
+        port: traf6
+        label: TRAF6
+        group: signaling
+      - id: species_7
+        port: traf5
+        label: TRAF5
+        group: signaling
+      - id: species_9
+        port: traf2
+        label: TRAF2
+        group: signaling
+      - id: species_16
+        port: erkc
+        label: ERKc
+        group: signaling
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_hayashi2013_tnf_induced_signaling_dynamics_model_model2502170001_model_state
+    schema:
+      species_1: float
+      species_2: float
+      species_3: float
+      species_4: float
+      species_5: float
+      species_6: float
+      species_7: float
+      species_8: float
+      species_9: float
+      species_10: float
+      species_11: float
+      species_12: float
+      species_13: float
+      species_14: float
+      species_15: float
+      species_16: float
+      species_17: float
+      species_18: float
+      species_19: float
+      species_20: float
+      species_21: float
+      species_22: float
+      species_23: float
+      species_24: float
+      species_25: float
+      species_26: float
+      species_27: float
+      species_28: float
+      species_29: float
+      species_30: float
+      species_31: float
+      species_32: float
+      species_33: float
+      species_34: float
+      species_35: float
+      species_36: float
+      species_37: float
+      species_38: float
+      species_39: float
+      species_40: float
+      species_41: float
+      species_42: float
+      species_43: float
+      species_44: float
+      species_45: float
+      species_46: float
+      species_47: float
+      species_48: float
+      species_49: float
+      species_50: float
+      species_51: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_hayashi2013_tnf_induced_signaling_dynamics_model_model2502170001_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_hayashi2013_tnf_induced_signaling_dynamics_model_model2502170001_model_species_labels
+    schema:
+      species_3: str
+      species_2: str
+      species_6: str
+      species_7: str
+      species_9: str
+      species_16: str
+    description: Display labels for selected source states.
+  outputs: []

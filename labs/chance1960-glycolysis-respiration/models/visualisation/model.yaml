@@ -1,0 +1,150 @@
+schema_version: '2.0'
+title: Chance1960_Glycolysis_Respiration Visualisation
+description: Oncology visualisation for Chance1960_Glycolysis_Respiration.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- metabolism
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Chance1960_Glycolysis_Respiration
+    question: Which metabolic states dominate the baseline oncology-associated metabolic model?
+    answer_focus: Compares selected metabolic observables and peak source states.
+    visual_scope: Cancer metabolism and metabolic-state changes
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model
+      title: Chance1960_Glycolysis_Respiration
+      state_observables:
+      - GLU
+      - ENZ
+      - ENG
+      - TP1
+      - ADP
+      - GLP
+      - ETZ
+      - ETG
+      - GPP
+      - GAP
+      - DHA
+      - DPN
+      - DPH
+      - PID
+      - DGA
+      - PGA
+      - PYR
+      - LAC
+      - DIN
+      - DIH
+      - XI
+      - XSI
+      - OXY
+      - XSP
+      - TP2
+      - DBP
+      - PUE
+      - PPP
+      - AGP
+      - MOD
+      - MOB
+      - MOX
+      observables:
+      - id: LAC
+        port: lac_lactate
+        label: (LAC) lactate
+        group: metabolism
+      - id: PUE
+        port: pue_enzyme_concerned_in_atp_utilization
+        label: (PUE) enzyme concerned in ATP utilization
+        group: metabolism
+      - id: PPP
+        port: ppp_enzyme_intermediate_concerned_in_atp_utilization
+        label: (PPP) enzyme intermediate concerned in ATP utilization
+        group: metabolism
+      - id: GLU
+        port: glu_glucose
+        label: (GLU) glucose
+        group: metabolism
+      - id: ENG
+        port: eng_hexokinase_glucose_intermediate
+        label: (ENG) hexokinase glucose intermediate
+        group: metabolism
+      - id: GLP
+        port: glp_glucose_6_phosphate
+        label: (GLP) glucose 6 phosphate
+        group: metabolism
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model_state
+    schema:
+      GLU: float
+      ENZ: float
+      ENG: float
+      TP1: float
+      ADP: float
+      GLP: float
+      ETZ: float
+      ETG: float
+      GPP: float
+      GAP: float
+      DHA: float
+      DPN: float
+      DPH: float
+      PID: float
+      DGA: float
+      PGA: float
+      PYR: float
+      LAC: float
+      DIN: float
+      DIH: float
+      XI: float
+      XSI: float
+      OXY: float
+      XSP: float
+      TP2: float
+      DBP: float
+      PUE: float
+      PPP: float
+      AGP: float
+      MOD: float
+      MOB: float
+      MOX: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_chance1960_glycolysis_respiration_biomd0000000281_model_species_labels
+    schema:
+      LAC: str
+      PUE: str
+      PPP: str
+      GLU: str
+      ENG: str
+      GLP: str
+    description: Display labels for selected source states.
+  outputs: []

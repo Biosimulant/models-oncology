@@ -1,0 +1,91 @@
+schema_version: '2.0'
+title: Yazdjer2019 - reinforcement learning-based control of tumor growth under anti-angiogenic therapy
+description: 'This model is based on:Reinforcement learning-based control of tumor growth under anti-angiogenic therapyAuthors: Parisa Yazdjerdi, Nader Meskin, Mohammad Al-Naemi, Ala-Eddin Al Moustafa, Levente Kova. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Parisa Yazdjerdi
+- Nader Meskin
+- Mohammad Al-Naemi
+- Ala-Eddin Al Moustafa
+- "Levente Kov\xE1cs"
+upstream:
+  id: biomodels_ebi:BIOMD0000000821
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000821
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000821
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000821?filename=Yazdjer2019 - reinforcement learning-based control of tumor growth under anti-angiogenic therapy.xml
+  license: CC0
+biosim:
+  entrypoint: src.yazdjer2019_reinforcement_learning_based_control_biomd0000000821_model:Yazdjer2019ReinforcementLearningBasedControlBiomd0000000821Model
+  init_kwargs:
+    model_path: data/BIOMD0000000821.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000821.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_tumor_volume_x_1
+    maps_to: tumor_volume_x_1
+    label: Tumor volume x 1
+    default: 1.0
+    units: native SBML value
+    description: Initial Tumor volume x 1. Sets the initial value of bundled SBML symbol `tumor_volume_x_1`.
+  - name: initial_endothelial_volume_x_2
+    maps_to: endothelial_volume_x_2
+    label: Endothelial volume x 2
+    default: 1.0
+    units: native SBML value
+    description: Initial Endothelial volume x 2. Sets the initial value of bundled SBML symbol `endothelial_volume_x_2`.
+  - name: initial_concentration_of_administrated_inhibitor_x_3
+    maps_to: concentration_of_administrated_inhibitor_x_3
+    label: Concentration of administrated inhibitor x 3
+    default: 0.0
+    units: native SBML value
+    description: Initial Concentration of administrated inhibitor x 3. Sets the initial value of bundled SBML symbol `concentration_of_administrated_inhibitor_x_3`.
+  outputs:
+  - name: tumor_volume_x_1
+    maps_to: tumor_volume_x_1
+    label: Tumor volume x 1
+    description: Tumor volume x 1 observable. Maps to SBML symbol `tumor_volume_x_1`.
+  - name: endothelial_volume_x_2
+    maps_to: endothelial_volume_x_2
+    label: Endothelial volume x 2
+    description: Endothelial volume x 2 observable. Maps to SBML symbol `endothelial_volume_x_2`.
+  - name: concentration_of_administrated_inhibitor_x_3
+    maps_to: concentration_of_administrated_inhibitor_x_3
+    label: Concentration of administrated inhibitor x 3
+    description: Concentration of administrated inhibitor x 3 observable. Maps to SBML symbol `concentration_of_administrated_inhibitor_x_3`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

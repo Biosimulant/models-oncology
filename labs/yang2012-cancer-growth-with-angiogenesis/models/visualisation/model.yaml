@@ -1,0 +1,90 @@
+schema_version: '2.0'
+title: Yang2012 - cancer growth with angiogenesis Visualisation
+description: Oncology visualisation for Yang2012 - cancer growth with angiogenesis.
+standard: other
+tags:
+- angiogenesis
+- biomodels_ebi
+- curated
+- faithful
+- microenvironment
+- oncology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Yang2012 - cancer growth with angiogenesis
+    question: Does the baseline model indicate vascular or angiogenic support for tumour dynamics?
+    answer_focus: Tracks vascular, tumour, and therapy-linked observables where present.
+    visual_scope: Tumour vascularization, angiogenesis, and tissue-level response
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_yang2012_cancer_growth_with_angiogenesis_biomd0000000796_model
+      title: Yang2012 - cancer growth with angiogenesis
+      state_observables:
+      - C
+      - E
+      - T
+      - P
+      - A
+      observables:
+      - id: C
+        port: model_state_1
+        label: C
+        group: angiogenesis
+      - id: E
+        port: model_state_2
+        label: E
+        group: angiogenesis
+      - id: T
+        port: model_state_3
+        label: T
+        group: angiogenesis
+      - id: P
+        port: model_state_4
+        label: P
+        group: angiogenesis
+      - id: A
+        port: model_state_5
+        label: A
+        group: angiogenesis
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_yang2012_cancer_growth_with_angiogenesis_biomd0000000796_model_state
+    schema:
+      C: float
+      E: float
+      T: float
+      P: float
+      A: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_yang2012_cancer_growth_with_angiogenesis_biomd0000000796_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_yang2012_cancer_growth_with_angiogenesis_biomd0000000796_model_species_labels
+    schema:
+      C: str
+      E: str
+      T: str
+      P: str
+      A: str
+    description: Display labels for selected source states.
+  outputs: []

@@ -1,0 +1,101 @@
+schema_version: '2.0'
+title: Ribba2012 - Low-grade gliomas, tumour growth inhibition model
+description: Ribba2012 - Low-grade gliomas, tumour growth inhibition model Using longitudinal mean tumour diameter (MTD) data, this model describe the size evolution of low-grade glioma (LGG) in patients treated w. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Benjamin Ribba
+- Gentian Kaloshi
+- Mathieu Peyre
+- Damien Ricard
+- Vincent Calvez
+upstream:
+  id: biomodels_ebi:BIOMD0000000521
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000521
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000521
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000521?filename=BIOMD0000000521_url.xml
+  license: CC0
+biosim:
+  entrypoint: src.ribba2012_low_grade_gliomas_tumour_growth_inhibi_biomd0000000521_model:Ribba2012LowGradeGliomasTumourGrowthInhibiBiomd0000000521Model
+  init_kwargs:
+    model_path: data/BIOMD0000000521.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000521.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_damaged_quiescent_cells
+    maps_to: Qp
+    label: Damaged quiescent cells
+    default: 0.0
+    units: native SBML value
+    description: Initial Damaged quiescent cells. Sets the initial value of bundled SBML symbol `Qp`.
+  - name: initial_pcv_plasma
+    maps_to: C
+    label: PCV plasma
+    default: 1.0
+    units: native SBML value
+    description: Initial PCV plasma. Sets the initial value of bundled SBML symbol `C`.
+  - name: initial_proliferative_tissue
+    maps_to: P
+    label: Proliferative tissue
+    default: 7.13
+    units: native SBML value
+    description: Initial Proliferative tissue. Sets the initial value of bundled SBML symbol `P`.
+  - name: initial_nonproliferative_quiescent_tissue
+    maps_to: Q
+    label: Nonproliferative quiescent tissue
+    default: 41.2
+    units: native SBML value
+    description: Initial Nonproliferative quiescent tissue. Sets the initial value of bundled SBML symbol `Q`.
+  outputs:
+  - name: damaged_quiescent_cells
+    maps_to: Qp
+    label: Damaged quiescent cells
+    description: Damaged quiescent cells observable. Maps to SBML symbol `Qp`.
+  - name: pcv_plasma
+    maps_to: C
+    label: PCV plasma
+    description: PCV plasma observable. Maps to SBML symbol `C`.
+  - name: proliferative_tissue
+    maps_to: P
+    label: Proliferative tissue
+    description: Proliferative tissue observable. Maps to SBML symbol `P`.
+  - name: nonproliferative_quiescent_tissue
+    maps_to: Q
+    label: Nonproliferative quiescent tissue
+    description: Nonproliferative quiescent tissue observable. Maps to SBML symbol `Q`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

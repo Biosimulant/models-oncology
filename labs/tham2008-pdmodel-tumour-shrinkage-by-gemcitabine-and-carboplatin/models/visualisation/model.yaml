@@ -1,0 +1,70 @@
+schema_version: '2.0'
+title: Tham2008 - PDmodel, Tumour shrinkage by gemcitabine and carboplatin Visualisation
+description: Oncology visualisation for Tham2008 - PDmodel, Tumour shrinkage by gemcitabine and carboplatin.
+standard: other
+tags:
+- biomodels_ebi
+- chemotherapy
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Tham2008 - PDmodel, Tumour shrinkage by gemcitabine and carboplatin
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model
+      title: Tham2008 - PDmodel, Tumour shrinkage by gemcitabine and carboplatin
+      state_observables:
+      - Ce
+      - TumorSize
+      observables:
+      - id: TumorSize
+        port: tumorsize
+        label: TumorSize
+        group: drug_response
+      - id: Ce
+        port: model_state_2
+        label: Ce
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model_state
+    schema:
+      Ce: float
+      TumorSize: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model_species_labels
+    schema:
+      TumorSize: str
+      Ce: str
+    description: Display labels for selected source states.
+  outputs: []

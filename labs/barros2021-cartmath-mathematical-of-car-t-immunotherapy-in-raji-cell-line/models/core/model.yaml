@@ -1,0 +1,95 @@
+schema_version: '2.0'
+title: Barros2021 - CARTmath, Mathematical Model of CAR-T Immunotherapy in Raji Cell Line
+description: A mathematical model (CART-math) studying the impact of CAR-T cells therapy on haematological cancer cell lines which in this case is RAJI. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- car-t
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- logical-model
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Luciana R C Barros
+- "Emanuelle A Paix\xE3o"
+- Andrea M P Valli
+- Gustavo T Naozuka
+- Artur C Fassoni
+upstream:
+  id: biomodels_ebi:BIOMD0000001020
+  source_db: biomodels_ebi
+  source_id: BIOMD0000001020
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000001020
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000001020?filename=Barros2021_RAJI.xml
+  license: CC0
+biosim:
+  entrypoint: src.barros2021_cartmath_mathematical_model_of_car_t_biomd0000001020_model:Barros2021CartmathMathematicalModelOfCarTBiomd0000001020Model
+  init_kwargs:
+    model_path: data/BIOMD0000001020.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000001020.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Logical/qualitative SBML semantics must be validated carefully; do not treat numeric trajectories as mechanistic ODEs without source support.
+io:
+  inputs:
+  - name: epsilon_level
+    maps_to: epsilon
+    label: Epsilon source parameter
+    default: 1.59795
+    units: native SBML value
+    description: Epsilon source parameter. Maps to bundled SBML parameter `epsilon`.
+  - name: raji_ido_positive_cart_19_positive_1mt_level
+    maps_to: Raji_IDO_CART_19_1MT
+    label: Raji IDO+CART 19+1MT source parameter
+    default: 0.0
+    units: native SBML value
+    description: Raji IDO+CART 19+1MT source parameter. Maps to bundled SBML parameter `Raji_IDO_CART_19_1MT`.
+  - name: initial_for_raji_ido_positive_cart_19_positive_1mt
+    maps_to: ModelValue_10
+    label: for Raji IDO+CART 19+1MT source parameter
+    default: 0.0
+    units: native SBML value
+    description: Initial for Raji IDO+CART 19+1MT source parameter. Maps to bundled SBML parameter `ModelValue_10`.
+  outputs:
+  - name: model_state_1
+    maps_to: T
+    label: T
+    description: T observable. Maps to SBML symbol `T`.
+  - name: model_state_2
+    maps_to: Cm
+    label: Cm
+    description: Cm observable. Maps to SBML symbol `Cm`.
+  - name: model_state_3
+    maps_to: Ct
+    label: Ct
+    description: Ct observable. Maps to SBML symbol `Ct`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

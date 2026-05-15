@@ -1,0 +1,72 @@
+schema_version: '2.0'
+title: Claret2009 - Predicting phase III overall survival in colorectal cancer Lab
+description: 'Claret2009 - Predicting phase III overall survival in colorectal cancer This model is described in the article: Model-based prediction of phase III overall survival in colorectal cancer on the basis o. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: treatment_int_level
+    maps_to: oncology_sbml_claret2009_predicting_phase_iii_overall_survival_model1708310001_model.treatment_int_level
+    label: Treatment int source parameter
+    default: 14.0
+    units: native SBML value
+    description: Treatment int source parameter. Maps to bundled SBML parameter `treatment_int`.
+  - name: treatment_day_level
+    maps_to: oncology_sbml_claret2009_predicting_phase_iii_overall_survival_model1708310001_model.treatment_day_level
+    label: Treatment day source parameter
+    default: 1.0
+    units: native SBML value
+    description: Treatment day source parameter. Maps to bundled SBML parameter `treatment_day`.
+  - name: dose_length
+    maps_to: oncology_sbml_claret2009_predicting_phase_iii_overall_survival_model1708310001_model.dose_length
+    label: Dose length source parameter
+    default: 0.0625
+    units: native SBML value
+    description: Dose length source parameter. Maps to bundled SBML parameter `dose_length`.
+  - name: dose_int2
+    maps_to: oncology_sbml_claret2009_predicting_phase_iii_overall_survival_model1708310001_model.dose_int2
+    label: Dose int2 source parameter
+    default: 0.5
+    units: native SBML value
+    description: Dose int2 source parameter. Maps to bundled SBML parameter `Dose_int2`.
+  outputs:
+  - name: model_state_1
+    maps_to: oncology_sbml_claret2009_predicting_phase_iii_overall_survival_model1708310001_model.model_state_1
+    description: Y observable. Maps to SBML symbol `y`.
+  - name: state
+    maps_to: oncology_sbml_claret2009_predicting_phase_iii_overall_survival_model1708310001_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_claret2009_predicting_phase_iii_overall_survival_model1708310001_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_claret2009_predicting_phase_iii_overall_survival_model1708310001_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_claret2009_predicting_phase_iii_overall_survival_model1708310001_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_claret2009_predicting_phase_iii_overall_survival_model1708310001_model.state
+  to:
+  - visualisation.oncology_sbml_claret2009_predicting_phase_iii_overall_survival_model1708310001_model_state
+- from: oncology_sbml_claret2009_predicting_phase_iii_overall_survival_model1708310001_model.summary
+  to:
+  - visualisation.oncology_sbml_claret2009_predicting_phase_iii_overall_survival_model1708310001_model_summary
+- from: oncology_sbml_claret2009_predicting_phase_iii_overall_survival_model1708310001_model.species_labels
+  to:
+  - visualisation.oncology_sbml_claret2009_predicting_phase_iii_overall_survival_model1708310001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

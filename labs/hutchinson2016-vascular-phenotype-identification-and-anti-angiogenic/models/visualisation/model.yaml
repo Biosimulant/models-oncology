@@ -1,0 +1,119 @@
+schema_version: '2.0'
+title: Hutchinson2016 - Vascular phenotype identification and anti-angiogenic treatment recommendation Visualisation
+description: Oncology visualisation for Hutchinson2016 - Vascular phenotype identification and anti-angiogenic treatment recommendation.
+standard: other
+tags:
+- angiogenesis
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Hutchinson2016 - Vascular phenotype identification and anti-angiogenic treatment recommendation
+    question: Does the baseline model indicate vascular or angiogenic support for tumour dynamics?
+    answer_focus: Tracks vascular, tumour, and therapy-linked observables where present.
+    visual_scope: Tumour vascularization, angiogenesis, and tissue-level response
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_hutchinson2016_vascular_phenotype_identification_model1911130007_model
+      title: Hutchinson2016 - Vascular phenotype identification and anti-angiogenic treatment recommendation
+      state_observables:
+      - v
+      - rv
+      - bv
+      - a1
+      - aw
+      - a2
+      - ra
+      - ba1
+      - ba2
+      - p
+      - rp
+      - bp
+      - Ei
+      - Em
+      - P
+      - EP
+      observables:
+      - id: v
+        port: model_state_1
+        label: V
+        group: angiogenesis
+      - id: rv
+        port: model_state_2
+        label: Rv
+        group: angiogenesis
+      - id: bv
+        port: model_state_3
+        label: Bv
+        group: angiogenesis
+      - id: a1
+        port: model_state_4
+        label: A1
+        group: angiogenesis
+      - id: aw
+        port: model_state_5
+        label: Aw
+        group: angiogenesis
+      - id: a2
+        port: model_state_6
+        label: A2
+        group: angiogenesis
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_hutchinson2016_vascular_phenotype_identification_model1911130007_model_state
+    schema:
+      v: float
+      rv: float
+      bv: float
+      a1: float
+      aw: float
+      a2: float
+      ra: float
+      ba1: float
+      ba2: float
+      p: float
+      rp: float
+      bp: float
+      Ei: float
+      Em: float
+      P: float
+      EP: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_hutchinson2016_vascular_phenotype_identification_model1911130007_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_hutchinson2016_vascular_phenotype_identification_model1911130007_model_species_labels
+    schema:
+      v: str
+      rv: str
+      bv: str
+      a1: str
+      aw: str
+      a2: str
+    description: Display labels for selected source states.
+  outputs: []

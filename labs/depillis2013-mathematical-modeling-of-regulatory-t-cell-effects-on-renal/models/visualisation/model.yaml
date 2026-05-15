@@ -1,0 +1,102 @@
+schema_version: '2.0'
+title: dePillis2013 - Mathematical modeling of regulatory T cell effects on renal cell carcinoma treatment Visualisation
+description: Oncology visualisation for dePillis2013 - Mathematical modeling of regulatory T cell effects on renal cell carcinoma treatment.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: dePillis2013 - Mathematical modeling of regulatory T cell effects on renal cell carcinoma treatment
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_depillis2013_mathematical_modeling_of_regulatory_biomd0000000908_model
+      title: dePillis2013 - Mathematical modeling of regulatory T cell effects on renal cell carcinoma treatment
+      state_observables:
+      - T
+      - N
+      - L
+      - R
+      - C
+      - I
+      - S
+      observables:
+      - id: T
+        port: model_state_1
+        label: T
+        group: drug_response
+      - id: N
+        port: model_state_2
+        label: N
+        group: drug_response
+      - id: L
+        port: model_state_3
+        label: L
+        group: drug_response
+      - id: R
+        port: model_state_4
+        label: R
+        group: drug_response
+      - id: C
+        port: model_state_5
+        label: C
+        group: drug_response
+      - id: I
+        port: model_state_6
+        label: I
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_depillis2013_mathematical_modeling_of_regulatory_biomd0000000908_model_state
+    schema:
+      T: float
+      N: float
+      L: float
+      R: float
+      C: float
+      I: float
+      S: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_depillis2013_mathematical_modeling_of_regulatory_biomd0000000908_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_depillis2013_mathematical_modeling_of_regulatory_biomd0000000908_model_species_labels
+    schema:
+      T: str
+      N: str
+      L: str
+      R: str
+      C: str
+      I: str
+    description: Display labels for selected source states.
+  outputs: []

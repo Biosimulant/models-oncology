@@ -1,0 +1,99 @@
+schema_version: '2.0'
+title: Jafarnejad2019 - Mechanistically detailed systems biology modeling of the HGF/Met pathway in hepatocellular carcinoma Lab
+description: Hepatocyte growth factor (HGF) signaling through its receptor Met has been implicated in hepatocellular carcinoma tumorigenesis and progression. Met interaction with integrins is shown to modulate the.
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- oncology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: kd_rilotumumab_level
+    maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.kd_rilotumumab_level
+    label: KD Rilotumumab source parameter
+    default: 0.22
+    units: native SBML value
+    description: KD Rilotumumab source parameter. Maps to bundled SBML parameter `KD_Rilotumumab`.
+  - name: initial_pi3k
+    maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.initial_pi3k
+    label: PI3K
+    default: 1976.0
+    units: native SBML value
+    description: Initial PI3K. Sets the initial value of bundled SBML symbol `PI3K`.
+  - name: initial_akt
+    maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.initial_akt
+    label: AKT
+    default: 32983.0
+    units: native SBML value
+    description: Initial AKT. Sets the initial value of bundled SBML symbol `Akt`.
+  - name: initial_ras
+    maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.initial_ras
+    label: Ras
+    default: 30826.0
+    units: native SBML value
+    description: Initial Ras. Sets the initial value of bundled SBML symbol `Ras`.
+  - name: initial_raf
+    maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.initial_raf
+    label: Raf
+    default: 89608.0
+    units: native SBML value
+    description: Initial Raf. Sets the initial value of bundled SBML symbol `Raf`.
+  - name: initial_erk
+    maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.initial_erk
+    label: ERK
+    default: 232907.0
+    units: native SBML value
+    description: Initial ERK. Sets the initial value of bundled SBML symbol `ERK`.
+  outputs:
+  - name: pi3k
+    maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.pi3k
+    description: PI3K observable. Maps to SBML symbol `PI3K`.
+  - name: akt
+    maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.akt
+    description: AKT observable. Maps to SBML symbol `Akt`.
+  - name: ras
+    maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.ras
+    description: Ras observable. Maps to SBML symbol `Ras`.
+  - name: raf
+    maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.raf
+    description: Raf observable. Maps to SBML symbol `Raf`.
+  - name: erk
+    maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.erk
+    description: ERK observable. Maps to SBML symbol `ERK`.
+  - name: pakt
+    maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.pakt
+    description: PAkt observable. Maps to SBML symbol `pAkt`.
+  - name: state
+    maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.state
+  to:
+  - visualisation.oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model_state
+- from: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.summary
+  to:
+  - visualisation.oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model_summary
+- from: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.species_labels
+  to:
+  - visualisation.oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

@@ -1,0 +1,93 @@
+schema_version: '2.0'
+title: Malinzi2018 - Enhancement of chemotherapy using oncolytic virotherapy Visualisation
+description: Oncology visualisation for Malinzi2018 - Enhancement of chemotherapy using oncolytic virotherapy.
+standard: other
+tags:
+- biomodels_ebi
+- chemotherapy
+- curated
+- drug-response
+- faithful
+- immunotherapy
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- virotherapy
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Malinzi2018 - Enhancement of chemotherapy using oncolytic virotherapy
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model
+      title: Malinzi2018 - Enhancement of chemotherapy using oncolytic virotherapy
+      state_observables:
+      - I
+      - T
+      - Td
+      - C
+      - R
+      observables:
+      - id: I
+        port: model_state_1
+        label: I
+        group: drug_response
+      - id: T
+        port: model_state_2
+        label: T
+        group: drug_response
+      - id: Td
+        port: model_state_3
+        label: Td
+        group: drug_response
+      - id: C
+        port: model_state_4
+        label: C
+        group: drug_response
+      - id: R
+        port: model_state_5
+        label: R
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model_state
+    schema:
+      I: float
+      T: float
+      Td: float
+      C: float
+      R: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model_species_labels
+    schema:
+      I: str
+      T: str
+      Td: str
+      C: str
+      R: str
+    description: Display labels for selected source states.
+  outputs: []

@@ -1,0 +1,83 @@
+schema_version: '2.0'
+title: Sotolongo-Costa2003 - Behavior of tumors under nonstationary therapy
+description: This model describes the interaction dynamics of a lymphocyte-tumor cell population. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- Sotolongo-Costa, O.
+- Molina, L.M.
+- Reyes, M.C.
+- Perez, D.R.
+- Antoranz, J.C.
+upstream:
+  id: biomodels_ebi:BIOMD0000000785
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000785
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000785
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000785?filename=Sotolongo-Costa2003.xml
+  license: CC0
+biosim:
+  entrypoint: src.sotolongo_costa2003_behavior_of_tumors_under_non_biomd0000000785_model:SotolongoCosta2003BehaviorOfTumorsUnderNonBiomd0000000785Model
+  init_kwargs:
+    model_path: data/BIOMD0000000785.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000785.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_x_malignant_cells
+    maps_to: x_Malignant_Cells
+    label: X Malignant Cells
+    default: 5.3
+    units: native SBML value
+    description: Initial X Malignant Cells. Sets the initial value of bundled SBML symbol `x_Malignant_Cells`.
+  - name: initial_y_lymphocytes
+    maps_to: y_Lymphocytes
+    label: Y Lymphocytes
+    default: 6.7
+    units: native SBML value
+    description: Initial Y Lymphocytes. Sets the initial value of bundled SBML symbol `y_Lymphocytes`.
+  outputs:
+  - name: x_malignant_cells
+    maps_to: x_Malignant_Cells
+    label: X Malignant Cells
+    description: X Malignant Cells observable. Maps to SBML symbol `x_Malignant_Cells`.
+  - name: y_lymphocytes
+    maps_to: y_Lymphocytes
+    label: Y Lymphocytes
+    description: Y Lymphocytes observable. Maps to SBML symbol `y_Lymphocytes`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

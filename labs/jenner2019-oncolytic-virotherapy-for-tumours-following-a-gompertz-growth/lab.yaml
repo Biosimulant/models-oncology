@@ -1,0 +1,56 @@
+schema_version: '2.0'
+title: Jenner2019 - Oncolytic virotherapy for tumours following a Gompertz growth law Lab
+description: This is a mathematical model using a Gompertz growth law to describe the in vivo dynamics of a cancer under treatment with an oncolytic virus. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunotherapy
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- virotherapy
+io:
+  inputs: []
+  outputs:
+  - name: model_state_1
+    maps_to: oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model.model_state_1
+    description: U observable. Maps to SBML symbol `U`.
+  - name: model_state_2
+    maps_to: oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model.model_state_2
+    description: I observable. Maps to SBML symbol `I`.
+  - name: model_state_3
+    maps_to: oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model.model_state_3
+    description: V observable. Maps to SBML symbol `V`.
+  - name: state
+    maps_to: oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model.state
+  to:
+  - visualisation.oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model_state
+- from: oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model.summary
+  to:
+  - visualisation.oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model_summary
+- from: oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model.species_labels
+  to:
+  - visualisation.oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

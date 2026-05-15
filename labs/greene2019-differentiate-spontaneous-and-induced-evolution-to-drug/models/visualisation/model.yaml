@@ -1,0 +1,69 @@
+schema_version: '2.0'
+title: Greene2019 - Differentiate Spontaneous and Induced Evolution to Drug Resistance During Cancer Treatment Visualisation
+description: Oncology visualisation for Greene2019 - Differentiate Spontaneous and Induced Evolution to Drug Resistance During Cancer Treatment.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Greene2019 - Differentiate Spontaneous and Induced Evolution to Drug Resistance During Cancer Treatment
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_greene2019_differentiate_spontaneous_and_induced_biomd0000000825_model
+      title: Greene2019 - Differentiate Spontaneous and Induced Evolution to Drug Resistance During Cancer Treatment
+      state_observables:
+      - Resistant_tumor_R
+      - Sensitive_tumor_S
+      observables:
+      - id: Sensitive_tumor_S
+        port: sensitive_tumor_s
+        label: Sensitive tumor S
+        group: drug_response
+      - id: Resistant_tumor_R
+        port: resistant_tumor_r
+        label: Resistant tumor R
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_greene2019_differentiate_spontaneous_and_induced_biomd0000000825_model_state
+    schema:
+      Resistant_tumor_R: float
+      Sensitive_tumor_S: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_greene2019_differentiate_spontaneous_and_induced_biomd0000000825_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_greene2019_differentiate_spontaneous_and_induced_biomd0000000825_model_species_labels
+    schema:
+      Sensitive_tumor_S: str
+      Resistant_tumor_R: str
+    description: Display labels for selected source states.
+  outputs: []

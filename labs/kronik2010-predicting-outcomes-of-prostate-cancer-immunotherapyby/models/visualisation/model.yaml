@@ -1,0 +1,104 @@
+schema_version: '2.0'
+title: Kronik2010 - Predicting Outcomes of Prostate Cancer Immunotherapyby Personalized Mathematical Models Visualisation
+description: Oncology visualisation for Kronik2010 - Predicting Outcomes of Prostate Cancer Immunotherapyby Personalized Mathematical Models.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Kronik2010 - Predicting Outcomes of Prostate Cancer Immunotherapyby Personalized Mathematical Models
+    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
+    visual_scope: Cancer signaling pathway activity and dominant source states
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_kronik2010_predicting_outcomes_of_prostate_cance_model2001130003_model
+      title: Kronik2010 - Predicting Outcomes of Prostate Cancer Immunotherapyby Personalized Mathematical Models
+      state_observables:
+      - V
+      - Dm
+      - Dc
+      - Dr
+      - C
+      - R
+      - P
+      observables:
+      - id: V
+        port: model_state_1
+        label: V
+        group: signaling
+      - id: Dm
+        port: model_state_2
+        label: Dm
+        group: signaling
+      - id: Dc
+        port: model_state_3
+        label: Dc
+        group: signaling
+      - id: Dr
+        port: model_state_4
+        label: Dr
+        group: signaling
+      - id: C
+        port: model_state_5
+        label: C
+        group: signaling
+      - id: R
+        port: model_state_6
+        label: R
+        group: signaling
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_kronik2010_predicting_outcomes_of_prostate_cance_model2001130003_model_state
+    schema:
+      V: float
+      Dm: float
+      Dc: float
+      Dr: float
+      C: float
+      R: float
+      P: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_kronik2010_predicting_outcomes_of_prostate_cance_model2001130003_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_kronik2010_predicting_outcomes_of_prostate_cance_model2001130003_model_species_labels
+    schema:
+      V: str
+      Dm: str
+      Dc: str
+      Dr: str
+      C: str
+      R: str
+    description: Display labels for selected source states.
+  outputs: []

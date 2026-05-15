@@ -1,0 +1,67 @@
+schema_version: '2.0'
+title: Dritschel2018 - A mathematical model of cytotoxic and helper T cell interactions in a tumour microenvironment Lab
+description: This model examines the role of helper and cytotoxic T cells in an anti-tumour response, with implicit inclusions of immunosuppressive effects. The model demonstrates the dependence of immunoediting o.
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: ntilde_level
+    maps_to: oncology_sbml_dritschel2018_a_mathematical_model_of_cytotoxic_biomd0000000763_model.ntilde_level
+    label: Ntilde source parameter
+    default: 0.04
+    units: native SBML value
+    description: Ntilde source parameter. Maps to bundled SBML parameter `Ntilde`.
+  - name: initial_n_tumour
+    maps_to: oncology_sbml_dritschel2018_a_mathematical_model_of_cytotoxic_biomd0000000763_model.initial_n_tumour
+    label: N Tumour
+    default: 0.01
+    units: native SBML value
+    description: Initial N Tumour. Sets the initial value of bundled SBML symbol `N_Tumour`.
+  outputs:
+  - name: n_tumour
+    maps_to: oncology_sbml_dritschel2018_a_mathematical_model_of_cytotoxic_biomd0000000763_model.n_tumour
+    description: N Tumour observable. Maps to SBML symbol `N_Tumour`.
+  - name: model_state_2
+    maps_to: oncology_sbml_dritschel2018_a_mathematical_model_of_cytotoxic_biomd0000000763_model.model_state_2
+    description: T H observable. Maps to SBML symbol `T_H`.
+  - name: model_state_3
+    maps_to: oncology_sbml_dritschel2018_a_mathematical_model_of_cytotoxic_biomd0000000763_model.model_state_3
+    description: T C observable. Maps to SBML symbol `T_C`.
+  - name: state
+    maps_to: oncology_sbml_dritschel2018_a_mathematical_model_of_cytotoxic_biomd0000000763_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_dritschel2018_a_mathematical_model_of_cytotoxic_biomd0000000763_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_dritschel2018_a_mathematical_model_of_cytotoxic_biomd0000000763_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_dritschel2018_a_mathematical_model_of_cytotoxic_biomd0000000763_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_dritschel2018_a_mathematical_model_of_cytotoxic_biomd0000000763_model.state
+  to:
+  - visualisation.oncology_sbml_dritschel2018_a_mathematical_model_of_cytotoxic_biomd0000000763_model_state
+- from: oncology_sbml_dritschel2018_a_mathematical_model_of_cytotoxic_biomd0000000763_model.summary
+  to:
+  - visualisation.oncology_sbml_dritschel2018_a_mathematical_model_of_cytotoxic_biomd0000000763_model_summary
+- from: oncology_sbml_dritschel2018_a_mathematical_model_of_cytotoxic_biomd0000000763_model.species_labels
+  to:
+  - visualisation.oncology_sbml_dritschel2018_a_mathematical_model_of_cytotoxic_biomd0000000763_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

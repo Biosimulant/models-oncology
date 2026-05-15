@@ -1,0 +1,193 @@
+schema_version: '2.0'
+title: Iwamoto2010 - Cell cycle reponse to DNA damage Visualisation
+description: Oncology visualisation for Iwamoto2010 - Cell cycle reponse to DNA damage.
+standard: other
+tags:
+- biomodels_ebi
+- cellcycle
+- curated
+- dna-damage
+- faithful
+- oncology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Iwamoto2010 - Cell cycle reponse to DNA damage
+    question: Which cell-cycle or damage-response states dominate the baseline cancer model?
+    answer_focus: Compares selected cycle/checkpoint observables and largest state changes.
+    visual_scope: Cancer cell-cycle/checkpoint state activity
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_iwamoto2010_cell_cycle_reponse_to_dna_damage_biomd0000000939_model
+      title: Iwamoto2010 - Cell cycle reponse to DNA damage
+      state_observables:
+      - Cyclin_D
+      - Cdk4
+      - Cyclin_D_Cdk4
+      - Cyclin_E
+      - E2F
+      - Cdk2
+      - Cyclin_E_Cdk2_inactive_phosphorylated
+      - Cyclin_A
+      - B_Myb_active
+      - Cyclin_A_Cdk2_inactive
+      - Cyclin_A_Cdk2_active
+      - APC_Ccdc20_active
+      - APC_Ccdh1_active
+      - Cyclin_E_Cdk2_active_unphosphorylated
+      - p21
+      - p21_CyclinD_Cdk4
+      - p27
+      - p27_CyclinD_Cdk4
+      - Cdc25A_active
+      - p27_CyclinE_Cdk2
+      - p21_CyclinE_Cdk2
+      - p27_CyclinA_Cdk2
+      - p21_CyclinA_Cdk2
+      - p53
+      - p16
+      - Rb
+      - Rb_E2F
+      - Rb_PP_E2F
+      - Rb_PPP
+      - ATM_ATR
+      - Mdm2
+      - Intermediate
+      - NF_Y
+      - Cdc25A_inactive
+      - Chk1_active
+      - Chk1_inactive
+      - Cyclin_B
+      - Cdk1
+      - Cyclin_B_Cdk1_inactive_unphosphorylated_cytoplasm
+      - Cyclin_B_Cdk1_active_phosphorylated_cytoplasm
+      - Cdc25C_active
+      - _14_3_3_sigma
+      - Cdc25C_Ps216_phosphorylated_active
+      - Wee1
+      - Wee1_phosphorylated
+      - Cyclin_B_Cdk1_nuclear
+      - p21_CyclinB_Cdk1
+      - B_Myb_inactive
+      - Cdc25C_inactive
+      - Cdc25C_Ps216_phosphorylated_inactive
+      - _14_3_3_sigma_iCdc25C_PS216_phosphorylated
+      - APC_Ccdc20_inactive
+      - APC_Ccdh1_inactive
+      - Cyclin_B_Cdk1_nuclear_inactive
+      observables:
+      - id: p27_CyclinD_Cdk4
+        port: p27_cyclind_cdk4
+        label: P27/CyclinD/Cdk4
+        group: cellcycle
+      - id: p27_CyclinE_Cdk2
+        port: p27_cycline_cdk2
+        label: P27/CyclinE/Cdk2
+        group: cellcycle
+      - id: p27_CyclinA_Cdk2
+        port: p27_cyclina_cdk2
+        label: P27/CyclinA/Cdk2
+        group: cellcycle
+      - id: p21_CyclinD_Cdk4
+        port: p21_cyclind_cdk4
+        label: P21/CyclinD/Cdk4
+        group: cellcycle
+      - id: p21_CyclinE_Cdk2
+        port: p21_cycline_cdk2
+        label: P21/CyclinE/Cdk2
+        group: cellcycle
+      - id: p21_CyclinA_Cdk2
+        port: p21_cyclina_cdk2
+        label: P21/CyclinA/Cdk2
+        group: cellcycle
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_iwamoto2010_cell_cycle_reponse_to_dna_damage_biomd0000000939_model_state
+    schema:
+      Cyclin_D: float
+      Cdk4: float
+      Cyclin_D_Cdk4: float
+      Cyclin_E: float
+      E2F: float
+      Cdk2: float
+      Cyclin_E_Cdk2_inactive_phosphorylated: float
+      Cyclin_A: float
+      B_Myb_active: float
+      Cyclin_A_Cdk2_inactive: float
+      Cyclin_A_Cdk2_active: float
+      APC_Ccdc20_active: float
+      APC_Ccdh1_active: float
+      Cyclin_E_Cdk2_active_unphosphorylated: float
+      p21: float
+      p21_CyclinD_Cdk4: float
+      p27: float
+      p27_CyclinD_Cdk4: float
+      Cdc25A_active: float
+      p27_CyclinE_Cdk2: float
+      p21_CyclinE_Cdk2: float
+      p27_CyclinA_Cdk2: float
+      p21_CyclinA_Cdk2: float
+      p53: float
+      p16: float
+      Rb: float
+      Rb_E2F: float
+      Rb_PP_E2F: float
+      Rb_PPP: float
+      ATM_ATR: float
+      Mdm2: float
+      Intermediate: float
+      NF_Y: float
+      Cdc25A_inactive: float
+      Chk1_active: float
+      Chk1_inactive: float
+      Cyclin_B: float
+      Cdk1: float
+      Cyclin_B_Cdk1_inactive_unphosphorylated_cytoplasm: float
+      Cyclin_B_Cdk1_active_phosphorylated_cytoplasm: float
+      Cdc25C_active: float
+      _14_3_3_sigma: float
+      Cdc25C_Ps216_phosphorylated_active: float
+      Wee1: float
+      Wee1_phosphorylated: float
+      Cyclin_B_Cdk1_nuclear: float
+      p21_CyclinB_Cdk1: float
+      B_Myb_inactive: float
+      Cdc25C_inactive: float
+      Cdc25C_Ps216_phosphorylated_inactive: float
+      _14_3_3_sigma_iCdc25C_PS216_phosphorylated: float
+      APC_Ccdc20_inactive: float
+      APC_Ccdh1_inactive: float
+      Cyclin_B_Cdk1_nuclear_inactive: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_iwamoto2010_cell_cycle_reponse_to_dna_damage_biomd0000000939_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_iwamoto2010_cell_cycle_reponse_to_dna_damage_biomd0000000939_model_species_labels
+    schema:
+      p27_CyclinD_Cdk4: str
+      p27_CyclinE_Cdk2: str
+      p27_CyclinA_Cdk2: str
+      p21_CyclinD_Cdk4: str
+      p21_CyclinE_Cdk2: str
+      p21_CyclinA_Cdk2: str
+    description: Display labels for selected source states.
+  outputs: []

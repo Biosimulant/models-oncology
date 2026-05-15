@@ -1,0 +1,97 @@
+schema_version: '2.0'
+title: West2019 - Cellular interactions constrain tumor growth Visualisation
+description: Oncology visualisation for West2019 - Cellular interactions constrain tumor growth.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- oncology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: West2019 - Cellular interactions constrain tumor growth
+    question: What oncology-relevant state dominates the bundled SBML simulation over the baseline run?
+    answer_focus: Compares the largest-changing and peak observables with selected source states.
+    visual_scope: Tumor-system state trajectories and dominant observable changes
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_west2019_cellular_interactions_constrain_tumor_g_biomd0000000820_model
+      title: West2019 - Cellular interactions constrain tumor growth
+      state_observables:
+      - tumor_at_Exp_Lin_growth
+      - tumor_at_Gen__logistic_growth
+      - tumor_at_Gomp__growth
+      - tumor_at_Power_growth
+      - tumor_at_Von_Bert__growth
+      - tumor_at_Exp_growth
+      - tumor_at_Logistic_growth
+      observables:
+      - id: tumor_at_Exp_Lin_growth
+        port: tumor_at_exp_lin_growth
+        label: Tumor at Exp Lin growth
+        group: tumor_system
+      - id: tumor_at_Gen__logistic_growth
+        port: tumor_at_gen_logistic_growth
+        label: Tumor at Gen. logistic growth
+        group: tumor_system
+      - id: tumor_at_Gomp__growth
+        port: tumor_at_gomp_growth
+        label: Tumor at Gomp. growth
+        group: tumor_system
+      - id: tumor_at_Power_growth
+        port: tumor_at_power_growth
+        label: Tumor at Power growth
+        group: tumor_system
+      - id: tumor_at_Von_Bert__growth
+        port: tumor_at_von_bert_growth
+        label: Tumor at Von Bert. growth
+        group: tumor_system
+      - id: tumor_at_Exp_growth
+        port: tumor_at_exp_growth
+        label: Tumor at Exp growth
+        group: tumor_system
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_west2019_cellular_interactions_constrain_tumor_g_biomd0000000820_model_state
+    schema:
+      tumor_at_Exp_Lin_growth: float
+      tumor_at_Gen__logistic_growth: float
+      tumor_at_Gomp__growth: float
+      tumor_at_Power_growth: float
+      tumor_at_Von_Bert__growth: float
+      tumor_at_Exp_growth: float
+      tumor_at_Logistic_growth: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_west2019_cellular_interactions_constrain_tumor_g_biomd0000000820_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_west2019_cellular_interactions_constrain_tumor_g_biomd0000000820_model_species_labels
+    schema:
+      tumor_at_Exp_Lin_growth: str
+      tumor_at_Gen__logistic_growth: str
+      tumor_at_Gomp__growth: str
+      tumor_at_Power_growth: str
+      tumor_at_Von_Bert__growth: str
+      tumor_at_Exp_growth: str
+    description: Display labels for selected source states.
+  outputs: []

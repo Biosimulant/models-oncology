@@ -1,0 +1,83 @@
+schema_version: '2.0'
+title: Kuznetsov1994 - Nonlinear dynamics of immunogenic tumors
+description: This mathematical model describes the response of cytotoxic T lymphocytes to the growth of an immunogenic tumor, with the inclusion on a number of in vivo phenomena, such as the immunostimulation of t. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- V A Kuznetsov
+- I A Makalkin
+- M A Taylor
+- A S Perelson
+upstream:
+  id: biomodels_ebi:BIOMD0000000762
+  source_db: biomodels_ebi
+  source_id: BIOMD0000000762
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/BIOMD0000000762
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/BIOMD0000000762?filename=Kuznetsov1994.xml
+  license: CC0
+biosim:
+  entrypoint: src.kuznetsov1994_nonlinear_dynamics_of_immunogenic_biomd0000000762_model:Kuznetsov1994NonlinearDynamicsOfImmunogenicBiomd0000000762Model
+  init_kwargs:
+    model_path: data/BIOMD0000000762.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/BIOMD0000000762.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_tumor_cells
+    maps_to: T
+    label: Tumor Cells
+    default: 5000000.0
+    units: native SBML value
+    description: Initial Tumor Cells. Sets the initial value of bundled SBML symbol `T`.
+  - name: initial_effector_cells
+    maps_to: E
+    label: Effector Cells
+    default: 320000.0
+    units: native SBML value
+    description: Initial Effector Cells. Sets the initial value of bundled SBML symbol `E`.
+  outputs:
+  - name: tumor_cells
+    maps_to: T
+    label: Tumor Cells
+    description: Tumor Cells observable. Maps to SBML symbol `T`.
+  - name: effector_cells
+    maps_to: E
+    label: Effector Cells
+    description: Effector Cells observable. Maps to SBML symbol `E`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

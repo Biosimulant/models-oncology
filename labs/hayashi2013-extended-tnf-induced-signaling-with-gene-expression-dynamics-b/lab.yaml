@@ -1,0 +1,101 @@
+schema_version: '2.0'
+title: Hayashi2013 - Extended TNF-induced Signaling with Gene Expression Dynamics (Model B) Lab
+description: Hayashi2013 - Extended TNF-induced Signaling with Gene Expression Dynamics (Model B)Tumor necrosis factor (TNF) plays a crucial role in inflammation and is associated with diseases such as rheumatoid. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: initial_tnfr1
+    maps_to: oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model.initial_tnfr1
+    label: TNFR1
+    default: 1.0
+    units: native SBML value
+    description: Initial TNFR1. Sets the initial value of bundled SBML symbol `species_3`.
+  - name: initial_ikba_nfkb
+    maps_to: oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model.initial_ikba_nfkb
+    label: IkBa NFkb
+    default: 5.0
+    units: native SBML value
+    description: Initial IkBa NFkb. Sets the initial value of bundled SBML symbol `species_1`.
+  - name: initial_mapk
+    maps_to: oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model.initial_mapk
+    label: MAPK
+    default: 46.0
+    units: native SBML value
+    description: Initial MAPK. Sets the initial value of bundled SBML symbol `species_13`.
+  - name: initial_nfkbc
+    maps_to: oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model.initial_nfkbc
+    label: NFkBc
+    default: 0.0
+    units: native SBML value
+    description: Initial NFkBc. Sets the initial value of bundled SBML symbol `species_2`.
+  - name: initial_traf6
+    maps_to: oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model.initial_traf6
+    label: TRAF6
+    default: 0.0
+    units: native SBML value
+    description: Initial TRAF6. Sets the initial value of bundled SBML symbol `species_6`.
+  - name: initial_traf5
+    maps_to: oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model.initial_traf5
+    label: TRAF5
+    default: 0.0
+    units: native SBML value
+    description: Initial TRAF5. Sets the initial value of bundled SBML symbol `species_7`.
+  outputs:
+  - name: tnfr1
+    maps_to: oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model.tnfr1
+    description: TNFR1 observable. Maps to SBML symbol `species_3`.
+  - name: ikba_nfkb
+    maps_to: oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model.ikba_nfkb
+    description: IkBa NFkb observable. Maps to SBML symbol `species_1`.
+  - name: mapk
+    maps_to: oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model.mapk
+    description: MAPK observable. Maps to SBML symbol `species_13`.
+  - name: nfkbc
+    maps_to: oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model.nfkbc
+    description: NFkBc observable. Maps to SBML symbol `species_2`.
+  - name: traf6
+    maps_to: oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model.traf6
+    description: TRAF6 observable. Maps to SBML symbol `species_6`.
+  - name: traf5
+    maps_to: oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model.traf5
+    description: TRAF5 observable. Maps to SBML symbol `species_7`.
+  - name: state
+    maps_to: oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model.state
+  to:
+  - visualisation.oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model_state
+- from: oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model.summary
+  to:
+  - visualisation.oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model_summary
+- from: oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model.species_labels
+  to:
+  - visualisation.oncology_sbml_hayashi2013_extended_tnf_induced_signaling_with_model2502170002_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

@@ -1,0 +1,109 @@
+schema_version: '2.0'
+title: Lopes2025 - NFkB model in Breast Cancer
+description: "Model for the activation of SLUG, SIP1, TWIST1, and NF-\u03BAB (subunits p50 and p65). The model exhibits two stationary states (bistability), each corresponding to the gene expression profiles we determin."
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- faithful
+- oncology
+- physiology
+- sbml
+- signal-transduction
+- signaling
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- FRANCISCO JP LOPES
+- Bruno Pires
+- Alexandre Lima
+- Renata Binato
+- Eliana Abdelhay
+upstream:
+  id: biomodels_ebi:MODEL2508260001
+  source_db: biomodels_ebi
+  source_id: MODEL2508260001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL2508260001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2508260001?filename=Lopes2025.xml
+  license: CC0
+biosim:
+  entrypoint: src.lopes2025_nfkb_model_in_breast_cancer_model2508260001_model:Lopes2025NfkbModelInBreastCancerModel2508260001Model
+  init_kwargs:
+    model_path: data/MODEL2508260001.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/MODEL2508260001.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: initial_nf_kb
+    maps_to: NFkB
+    label: NF-kB
+    default: 5893.41991828698
+    units: native SBML value
+    description: Initial NF-kB. Sets the initial value of bundled SBML symbol `NFkB`.
+  - name: initial_slug
+    maps_to: SLUG
+    label: SLUG
+    default: 7789508.97608121
+    units: native SBML value
+    description: Initial SLUG. Sets the initial value of bundled SBML symbol `SLUG`.
+  - name: initial_sip1
+    maps_to: SIP1
+    label: SIP1
+    default: 23581097.7152633
+    units: native SBML value
+    description: Initial SIP1. Sets the initial value of bundled SBML symbol `SIP1`.
+  - name: initial_twist1
+    maps_to: TWIST1
+    label: TWIST1
+    default: 200834985.025365
+    units: native SBML value
+    description: Initial TWIST1. Sets the initial value of bundled SBML symbol `TWIST1`.
+  outputs:
+  - name: nf_kb
+    maps_to: NFkB
+    label: NF-kB
+    description: NF-kB observable. Maps to SBML symbol `NFkB`.
+  - name: slug
+    maps_to: SLUG
+    label: SLUG
+    description: SLUG observable. Maps to SBML symbol `SLUG`.
+  - name: sip1
+    maps_to: SIP1
+    label: SIP1
+    description: SIP1 observable. Maps to SBML symbol `SIP1`.
+  - name: p65
+    maps_to: p65
+    label: P65
+    description: P65 observable. Maps to SBML symbol `p65`.
+  - name: p50
+    maps_to: p50
+    label: P50
+    description: P50 observable. Maps to SBML symbol `p50`.
+  - name: twist1
+    maps_to: TWIST1
+    label: TWIST1
+    description: TWIST1 observable. Maps to SBML symbol `TWIST1`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

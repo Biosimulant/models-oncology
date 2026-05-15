@@ -1,0 +1,76 @@
+schema_version: '2.0'
+title: Rodrigues2019 - A mathematical model for chemoimmunotherapy of chronic lymphocytic leukemia Lab
+description: THis is a simple ordinary differential equation model describing chemoimmunotherapy of chronic lymphocytic leukemia, including descriptions of the combinatorial effects of chemotherapy and adoptive ce. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- chemotherapy
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: chemotherapy_input_level
+    maps_to: oncology_sbml_rodrigues2019_a_mathematical_model_for_chemoimmu_biomd0000000879_model.chemotherapy_input_level
+    label: Chemotherapy Input source parameter
+    default: 8640.0
+    units: native SBML value
+    description: Chemotherapy Input source parameter. Maps to bundled SBML parameter `Chemotherapy_Input`.
+  - name: immunotherapy_input_level
+    maps_to: oncology_sbml_rodrigues2019_a_mathematical_model_for_chemoimmu_biomd0000000879_model.immunotherapy_input_level
+    label: Immunotherapy Input source parameter
+    default: 0.0
+    units: native SBML value
+    description: Immunotherapy Input source parameter. Maps to bundled SBML parameter `Immunotherapy_Input`.
+  - name: infusion_dose
+    maps_to: oncology_sbml_rodrigues2019_a_mathematical_model_for_chemoimmu_biomd0000000879_model.infusion_dose
+    label: Infusion Dose source parameter
+    default: 1080.0
+    units: native SBML value
+    description: Infusion Dose source parameter. Maps to bundled SBML parameter `Infusion_Dose`.
+  outputs:
+  - name: model_state_1
+    maps_to: oncology_sbml_rodrigues2019_a_mathematical_model_for_chemoimmu_biomd0000000879_model.model_state_1
+    description: N observable. Maps to SBML symbol `N`.
+  - name: model_state_2
+    maps_to: oncology_sbml_rodrigues2019_a_mathematical_model_for_chemoimmu_biomd0000000879_model.model_state_2
+    description: I observable. Maps to SBML symbol `I`.
+  - name: model_state_3
+    maps_to: oncology_sbml_rodrigues2019_a_mathematical_model_for_chemoimmu_biomd0000000879_model.model_state_3
+    description: Q observable. Maps to SBML symbol `Q`.
+  - name: state
+    maps_to: oncology_sbml_rodrigues2019_a_mathematical_model_for_chemoimmu_biomd0000000879_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_rodrigues2019_a_mathematical_model_for_chemoimmu_biomd0000000879_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_rodrigues2019_a_mathematical_model_for_chemoimmu_biomd0000000879_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_rodrigues2019_a_mathematical_model_for_chemoimmu_biomd0000000879_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_rodrigues2019_a_mathematical_model_for_chemoimmu_biomd0000000879_model.state
+  to:
+  - visualisation.oncology_sbml_rodrigues2019_a_mathematical_model_for_chemoimmu_biomd0000000879_model_state
+- from: oncology_sbml_rodrigues2019_a_mathematical_model_for_chemoimmu_biomd0000000879_model.summary
+  to:
+  - visualisation.oncology_sbml_rodrigues2019_a_mathematical_model_for_chemoimmu_biomd0000000879_model_summary
+- from: oncology_sbml_rodrigues2019_a_mathematical_model_for_chemoimmu_biomd0000000879_model.species_labels
+  to:
+  - visualisation.oncology_sbml_rodrigues2019_a_mathematical_model_for_chemoimmu_biomd0000000879_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

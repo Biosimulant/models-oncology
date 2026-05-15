@@ -1,0 +1,61 @@
+schema_version: '2.0'
+title: Zhu2015 - Combined gemcitabine and birinapant in pancreatic cancer cells - mechanistic PD model Lab
+description: Zhu2015 - combined gemcitabine and birinapantin pancreatic cancer cells - mechanistic PD model Mechanistic mathematical model toillustrate the effectiveness of combination chemotherapy involvinggemcit. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- chemotherapy
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs: []
+  outputs:
+  - name: g1
+    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.g1
+    description: G1 observable. Maps to SBML symbol `G1`.
+  - name: model_state_2
+    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.model_state_2
+    description: S observable. Maps to SBML symbol `S`.
+  - name: g2
+    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.g2
+    description: G2 observable. Maps to SBML symbol `G2`.
+  - name: r_apo
+    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.r_apo
+    description: R apo observable. Maps to SBML symbol `R_apo`.
+  - name: r_other
+    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.r_other
+    description: R other observable. Maps to SBML symbol `R_other`.
+  - name: state
+    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.state
+  to:
+  - visualisation.oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model_state
+- from: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.summary
+  to:
+  - visualisation.oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model_summary
+- from: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.species_labels
+  to:
+  - visualisation.oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

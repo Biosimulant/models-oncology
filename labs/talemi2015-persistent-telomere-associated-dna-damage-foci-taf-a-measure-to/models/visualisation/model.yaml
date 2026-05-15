@@ -1,0 +1,92 @@
+schema_version: '2.0'
+title: Talemi2015 - Persistent telomere-associated DNA damage foci (TAF), a measure to predict cancer risks Visualisation
+description: Oncology visualisation for Talemi2015 - Persistent telomere-associated DNA damage foci (TAF), a measure to predict cancer risks.
+standard: other
+tags:
+- biomodels_ebi
+- cellcycle
+- curated
+- dna-damage
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Talemi2015 - Persistent telomere-associated DNA damage foci (TAF), a measure to predict cancer risks
+    question: Which cell-cycle or damage-response states dominate the baseline cancer model?
+    answer_focus: Compares selected cycle/checkpoint observables and largest state changes.
+    visual_scope: Cancer cell-cycle/checkpoint state activity
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_talemi2015_persistent_telomere_associated_dna_da_model1412200000_model
+      title: Talemi2015 - Persistent telomere-associated DNA damage foci (TAF), a measure to predict cancer risks
+      state_observables:
+      - FAST
+      - FASTi
+      - SLOWi
+      - SLOW
+      - RP
+      observables:
+      - id: RP
+        port: model_state_1
+        label: RP
+        group: cellcycle
+      - id: FAST
+        port: fast
+        label: FAST
+        group: cellcycle
+      - id: SLOW
+        port: slow
+        label: SLOW
+        group: cellcycle
+      - id: FASTi
+        port: fasti
+        label: FASTi
+        group: cellcycle
+      - id: SLOWi
+        port: slowi
+        label: SLOWi
+        group: cellcycle
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_talemi2015_persistent_telomere_associated_dna_da_model1412200000_model_state
+    schema:
+      FAST: float
+      FASTi: float
+      SLOWi: float
+      SLOW: float
+      RP: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_talemi2015_persistent_telomere_associated_dna_da_model1412200000_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_talemi2015_persistent_telomere_associated_dna_da_model1412200000_model_species_labels
+    schema:
+      RP: str
+      FAST: str
+      SLOW: str
+      FASTi: str
+      SLOWi: str
+    description: Display labels for selected source states.
+  outputs: []

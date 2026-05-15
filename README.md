@@ -1,5 +1,8 @@
 # models-oncology
 
+> Storage-only repo: each former root model now lives in `labs/<slug>/model/` and is wrapped by
+> `labs/<slug>/lab.yaml`. This repo has no repo-level import catalog and no composed labs at the root.
+
 Curated collection of **oncology** and **cancer biology** simulation models for the **biosim** platform. This repository contains 135 computational models of tumor growth, cancer cell dynamics, oncogene signaling, cell cycle dysregulation, and cancer therapeutics.
 
 ## What's Inside

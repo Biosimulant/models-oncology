@@ -1,0 +1,121 @@
+schema_version: '2.0'
+title: 'Boer1986 - Interactions between Macrophages and T-lymphocytes: Tumor Sneaking Through Intrinsic to Helper T cell Dynamics'
+description: 'Interactions between Macrophages and T-lymphocytes: TumorSneaking Through Intrinsic to Helper T cell DynamicsROB J. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+authors:
+- Biosimulant Team
+- R J de Boer
+- P Hogeweg
+upstream:
+  id: biomodels_ebi:MODEL1912110001
+  source_db: biomodels_ebi
+  source_id: MODEL1912110001
+  standard: sbml
+  original_url: https://www.ebi.ac.uk/biomodels/MODEL1912110001
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1912110001?filename=Boer1986.xml
+  license: CC0
+biosim:
+  entrypoint: src.boer1986_interactions_between_macrophages_and_t_model1912110001_model:Boer1986InteractionsBetweenMacrophagesAndTModel1912110001Model
+  init_kwargs:
+    model_path: data/MODEL1912110001.xml
+    integration_step: 0.1
+  communication_step: 1.0
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - tellurium==2.2.11.2
+    - PyYAML==6.0.3
+parameters:
+- name: model_path
+  value: data/MODEL1912110001.xml
+  description: Relative path to the curated SBML source file.
+- name: integration_step
+  value: 0.1
+  min: 0.0
+  units: model_time
+  description: Output sampling step for the Tellurium simulator.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+io:
+  inputs:
+  - name: kill_level
+    maps_to: KILL
+    label: KILL source parameter
+    default: 10.0
+    units: native SBML value
+    description: KILL source parameter. Maps to bundled SBML parameter `KILL`.
+  - name: initial_tumor
+    maps_to: TUMOR
+    label: TUMOR
+    default: 1000.0
+    units: native SBML value
+    description: Initial TUMOR. Sets the initial value of bundled SBML symbol `TUMOR`.
+  - name: initial_ctlp
+    maps_to: CTLP
+    label: CTLP
+    default: 1.0
+    units: native SBML value
+    description: Initial CTLP. Sets the initial value of bundled SBML symbol `CTLP`.
+  - name: initial_htlp
+    maps_to: HTLP
+    label: HTLP
+    default: 15.0
+    units: native SBML value
+    description: Initial HTLP. Sets the initial value of bundled SBML symbol `HTLP`.
+  - name: initial_mph
+    maps_to: MPH
+    label: MPH
+    default: 3000000.0
+    units: native SBML value
+    description: Initial MPH. Sets the initial value of bundled SBML symbol `MPH`.
+  - name: initial_ctl
+    maps_to: CTL
+    label: CTL
+    default: 3909.0
+    units: native SBML value
+    description: Initial CTL. Sets the initial value of bundled SBML symbol `CTL`.
+  outputs:
+  - name: tumor
+    maps_to: TUMOR
+    label: TUMOR
+    description: TUMOR observable. Maps to SBML symbol `TUMOR`.
+  - name: ctlp
+    maps_to: CTLP
+    label: CTLP
+    description: CTLP observable. Maps to SBML symbol `CTLP`.
+  - name: htlp
+    maps_to: HTLP
+    label: HTLP
+    description: HTLP observable. Maps to SBML symbol `HTLP`.
+  - name: mph
+    maps_to: MPH
+    label: MPH
+    description: MPH observable. Maps to SBML symbol `MPH`.
+  - name: ctl
+    maps_to: CTL
+    label: CTL
+    description: CTL observable. Maps to SBML symbol `CTL`.
+  - name: htl
+    maps_to: HTL
+    label: HTL
+    description: HTL observable. Maps to SBML symbol `HTL`.
+  - name: state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.

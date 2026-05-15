@@ -1,0 +1,72 @@
+schema_version: '2.0'
+title: Siddhartha2002 - Kinetic modelling of cancer therapies Lab
+description: Siddhartha Jain. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs:
+  - name: initial_ttum
+    maps_to: oncology_sbml_siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model.initial_ttum
+    label: Ttum
+    default: 1000000.0
+    units: native SBML value
+    description: Initial Ttum. Sets the initial value of bundled SBML symbol `Ttum`.
+  - name: initial_tplas
+    maps_to: oncology_sbml_siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model.initial_tplas
+    label: Tplas
+    default: 4000000.0
+    units: native SBML value
+    description: Initial Tplas. Sets the initial value of bundled SBML symbol `Tplas`.
+  - name: initial_tnew
+    maps_to: oncology_sbml_siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model.initial_tnew
+    label: Tnew
+    default: 0.0
+    units: native SBML value
+    description: Initial Tnew. Sets the initial value of bundled SBML symbol `Tnew`.
+  outputs:
+  - name: ttum
+    maps_to: oncology_sbml_siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model.ttum
+    description: Ttum observable. Maps to SBML symbol `Ttum`.
+  - name: tplas
+    maps_to: oncology_sbml_siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model.tplas
+    description: Tplas observable. Maps to SBML symbol `Tplas`.
+  - name: tnew
+    maps_to: oncology_sbml_siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model.tnew
+    description: Tnew observable. Maps to SBML symbol `Tnew`.
+  - name: state
+    maps_to: oncology_sbml_siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model.state
+  to:
+  - visualisation.oncology_sbml_siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model_state
+- from: oncology_sbml_siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model.summary
+  to:
+  - visualisation.oncology_sbml_siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model_summary
+- from: oncology_sbml_siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model.species_labels
+  to:
+  - visualisation.oncology_sbml_siddhartha2002_kinetic_modelling_of_cancer_thera_biomd0000001048_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}

@@ -1,0 +1,101 @@
+schema_version: '2.0'
+title: Palaniappan2021 - Cell free modelling of second generation Toehold switches Visualisation
+description: Oncology visualisation for Palaniappan2021 - Cell free modelling of second generation Toehold switches.
+standard: other
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+- visualisation
+authors:
+- Biosimulant Team
+biosim:
+  entrypoint: src.oncology_visualisation:OncologyVisualisationModel
+  init_kwargs:
+    integration_step: 1.0
+    lab_title: Palaniappan2021 - Cell free modelling of second generation Toehold switches
+    question: How does the bundled treatment-response model evolve under its baseline source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    visual_scope: Drug/treatment response and tumour-state change
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    sources:
+    - alias: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model
+      title: Palaniappan2021 - Cell free modelling of second generation Toehold switches
+      state_observables:
+      - miR
+      - antimiR
+      - Toehold_DNA
+      - Toehold_RNA_CTS
+      - miR_antimiR
+      - GFP
+      - Toehold_RNA_OTS
+      - Mat_GFP
+      observables:
+      - id: miR
+        port: mir
+        label: MiR
+        group: drug_response
+      - id: antimiR
+        port: antimir
+        label: AntimiR
+        group: drug_response
+      - id: Toehold_DNA
+        port: toehold_dna
+        label: Toehold DNA
+        group: drug_response
+      - id: GFP
+        port: gfp
+        label: GFP
+        group: drug_response
+      - id: Toehold_RNA_CTS
+        port: toehold_rna_cts
+        label: Toehold RNA CTS
+        group: drug_response
+      - id: miR_antimiR
+        port: mir_antimir
+        label: MiR antimiR
+        group: drug_response
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - PyYAML==6.0.3
+io:
+  inputs:
+  - name: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model_state
+    schema:
+      miR: float
+      antimiR: float
+      Toehold_DNA: float
+      Toehold_RNA_CTS: float
+      miR_antimiR: float
+      GFP: float
+      Toehold_RNA_OTS: float
+      Mat_GFP: float
+    description: Selected source state values from the core model.
+  - name: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model_summary
+    schema:
+      duration_simulated: float
+      observable_count: int
+      largest_change_observable: str
+      largest_change_magnitude: float
+      peak_observable: str
+      peak_value: float
+    description: Core model summary output.
+  - name: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model_species_labels
+    schema:
+      miR: str
+      antimiR: str
+      Toehold_DNA: str
+      GFP: str
+      Toehold_RNA_CTS: str
+      miR_antimiR: str
+    description: Display labels for selected source states.
+  outputs: []

@@ -1,0 +1,54 @@
+schema_version: '2.0'
+title: Babbs2012 - immunotherapy Lab
+description: 'The paper describes a simple model of tumor immunotherapy. Created by COPASI 4.25 (Build 207) This model is described in the article: Predicting success or failure of immunotherapy for cancer: insight.'
+tags:
+- biomodels_ebi
+- curated
+- drug-response
+- faithful
+- immunology
+- immunotherapy
+- microenvironment
+- oncology
+- pharmacology
+- physiology
+- sbml
+- systemsbiology
+- tumor-growth
+io:
+  inputs: []
+  outputs:
+  - name: model_state_1
+    maps_to: oncology_sbml_babbs2012_immunotherapy_biomd0000000758_model.model_state_1
+    description: T observable. Maps to SBML symbol `T`.
+  - name: model_state_2
+    maps_to: oncology_sbml_babbs2012_immunotherapy_biomd0000000758_model.model_state_2
+    description: I observable. Maps to SBML symbol `I`.
+  - name: state
+    maps_to: oncology_sbml_babbs2012_immunotherapy_biomd0000000758_model.state
+    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+  - name: summary
+    maps_to: oncology_sbml_babbs2012_immunotherapy_biomd0000000758_model.summary
+    description: Change and peak summary across the simulated SBML observables.
+  - name: species_labels
+    maps_to: oncology_sbml_babbs2012_immunotherapy_biomd0000000758_model.species_labels
+    description: Mapping from selected raw SBML observable symbols to display labels.
+models:
+- alias: oncology_sbml_babbs2012_immunotherapy_biomd0000000758_model
+  path: models/core
+- alias: visualisation
+  path: models/visualisation
+wiring:
+- from: oncology_sbml_babbs2012_immunotherapy_biomd0000000758_model.state
+  to:
+  - visualisation.oncology_sbml_babbs2012_immunotherapy_biomd0000000758_model_state
+- from: oncology_sbml_babbs2012_immunotherapy_biomd0000000758_model.summary
+  to:
+  - visualisation.oncology_sbml_babbs2012_immunotherapy_biomd0000000758_model_summary
+- from: oncology_sbml_babbs2012_immunotherapy_biomd0000000758_model.species_labels
+  to:
+  - visualisation.oncology_sbml_babbs2012_immunotherapy_biomd0000000758_model_species_labels
+runtime:
+  duration: 10.0
+  communication_step: 1.0
+  initial_inputs: {}
