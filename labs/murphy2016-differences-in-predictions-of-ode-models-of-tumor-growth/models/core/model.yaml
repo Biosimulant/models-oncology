@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Murphy2016 - Differences in predictions of ODE models of tumor growth
-description: Murphy2016 - Differences in predictions ofODE models of tumor growth Comparison of 7 ODE models for tumoursize. This models have been compared to experimental data.
+description: Murphy2016 - Differences in predictions ofODE models of tumor growth
+  Comparison of 7 ODE models for tumoursize. This models have been compared to experimental
+  data.
 standard: other
 tags:
 - biomodels_ebi
@@ -45,9 +47,31 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations. No scientifically safe external input was exposed by the cleanup.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations. Exposed inputs are traceable to bundled SBML parameters or initial conditions.
 io:
-  inputs: []
+  inputs:
+  - name: initial_exponential_tumor_volume
+    maps_to: V_exp
+    label: Exponential Tumor Volume
+    default: 220.0
+    units: native SBML value
+    description: Initial Exponential Tumor Volume. Sets the initial value of bundled
+      SBML symbol `V_exp`.
+  - name: initial_logistic_tumor_volume
+    maps_to: V_log
+    label: Logistic Tumor Volume
+    default: 220.0
+    units: native SBML value
+    description: Initial Logistic Tumor Volume. Sets the initial value of bundled
+      SBML symbol `V_log`.
+  - name: initial_gompertz_tumor_volume
+    maps_to: V_gomp
+    label: Gompertz Tumor Volume
+    default: 220.0
+    units: native SBML value
+    description: Initial Gompertz Tumor Volume. Sets the initial value of bundled
+      SBML symbol `V_gomp`.
   outputs:
   - name: v_exp
     maps_to: V_exp
@@ -74,7 +98,8 @@ io:
     label: V gomp
     description: V gomp observable. Maps to SBML symbol `V_gomp`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

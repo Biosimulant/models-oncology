@@ -16,10 +16,10 @@ class Chareyron2009MixedImmunotherapyAndChemotheraModel2001160002Model(Tellurium
     _TIME_UNIT = "model_time"
     _OBSERVABLE_STRATEGY = 'species'
     _OBSERVABLES = ['T', 'N', 'L', 'C', 'M', 'I']
-    _SPECIES_LABELS = {'T': 'T', 'N': 'N', 'L': 'L', 'C': 'C', 'M': 'M', 'I': 'I'}
-    _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {}
-    _HEADLINE_OUTPUTS = {'model_state_1': ('T', 'native SBML value', 'T observable. Maps to SBML symbol `T`.'), 'model_state_2': ('N', 'native SBML value', 'N observable. Maps to SBML symbol `N`.'), 'model_state_3': ('L', 'native SBML value', 'L observable. Maps to SBML symbol `L`.'), 'model_state_4': ('C', 'native SBML value', 'C observable. Maps to SBML symbol `C`.'), 'model_state_5': ('M', 'native SBML value', 'M observable. Maps to SBML symbol `M`.'), 'model_state_6': ('I', 'native SBML value', 'I observable. Maps to SBML symbol `I`.')}
+    _SPECIES_LABELS = {'T': 'Tumor Cells', 'N': 'N', 'L': 'L', 'C': 'C', 'M': 'M', 'I': 'I'}
+    _PARAMETER_INPUTS = {'chemotherapy_drug_level': ('D', 2.34000000000344, 'native SBML value', 'Chemotherapy Drug Level. Overrides bundled SBML parameter `D`.')}
+    _INITIAL_CONDITION_INPUTS = {'initial_tumor_cells': ('T', 50000000.0, 'native SBML value', 'Initial Tumor Cells. Sets the initial value of bundled SBML symbol `T`.')}
+    _HEADLINE_OUTPUTS = {'tumor_cells': ('T', 'native SBML value', 'Tumor Cells observable. Maps to SBML symbol `T`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/MODEL2001160002.xml', integration_step: float = 0.1) -> None:

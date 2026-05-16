@@ -16,10 +16,10 @@ class Rommelfanger2011GompertzModelOfMelanomaTumoModel2109110003Model(TelluriumS
     _TIME_UNIT = "model_time"
     _OBSERVABLE_STRATEGY = 'species'
     _OBSERVABLES = ['x', 'y', 'z', 'v_i']
-    _SPECIES_LABELS = {'y': 'Y', 'v_i': 'V i', 'x': 'X', 'z': 'Z'}
+    _SPECIES_LABELS = {'y': 'Y', 'v_i': 'Injected Virus', 'x': 'X', 'z': 'Z'}
     _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {}
-    _HEADLINE_OUTPUTS = {'model_state_1': ('y', 'native SBML value', 'Y observable. Maps to SBML symbol `y`.'), 'model_state_2': ('v_i', 'native SBML value', 'V i observable. Maps to SBML symbol `v_i`.'), 'model_state_3': ('x', 'native SBML value', 'X observable. Maps to SBML symbol `x`.'), 'model_state_4': ('z', 'native SBML value', 'Z observable. Maps to SBML symbol `z`.')}
+    _INITIAL_CONDITION_INPUTS = {'initial_injected_virus': ('v_i', 500000000.0, 'native SBML value', 'Initial Injected Virus. Sets the initial value of bundled SBML symbol `v_i`.')}
+    _HEADLINE_OUTPUTS = {'injected_virus': ('v_i', 'native SBML value', 'Injected Virus observable. Maps to SBML symbol `v_i`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/MODEL2109110003.xml', integration_step: float = 0.1) -> None:

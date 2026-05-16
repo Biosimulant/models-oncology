@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Owen1998 - tumour growth model
-description: 'Owen1998 - tumour growth model Deterministic model for the early,avascular growth of a tumour, concentrating on the inhibitoryeffect of macrophages. This model is described in the article: Modelling t.'
+description: 'Owen1998 - tumour growth model Deterministic model for the early,avascular
+  growth of a tumour, concentrating on the inhibitoryeffect of macrophages. This model
+  is described in the article: Modelling t.'
 standard: other
 tags:
 - angiogenesis
@@ -48,24 +50,47 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations. No scientifically safe external input was exposed by the cleanup.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations. Exposed inputs are traceable to bundled SBML parameters or initial conditions.
 io:
-  inputs: []
-  outputs:
-  - name: model_state_1
+  inputs:
+  - name: initial_macrophage
     maps_to: l
-    label: L
-    description: L observable. Maps to SBML symbol `l`.
-  - name: model_state_2
+    label: Macrophage
+    default: 0.0999999999999985
+    units: native SBML value
+    description: Initial Macrophage. Sets the initial value of bundled SBML symbol
+      `l`.
+  - name: initial_normal_cells
     maps_to: n
-    label: N
-    description: N observable. Maps to SBML symbol `n`.
-  - name: model_state_3
+    label: Normal Cells
+    default: 0.899999999999988
+    units: native SBML value
+    description: Initial Normal Cells. Sets the initial value of bundled SBML symbol
+      `n`.
+  - name: initial_mutated_cells
     maps_to: m
-    label: M
-    description: M observable. Maps to SBML symbol `m`.
+    label: Mutated Cells
+    default: 0.899999999999988
+    units: native SBML value
+    description: Initial Mutated Cells. Sets the initial value of bundled SBML symbol
+      `m`.
+  outputs:
+  - name: macrophage
+    maps_to: l
+    label: Macrophage
+    description: Macrophage observable. Maps to SBML symbol `l`.
+  - name: normal_cells
+    maps_to: n
+    label: Normal Cells
+    description: Normal Cells observable. Maps to SBML symbol `n`.
+  - name: mutated_cells
+    maps_to: m
+    label: Mutated Cells
+    description: Mutated Cells observable. Maps to SBML symbol `m`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

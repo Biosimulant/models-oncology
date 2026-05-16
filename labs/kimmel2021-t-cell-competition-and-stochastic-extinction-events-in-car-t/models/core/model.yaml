@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: Kimmel2021 - T cell competition and stochastic extinction events in CAR T cell therapy
-description: This mathematical model of T cell-tumour interactions considering the roles of T cell competition and stochastic extinction events in CAR T cell therapy is described by the publication:Kimmel GJ, Lock. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+title: Kimmel2021 - T cell competition and stochastic extinction events in CAR T cell
+  therapy
+description: This mathematical model of T cell-tumour interactions considering the
+  roles of T cell competition and stochastic extinction events in CAR T cell therapy
+  is described by the publication:Kimmel GJ, Lock. It can be used to explore tumor-related
+  dynamics and compare treatment-response behavior across conditions.
 standard: other
 tags:
 - biomodels_ebi
@@ -50,29 +54,33 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
-  - name: initial_antigen_presenting_tumour_cells
+  - name: initial_antigen_presenting_tumor_cells
     maps_to: Antigen_presenting_tumour_cells
     label: Antigen presenting tumour cells
     default: 94.86
     units: native SBML value
-    description: Initial Antigen presenting tumour cells. Sets the initial value of bundled SBML symbol `Antigen_presenting_tumour_cells`.
+    description: Initial Antigen presenting tumour cells. Sets the initial value of
+      bundled SBML symbol `Antigen_presenting_tumour_cells`.
   - name: initial_normal_t_cells
     maps_to: Normal_T_cells
     label: Normal T cells
     default: 6.0
     units: native SBML value
-    description: Initial Normal T cells. Sets the initial value of bundled SBML symbol `Normal_T_cells`.
+    description: Initial Normal T cells. Sets the initial value of bundled SBML symbol
+      `Normal_T_cells`.
   - name: initial_car_t_cells
     maps_to: CAR_T_cells
     label: CAR T cells
     default: 0.36
     units: native SBML value
-    description: Initial CAR T cells. Sets the initial value of bundled SBML symbol `CAR_T_cells`.
+    description: Initial CAR T cells. Sets the initial value of bundled SBML symbol
+      `CAR_T_cells`.
   outputs:
-  - name: antigen_presenting_tumour_cells
+  - name: antigen_presenting_tumor_cells
     maps_to: Antigen_presenting_tumour_cells
     label: Antigen presenting tumour cells
     description: Antigen presenting tumour cells observable. Maps to SBML symbol `Antigen_presenting_tumour_cells`.
@@ -85,7 +93,8 @@ io:
     label: CAR T cells
     description: CAR T cells observable. Maps to SBML symbol `CAR_T_cells`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

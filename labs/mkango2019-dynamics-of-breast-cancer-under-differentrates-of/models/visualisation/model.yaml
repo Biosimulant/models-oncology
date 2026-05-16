@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Mkango2019 - Dynamics of Breast Cancer under DifferentRates of Chemoradiotherapy Visualisation
-description: Oncology visualisation for Mkango2019 - Dynamics of Breast Cancer under DifferentRates of Chemoradiotherapy.
+title: Mkango2019 - Dynamics of Breast Cancer under DifferentRates of Chemoradiotherapy
+  Visualisation
+description: Oncology visualisation for Mkango2019 - Dynamics of Breast Cancer under
+  DifferentRates of Chemoradiotherapy.
 standard: other
 tags:
 - biomodels_ebi
@@ -19,14 +21,17 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Mkango2019 - Dynamics of Breast Cancer under DifferentRates of Chemoradiotherapy
-    question: Does the radiotherapy-linked model show tumour response under baseline source conditions?
+    question: Does the radiotherapy-linked model show tumour response under baseline
+      source conditions?
     answer_focus: Compares radiation/treatment and tumour observables where present.
     visual_scope: Radiotherapy-linked tumour response
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_mkango2019_dynamics_of_breast_cancer_under_diffe_model1912120005_model
       title: Mkango2019 - Dynamics of Breast Cancer under DifferentRates of Chemoradiotherapy
@@ -39,27 +44,22 @@ biosim:
       - R
       observables:
       - id: T
-        port: model_state_1
-        label: T
+        port: breast_tumor_cells
+        label: Breast Tumor Cells
         group: radiotherapy
       - id: TR
-        port: model_state_2
         label: TR
         group: radiotherapy
       - id: N
-        port: model_state_3
         label: N
         group: radiotherapy
       - id: I
-        port: model_state_4
         label: I
         group: radiotherapy
       - id: M
-        port: model_state_5
         label: M
         group: radiotherapy
       - id: R
-        port: model_state_6
         label: R
         group: radiotherapy
 runtime:

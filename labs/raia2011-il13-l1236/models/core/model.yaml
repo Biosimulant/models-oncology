@@ -1,6 +1,9 @@
 schema_version: '2.0'
 title: Raia2011 - IL13 L1236
-description: 'This is the model of IL13 induced signalling in L1236 cells described in the article: Dynamic Mathematical Modeling of IL13-Induced Signaling in Hodgkin and Primary Mediastinal B-Cell Lymphoma Allows. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+description: 'This is the model of IL13 induced signalling in L1236 cells described
+  in the article: Dynamic Mathematical Modeling of IL13-Induced Signaling in Hodgkin
+  and Primary Mediastinal B-Cell Lymphoma Allows. It can be used to explore tumor-related
+  dynamics and compare treatment-response behavior across conditions.'
 standard: other
 tags:
 - biomodels_ebi
@@ -51,21 +54,23 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
-  - name: kon_il13rec_level
+  - name: kon_il13_rec_source_parameter
     maps_to: Kon_IL13Rec
     label: Kon IL13Rec source parameter
     default: 0.00174087
     units: native SBML value
     description: Kon IL13Rec source parameter. Maps to bundled SBML parameter `Kon_IL13Rec`.
-  - name: il13stimulation_level
+  - name: il13stimulation_source_parameter
     maps_to: IL13stimulation
     label: IL13stimulation source parameter
     default: 1.0
     units: native SBML value
-    description: IL13stimulation source parameter. Maps to bundled SBML parameter `IL13stimulation`.
+    description: IL13stimulation source parameter. Maps to bundled SBML parameter
+      `IL13stimulation`.
   - name: initial_stat5
     maps_to: STAT5
     label: STAT5
@@ -116,7 +121,8 @@ io:
     label: Rec i
     description: Rec i observable. Maps to SBML symbol `Rec_i`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

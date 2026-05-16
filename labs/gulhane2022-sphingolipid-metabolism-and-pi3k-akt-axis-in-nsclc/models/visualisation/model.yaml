@@ -1,6 +1,7 @@
 schema_version: '2.0'
 title: Gulhane2022 - Sphingolipid metabolism and PI3K-AKT axis in NSCLC Visualisation
-description: Oncology visualisation for Gulhane2022 - Sphingolipid metabolism and PI3K-AKT axis in NSCLC.
+description: Oncology visualisation for Gulhane2022 - Sphingolipid metabolism and
+  PI3K-AKT axis in NSCLC.
 standard: other
 tags:
 - biomodels_ebi
@@ -20,14 +21,17 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Gulhane2022 - Sphingolipid metabolism and PI3K-AKT axis in NSCLC
-    question: Which metabolic states dominate the baseline oncology-associated metabolic model?
+    question: Which metabolic states dominate the baseline oncology-associated metabolic
+      model?
     answer_focus: Compares selected metabolic observables and peak source states.
     visual_scope: Cancer metabolism and metabolic-state changes
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_gulhane2022_sphingolipid_metabolism_and_pi3k_akt_model2402290001_model
       title: Gulhane2022 - Sphingolipid metabolism and PI3K-AKT axis in NSCLC
@@ -129,7 +133,7 @@ biosim:
         label: Ras
         group: metabolism
       - id: mw1906ffc7_edd7_4567_8b41_84201e788393
-        port: pi3k
+        port: pi3_k
         label: PI3K
         group: metabolism
       - id: mwe5fc6bf1_e5b9_4f84_b107_5828de7af61b

@@ -1,6 +1,9 @@
 schema_version: '2.0'
-title: Jafarnejad2019 - Mechanistically detailed systems biology modeling of the HGF/Met pathway in hepatocellular carcinoma
-description: Hepatocyte growth factor (HGF) signaling through its receptor Met has been implicated in hepatocellular carcinoma tumorigenesis and progression. Met interaction with integrins is shown to modulate the.
+title: Jafarnejad2019 - Mechanistically detailed systems biology modeling of the HGF/Met
+  pathway in hepatocellular carcinoma
+description: Hepatocyte growth factor (HGF) signaling through its receptor Met has
+  been implicated in hepatocellular carcinoma tumorigenesis and progression. Met interaction
+  with integrins is shown to modulate the.
 standard: other
 tags:
 - biomodels_ebi
@@ -49,16 +52,17 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
-  - name: kd_rilotumumab_level
+  - name: kd_rilotumumab_source_parameter
     maps_to: KD_Rilotumumab
     label: KD Rilotumumab source parameter
     default: 0.22
     units: native SBML value
     description: KD Rilotumumab source parameter. Maps to bundled SBML parameter `KD_Rilotumumab`.
-  - name: initial_pi3k
+  - name: initial_pi3_k
     maps_to: PI3K
     label: PI3K
     default: 1976.0
@@ -89,7 +93,7 @@ io:
     units: native SBML value
     description: Initial ERK. Sets the initial value of bundled SBML symbol `ERK`.
   outputs:
-  - name: pi3k
+  - name: pi3_k
     maps_to: PI3K
     label: PI3K
     description: PI3K observable. Maps to SBML symbol `PI3K`.
@@ -114,7 +118,8 @@ io:
     label: PAkt
     description: PAkt observable. Maps to SBML symbol `pAkt`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

@@ -1,6 +1,9 @@
 schema_version: '2.0'
-title: Ontah2019 - Dynamic analysis of a tumor treatment model using oncolytic virus and chemotherapy with saturated infection rate Lab
-description: This is a mathematical model describing the treatment of tumors using oncolytic virus and chemotherapy. The model is comprised of nonlinear ordinary differential equations describing the interactions.
+title: Ontah2019 - Dynamic analysis of a tumor treatment model using oncolytic virus
+  and chemotherapy with saturated infection rate Lab
+description: This is a mathematical model describing the treatment of tumors using
+  oncolytic virus and chemotherapy. The model is comprised of nonlinear ordinary differential
+  equations describing the interactions.
 tags:
 - biomodels_ebi
 - chemotherapy
@@ -16,23 +19,52 @@ tags:
 - tumor-growth
 - virotherapy
 io:
-  inputs: []
+  inputs:
+  - name: initial_uninfected_tumor_cells
+    maps_to: oncology_sbml_ontah2019_dynamic_analysis_of_a_tumor_treatment_biomd0000000877_model.initial_uninfected_tumor_cells
+    label: Uninfected Tumor Cells
+    default: 100.0
+    units: native SBML value
+    description: Initial Uninfected Tumor Cells. Sets the initial value of bundled
+      SBML symbol `U`.
+  - name: initial_infected_tumor_cells
+    maps_to: oncology_sbml_ontah2019_dynamic_analysis_of_a_tumor_treatment_biomd0000000877_model.initial_infected_tumor_cells
+    label: Infected Tumor Cells
+    default: 10.0
+    units: native SBML value
+    description: Initial Infected Tumor Cells. Sets the initial value of bundled SBML
+      symbol `I`.
+  - name: initial_virus_load
+    maps_to: oncology_sbml_ontah2019_dynamic_analysis_of_a_tumor_treatment_biomd0000000877_model.initial_virus_load
+    label: Virus Load
+    default: 10.0
+    units: native SBML value
+    description: Initial Virus Load. Sets the initial value of bundled SBML symbol
+      `V`.
+  - name: initial_chemotherapy_level
+    maps_to: oncology_sbml_ontah2019_dynamic_analysis_of_a_tumor_treatment_biomd0000000877_model.initial_chemotherapy_level
+    label: Chemotherapy Level
+    default: 30.0
+    units: native SBML value
+    description: Initial Chemotherapy Level. Sets the initial value of bundled SBML
+      symbol `C`.
   outputs:
-  - name: model_state_1
-    maps_to: oncology_sbml_ontah2019_dynamic_analysis_of_a_tumor_treatment_biomd0000000877_model.model_state_1
-    description: U observable. Maps to SBML symbol `U`.
-  - name: model_state_2
-    maps_to: oncology_sbml_ontah2019_dynamic_analysis_of_a_tumor_treatment_biomd0000000877_model.model_state_2
-    description: I observable. Maps to SBML symbol `I`.
-  - name: model_state_3
-    maps_to: oncology_sbml_ontah2019_dynamic_analysis_of_a_tumor_treatment_biomd0000000877_model.model_state_3
-    description: V observable. Maps to SBML symbol `V`.
-  - name: model_state_4
-    maps_to: oncology_sbml_ontah2019_dynamic_analysis_of_a_tumor_treatment_biomd0000000877_model.model_state_4
-    description: C observable. Maps to SBML symbol `C`.
+  - name: uninfected_tumor_cells
+    maps_to: oncology_sbml_ontah2019_dynamic_analysis_of_a_tumor_treatment_biomd0000000877_model.uninfected_tumor_cells
+    description: Uninfected Tumor Cells observable. Maps to SBML symbol `U`.
+  - name: infected_tumor_cells
+    maps_to: oncology_sbml_ontah2019_dynamic_analysis_of_a_tumor_treatment_biomd0000000877_model.infected_tumor_cells
+    description: Infected Tumor Cells observable. Maps to SBML symbol `I`.
+  - name: virus_load
+    maps_to: oncology_sbml_ontah2019_dynamic_analysis_of_a_tumor_treatment_biomd0000000877_model.virus_load
+    description: Virus Load observable. Maps to SBML symbol `V`.
+  - name: chemotherapy_level
+    maps_to: oncology_sbml_ontah2019_dynamic_analysis_of_a_tumor_treatment_biomd0000000877_model.chemotherapy_level
+    description: Chemotherapy Level observable. Maps to SBML symbol `C`.
   - name: state
     maps_to: oncology_sbml_ontah2019_dynamic_analysis_of_a_tumor_treatment_biomd0000000877_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_ontah2019_dynamic_analysis_of_a_tumor_treatment_biomd0000000877_model.summary
     description: Change and peak summary across the simulated SBML observables.

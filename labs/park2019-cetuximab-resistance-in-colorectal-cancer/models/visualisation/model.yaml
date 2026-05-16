@@ -17,6 +17,7 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0

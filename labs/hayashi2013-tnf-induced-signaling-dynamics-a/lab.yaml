@@ -1,6 +1,9 @@
 schema_version: '2.0'
 title: Hayashi2013 - TNF-induced Signaling Dynamics (Model A) Lab
-description: Hayashi2013 - TNF-induced Signaling Dynamics Model (Model A)Tumor necrosis factor (TNF) plays a crucial role in inflammation and is associated with diseases such as rheumatoid arthritis and cancer. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+description: Hayashi2013 - TNF-induced Signaling Dynamics Model (Model A)Tumor necrosis
+  factor (TNF) plays a crucial role in inflammation and is associated with diseases
+  such as rheumatoid arthritis and cancer. It can be used to explore tumor-related
+  dynamics and compare treatment-response behavior across conditions.
 tags:
 - biomodels_ebi
 - curated
@@ -22,8 +25,8 @@ io:
     default: 1.0
     units: native SBML value
     description: Initial TNFR1. Sets the initial value of bundled SBML symbol `species_3`.
-  - name: initial_nfkbc
-    maps_to: oncology_sbml_hayashi2013_tnf_induced_signaling_dynamics_model_model2502170001_model.initial_nfkbc
+  - name: initial_nfk_bc
+    maps_to: oncology_sbml_hayashi2013_tnf_induced_signaling_dynamics_model_model2502170001_model.initial_nfk_bc
     label: NFkBc
     default: 0.0
     units: native SBML value
@@ -56,8 +59,8 @@ io:
   - name: tnfr1
     maps_to: oncology_sbml_hayashi2013_tnf_induced_signaling_dynamics_model_model2502170001_model.tnfr1
     description: TNFR1 observable. Maps to SBML symbol `species_3`.
-  - name: nfkbc
-    maps_to: oncology_sbml_hayashi2013_tnf_induced_signaling_dynamics_model_model2502170001_model.nfkbc
+  - name: nfk_bc
+    maps_to: oncology_sbml_hayashi2013_tnf_induced_signaling_dynamics_model_model2502170001_model.nfk_bc
     description: NFkBc observable. Maps to SBML symbol `species_2`.
   - name: traf6
     maps_to: oncology_sbml_hayashi2013_tnf_induced_signaling_dynamics_model_model2502170001_model.traf6
@@ -73,7 +76,8 @@ io:
     description: ERKc observable. Maps to SBML symbol `species_16`.
   - name: state
     maps_to: oncology_sbml_hayashi2013_tnf_induced_signaling_dynamics_model_model2502170001_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_hayashi2013_tnf_induced_signaling_dynamics_model_model2502170001_model.summary
     description: Change and peak summary across the simulated SBML observables.

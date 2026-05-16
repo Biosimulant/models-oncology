@@ -18,8 +18,8 @@ class Barros2021CartmathMathematicalModelOfCarTBiomd0000001019Model(TelluriumSBM
     _OBSERVABLES = ['Cm', 'Ct', 'T']
     _SPECIES_LABELS = {'T': 'T', 'Cm': 'Cm', 'Ct': 'Ct'}
     _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {'epsilon_level': ('epsilon', 0.15, 'native SBML value', 'Epsilon source parameter. Maps to bundled SBML parameter `epsilon`.')}
-    _HEADLINE_OUTPUTS = {'model_state_1': ('T', 'native SBML value', 'T observable. Maps to SBML symbol `T`.'), 'model_state_2': ('Cm', 'native SBML value', 'Cm observable. Maps to SBML symbol `Cm`.'), 'model_state_3': ('Ct', 'native SBML value', 'Ct observable. Maps to SBML symbol `Ct`.')}
+    _INITIAL_CONDITION_INPUTS = {'epsilon_source_parameter': ('epsilon', 0.15, 'native SBML value', 'Epsilon source parameter. Maps to bundled SBML parameter `epsilon`.')}
+    _HEADLINE_OUTPUTS = {'tumor_cells': ('T', 'native SBML value', 'T observable. Maps to SBML symbol `T`.'), 'cm': ('Cm', 'native SBML value', 'Cm observable. Maps to SBML symbol `Cm`.'), 'ct': ('Ct', 'native SBML value', 'Ct observable. Maps to SBML symbol `Ct`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/BIOMD0000001019.xml', integration_step: float = 0.1) -> None:

@@ -1,6 +1,9 @@
 schema_version: '2.0'
 title: Moore_2004_Mathematical model for CML and T cell interaction Lab
-description: Its a mathematical model depicting CML (chronic myelogenous leukemia) interaction with T cells and impact of T cell activations on CML progression over time. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+description: Its a mathematical model depicting CML (chronic myelogenous leukemia)
+  interaction with T cells and impact of T cell activations on CML progression over
+  time. It can be used to explore tumor-related dynamics and compare treatment-response
+  behavior across conditions.
 tags:
 - biomodels_ebi
 - curated
@@ -22,32 +25,36 @@ io:
     label: Tumor cells
     default: 10000.0
     units: native SBML value
-    description: Initial Tumor cells. Sets the initial value of bundled SBML symbol `tumor_cells`.
-  - name: initial_naive_tcells
-    maps_to: oncology_sbml_moore_2004_mathematical_model_for_cml_and_t_cell_biomd0000000733_model.initial_naive_tcells
+    description: Initial Tumor cells. Sets the initial value of bundled SBML symbol
+      `tumor_cells`.
+  - name: initial_naive_t_cells
+    maps_to: oncology_sbml_moore_2004_mathematical_model_for_cml_and_t_cell_biomd0000000733_model.initial_naive_t_cells
     label: Naive Tcells
     default: 1510.0
     units: native SBML value
-    description: Initial Naive Tcells. Sets the initial value of bundled SBML symbol `naive_Tcells`.
-  - name: initial_eff_tcells
-    maps_to: oncology_sbml_moore_2004_mathematical_model_for_cml_and_t_cell_biomd0000000733_model.initial_eff_tcells
+    description: Initial Naive Tcells. Sets the initial value of bundled SBML symbol
+      `naive_Tcells`.
+  - name: initial_eff_t_cells
+    maps_to: oncology_sbml_moore_2004_mathematical_model_for_cml_and_t_cell_biomd0000000733_model.initial_eff_t_cells
     label: Eff Tcells
     default: 20.0
     units: native SBML value
-    description: Initial Eff Tcells. Sets the initial value of bundled SBML symbol `eff_Tcells`.
+    description: Initial Eff Tcells. Sets the initial value of bundled SBML symbol
+      `eff_Tcells`.
   outputs:
   - name: tumor_cells
     maps_to: oncology_sbml_moore_2004_mathematical_model_for_cml_and_t_cell_biomd0000000733_model.tumor_cells
     description: Tumor cells observable. Maps to SBML symbol `tumor_cells`.
-  - name: naive_tcells
-    maps_to: oncology_sbml_moore_2004_mathematical_model_for_cml_and_t_cell_biomd0000000733_model.naive_tcells
+  - name: naive_t_cells
+    maps_to: oncology_sbml_moore_2004_mathematical_model_for_cml_and_t_cell_biomd0000000733_model.naive_t_cells
     description: Naive Tcells observable. Maps to SBML symbol `naive_Tcells`.
-  - name: eff_tcells
-    maps_to: oncology_sbml_moore_2004_mathematical_model_for_cml_and_t_cell_biomd0000000733_model.eff_tcells
+  - name: eff_t_cells
+    maps_to: oncology_sbml_moore_2004_mathematical_model_for_cml_and_t_cell_biomd0000000733_model.eff_t_cells
     description: Eff Tcells observable. Maps to SBML symbol `eff_Tcells`.
   - name: state
     maps_to: oncology_sbml_moore_2004_mathematical_model_for_cml_and_t_cell_biomd0000000733_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_moore_2004_mathematical_model_for_cml_and_t_cell_biomd0000000733_model.summary
     description: Change and peak summary across the simulated SBML observables.

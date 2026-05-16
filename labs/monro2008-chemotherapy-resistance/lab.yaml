@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Monro2008 - chemotherapy resistance Lab
-description: 'The paper describes a model of resistance of cancer to chemotherapy. Created by COPASI 4.25 (Build 207) This model is described in the article: Modelling chemotherapy resistance in palliation and fail.'
+description: 'The paper describes a model of resistance of cancer to chemotherapy.
+  Created by COPASI 4.25 (Build 207) This model is described in the article: Modelling
+  chemotherapy resistance in palliation and fail.'
 tags:
 - biomodels_ebi
 - chemotherapy
@@ -14,17 +16,38 @@ tags:
 - systemsbiology
 - tumor-growth
 io:
-  inputs: []
+  inputs:
+  - name: initial_chemo_sensitive_cells
+    maps_to: oncology_sbml_monro2008_chemotherapy_resistance_biomd0000000776_model.initial_chemo_sensitive_cells
+    label: Chemo-Sensitive Cells
+    default: 10000000000.0
+    units: native SBML value
+    description: Initial Chemo-Sensitive Cells. Sets the initial value of bundled
+      SBML symbol `S`.
+  - name: initial_chemo_resistant_cells
+    maps_to: oncology_sbml_monro2008_chemotherapy_resistance_biomd0000000776_model.initial_chemo_resistant_cells
+    label: Chemo-Resistant Cells
+    default: 200000.0
+    units: native SBML value
+    description: Initial Chemo-Resistant Cells. Sets the initial value of bundled
+      SBML symbol `R`.
+  - name: chemotherapy_concentration
+    maps_to: oncology_sbml_monro2008_chemotherapy_resistance_biomd0000000776_model.chemotherapy_concentration
+    label: Chemotherapy Concentration
+    default: 2.0
+    units: native SBML value
+    description: Chemotherapy Concentration. Overrides bundled SBML parameter `C0`.
   outputs:
-  - name: model_state_1
-    maps_to: oncology_sbml_monro2008_chemotherapy_resistance_biomd0000000776_model.model_state_1
-    description: S observable. Maps to SBML symbol `S`.
-  - name: model_state_2
-    maps_to: oncology_sbml_monro2008_chemotherapy_resistance_biomd0000000776_model.model_state_2
-    description: R observable. Maps to SBML symbol `R`.
+  - name: chemo_sensitive_cells
+    maps_to: oncology_sbml_monro2008_chemotherapy_resistance_biomd0000000776_model.chemo_sensitive_cells
+    description: Chemo-Sensitive Cells observable. Maps to SBML symbol `S`.
+  - name: chemo_resistant_cells
+    maps_to: oncology_sbml_monro2008_chemotherapy_resistance_biomd0000000776_model.chemo_resistant_cells
+    description: Chemo-Resistant Cells observable. Maps to SBML symbol `R`.
   - name: state
     maps_to: oncology_sbml_monro2008_chemotherapy_resistance_biomd0000000776_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_monro2008_chemotherapy_resistance_biomd0000000776_model.summary
     description: Change and peak summary across the simulated SBML observables.

@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Perez-Garcia19 - Computational design of improved standardized chemotherapy protocols for grade 2 oligodendrogliomas Visualisation
-description: Oncology visualisation for Perez-Garcia19 - Computational design of improved standardized chemotherapy protocols for grade 2 oligodendrogliomas.
+title: Perez-Garcia19 - Computational design of improved standardized chemotherapy
+  protocols for grade 2 oligodendrogliomas Visualisation
+description: Oncology visualisation for Perez-Garcia19 - Computational design of improved
+  standardized chemotherapy protocols for grade 2 oligodendrogliomas.
 standard: other
 tags:
 - biomodels_ebi
@@ -18,17 +20,23 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Perez-Garcia19 - Computational design of improved standardized chemotherapy protocols for grade 2 oligodendrogliomas
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    lab_title: Perez-Garcia19 - Computational design of improved standardized chemotherapy
+      protocols for grade 2 oligodendrogliomas
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model
-      title: Perez-Garcia19 - Computational design of improved standardized chemotherapy protocols for grade 2 oligodendrogliomas
+      title: Perez-Garcia19 - Computational design of improved standardized chemotherapy
+        protocols for grade 2 oligodendrogliomas
       state_observables:
       - Drug_Concentration_C
       - Tumor_Cell_Population_P

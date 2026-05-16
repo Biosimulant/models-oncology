@@ -18,8 +18,8 @@ class Barros2021CartmathMathematicalModelOfCarTBiomd0000001020Model(TelluriumSBM
     _OBSERVABLES = ['Cm', 'Ct', 'T']
     _SPECIES_LABELS = {'T': 'T', 'Cm': 'Cm', 'Ct': 'Ct'}
     _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {'epsilon_level': ('epsilon', 1.59795, 'native SBML value', 'Epsilon source parameter. Maps to bundled SBML parameter `epsilon`.'), 'raji_ido_positive_cart_19_positive_1mt_level': ('Raji_IDO_CART_19_1MT', 0.0, 'native SBML value', 'Raji IDO+CART 19+1MT source parameter. Maps to bundled SBML parameter `Raji_IDO_CART_19_1MT`.'), 'initial_for_raji_ido_positive_cart_19_positive_1mt': ('ModelValue_10', 0.0, 'native SBML value', 'Initial for Raji IDO+CART 19+1MT source parameter. Maps to bundled SBML parameter `ModelValue_10`.')}
-    _HEADLINE_OUTPUTS = {'model_state_1': ('T', 'native SBML value', 'T observable. Maps to SBML symbol `T`.'), 'model_state_2': ('Cm', 'native SBML value', 'Cm observable. Maps to SBML symbol `Cm`.'), 'model_state_3': ('Ct', 'native SBML value', 'Ct observable. Maps to SBML symbol `Ct`.')}
+    _INITIAL_CONDITION_INPUTS = {'epsilon_source_parameter': ('epsilon', 1.59795, 'native SBML value', 'Epsilon source parameter. Maps to bundled SBML parameter `epsilon`.'), 'raji_ido_cart_19_1_mt_source_parameter': ('Raji_IDO_CART_19_1MT', 0.0, 'native SBML value', 'Raji IDO+CART 19+1MT source parameter. Maps to bundled SBML parameter `Raji_IDO_CART_19_1MT`.'), 'initial_for_raji_ido_cart_19_1_mt_source_parameter': ('ModelValue_10', 0.0, 'native SBML value', 'Initial for Raji IDO+CART 19+1MT source parameter. Maps to bundled SBML parameter `ModelValue_10`.')}
+    _HEADLINE_OUTPUTS = {'tumor_cells': ('T', 'native SBML value', 'T observable. Maps to SBML symbol `T`.'), 'cm': ('Cm', 'native SBML value', 'Cm observable. Maps to SBML symbol `Cm`.'), 'ct': ('Ct', 'native SBML value', 'Ct observable. Maps to SBML symbol `Ct`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/BIOMD0000001020.xml', integration_step: float = 0.1) -> None:

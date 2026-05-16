@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Dritschel2018 - A mathematical model of cytotoxic and helper T cell interactions in a tumour microenvironment Visualisation
-description: Oncology visualisation for Dritschel2018 - A mathematical model of cytotoxic and helper T cell interactions in a tumour microenvironment.
+title: Dritschel2018 - A mathematical model of cytotoxic and helper T cell interactions
+  in a tumour microenvironment Visualisation
+description: Oncology visualisation for Dritschel2018 - A mathematical model of cytotoxic
+  and helper T cell interactions in a tumour microenvironment.
 standard: other
 tags:
 - biomodels_ebi
@@ -18,32 +20,37 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Dritschel2018 - A mathematical model of cytotoxic and helper T cell interactions in a tumour microenvironment
-    question: Does the baseline tumour-immune model favour immune control or tumour escape?
+    lab_title: Dritschel2018 - A mathematical model of cytotoxic and helper T cell
+      interactions in a tumour microenvironment
+    question: Does the baseline tumour-immune model favour immune control or tumour
+      escape?
     answer_focus: Compares immune, tumour, and treatment-linked source observables.
     visual_scope: Tumour-immune interaction and immunotherapy response
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_dritschel2018_a_mathematical_model_of_cytotoxic_biomd0000000763_model
-      title: Dritschel2018 - A mathematical model of cytotoxic and helper T cell interactions in a tumour microenvironment
+      title: Dritschel2018 - A mathematical model of cytotoxic and helper T cell interactions
+        in a tumour microenvironment
       state_observables:
       - N_Tumour
       - T_H
       - T_C
       observables:
       - id: N_Tumour
-        port: n_tumour
+        port: n_tumor
         label: N Tumour
         group: tumor_immune
       - id: T_H
-        port: model_state_2
+        port: t_h
         label: T H
         group: tumor_immune
       - id: T_C
-        port: model_state_3
+        port: t_c
         label: T C
         group: tumor_immune
 runtime:

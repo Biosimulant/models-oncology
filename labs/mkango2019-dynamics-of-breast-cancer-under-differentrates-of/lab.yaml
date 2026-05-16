@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: Mkango2019 - Dynamics of Breast Cancer under DifferentRates of Chemoradiotherapy Lab
-description: Dynamics of Breast Cancer under Different Rates of Chemoradiotherapy.Mkango SB1, Shaban N1, Mureithi E1, Ngoma T2.Author information1 Department of Mathematics, University of Dar es Salaam, P.O. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+title: Mkango2019 - Dynamics of Breast Cancer under DifferentRates of Chemoradiotherapy
+  Lab
+description: Dynamics of Breast Cancer under Different Rates of Chemoradiotherapy.Mkango
+  SB1, Shaban N1, Mureithi E1, Ngoma T2.Author information1 Department of Mathematics,
+  University of Dar es Salaam, P.O. It can be used to explore tumor-related dynamics
+  and compare treatment-response behavior across conditions.
 tags:
 - biomodels_ebi
 - chemotherapy
@@ -15,29 +19,22 @@ tags:
 - systemsbiology
 - tumor-growth
 io:
-  inputs: []
+  inputs:
+  - name: initial_breast_tumor_cells
+    maps_to: oncology_sbml_mkango2019_dynamics_of_breast_cancer_under_diffe_model1912120005_model.initial_breast_tumor_cells
+    label: Breast Tumor Cells
+    default: 3500000.0
+    units: native SBML value
+    description: Initial Breast Tumor Cells. Sets the initial value of bundled SBML
+      symbol `T`.
   outputs:
-  - name: model_state_1
-    maps_to: oncology_sbml_mkango2019_dynamics_of_breast_cancer_under_diffe_model1912120005_model.model_state_1
-    description: T observable. Maps to SBML symbol `T`.
-  - name: model_state_2
-    maps_to: oncology_sbml_mkango2019_dynamics_of_breast_cancer_under_diffe_model1912120005_model.model_state_2
-    description: TR observable. Maps to SBML symbol `TR`.
-  - name: model_state_3
-    maps_to: oncology_sbml_mkango2019_dynamics_of_breast_cancer_under_diffe_model1912120005_model.model_state_3
-    description: N observable. Maps to SBML symbol `N`.
-  - name: model_state_4
-    maps_to: oncology_sbml_mkango2019_dynamics_of_breast_cancer_under_diffe_model1912120005_model.model_state_4
-    description: I observable. Maps to SBML symbol `I`.
-  - name: model_state_5
-    maps_to: oncology_sbml_mkango2019_dynamics_of_breast_cancer_under_diffe_model1912120005_model.model_state_5
-    description: M observable. Maps to SBML symbol `M`.
-  - name: model_state_6
-    maps_to: oncology_sbml_mkango2019_dynamics_of_breast_cancer_under_diffe_model1912120005_model.model_state_6
-    description: R observable. Maps to SBML symbol `R`.
+  - name: breast_tumor_cells
+    maps_to: oncology_sbml_mkango2019_dynamics_of_breast_cancer_under_diffe_model1912120005_model.breast_tumor_cells
+    description: Breast Tumor Cells observable. Maps to SBML symbol `T`.
   - name: state
     maps_to: oncology_sbml_mkango2019_dynamics_of_breast_cancer_under_diffe_model1912120005_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_mkango2019_dynamics_of_breast_cancer_under_diffe_model1912120005_model.summary
     description: Change and peak summary across the simulated SBML observables.

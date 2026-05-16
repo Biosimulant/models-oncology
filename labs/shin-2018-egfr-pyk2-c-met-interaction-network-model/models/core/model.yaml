@@ -1,6 +1,9 @@
 schema_version: '2.0'
 title: Shin_2018_EGFR-PYK2-c-Met interaction network_model
-description: Systems modelling of the EGFR-PYK2-c-Met interaction network predicted and prioritized synergistic drug combinations for Triple-negative breast cancer. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+description: Systems modelling of the EGFR-PYK2-c-Met interaction network predicted
+  and prioritized synergistic drug combinations for Triple-negative breast cancer.
+  It can be used to explore tumor-related dynamics and compare treatment-response
+  behavior across conditions.
 standard: other
 tags:
 - biomodels_ebi
@@ -51,22 +54,23 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
-  - name: egfrtot_level
+  - name: egfrtot_source_parameter
     maps_to: EGFRtot
     label: EGFRtot source parameter
     default: 398.107
     units: native SBML value
     description: EGFRtot source parameter. Maps to bundled SBML parameter `EGFRtot`.
-  - name: caegf_level
+  - name: ca_egf_source_parameter
     maps_to: caEGF
     label: CaEGF source parameter
     default: 0.0891251
     units: native SBML value
     description: CaEGF source parameter. Maps to bundled SBML parameter `caEGF`.
-  - name: egf_level
+  - name: egf_source_parameter
     maps_to: EGF
     label: EGF source parameter
     default: 10.0
@@ -107,7 +111,7 @@ io:
     maps_to: pSTAT3
     label: PSTAT3
     description: PSTAT3 observable. Maps to SBML symbol `pSTAT3`.
-  - name: stat3ustattic
+  - name: stat3u_stattic
     maps_to: STAT3uStattic
     label: STAT3uStattic
     description: STAT3uStattic observable. Maps to SBML symbol `STAT3uStattic`.
@@ -116,7 +120,8 @@ io:
     label: PYK2
     description: PYK2 observable. Maps to SBML symbol `PYK2`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

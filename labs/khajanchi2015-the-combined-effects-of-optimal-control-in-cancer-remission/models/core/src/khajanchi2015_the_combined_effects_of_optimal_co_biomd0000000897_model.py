@@ -16,10 +16,10 @@ class Khajanchi2015TheCombinedEffectsOfOptimalCoBiomd0000000897Model(TelluriumSB
     _TIME_UNIT = "model_time"
     _OBSERVABLE_STRATEGY = 'species'
     _OBSERVABLES = ['E', 'T']
-    _SPECIES_LABELS = {'E': 'E', 'T': 'T'}
+    _SPECIES_LABELS = {'E': 'Effector Cells', 'T': 'Tumor Cells'}
     _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {}
-    _HEADLINE_OUTPUTS = {'model_state_1': ('E', 'native SBML value', 'E observable. Maps to SBML symbol `E`.'), 'model_state_2': ('T', 'native SBML value', 'T observable. Maps to SBML symbol `T`.')}
+    _INITIAL_CONDITION_INPUTS = {'initial_effector_cells': ('E', 1708110.0, 'native SBML value', 'Initial Effector Cells. Sets the initial value of bundled SBML symbol `E`.'), 'initial_tumor_cells': ('T', 8286380.0, 'native SBML value', 'Initial Tumor Cells. Sets the initial value of bundled SBML symbol `T`.')}
+    _HEADLINE_OUTPUTS = {'effector_cells': ('E', 'native SBML value', 'Effector Cells observable. Maps to SBML symbol `E`.'), 'tumor_cells': ('T', 'native SBML value', 'Tumor Cells observable. Maps to SBML symbol `T`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/BIOMD0000000897.xml', integration_step: float = 0.1) -> None:

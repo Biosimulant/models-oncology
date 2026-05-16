@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Dorvash2019 - Dynamic modeling of signal transduction by mTOR complexes in cancer Visualisation
-description: Oncology visualisation for Dorvash2019 - Dynamic modeling of signal transduction by mTOR complexes in cancer.
+title: Dorvash2019 - Dynamic modeling of signal transduction by mTOR complexes in
+  cancer Visualisation
+description: Oncology visualisation for Dorvash2019 - Dynamic modeling of signal transduction
+  by mTOR complexes in cancer.
 standard: other
 tags:
 - biomodels_ebi
@@ -19,17 +21,22 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Dorvash2019 - Dynamic modeling of signal transduction by mTOR complexes in cancer
-    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    lab_title: Dorvash2019 - Dynamic modeling of signal transduction by mTOR complexes
+      in cancer
+    question: Which signaling states carry the dominant response in the bundled cancer
+      pathway model?
     answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
     visual_scope: Cancer signaling pathway activity and dominant source states
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model
-      title: Dorvash2019 - Dynamic modeling of signal transduction by mTOR complexes in cancer
+      title: Dorvash2019 - Dynamic modeling of signal transduction by mTOR complexes
+        in cancer
       state_observables:
       - Cytosolic_Rapamycin
       - mTOR

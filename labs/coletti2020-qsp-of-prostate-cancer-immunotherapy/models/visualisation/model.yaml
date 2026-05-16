@@ -1,6 +1,7 @@
 schema_version: '2.0'
 title: Coletti2020 - QSP model of prostate cancer immunotherapy Visualisation
-description: Oncology visualisation for Coletti2020 - QSP model of prostate cancer immunotherapy.
+description: Oncology visualisation for Coletti2020 - QSP model of prostate cancer
+  immunotherapy.
 standard: other
 tags:
 - biomodels_ebi
@@ -22,14 +23,17 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Coletti2020 - QSP model of prostate cancer immunotherapy
-    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    question: Which signaling states carry the dominant response in the bundled cancer
+      pathway model?
     answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
     visual_scope: Cancer signaling pathway activity and dominant source states
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model
       title: Coletti2020 - QSP model of prostate cancer immunotherapy
@@ -55,27 +59,27 @@ biosim:
       - ICB
       observables:
       - id: X_1
-        port: model_state_1
+        port: x_1
         label: X 1
         group: signaling
       - id: A
-        port: model_state_2
+        port: a
         label: A
         group: signaling
       - id: D_m
-        port: model_state_3
+        port: d_m
         label: D m
         group: signaling
       - id: C_2
-        port: model_state_4
+        port: c_2
         label: C 2
         group: signaling
       - id: I_2
-        port: model_state_5
+        port: i_2
         label: I 2
         group: signaling
       - id: N
-        port: model_state_6
+        port: normal_cells
         label: N
         group: signaling
 runtime:

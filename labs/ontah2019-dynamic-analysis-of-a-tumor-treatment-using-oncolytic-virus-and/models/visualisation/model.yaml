@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Ontah2019 - Dynamic analysis of a tumor treatment model using oncolytic virus and chemotherapy with saturated infection rate Visualisation
-description: Oncology visualisation for Ontah2019 - Dynamic analysis of a tumor treatment model using oncolytic virus and chemotherapy with saturated infection rate.
+title: Ontah2019 - Dynamic analysis of a tumor treatment model using oncolytic virus
+  and chemotherapy with saturated infection rate Visualisation
+description: Oncology visualisation for Ontah2019 - Dynamic analysis of a tumor treatment
+  model using oncolytic virus and chemotherapy with saturated infection rate.
 standard: other
 tags:
 - biomodels_ebi
@@ -20,17 +22,23 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Ontah2019 - Dynamic analysis of a tumor treatment model using oncolytic virus and chemotherapy with saturated infection rate
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    lab_title: Ontah2019 - Dynamic analysis of a tumor treatment model using oncolytic
+      virus and chemotherapy with saturated infection rate
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_ontah2019_dynamic_analysis_of_a_tumor_treatment_biomd0000000877_model
-      title: Ontah2019 - Dynamic analysis of a tumor treatment model using oncolytic virus and chemotherapy with saturated infection rate
+      title: Ontah2019 - Dynamic analysis of a tumor treatment model using oncolytic
+        virus and chemotherapy with saturated infection rate
       state_observables:
       - U
       - I
@@ -38,20 +46,20 @@ biosim:
       - C
       observables:
       - id: U
-        port: model_state_1
-        label: U
+        port: uninfected_tumor_cells
+        label: Uninfected Tumor Cells
         group: drug_response
       - id: I
-        port: model_state_2
-        label: I
+        port: infected_tumor_cells
+        label: Infected Tumor Cells
         group: drug_response
       - id: V
-        port: model_state_3
-        label: V
+        port: virus_load
+        label: Virus Load
         group: drug_response
       - id: C
-        port: model_state_4
-        label: C
+        port: chemotherapy_level
+        label: Chemotherapy Level
         group: drug_response
 runtime:
   python_version: '3.12'

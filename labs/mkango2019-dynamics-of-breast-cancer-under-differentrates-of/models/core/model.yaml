@@ -1,6 +1,9 @@
 schema_version: '2.0'
 title: Mkango2019 - Dynamics of Breast Cancer under DifferentRates of Chemoradiotherapy
-description: Dynamics of Breast Cancer under Different Rates of Chemoradiotherapy.Mkango SB1, Shaban N1, Mureithi E1, Ngoma T2.Author information1 Department of Mathematics, University of Dar es Salaam, P.O. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+description: Dynamics of Breast Cancer under Different Rates of Chemoradiotherapy.Mkango
+  SB1, Shaban N1, Mureithi E1, Ngoma T2.Author information1 Department of Mathematics,
+  University of Dar es Salaam, P.O. It can be used to explore tumor-related dynamics
+  and compare treatment-response behavior across conditions.
 standard: other
 tags:
 - biomodels_ebi
@@ -50,36 +53,25 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations. No scientifically safe external input was exposed by the cleanup.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations. Exposed inputs are traceable to bundled SBML parameters or initial conditions.
 io:
-  inputs: []
-  outputs:
-  - name: model_state_1
+  inputs:
+  - name: initial_breast_tumor_cells
     maps_to: T
-    label: T
-    description: T observable. Maps to SBML symbol `T`.
-  - name: model_state_2
-    maps_to: TR
-    label: TR
-    description: TR observable. Maps to SBML symbol `TR`.
-  - name: model_state_3
-    maps_to: N
-    label: N
-    description: N observable. Maps to SBML symbol `N`.
-  - name: model_state_4
-    maps_to: I
-    label: I
-    description: I observable. Maps to SBML symbol `I`.
-  - name: model_state_5
-    maps_to: M
-    label: M
-    description: M observable. Maps to SBML symbol `M`.
-  - name: model_state_6
-    maps_to: R
-    label: R
-    description: R observable. Maps to SBML symbol `R`.
+    label: Breast Tumor Cells
+    default: 3500000.0
+    units: native SBML value
+    description: Initial Breast Tumor Cells. Sets the initial value of bundled SBML
+      symbol `T`.
+  outputs:
+  - name: breast_tumor_cells
+    maps_to: T
+    label: Breast Tumor Cells
+    description: Breast Tumor Cells observable. Maps to SBML symbol `T`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

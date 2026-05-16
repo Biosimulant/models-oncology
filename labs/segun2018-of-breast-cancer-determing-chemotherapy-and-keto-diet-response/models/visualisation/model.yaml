@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Segun2018 - model of breast cancer determing Chemotherapy and Keto diet response Visualisation
-description: Oncology visualisation for Segun2018 - model of breast cancer determing Chemotherapy and Keto diet response.
+title: Segun2018 - model of breast cancer determing Chemotherapy and Keto diet response
+  Visualisation
+description: Oncology visualisation for Segun2018 - model of breast cancer determing
+  Chemotherapy and Keto diet response.
 standard: other
 tags:
 - biomodels_ebi
@@ -18,17 +20,23 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Segun2018 - model of breast cancer determing Chemotherapy and Keto diet response
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    lab_title: Segun2018 - model of breast cancer determing Chemotherapy and Keto
+      diet response
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_segun2018_model_of_breast_cancer_determing_chemo_model2003050001_model
-      title: Segun2018 - model of breast cancer determing Chemotherapy and Keto diet response
+      title: Segun2018 - model of breast cancer determing Chemotherapy and Keto diet
+        response
       state_observables:
       - N
       - T
@@ -36,19 +44,17 @@ biosim:
       - E
       observables:
       - id: N
-        port: model_state_1
-        label: N
+        port: normal_cells
+        label: Normal Cells
         group: drug_response
       - id: T
-        port: model_state_2
-        label: T
+        port: breast_tumor_cells
+        label: Breast Tumor Cells
         group: drug_response
       - id: M
-        port: model_state_3
         label: M
         group: drug_response
       - id: E
-        port: model_state_4
         label: E
         group: drug_response
 runtime:

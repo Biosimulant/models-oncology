@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Lombardo2018 - Expression of PDL1 in Neuroblastoma Cancer Cell
-description: 'The model reproduces the time profiles of PDL1 in a Neuroblastoma Cancer Cell, considering the activating mutation of ALK: ALKF1174L. We simulate the impact of two different therapy: Crizotinib and Ge.'
+description: 'The model reproduces the time profiles of PDL1 in a Neuroblastoma Cancer
+  Cell, considering the activating mutation of ALK: ALKF1174L. We simulate the impact
+  of two different therapy: Crizotinib and Ge.'
 standard: other
 tags:
 - biomodels_ebi
@@ -26,7 +28,8 @@ upstream:
   source_id: MODEL1812070002
   standard: sbml
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1812070002
-  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1812070002?filename=Lombardo2018 - PDL1 Signaling Pathway in Neuroblastoma Cancer.xml
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1812070002?filename=Lombardo2018
+    - PDL1 Signaling Pathway in Neuroblastoma Cancer.xml
   license: CC0
 biosim:
   entrypoint: src.lombardo2018_expression_of_pdl1_in_neuroblastoma_model1812070002_model:Lombardo2018ExpressionOfPdl1InNeuroblastomaModel1812070002Model
@@ -49,16 +52,17 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
-  - name: kmegf_level
+  - name: km_egf_source_parameter
     maps_to: KmEGF
     label: KmEGF source parameter
     default: 6086070.0
     units: native SBML value
     description: KmEGF source parameter. Maps to bundled SBML parameter `KmEGF`.
-  - name: kcategf_level
+  - name: kcat_egf_source_parameter
     maps_to: KcatEGF
     label: KcatEGF source parameter
     default: 694.731
@@ -81,13 +85,15 @@ io:
     label: EGFR free
     default: 618.0
     units: native SBML value
-    description: Initial EGFR free. Sets the initial value of bundled SBML symbol `EGFR_f`.
+    description: Initial EGFR free. Sets the initial value of bundled SBML symbol
+      `EGFR_f`.
   - name: initial_sos_inactive
     maps_to: SOS_inactive
     label: SOS inactive
     default: 9456.0
     units: native SBML value
-    description: Initial SOS inactive. Sets the initial value of bundled SBML symbol `SOS_inactive`.
+    description: Initial SOS inactive. Sets the initial value of bundled SBML symbol
+      `SOS_inactive`.
   outputs:
   - name: ngfr
     maps_to: NGFR
@@ -105,7 +111,7 @@ io:
     maps_to: SOS_inactive
     label: SOS inactive
     description: SOS inactive observable. Maps to SBML symbol `SOS_inactive`.
-  - name: p90rsk_inactive
+  - name: p90_rsk_inactive
     maps_to: P90Rsk_inactive
     label: P90Rsk inactive
     description: P90Rsk inactive observable. Maps to SBML symbol `P90Rsk_inactive`.
@@ -114,7 +120,8 @@ io:
     label: RAS inactive
     description: RAS inactive observable. Maps to SBML symbol `RAS_inactive`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

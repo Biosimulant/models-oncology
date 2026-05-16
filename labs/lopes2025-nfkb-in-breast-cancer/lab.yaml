@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Lopes2025 - NFkB model in Breast Cancer Lab
-description: "Model for the activation of SLUG, SIP1, TWIST1, and NF-\u03BAB (subunits p50 and p65). The model exhibits two stationary states (bistability), each corresponding to the gene expression profiles we determin."
+description: "Model for the activation of SLUG, SIP1, TWIST1, and NF-\u03BAB (subunits\
+  \ p50 and p65). The model exhibits two stationary states (bistability), each corresponding\
+  \ to the gene expression profiles we determin."
 tags:
 - biomodels_ebi
 - curated
@@ -14,8 +16,8 @@ tags:
 - tumor-growth
 io:
   inputs:
-  - name: initial_nf_kb
-    maps_to: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.initial_nf_kb
+  - name: initial_nf_k_b
+    maps_to: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.initial_nf_k_b
     label: NF-kB
     default: 5893.41991828698
     units: native SBML value
@@ -39,8 +41,8 @@ io:
     units: native SBML value
     description: Initial TWIST1. Sets the initial value of bundled SBML symbol `TWIST1`.
   outputs:
-  - name: nf_kb
-    maps_to: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.nf_kb
+  - name: nf_k_b
+    maps_to: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.nf_k_b
     description: NF-kB observable. Maps to SBML symbol `NFkB`.
   - name: slug
     maps_to: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.slug
@@ -59,7 +61,8 @@ io:
     description: TWIST1 observable. Maps to SBML symbol `TWIST1`.
   - name: state
     maps_to: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model.summary
     description: Change and peak summary across the simulated SBML observables.

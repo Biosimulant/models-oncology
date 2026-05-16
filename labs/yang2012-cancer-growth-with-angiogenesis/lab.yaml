@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Yang2012 - cancer growth with angiogenesis Lab
-description: 'The paper describes a model of tumor growth with angiogenesis. Created by COPASI 4.26 (Build 213) This model is described in the article: Mathematical modeling of solid cancer growth with angiogenesis.'
+description: 'The paper describes a model of tumor growth with angiogenesis. Created
+  by COPASI 4.26 (Build 213) This model is described in the article: Mathematical
+  modeling of solid cancer growth with angiogenesis.'
 tags:
 - angiogenesis
 - biomodels_ebi
@@ -13,26 +15,32 @@ tags:
 - systemsbiology
 - tumor-growth
 io:
-  inputs: []
+  inputs:
+  - name: initial_cancer_cells
+    maps_to: oncology_sbml_yang2012_cancer_growth_with_angiogenesis_biomd0000000796_model.initial_cancer_cells
+    label: Cancer Cells
+    default: 9.0
+    units: native SBML value
+    description: Initial Cancer Cells. Sets the initial value of bundled SBML symbol
+      `C`.
+  - name: initial_endothelial_cells
+    maps_to: oncology_sbml_yang2012_cancer_growth_with_angiogenesis_biomd0000000796_model.initial_endothelial_cells
+    label: Endothelial Cells
+    default: 10.0
+    units: native SBML value
+    description: Initial Endothelial Cells. Sets the initial value of bundled SBML
+      symbol `E`.
   outputs:
-  - name: model_state_1
-    maps_to: oncology_sbml_yang2012_cancer_growth_with_angiogenesis_biomd0000000796_model.model_state_1
-    description: C observable. Maps to SBML symbol `C`.
-  - name: model_state_2
-    maps_to: oncology_sbml_yang2012_cancer_growth_with_angiogenesis_biomd0000000796_model.model_state_2
-    description: E observable. Maps to SBML symbol `E`.
-  - name: model_state_3
-    maps_to: oncology_sbml_yang2012_cancer_growth_with_angiogenesis_biomd0000000796_model.model_state_3
-    description: T observable. Maps to SBML symbol `T`.
-  - name: model_state_4
-    maps_to: oncology_sbml_yang2012_cancer_growth_with_angiogenesis_biomd0000000796_model.model_state_4
-    description: P observable. Maps to SBML symbol `P`.
-  - name: model_state_5
-    maps_to: oncology_sbml_yang2012_cancer_growth_with_angiogenesis_biomd0000000796_model.model_state_5
-    description: A observable. Maps to SBML symbol `A`.
+  - name: cancer_cells
+    maps_to: oncology_sbml_yang2012_cancer_growth_with_angiogenesis_biomd0000000796_model.cancer_cells
+    description: Cancer Cells observable. Maps to SBML symbol `C`.
+  - name: endothelial_cells
+    maps_to: oncology_sbml_yang2012_cancer_growth_with_angiogenesis_biomd0000000796_model.endothelial_cells
+    description: Endothelial Cells observable. Maps to SBML symbol `E`.
   - name: state
     maps_to: oncology_sbml_yang2012_cancer_growth_with_angiogenesis_biomd0000000796_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_yang2012_cancer_growth_with_angiogenesis_biomd0000000796_model.summary
     description: Change and peak summary across the simulated SBML observables.

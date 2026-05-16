@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Gevertz2018 - Cancer Treatment with Oncolytic Viruses and Dendritic Cell injections original model Visualisation
-description: Oncology visualisation for Gevertz2018 - Cancer Treatment with Oncolytic Viruses and Dendritic Cell injections original model.
+title: Gevertz2018 - Cancer Treatment with Oncolytic Viruses and Dendritic Cell injections
+  original model Visualisation
+description: Oncology visualisation for Gevertz2018 - Cancer Treatment with Oncolytic
+  Viruses and Dendritic Cell injections original model.
 standard: other
 tags:
 - biomodels_ebi
@@ -19,17 +21,23 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Gevertz2018 - Cancer Treatment with Oncolytic Viruses and Dendritic Cell injections original model
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    lab_title: Gevertz2018 - Cancer Treatment with Oncolytic Viruses and Dendritic
+      Cell injections original model
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_gevertz2018_cancer_treatment_with_oncolytic_viru_biomd0000000816_model
-      title: Gevertz2018 - Cancer Treatment with Oncolytic Viruses and Dendritic Cell injections original model
+      title: Gevertz2018 - Cancer Treatment with Oncolytic Viruses and Dendritic Cell
+        injections original model
       state_observables:
       - Uninfected_Tumor_Cell_U
       - Infected_Cancer_Cell_I

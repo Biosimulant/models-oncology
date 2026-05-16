@@ -1,6 +1,9 @@
 schema_version: '2.0'
 title: Pappalardo2016 - PI3K/AKT and MAPK Signaling Pathways in Melanoma Cancer
-description: 'Pappalardo2016 - PI3K/AKT and MAPK SignalingPathways in Melanoma Cancer This model is described in the article: Computational Modeling of PI3K/AKT and MAPK Signaling Pathways in Melanoma Cancer. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+description: 'Pappalardo2016 - PI3K/AKT and MAPK SignalingPathways in Melanoma Cancer
+  This model is described in the article: Computational Modeling of PI3K/AKT and MAPK
+  Signaling Pathways in Melanoma Cancer. It can be used to explore tumor-related dynamics
+  and compare treatment-response behavior across conditions.'
 standard: other
 tags:
 - biomodels_ebi
@@ -51,72 +54,80 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
-  - name: initial_rasinactive
+  - name: initial_ras_inactive
     maps_to: species_5
     label: RasInactive
     default: 120000.0
     units: native SBML value
-    description: Initial RasInactive. Sets the initial value of bundled SBML symbol `species_5`.
-  - name: initial_raf1inactive
+    description: Initial RasInactive. Sets the initial value of bundled SBML symbol
+      `species_5`.
+  - name: initial_raf1_inactive
     maps_to: species_7
     label: Raf1Inactive
     default: 120000.0
     units: native SBML value
-    description: Initial Raf1Inactive. Sets the initial value of bundled SBML symbol `species_7`.
-  - name: initial_erkinactive
+    description: Initial Raf1Inactive. Sets the initial value of bundled SBML symbol
+      `species_7`.
+  - name: initial_erk_inactive
     maps_to: species_11
     label: ErkInactive
     default: 600000.0
     units: native SBML value
-    description: Initial ErkInactive. Sets the initial value of bundled SBML symbol `species_11`.
-  - name: initial_pi3kinactive
+    description: Initial ErkInactive. Sets the initial value of bundled SBML symbol
+      `species_11`.
+  - name: initial_pi3_kinactive
     maps_to: species_15
     label: PI3KInactive
     default: 120000.0
     units: native SBML value
-    description: Initial PI3KInactive. Sets the initial value of bundled SBML symbol `species_15`.
-  - name: initial_aktinactive
+    description: Initial PI3KInactive. Sets the initial value of bundled SBML symbol
+      `species_15`.
+  - name: initial_akt_inactive
     maps_to: species_17
     label: AktInactive
     default: 120000.0
     units: native SBML value
-    description: Initial AktInactive. Sets the initial value of bundled SBML symbol `species_17`.
-  - name: initial_brafmutated
+    description: Initial AktInactive. Sets the initial value of bundled SBML symbol
+      `species_17`.
+  - name: initial_braf_mutated
     maps_to: bRafMutated
     label: BRafMutated
     default: 120000.0
     units: native SBML value
-    description: Initial BRafMutated. Sets the initial value of bundled SBML symbol `bRafMutated`.
+    description: Initial BRafMutated. Sets the initial value of bundled SBML symbol
+      `bRafMutated`.
   outputs:
-  - name: rasinactive
+  - name: ras_inactive
     maps_to: species_5
     label: RasInactive
     description: RasInactive observable. Maps to SBML symbol `species_5`.
-  - name: raf1inactive
+  - name: raf1_inactive
     maps_to: species_7
     label: Raf1Inactive
     description: Raf1Inactive observable. Maps to SBML symbol `species_7`.
-  - name: erkinactive
+  - name: erk_inactive
     maps_to: species_11
     label: ErkInactive
     description: ErkInactive observable. Maps to SBML symbol `species_11`.
-  - name: pi3kinactive
+  - name: pi3_kinactive
     maps_to: species_15
     label: PI3KInactive
     description: PI3KInactive observable. Maps to SBML symbol `species_15`.
-  - name: aktinactive
+  - name: akt_inactive
     maps_to: species_17
     label: AktInactive
     description: AktInactive observable. Maps to SBML symbol `species_17`.
-  - name: brafmutated
+  - name: braf_mutated
     maps_to: bRafMutated
     label: BRafMutated
     description: BRafMutated observable. Maps to SBML symbol `bRafMutated`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

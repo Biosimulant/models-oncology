@@ -1,6 +1,9 @@
 schema_version: '2.0'
 title: Tham2008 - PDmodel, Tumour shrinkage by gemcitabine and carboplatin Lab
-description: 'PURPOSE: This tumor response pharmacodynamic model aims to describe primary lesion shrinkage in non-small cell lung cancer over time and determine if concentration-based exposure metrics for gemcitabi. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+description: 'PURPOSE: This tumor response pharmacodynamic model aims to describe
+  primary lesion shrinkage in non-small cell lung cancer over time and determine if
+  concentration-based exposure metrics for gemcitabi. It can be used to explore tumor-related
+  dynamics and compare treatment-response behavior across conditions.'
 tags:
 - biomodels_ebi
 - chemotherapy
@@ -15,40 +18,42 @@ tags:
 - tumor-growth
 io:
   inputs:
-  - name: dose_int2
-    maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.dose_int2
+  - name: dose_int2_source_parameter
+    maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.dose_int2_source_parameter
     label: Dose Int2 source parameter
     default: -2.0
     units: native SBML value
     description: Dose Int2 source parameter. Maps to bundled SBML parameter `Dose_Int2`.
-  - name: dose_int1
-    maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.dose_int1
+  - name: dose_int1_source_parameter
+    maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.dose_int1_source_parameter
     label: Dose Int1 source parameter
     default: 0.0
     units: native SBML value
     description: Dose Int1 source parameter. Maps to bundled SBML parameter `Dose_Int1`.
-  - name: dose
-    maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.dose
+  - name: dose_source_parameter
+    maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.dose_source_parameter
     label: Dose source parameter
     default: 5203.84
     units: native SBML value
     description: Dose source parameter. Maps to bundled SBML parameter `Dose`.
-  - name: initial_tumorsize
-    maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.initial_tumorsize
+  - name: initial_tumor_size
+    maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.initial_tumor_size
     label: TumorSize
     default: 6.66
     units: native SBML value
-    description: Initial TumorSize. Sets the initial value of bundled SBML symbol `TumorSize`.
+    description: Initial TumorSize. Sets the initial value of bundled SBML symbol
+      `TumorSize`.
   outputs:
-  - name: tumorsize
-    maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.tumorsize
+  - name: tumor_size
+    maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.tumor_size
     description: TumorSize observable. Maps to SBML symbol `TumorSize`.
-  - name: model_state_2
-    maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.model_state_2
+  - name: ce
+    maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.ce
     description: Ce observable. Maps to SBML symbol `Ce`.
   - name: state
     maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model.summary
     description: Change and peak summary across the simulated SBML observables.

@@ -16,10 +16,10 @@ class Zhu2015CombinedGemcitabineAndBirinapantInPBiomd0000000669Model(TelluriumSB
     _TIME_UNIT = "model_time"
     _OBSERVABLE_STRATEGY = 'rateRule'
     _OBSERVABLES = ['G1', 'S', 'G2', 'R_apo', 'R_other']
-    _SPECIES_LABELS = {'G1': 'G1', 'S': 'S', 'G2': 'G2', 'R_apo': 'R apo', 'R_other': 'R other'}
-    _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {}
-    _HEADLINE_OUTPUTS = {'g1': ('G1', 'native SBML value', 'G1 observable. Maps to SBML symbol `G1`.'), 'model_state_2': ('S', 'native SBML value', 'S observable. Maps to SBML symbol `S`.'), 'g2': ('G2', 'native SBML value', 'G2 observable. Maps to SBML symbol `G2`.'), 'r_apo': ('R_apo', 'native SBML value', 'R apo observable. Maps to SBML symbol `R_apo`.'), 'r_other': ('R_other', 'native SBML value', 'R other observable. Maps to SBML symbol `R_other`.')}
+    _SPECIES_LABELS = {'G1': 'G1 Cells', 'S': 'S-Phase Cells', 'G2': 'G2 Cells', 'R_apo': 'Apoptotic Response', 'R_other': 'Other Response'}
+    _PARAMETER_INPUTS = {'gemcitabine_concentration': ('C_g', 20.0, 'native SBML value', 'Gemcitabine Concentration. Overrides bundled SBML parameter `C_g`.'), 'birinapant_concentration': ('C_b', 500.0, 'native SBML value', 'Birinapant Concentration. Overrides bundled SBML parameter `C_b`.')}
+    _INITIAL_CONDITION_INPUTS = {'initial_g1_cells': ('G1', 113516.0, 'native SBML value', 'Initial G1 Cells. Sets the initial value of bundled SBML symbol `G1`.'), 'initial_g2_cells': ('G2', 81656.0, 'native SBML value', 'Initial G2 Cells. Sets the initial value of bundled SBML symbol `G2`.')}
+    _HEADLINE_OUTPUTS = {'g1_cells': ('G1', 'native SBML value', 'G1 Cells observable. Maps to SBML symbol `G1`.'), 's_phase_cells': ('S', 'native SBML value', 'S-Phase Cells observable. Maps to SBML symbol `S`.'), 'g2_cells': ('G2', 'native SBML value', 'G2 Cells observable. Maps to SBML symbol `G2`.'), 'apoptotic_response': ('R_apo', 'native SBML value', 'Apoptotic Response observable. Maps to SBML symbol `R_apo`.'), 'other_response': ('R_other', 'native SBML value', 'Other Response observable. Maps to SBML symbol `R_other`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/BIOMD0000000669.xml', integration_step: float = 0.1) -> None:

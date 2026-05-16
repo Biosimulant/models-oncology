@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Iwamoto2010 - Cell cycle reponse to DNA damage
-description: After DNA damage, cells activate p53, a tumor suppressor gene, and select a cell fate (e.g., DNA repair, cell cycle arrest, or apoptosis). Recently, a p53 oscillatory behavior was observed following D.
+description: After DNA damage, cells activate p53, a tumor suppressor gene, and select
+  a cell fate (e.g., DNA repair, cell cycle arrest, or apoptosis). Recently, a p53
+  oscillatory behavior was observed following D.
 standard: other
 tags:
 - biomodels_ebi
@@ -48,72 +50,80 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
-  - name: dna_damage_signal
+  - name: dna_damage_signal_source_parameter
     maps_to: DNA_damage_signal
     label: DNA damage signal source parameter
     default: 0.0
     units: native SBML value
-    description: DNA damage signal source parameter. Maps to bundled SBML parameter `DNA_damage_signal`.
-  - name: initial_p27_cyclind_cdk4
+    description: DNA damage signal source parameter. Maps to bundled SBML parameter
+      `DNA_damage_signal`.
+  - name: initial_p27_cyclin_d_cdk4
     maps_to: p27_CyclinD_Cdk4
     label: P27/CyclinD/Cdk4
     default: 0.001
     units: native SBML value
-    description: Initial P27/CyclinD/Cdk4. Sets the initial value of bundled SBML symbol `p27_CyclinD_Cdk4`.
-  - name: initial_p27_cycline_cdk2
+    description: Initial P27/CyclinD/Cdk4. Sets the initial value of bundled SBML
+      symbol `p27_CyclinD_Cdk4`.
+  - name: initial_p27_cyclin_e_cdk2
     maps_to: p27_CyclinE_Cdk2
     label: P27/CyclinE/Cdk2
     default: 1.0
     units: native SBML value
-    description: Initial P27/CyclinE/Cdk2. Sets the initial value of bundled SBML symbol `p27_CyclinE_Cdk2`.
-  - name: initial_p27_cyclina_cdk2
+    description: Initial P27/CyclinE/Cdk2. Sets the initial value of bundled SBML
+      symbol `p27_CyclinE_Cdk2`.
+  - name: initial_p27_cyclin_a_cdk2
     maps_to: p27_CyclinA_Cdk2
     label: P27/CyclinA/Cdk2
     default: 0.0001
     units: native SBML value
-    description: Initial P27/CyclinA/Cdk2. Sets the initial value of bundled SBML symbol `p27_CyclinA_Cdk2`.
-  - name: initial_p21_cyclind_cdk4
+    description: Initial P27/CyclinA/Cdk2. Sets the initial value of bundled SBML
+      symbol `p27_CyclinA_Cdk2`.
+  - name: initial_p21_cyclin_d_cdk4
     maps_to: p21_CyclinD_Cdk4
     label: P21/CyclinD/Cdk4
     default: 0.0
     units: native SBML value
-    description: Initial P21/CyclinD/Cdk4. Sets the initial value of bundled SBML symbol `p21_CyclinD_Cdk4`.
-  - name: initial_p21_cycline_cdk2
+    description: Initial P21/CyclinD/Cdk4. Sets the initial value of bundled SBML
+      symbol `p21_CyclinD_Cdk4`.
+  - name: initial_p21_cyclin_e_cdk2
     maps_to: p21_CyclinE_Cdk2
     label: P21/CyclinE/Cdk2
     default: 0.0
     units: native SBML value
-    description: Initial P21/CyclinE/Cdk2. Sets the initial value of bundled SBML symbol `p21_CyclinE_Cdk2`.
+    description: Initial P21/CyclinE/Cdk2. Sets the initial value of bundled SBML
+      symbol `p21_CyclinE_Cdk2`.
   outputs:
-  - name: p27_cyclind_cdk4
+  - name: p27_cyclin_d_cdk4
     maps_to: p27_CyclinD_Cdk4
     label: P27/CyclinD/Cdk4
     description: P27/CyclinD/Cdk4 observable. Maps to SBML symbol `p27_CyclinD_Cdk4`.
-  - name: p27_cycline_cdk2
+  - name: p27_cyclin_e_cdk2
     maps_to: p27_CyclinE_Cdk2
     label: P27/CyclinE/Cdk2
     description: P27/CyclinE/Cdk2 observable. Maps to SBML symbol `p27_CyclinE_Cdk2`.
-  - name: p27_cyclina_cdk2
+  - name: p27_cyclin_a_cdk2
     maps_to: p27_CyclinA_Cdk2
     label: P27/CyclinA/Cdk2
     description: P27/CyclinA/Cdk2 observable. Maps to SBML symbol `p27_CyclinA_Cdk2`.
-  - name: p21_cyclind_cdk4
+  - name: p21_cyclin_d_cdk4
     maps_to: p21_CyclinD_Cdk4
     label: P21/CyclinD/Cdk4
     description: P21/CyclinD/Cdk4 observable. Maps to SBML symbol `p21_CyclinD_Cdk4`.
-  - name: p21_cycline_cdk2
+  - name: p21_cyclin_e_cdk2
     maps_to: p21_CyclinE_Cdk2
     label: P21/CyclinE/Cdk2
     description: P21/CyclinE/Cdk2 observable. Maps to SBML symbol `p21_CyclinE_Cdk2`.
-  - name: p21_cyclina_cdk2
+  - name: p21_cyclin_a_cdk2
     maps_to: p21_CyclinA_Cdk2
     label: P21/CyclinA/Cdk2
     description: P21/CyclinA/Cdk2 observable. Maps to SBML symbol `p21_CyclinA_Cdk2`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

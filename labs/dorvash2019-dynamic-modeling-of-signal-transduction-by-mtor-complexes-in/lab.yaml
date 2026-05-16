@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: Dorvash2019 - Dynamic modeling of signal transduction by mTOR complexes in cancer Lab
-description: This model is based on:Dynamic modeling of signal transduction by mTOR complexes in cancerAuthor:Mohammadreza Dorvash, Mohammad Farahmandnia, Pouria Mosaddeghi, Mitra Farahmandnejad, Hosein Saber, Moh. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+title: Dorvash2019 - Dynamic modeling of signal transduction by mTOR complexes in
+  cancer Lab
+description: This model is based on:Dynamic modeling of signal transduction by mTOR
+  complexes in cancerAuthor:Mohammadreza Dorvash, Mohammad Farahmandnia, Pouria Mosaddeghi,
+  Mitra Farahmandnejad, Hosein Saber, Moh. It can be used to explore tumor-related
+  dynamics and compare treatment-response behavior across conditions.
 tags:
 - biomodels_ebi
 - curated
@@ -16,8 +20,8 @@ tags:
 - tumor-growth
 io:
   inputs:
-  - name: rapamycin_dose
-    maps_to: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.rapamycin_dose
+  - name: rapamycin_dose_source_parameter
+    maps_to: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.rapamycin_dose_source_parameter
     label: Rapamycin Dose source parameter
     default: 0.0
     units: native SBML value
@@ -45,7 +49,8 @@ io:
     label: Cytosolic Rapamycin
     default: 0.0
     units: native SBML value
-    description: Initial Cytosolic Rapamycin. Sets the initial value of bundled SBML symbol `Cytosolic_Rapamycin`.
+    description: Initial Cytosolic Rapamycin. Sets the initial value of bundled SBML
+      symbol `Cytosolic_Rapamycin`.
   - name: initial_mtorc1
     maps_to: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.initial_mtorc1
     label: MTORC1
@@ -73,7 +78,8 @@ io:
     description: MTORC2 observable. Maps to SBML symbol `mTORC2`.
   - name: state
     maps_to: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_dorvash2019_dynamic_modeling_of_signal_transduct_biomd0000000822_model.summary
     description: Change and peak summary across the simulated SBML observables.

@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: Zhu2015 - Combined gemcitabine and birinapant in pancreatic cancer cells - mechanistic PD model Lab
-description: Zhu2015 - combined gemcitabine and birinapantin pancreatic cancer cells - mechanistic PD model Mechanistic mathematical model toillustrate the effectiveness of combination chemotherapy involvinggemcit. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+title: Zhu2015 - Combined gemcitabine and birinapant in pancreatic cancer cells -
+  mechanistic PD model Lab
+description: Zhu2015 - combined gemcitabine and birinapantin pancreatic cancer cells
+  - mechanistic PD model Mechanistic mathematical model toillustrate the effectiveness
+  of combination chemotherapy involvinggemcit. It can be used to explore tumor-related
+  dynamics and compare treatment-response behavior across conditions.
 tags:
 - biomodels_ebi
 - chemotherapy
@@ -14,26 +18,51 @@ tags:
 - systemsbiology
 - tumor-growth
 io:
-  inputs: []
+  inputs:
+  - name: gemcitabine_concentration
+    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.gemcitabine_concentration
+    label: Gemcitabine Concentration
+    default: 20.0
+    units: native SBML value
+    description: Gemcitabine Concentration. Overrides bundled SBML parameter `C_g`.
+  - name: birinapant_concentration
+    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.birinapant_concentration
+    label: Birinapant Concentration
+    default: 500.0
+    units: native SBML value
+    description: Birinapant Concentration. Overrides bundled SBML parameter `C_b`.
+  - name: initial_g1_cells
+    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.initial_g1_cells
+    label: G1 Cells
+    default: 113516.0
+    units: native SBML value
+    description: Initial G1 Cells. Sets the initial value of bundled SBML symbol `G1`.
+  - name: initial_g2_cells
+    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.initial_g2_cells
+    label: G2 Cells
+    default: 81656.0
+    units: native SBML value
+    description: Initial G2 Cells. Sets the initial value of bundled SBML symbol `G2`.
   outputs:
-  - name: g1
-    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.g1
-    description: G1 observable. Maps to SBML symbol `G1`.
-  - name: model_state_2
-    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.model_state_2
-    description: S observable. Maps to SBML symbol `S`.
-  - name: g2
-    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.g2
-    description: G2 observable. Maps to SBML symbol `G2`.
-  - name: r_apo
-    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.r_apo
-    description: R apo observable. Maps to SBML symbol `R_apo`.
-  - name: r_other
-    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.r_other
-    description: R other observable. Maps to SBML symbol `R_other`.
+  - name: g1_cells
+    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.g1_cells
+    description: G1 Cells observable. Maps to SBML symbol `G1`.
+  - name: s_phase_cells
+    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.s_phase_cells
+    description: S-Phase Cells observable. Maps to SBML symbol `S`.
+  - name: g2_cells
+    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.g2_cells
+    description: G2 Cells observable. Maps to SBML symbol `G2`.
+  - name: apoptotic_response
+    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.apoptotic_response
+    description: Apoptotic Response observable. Maps to SBML symbol `R_apo`.
+  - name: other_response
+    maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.other_response
+    description: Other Response observable. Maps to SBML symbol `R_other`.
   - name: state
     maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_zhu2015_combined_gemcitabine_and_birinapant_in_p_biomd0000000669_model.summary
     description: Change and peak summary across the simulated SBML observables.

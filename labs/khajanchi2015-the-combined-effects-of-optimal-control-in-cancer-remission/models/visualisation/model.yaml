@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Khajanchi2015 - The combined effects of optimal control in cancer remission Visualisation
-description: Oncology visualisation for Khajanchi2015 - The combined effects of optimal control in cancer remission.
+title: Khajanchi2015 - The combined effects of optimal control in cancer remission
+  Visualisation
+description: Oncology visualisation for Khajanchi2015 - The combined effects of optimal
+  control in cancer remission.
 standard: other
 tags:
 - biomodels_ebi
@@ -20,14 +22,18 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Khajanchi2015 - The combined effects of optimal control in cancer remission
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_khajanchi2015_the_combined_effects_of_optimal_co_biomd0000000897_model
       title: Khajanchi2015 - The combined effects of optimal control in cancer remission
@@ -36,12 +42,12 @@ biosim:
       - T
       observables:
       - id: E
-        port: model_state_1
-        label: E
+        port: effector_cells
+        label: Effector Cells
         group: drug_response
       - id: T
-        port: model_state_2
-        label: T
+        port: tumor_cells
+        label: Tumor Cells
         group: drug_response
 runtime:
   python_version: '3.12'

@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: Greene2019 - Differentiate Spontaneous and Induced Evolution to Drug Resistance During Cancer Treatment Lab
-description: This model is built by COPASI 4.24(Build 197), based on paper:Mathematical Approach to Differentiate Spontaneous and Induced Evolution to Drug Resistance During Cancer Treatment.Author:James M. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+title: Greene2019 - Differentiate Spontaneous and Induced Evolution to Drug Resistance
+  During Cancer Treatment Lab
+description: This model is built by COPASI 4.24(Build 197), based on paper:Mathematical
+  Approach to Differentiate Spontaneous and Induced Evolution to Drug Resistance During
+  Cancer Treatment.Author:James M. It can be used to explore tumor-related dynamics
+  and compare treatment-response behavior across conditions.
 tags:
 - biomodels_ebi
 - curated
@@ -14,8 +18,8 @@ tags:
 - tumor-growth
 io:
   inputs:
-  - name: epsilon_level
-    maps_to: oncology_sbml_greene2019_differentiate_spontaneous_and_induced_biomd0000000825_model.epsilon_level
+  - name: epsilon_source_parameter
+    maps_to: oncology_sbml_greene2019_differentiate_spontaneous_and_induced_biomd0000000825_model.epsilon_source_parameter
     label: Epsilon source parameter
     default: 1.0e-06
     units: native SBML value
@@ -25,13 +29,15 @@ io:
     label: Sensitive tumor S
     default: 0.01
     units: native SBML value
-    description: Initial Sensitive tumor S. Sets the initial value of bundled SBML symbol `Sensitive_tumor_S`.
+    description: Initial Sensitive tumor S. Sets the initial value of bundled SBML
+      symbol `Sensitive_tumor_S`.
   - name: initial_resistant_tumor_r
     maps_to: oncology_sbml_greene2019_differentiate_spontaneous_and_induced_biomd0000000825_model.initial_resistant_tumor_r
     label: Resistant tumor R
     default: 0.0
     units: native SBML value
-    description: Initial Resistant tumor R. Sets the initial value of bundled SBML symbol `Resistant_tumor_R`.
+    description: Initial Resistant tumor R. Sets the initial value of bundled SBML
+      symbol `Resistant_tumor_R`.
   outputs:
   - name: sensitive_tumor_s
     maps_to: oncology_sbml_greene2019_differentiate_spontaneous_and_induced_biomd0000000825_model.sensitive_tumor_s
@@ -41,7 +47,8 @@ io:
     description: Resistant tumor R observable. Maps to SBML symbol `Resistant_tumor_R`.
   - name: state
     maps_to: oncology_sbml_greene2019_differentiate_spontaneous_and_induced_biomd0000000825_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_greene2019_differentiate_spontaneous_and_induced_biomd0000000825_model.summary
     description: Change and peak summary across the simulated SBML observables.

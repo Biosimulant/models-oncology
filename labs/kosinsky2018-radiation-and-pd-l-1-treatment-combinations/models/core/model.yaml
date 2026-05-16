@@ -1,6 +1,9 @@
 schema_version: '2.0'
 title: Kosinsky2018 - Radiation and PD-(L)1 treatment combinations
-description: This is a quantitative systems pharmacology (QSP) model that describes key elements of the cancer immunity cycle and the tumor microenvironment, tumor growth, as well as dose-exposure-target modulatio. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+description: This is a quantitative systems pharmacology (QSP) model that describes
+  key elements of the cancer immunity cycle and the tumor microenvironment, tumor
+  growth, as well as dose-exposure-target modulatio. It can be used to explore tumor-related
+  dynamics and compare treatment-response behavior across conditions.
 standard: other
 tags:
 - biomodels_ebi
@@ -50,10 +53,11 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
-  - name: radiation_dose
+  - name: radiation_dose_source_parameter
     maps_to: radiation_Dose
     label: Radiation Dose source parameter
     default: 0.0
@@ -65,7 +69,7 @@ io:
     default: 0.0
     units: native SBML value
     description: Initial DSB. Sets the initial value of bundled SBML symbol `U`.
-  - name: initial_pdl1
+  - name: initial_pd_l1
     maps_to: PDL1
     label: PDL1
     default: 0.0
@@ -90,7 +94,7 @@ io:
     units: native SBML value
     description: Initial TC D. Sets the initial value of bundled SBML symbol `dTeff`.
   outputs:
-  - name: model_state_1
+  - name: tv
     maps_to: TV
     label: TV
     description: TV observable. Maps to SBML symbol `TV`.
@@ -98,7 +102,7 @@ io:
     maps_to: U
     label: DSB
     description: DSB observable. Maps to SBML symbol `U`.
-  - name: pdl1
+  - name: pd_l1
     maps_to: PDL1
     label: PDL1
     description: PDL1 observable. Maps to SBML symbol `PDL1`.
@@ -115,7 +119,8 @@ io:
     label: TC D
     description: TC D observable. Maps to SBML symbol `dTeff`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Jenner2018 - treatment of oncolytic virus
-description: 'The paper describes a model of oncolytic virotherapy. Created by COPASI 4.26 (Build 213) This model is described in the article: Mathematical Modelling of the Interaction Between Cancer Cells and an O.'
+description: 'The paper describes a model of oncolytic virotherapy. Created by COPASI
+  4.26 (Build 213) This model is described in the article: Mathematical Modelling
+  of the Interaction Between Cancer Cells and an O.'
 standard: other
 tags:
 - biomodels_ebi
@@ -50,24 +52,47 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations. No scientifically safe external input was exposed by the cleanup.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations. Exposed inputs are traceable to bundled SBML parameters or initial conditions.
 io:
-  inputs: []
-  outputs:
-  - name: model_state_1
-    maps_to: S
-    label: S
-    description: S observable. Maps to SBML symbol `S`.
-  - name: model_state_2
+  inputs:
+  - name: initial_virus_load
     maps_to: V
-    label: V
-    description: V observable. Maps to SBML symbol `V`.
-  - name: model_state_3
+    label: Virus Load
+    default: 0.0
+    units: native SBML value
+    description: Initial Virus Load. Sets the initial value of bundled SBML symbol
+      `V`.
+  - name: initial_susceptible_tumor_cells
+    maps_to: S
+    label: Susceptible Tumor Cells
+    default: 251000000.0
+    units: native SBML value
+    description: Initial Susceptible Tumor Cells. Sets the initial value of bundled
+      SBML symbol `S`.
+  - name: initial_infected_tumor_cells
     maps_to: I
-    label: I
-    description: I observable. Maps to SBML symbol `I`.
+    label: Infected Tumor Cells
+    default: 0.0
+    units: native SBML value
+    description: Initial Infected Tumor Cells. Sets the initial value of bundled SBML
+      symbol `I`.
+  outputs:
+  - name: virus_load
+    maps_to: V
+    label: Virus Load
+    description: Virus Load observable. Maps to SBML symbol `V`.
+  - name: susceptible_tumor_cells
+    maps_to: S
+    label: Susceptible Tumor Cells
+    description: Susceptible Tumor Cells observable. Maps to SBML symbol `S`.
+  - name: infected_tumor_cells
+    maps_to: I
+    label: Infected Tumor Cells
+    description: Infected Tumor Cells observable. Maps to SBML symbol `I`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

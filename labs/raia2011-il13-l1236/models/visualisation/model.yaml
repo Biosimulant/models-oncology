@@ -19,14 +19,17 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Raia2011 - IL13 L1236
-    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    question: Which signaling states carry the dominant response in the bundled cancer
+      pathway model?
     answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
     visual_scope: Cancer signaling pathway activity and dominant source states
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_raia2011_il13_l1236_biomd0000000314_model
       title: Raia2011 - IL13 L1236

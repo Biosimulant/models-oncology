@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: Palaniappan2021 - Cell free modelling of second generation Toehold switches Lab
-description: Cervical cancer is a global public health subject as it affects women in the reproductive ages, and accounts for the second largest burden among cancer patients worldwide with an unforgiving 50% morta. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+title: Palaniappan2021 - Cell free modelling of second generation Toehold switches
+  Lab
+description: Cervical cancer is a global public health subject as it affects women
+  in the reproductive ages, and accounts for the second largest burden among cancer
+  patients worldwide with an unforgiving 50% morta. It can be used to explore tumor-related
+  dynamics and compare treatment-response behavior across conditions.
 tags:
 - biomodels_ebi
 - curated
@@ -14,14 +18,14 @@ tags:
 - tumor-growth
 io:
   inputs:
-  - name: initial_mir
-    maps_to: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model.initial_mir
+  - name: initial_mi_r
+    maps_to: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model.initial_mi_r
     label: MiR
     default: 1.2e-07
     units: native SBML value
     description: Initial MiR. Sets the initial value of bundled SBML symbol `miR`.
-  - name: initial_antimir
-    maps_to: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model.initial_antimir
+  - name: initial_antimi_r
+    maps_to: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model.initial_antimi_r
     label: AntimiR
     default: 1.2e-07
     units: native SBML value
@@ -31,7 +35,8 @@ io:
     label: Toehold DNA
     default: 2.35e-07
     units: native SBML value
-    description: Initial Toehold DNA. Sets the initial value of bundled SBML symbol `Toehold_DNA`.
+    description: Initial Toehold DNA. Sets the initial value of bundled SBML symbol
+      `Toehold_DNA`.
   - name: initial_gfp
     maps_to: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model.initial_gfp
     label: GFP
@@ -43,19 +48,21 @@ io:
     label: Toehold RNA CTS
     default: 0.0
     units: native SBML value
-    description: Initial Toehold RNA CTS. Sets the initial value of bundled SBML symbol `Toehold_RNA_CTS`.
-  - name: initial_mir_antimir
-    maps_to: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model.initial_mir_antimir
+    description: Initial Toehold RNA CTS. Sets the initial value of bundled SBML symbol
+      `Toehold_RNA_CTS`.
+  - name: initial_mi_r_antimi_r
+    maps_to: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model.initial_mi_r_antimi_r
     label: MiR antimiR
     default: 0.0
     units: native SBML value
-    description: Initial MiR antimiR. Sets the initial value of bundled SBML symbol `miR_antimiR`.
+    description: Initial MiR antimiR. Sets the initial value of bundled SBML symbol
+      `miR_antimiR`.
   outputs:
-  - name: mir
-    maps_to: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model.mir
+  - name: mi_r
+    maps_to: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model.mi_r
     description: MiR observable. Maps to SBML symbol `miR`.
-  - name: antimir
-    maps_to: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model.antimir
+  - name: antimi_r
+    maps_to: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model.antimi_r
     description: AntimiR observable. Maps to SBML symbol `antimiR`.
   - name: toehold_dna
     maps_to: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model.toehold_dna
@@ -66,12 +73,13 @@ io:
   - name: toehold_rna_cts
     maps_to: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model.toehold_rna_cts
     description: Toehold RNA CTS observable. Maps to SBML symbol `Toehold_RNA_CTS`.
-  - name: mir_antimir
-    maps_to: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model.mir_antimir
+  - name: mi_r_antimi_r
+    maps_to: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model.mi_r_antimi_r
     description: MiR antimiR observable. Maps to SBML symbol `miR_antimiR`.
   - name: state
     maps_to: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model.summary
     description: Change and peak summary across the simulated SBML observables.

@@ -1,6 +1,7 @@
 schema_version: '2.0'
 title: Wodarz2018/2 - model with transit amplifying cells Visualisation
-description: Oncology visualisation for Wodarz2018/2 - model with transit amplifying cells.
+description: Oncology visualisation for Wodarz2018/2 - model with transit amplifying
+  cells.
 standard: other
 tags:
 - biomodels_ebi
@@ -15,14 +16,18 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Wodarz2018/2 - model with transit amplifying cells
-    question: What oncology-relevant state dominates the bundled SBML simulation over the baseline run?
-    answer_focus: Compares the largest-changing and peak observables with selected source states.
+    question: What oncology-relevant state dominates the bundled SBML simulation over
+      the baseline run?
+    answer_focus: Compares the largest-changing and peak observables with selected
+      source states.
     visual_scope: Tumor-system state trajectories and dominant observable changes
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_wodarz2018_2_model_with_transit_amplifying_cells_biomd0000000773_model
       title: Wodarz2018/2 - model with transit amplifying cells
@@ -32,16 +37,16 @@ biosim:
       - D
       observables:
       - id: S
-        port: model_state_1
-        label: S
+        port: stem_like_cells
+        label: Stem-Like Cells
         group: tumor_system
       - id: T
-        port: model_state_2
-        label: T
+        port: transit_amplifying_cells
+        label: Transit-Amplifying Cells
         group: tumor_system
       - id: D
-        port: model_state_3
-        label: D
+        port: differentiated_cells
+        label: Differentiated Cells
         group: tumor_system
 runtime:
   python_version: '3.12'

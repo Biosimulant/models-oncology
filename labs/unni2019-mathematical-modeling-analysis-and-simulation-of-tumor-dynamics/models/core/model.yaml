@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: Unni2019 - Mathematical Modeling, Analysis, and Simulation of Tumor Dynamics with Drug Interventions
-description: Mathematical Modeling, Analysis, and Simulation of Tumor Dynamics with Drug InterventionsPranav Unni 1 and Padmanabhan SeshaiyerAbstractOver the last few decades, there have been significant developme. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+title: Unni2019 - Mathematical Modeling, Analysis, and Simulation of Tumor Dynamics
+  with Drug Interventions
+description: Mathematical Modeling, Analysis, and Simulation of Tumor Dynamics with
+  Drug InterventionsPranav Unni 1 and Padmanabhan SeshaiyerAbstractOver the last few
+  decades, there have been significant developme. It can be used to explore tumor-related
+  dynamics and compare treatment-response behavior across conditions.
 standard: other
 tags:
 - biomodels_ebi
@@ -46,28 +50,36 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations. No scientifically safe external input was exposed by the cleanup.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations. Exposed inputs are traceable to bundled SBML parameters or initial conditions.
 io:
-  inputs: []
-  outputs:
-  - name: model_state_1
+  inputs:
+  - name: initial_tumor_cells
     maps_to: T
-    label: T
-    description: T observable. Maps to SBML symbol `T`.
-  - name: model_state_2
-    maps_to: N
-    label: N
-    description: N observable. Maps to SBML symbol `N`.
-  - name: model_state_3
+    label: Tumor Cells
+    default: 100.0
+    units: native SBML value
+    description: Initial Tumor Cells. Sets the initial value of bundled SBML symbol
+      `T`.
+  - name: initial_drug_level
     maps_to: D
-    label: D
-    description: D observable. Maps to SBML symbol `D`.
-  - name: model_state_4
-    maps_to: L
-    label: L
-    description: L observable. Maps to SBML symbol `L`.
+    label: Drug Level
+    default: 1.0
+    units: native SBML value
+    description: Initial Drug Level. Sets the initial value of bundled SBML symbol
+      `D`.
+  outputs:
+  - name: tumor_cells
+    maps_to: T
+    label: Tumor Cells
+    description: Tumor Cells observable. Maps to SBML symbol `T`.
+  - name: drug_level
+    maps_to: D
+    label: Drug Level
+    description: Drug Level observable. Maps to SBML symbol `D`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

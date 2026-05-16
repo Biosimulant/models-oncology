@@ -1,6 +1,9 @@
 schema_version: '2.0'
-title: Jafarnejad2019 - Mechanistically detailed systems biology modeling of the HGF/Met pathway in hepatocellular carcinoma Lab
-description: Hepatocyte growth factor (HGF) signaling through its receptor Met has been implicated in hepatocellular carcinoma tumorigenesis and progression. Met interaction with integrins is shown to modulate the.
+title: Jafarnejad2019 - Mechanistically detailed systems biology modeling of the HGF/Met
+  pathway in hepatocellular carcinoma Lab
+description: Hepatocyte growth factor (HGF) signaling through its receptor Met has
+  been implicated in hepatocellular carcinoma tumorigenesis and progression. Met interaction
+  with integrins is shown to modulate the.
 tags:
 - biomodels_ebi
 - curated
@@ -14,14 +17,14 @@ tags:
 - tumor-growth
 io:
   inputs:
-  - name: kd_rilotumumab_level
-    maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.kd_rilotumumab_level
+  - name: kd_rilotumumab_source_parameter
+    maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.kd_rilotumumab_source_parameter
     label: KD Rilotumumab source parameter
     default: 0.22
     units: native SBML value
     description: KD Rilotumumab source parameter. Maps to bundled SBML parameter `KD_Rilotumumab`.
-  - name: initial_pi3k
-    maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.initial_pi3k
+  - name: initial_pi3_k
+    maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.initial_pi3_k
     label: PI3K
     default: 1976.0
     units: native SBML value
@@ -51,8 +54,8 @@ io:
     units: native SBML value
     description: Initial ERK. Sets the initial value of bundled SBML symbol `ERK`.
   outputs:
-  - name: pi3k
-    maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.pi3k
+  - name: pi3_k
+    maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.pi3_k
     description: PI3K observable. Maps to SBML symbol `PI3K`.
   - name: akt
     maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.akt
@@ -71,7 +74,8 @@ io:
     description: PAkt observable. Maps to SBML symbol `pAkt`.
   - name: state
     maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_jafarnejad2019_mechanistically_detailed_systems_model2003200001_model.summary
     description: Change and peak summary across the simulated SBML observables.

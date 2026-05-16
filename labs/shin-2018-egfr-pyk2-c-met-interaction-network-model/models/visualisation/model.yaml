@@ -19,14 +19,17 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Shin_2018_EGFR-PYK2-c-Met interaction network_model
-    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    question: Which signaling states carry the dominant response in the bundled cancer
+      pathway model?
     answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
     visual_scope: Cancer signaling pathway activity and dominant source states
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model
       title: Shin_2018_EGFR-PYK2-c-Met interaction network_model
@@ -62,7 +65,7 @@ biosim:
         label: PSTAT3
         group: signaling
       - id: STAT3uStattic
-        port: stat3ustattic
+        port: stat3u_stattic
         label: STAT3uStattic
         group: signaling
       - id: PYK2

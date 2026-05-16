@@ -1,6 +1,7 @@
 schema_version: '2.0'
 title: Claret2009 - Predicting phase III overall survival in colorectal cancer Visualisation
-description: Oncology visualisation for Claret2009 - Predicting phase III overall survival in colorectal cancer.
+description: Oncology visualisation for Claret2009 - Predicting phase III overall
+  survival in colorectal cancer.
 standard: other
 tags:
 - biomodels_ebi
@@ -17,14 +18,18 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Claret2009 - Predicting phase III overall survival in colorectal cancer
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_claret2009_predicting_phase_iii_overall_survival_model1708310001_model
       title: Claret2009 - Predicting phase III overall survival in colorectal cancer
@@ -32,7 +37,7 @@ biosim:
       - y
       observables:
       - id: y
-        port: model_state_1
+        port: y
         label: Y
         group: drug_response
 runtime:

@@ -16,10 +16,10 @@ class Monro2008ChemotherapyResistanceBiomd0000000776Model(TelluriumSBMLBioModule
     _TIME_UNIT = "model_time"
     _OBSERVABLE_STRATEGY = 'species'
     _OBSERVABLES = ['S', 'R']
-    _SPECIES_LABELS = {'S': 'S', 'R': 'R'}
-    _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {}
-    _HEADLINE_OUTPUTS = {'model_state_1': ('S', 'native SBML value', 'S observable. Maps to SBML symbol `S`.'), 'model_state_2': ('R', 'native SBML value', 'R observable. Maps to SBML symbol `R`.')}
+    _SPECIES_LABELS = {'S': 'Chemo-Sensitive Cells', 'R': 'Chemo-Resistant Cells'}
+    _PARAMETER_INPUTS = {'chemotherapy_concentration': ('C0', 2.0, 'native SBML value', 'Chemotherapy Concentration. Overrides bundled SBML parameter `C0`.')}
+    _INITIAL_CONDITION_INPUTS = {'initial_chemo_sensitive_cells': ('S', 10000000000.0, 'native SBML value', 'Initial Chemo-Sensitive Cells. Sets the initial value of bundled SBML symbol `S`.'), 'initial_chemo_resistant_cells': ('R', 200000.0, 'native SBML value', 'Initial Chemo-Resistant Cells. Sets the initial value of bundled SBML symbol `R`.')}
+    _HEADLINE_OUTPUTS = {'chemo_sensitive_cells': ('S', 'native SBML value', 'Chemo-Sensitive Cells observable. Maps to SBML symbol `S`.'), 'chemo_resistant_cells': ('R', 'native SBML value', 'Chemo-Resistant Cells observable. Maps to SBML symbol `R`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/BIOMD0000000776.xml', integration_step: float = 0.1) -> None:

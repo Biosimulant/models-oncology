@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Nikolaev2019 - Immunobiochemical reconstruction of influenza lung infection-melanoma skin cancer interactions Visualisation
-description: Oncology visualisation for Nikolaev2019 - Immunobiochemical reconstruction of influenza lung infection-melanoma skin cancer interactions.
+title: Nikolaev2019 - Immunobiochemical reconstruction of influenza lung infection-melanoma
+  skin cancer interactions Visualisation
+description: Oncology visualisation for Nikolaev2019 - Immunobiochemical reconstruction
+  of influenza lung infection-melanoma skin cancer interactions.
 standard: other
 tags:
 - biomodels_ebi
@@ -18,17 +20,22 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Nikolaev2019 - Immunobiochemical reconstruction of influenza lung infection-melanoma skin cancer interactions
-    question: Does the baseline tumour-immune model favour immune control or tumour escape?
+    lab_title: Nikolaev2019 - Immunobiochemical reconstruction of influenza lung infection-melanoma
+      skin cancer interactions
+    question: Does the baseline tumour-immune model favour immune control or tumour
+      escape?
     answer_focus: Compares immune, tumour, and treatment-linked source observables.
     visual_scope: Tumour-immune interaction and immunotherapy response
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_nikolaev2019_immunobiochemical_reconstruction_of_biomd0000000865_model
-      title: Nikolaev2019 - Immunobiochemical reconstruction of influenza lung infection-melanoma skin cancer interactions
+      title: Nikolaev2019 - Immunobiochemical reconstruction of influenza lung infection-melanoma
+        skin cancer interactions
       state_observables:
       - C
       - P
@@ -36,19 +43,19 @@ biosim:
       - B
       observables:
       - id: C
-        port: model_state_1
+        port: chemotherapy_level
         label: C
         group: tumor_immune
       - id: P
-        port: model_state_2
+        port: p
         label: P
         group: tumor_immune
       - id: I
-        port: model_state_3
+        port: infected_tumor_cells
         label: I
         group: tumor_immune
       - id: B
-        port: model_state_4
+        port: b
         label: B
         group: tumor_immune
 runtime:

@@ -3,5 +3,8 @@
   "local_id": "f7f757a5-b744-4d03-884f-bf9cf702a2bc",
   "kind": "lab",
   "source": "local",
-  "created_at": "2026-05-15T19:05:39.394638733+00:00"
+  "hub_id": "61938abd-0716-41e9-ad17-ef64d5508fcd",
+  "created_at": "2026-05-15T19:05:39.394638733+00:00",
+  "last_synced_at": "2026-05-16T09:15:49.607439+00:00",
+  "hub_manifest_hash": "9a89ca2fab827e01dac1899e7b0db1757187f736b3240b858bd5d12c718dff49"
 }

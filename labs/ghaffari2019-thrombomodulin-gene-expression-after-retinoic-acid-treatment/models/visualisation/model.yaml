@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Ghaffari2019 - Thrombomodulin Gene Expression after Retinoic Acid Treatment for Cancer Patients with Coagulation Disorders Visualisation
-description: Oncology visualisation for Ghaffari2019 - Thrombomodulin Gene Expression after Retinoic Acid Treatment for Cancer Patients with Coagulation Disorders.
+title: Ghaffari2019 - Thrombomodulin Gene Expression after Retinoic Acid Treatment
+  for Cancer Patients with Coagulation Disorders Visualisation
+description: Oncology visualisation for Ghaffari2019 - Thrombomodulin Gene Expression
+  after Retinoic Acid Treatment for Cancer Patients with Coagulation Disorders.
 standard: other
 tags:
 - biomodels_ebi
@@ -17,17 +19,23 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Ghaffari2019 - Thrombomodulin Gene Expression after Retinoic Acid Treatment for Cancer Patients with Coagulation Disorders
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    lab_title: Ghaffari2019 - Thrombomodulin Gene Expression after Retinoic Acid Treatment
+      for Cancer Patients with Coagulation Disorders
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_ghaffari2019_thrombomodulin_gene_expression_afte_model1907140001_model
-      title: Ghaffari2019 - Thrombomodulin Gene Expression after Retinoic Acid Treatment for Cancer Patients with Coagulation Disorders
+      title: Ghaffari2019 - Thrombomodulin Gene Expression after Retinoic Acid Treatment
+        for Cancer Patients with Coagulation Disorders
       state_observables:
       - TM_mRNA
       - TM
@@ -36,11 +44,11 @@ biosim:
       - sTM
       observables:
       - id: TM
-        port: model_state_1
+        port: tm
         label: TM
         group: drug_response
       - id: RA
-        port: model_state_2
+        port: ra
         label: RA
         group: drug_response
       - id: sTM
@@ -52,7 +60,7 @@ biosim:
         label: REC1t
         group: drug_response
       - id: TM_mRNA
-        port: tm_mrna
+        port: tm_m_rna
         label: TM mRNA
         group: drug_response
 runtime:

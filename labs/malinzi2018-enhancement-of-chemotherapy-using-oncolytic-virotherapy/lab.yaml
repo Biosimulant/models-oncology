@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Malinzi2018 - Enhancement of chemotherapy using oncolytic virotherapy Lab
-description: IA spatio-temporal mathematical model, in the form of a moving boundary problem, to explain cancer dormancy is developed. Analysis of the model is carried out for both temporal and spatio-temporal cas.
+description: IA spatio-temporal mathematical model, in the form of a moving boundary
+  problem, to explain cancer dormancy is developed. Analysis of the model is carried
+  out for both temporal and spatio-temporal cas.
 tags:
 - biomodels_ebi
 - chemotherapy
@@ -16,26 +18,42 @@ tags:
 - tumor-growth
 - virotherapy
 io:
-  inputs: []
+  inputs:
+  - name: initial_uninfected_tumor_cells
+    maps_to: oncology_sbml_malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model.initial_uninfected_tumor_cells
+    label: Uninfected Tumor Cells
+    default: 0.8
+    units: native SBML value
+    description: Initial Uninfected Tumor Cells. Sets the initial value of bundled
+      SBML symbol `T`.
+  - name: initial_infected_tumor_cells
+    maps_to: oncology_sbml_malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model.initial_infected_tumor_cells
+    label: Infected Tumor Cells
+    default: 0.3
+    units: native SBML value
+    description: Initial Infected Tumor Cells. Sets the initial value of bundled SBML
+      symbol `I`.
+  - name: initial_chemotherapy_level
+    maps_to: oncology_sbml_malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model.initial_chemotherapy_level
+    label: Chemotherapy Level
+    default: 1.0e-06
+    units: native SBML value
+    description: Initial Chemotherapy Level. Sets the initial value of bundled SBML
+      symbol `C`.
   outputs:
-  - name: model_state_1
-    maps_to: oncology_sbml_malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model.model_state_1
-    description: I observable. Maps to SBML symbol `I`.
-  - name: model_state_2
-    maps_to: oncology_sbml_malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model.model_state_2
-    description: T observable. Maps to SBML symbol `T`.
-  - name: model_state_3
-    maps_to: oncology_sbml_malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model.model_state_3
-    description: Td observable. Maps to SBML symbol `Td`.
-  - name: model_state_4
-    maps_to: oncology_sbml_malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model.model_state_4
-    description: C observable. Maps to SBML symbol `C`.
-  - name: model_state_5
-    maps_to: oncology_sbml_malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model.model_state_5
-    description: R observable. Maps to SBML symbol `R`.
+  - name: uninfected_tumor_cells
+    maps_to: oncology_sbml_malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model.uninfected_tumor_cells
+    description: Uninfected Tumor Cells observable. Maps to SBML symbol `T`.
+  - name: infected_tumor_cells
+    maps_to: oncology_sbml_malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model.infected_tumor_cells
+    description: Infected Tumor Cells observable. Maps to SBML symbol `I`.
+  - name: chemotherapy_level
+    maps_to: oncology_sbml_malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model.chemotherapy_level
+    description: Chemotherapy Level observable. Maps to SBML symbol `C`.
   - name: state
     maps_to: oncology_sbml_malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model.summary
     description: Change and peak summary across the simulated SBML observables.
@@ -58,6 +76,6 @@ wiring:
   to:
   - visualisation.oncology_sbml_malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model_species_labels
 runtime:
-  duration: 10.0
+  duration: 0.055
   communication_step: 1.0
   initial_inputs: {}

@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Barros2021 - CARTmath, Mathematical Model of CAR-T Immunotherapy in HDLM-2 cell line Visualisation
-description: Oncology visualisation for Barros2021 - CARTmath, Mathematical Model of CAR-T Immunotherapy in HDLM-2 cell line.
+title: Barros2021 - CARTmath, Mathematical Model of CAR-T Immunotherapy in HDLM-2
+  cell line Visualisation
+description: Oncology visualisation for Barros2021 - CARTmath, Mathematical Model
+  of CAR-T Immunotherapy in HDLM-2 cell line.
 standard: other
 tags:
 - biomodels_ebi
@@ -21,32 +23,38 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Barros2021 - CARTmath, Mathematical Model of CAR-T Immunotherapy in HDLM-2 cell line
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    lab_title: Barros2021 - CARTmath, Mathematical Model of CAR-T Immunotherapy in
+      HDLM-2 cell line
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Logical/qualitative SBML semantics must be validated carefully; do not treat numeric trajectories as mechanistic ODEs without source support.
+    caveat: Logical/qualitative SBML semantics must be validated carefully; do not
+      treat numeric trajectories as mechanistic ODEs without source support.
     sources:
     - alias: oncology_sbml_barros2021_cartmath_mathematical_model_of_car_t_biomd0000001019_model
-      title: Barros2021 - CARTmath, Mathematical Model of CAR-T Immunotherapy in HDLM-2 cell line
+      title: Barros2021 - CARTmath, Mathematical Model of CAR-T Immunotherapy in HDLM-2
+        cell line
       state_observables:
       - Cm
       - Ct
       - T
       observables:
       - id: T
-        port: model_state_1
+        port: tumor_cells
         label: T
         group: drug_response
       - id: Cm
-        port: model_state_2
+        port: cm
         label: Cm
         group: drug_response
       - id: Ct
-        port: model_state_3
+        port: ct
         label: Ct
         group: drug_response
 runtime:

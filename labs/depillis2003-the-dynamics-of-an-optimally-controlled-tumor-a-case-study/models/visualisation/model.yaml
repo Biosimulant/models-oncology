@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: 'dePillis2003 - The dynamics of an optimally controlled tumor model: A case study Visualisation'
-description: 'Oncology visualisation for dePillis2003 - The dynamics of an optimally controlled tumor model: A case study.'
+title: 'dePillis2003 - The dynamics of an optimally controlled tumor model: A case
+  study Visualisation'
+description: 'Oncology visualisation for dePillis2003 - The dynamics of an optimally
+  controlled tumor model: A case study.'
 standard: other
 tags:
 - biomodels_ebi
@@ -17,17 +19,23 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: 'dePillis2003 - The dynamics of an optimally controlled tumor model: A case study'
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    lab_title: 'dePillis2003 - The dynamics of an optimally controlled tumor model:
+      A case study'
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_depillis2003_the_dynamics_of_an_optimally_contro_biomd0000000909_model
-      title: 'dePillis2003 - The dynamics of an optimally controlled tumor model: A case study'
+      title: 'dePillis2003 - The dynamics of an optimally controlled tumor model:
+        A case study'
       state_observables:
       - N
       - T
@@ -35,19 +43,16 @@ biosim:
       - u
       observables:
       - id: N
-        port: model_state_1
         label: N
         group: drug_response
       - id: T
-        port: model_state_2
-        label: T
+        port: tumor_cells
+        label: Tumor Cells
         group: drug_response
       - id: I
-        port: model_state_3
         label: I
         group: drug_response
       - id: u
-        port: model_state_4
         label: U
         group: drug_response
 runtime:

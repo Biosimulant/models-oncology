@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Talemi2015 - Persistent telomere-associated DNA damage foci (TAF), a measure to predict cancer risks Visualisation
-description: Oncology visualisation for Talemi2015 - Persistent telomere-associated DNA damage foci (TAF), a measure to predict cancer risks.
+title: Talemi2015 - Persistent telomere-associated DNA damage foci (TAF), a measure
+  to predict cancer risks Visualisation
+description: Oncology visualisation for Talemi2015 - Persistent telomere-associated
+  DNA damage foci (TAF), a measure to predict cancer risks.
 standard: other
 tags:
 - biomodels_ebi
@@ -19,17 +21,23 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Talemi2015 - Persistent telomere-associated DNA damage foci (TAF), a measure to predict cancer risks
-    question: Which cell-cycle or damage-response states dominate the baseline cancer model?
-    answer_focus: Compares selected cycle/checkpoint observables and largest state changes.
+    lab_title: Talemi2015 - Persistent telomere-associated DNA damage foci (TAF),
+      a measure to predict cancer risks
+    question: Which cell-cycle or damage-response states dominate the baseline cancer
+      model?
+    answer_focus: Compares selected cycle/checkpoint observables and largest state
+      changes.
     visual_scope: Cancer cell-cycle/checkpoint state activity
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_talemi2015_persistent_telomere_associated_dna_da_model1412200000_model
-      title: Talemi2015 - Persistent telomere-associated DNA damage foci (TAF), a measure to predict cancer risks
+      title: Talemi2015 - Persistent telomere-associated DNA damage foci (TAF), a
+        measure to predict cancer risks
       state_observables:
       - FAST
       - FASTi
@@ -38,7 +46,7 @@ biosim:
       - RP
       observables:
       - id: RP
-        port: model_state_1
+        port: rp
         label: RP
         group: cellcycle
       - id: FAST

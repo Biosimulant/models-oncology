@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "ea0e3026-5a25-4bc1-9842-c3c1cd74da5e",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "9a12cdb3-154a-4c05-a0f7-a45f1004421e",
+  "created_at": "2026-05-15T19:05:40.542075239+00:00",
+  "last_synced_at": "2026-05-16T10:42:26.221323+00:00",
+  "hub_manifest_hash": "651ad450e004c41f24fee9c05b2f7d44ad7347d45993c2a5288c9d06608042e4",
+  "package_name": "unni2019-mathematical-modeling-analysis-and-simulation-of-tumor"
+}

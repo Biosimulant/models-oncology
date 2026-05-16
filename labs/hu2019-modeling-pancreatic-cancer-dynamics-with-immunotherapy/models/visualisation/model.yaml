@@ -1,6 +1,7 @@
 schema_version: '2.0'
 title: Hu2019 - Modeling Pancreatic Cancer Dynamics with Immunotherapy Visualisation
-description: Oncology visualisation for Hu2019 - Modeling Pancreatic Cancer Dynamics with Immunotherapy.
+description: Oncology visualisation for Hu2019 - Modeling Pancreatic Cancer Dynamics
+  with Immunotherapy.
 standard: other
 tags:
 - biomodels_ebi
@@ -20,14 +21,18 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Hu2019 - Modeling Pancreatic Cancer Dynamics with Immunotherapy
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model
       title: Hu2019 - Modeling Pancreatic Cancer Dynamics with Immunotherapy
@@ -60,7 +65,7 @@ biosim:
         label: V TSC
         group: drug_response
       - id: R_siRNA
-        port: r_sirna
+        port: r_si_rna
         label: R siRNA
         group: drug_response
 runtime:

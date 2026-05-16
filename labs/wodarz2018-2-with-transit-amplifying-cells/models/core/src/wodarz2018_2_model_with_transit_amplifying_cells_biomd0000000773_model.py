@@ -16,10 +16,10 @@ class Wodarz20182ModelWithTransitAmplifyingCellsBiomd0000000773Model(TelluriumSB
     _TIME_UNIT = "model_time"
     _OBSERVABLE_STRATEGY = 'species'
     _OBSERVABLES = ['S', 'T', 'D']
-    _SPECIES_LABELS = {'S': 'S', 'T': 'T', 'D': 'D'}
+    _SPECIES_LABELS = {'S': 'Stem-Like Cells', 'T': 'Transit-Amplifying Cells', 'D': 'Differentiated Cells'}
     _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {}
-    _HEADLINE_OUTPUTS = {'model_state_1': ('S', 'native SBML value', 'S observable. Maps to SBML symbol `S`.'), 'model_state_2': ('T', 'native SBML value', 'T observable. Maps to SBML symbol `T`.'), 'model_state_3': ('D', 'native SBML value', 'D observable. Maps to SBML symbol `D`.')}
+    _INITIAL_CONDITION_INPUTS = {'initial_stem_like_cells': ('S', 1.0, 'native SBML value', 'Initial Stem-Like Cells. Sets the initial value of bundled SBML symbol `S`.'), 'initial_transit_amplifying_cells': ('T', 0.0, 'native SBML value', 'Initial Transit-Amplifying Cells. Sets the initial value of bundled SBML symbol `T`.'), 'initial_differentiated_cells': ('D', 0.0, 'native SBML value', 'Initial Differentiated Cells. Sets the initial value of bundled SBML symbol `D`.')}
+    _HEADLINE_OUTPUTS = {'stem_like_cells': ('S', 'native SBML value', 'Stem-Like Cells observable. Maps to SBML symbol `S`.'), 'transit_amplifying_cells': ('T', 'native SBML value', 'Transit-Amplifying Cells observable. Maps to SBML symbol `T`.'), 'differentiated_cells': ('D', 'native SBML value', 'Differentiated Cells observable. Maps to SBML symbol `D`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/BIOMD0000000773.xml', integration_step: float = 0.1) -> None:

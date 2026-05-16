@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Rouhimoghadam2018 - GPR30/PI3K/MAPK/STAT signaling pathway in normal and cancer cells Visualisation
-description: Oncology visualisation for Rouhimoghadam2018 - GPR30/PI3K/MAPK/STAT signaling pathway in normal and cancer cells.
+title: Rouhimoghadam2018 - GPR30/PI3K/MAPK/STAT signaling pathway in normal and cancer
+  cells Visualisation
+description: Oncology visualisation for Rouhimoghadam2018 - GPR30/PI3K/MAPK/STAT signaling
+  pathway in normal and cancer cells.
 standard: other
 tags:
 - biomodels_ebi
@@ -19,17 +21,22 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Rouhimoghadam2018 - GPR30/PI3K/MAPK/STAT signaling pathway in normal and cancer cells
-    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    lab_title: Rouhimoghadam2018 - GPR30/PI3K/MAPK/STAT signaling pathway in normal
+      and cancer cells
+    question: Which signaling states carry the dominant response in the bundled cancer
+      pathway model?
     answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
     visual_scope: Cancer signaling pathway activity and dominant source states
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model2002250001_model
-      title: Rouhimoghadam2018 - GPR30/PI3K/MAPK/STAT signaling pathway in normal and cancer cells
+      title: Rouhimoghadam2018 - GPR30/PI3K/MAPK/STAT signaling pathway in normal
+        and cancer cells
       state_observables:
       - mwe2fff28d_182c_4a1c_9882_f17774c0958a
       - mw93907b2d_53db_4080_9e3f_3eb304441ab9
@@ -160,7 +167,7 @@ biosim:
       - mwc3825c0f_3442_4143_ae80_89383dd8ad12
       observables:
       - id: mwf40d6176_abfc_4a30_886f_83a19fcffc48
-        port: pegf_egfr2_pshc_grb2_sos_ras_gdp
+        port: pegf_egfr2_p_shc_grb2_sos_ras_gdp
         label: PEGF EGFR2 pShc Grb2 SOS Ras GDP
         group: signaling
       - id: mw28464aad_8013_4a23_ae09_a406954859a6
@@ -180,7 +187,7 @@ biosim:
         label: PEGF EGFR2 Ras GAP SHP2
         group: signaling
       - id: mw5babe3d5_a9af_4dfd_ac01_35474ef64af2
-        port: pperk_pegf_egfr2_pshc_grb2_sos
+        port: pp_erk_p_egf_egfr2_p_shc_grb2_sos
         label: PpERK pEGF EGFR2 pShc Grb2 SOS
         group: signaling
 runtime:

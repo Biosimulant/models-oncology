@@ -16,10 +16,10 @@ class Wodarz20181SimpleModelBiomd0000000774Model(TelluriumSBMLBioModule):
     _TIME_UNIT = "model_time"
     _OBSERVABLE_STRATEGY = 'species'
     _OBSERVABLES = ['S', 'D']
-    _SPECIES_LABELS = {'S': 'S', 'D': 'D'}
+    _SPECIES_LABELS = {'S': 'Stem-Like Cells', 'D': 'Differentiated Cells'}
     _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {}
-    _HEADLINE_OUTPUTS = {'model_state_1': ('S', 'native SBML value', 'S observable. Maps to SBML symbol `S`.'), 'model_state_2': ('D', 'native SBML value', 'D observable. Maps to SBML symbol `D`.')}
+    _INITIAL_CONDITION_INPUTS = {'initial_stem_like_cells': ('S', 1.0, 'native SBML value', 'Initial Stem-Like Cells. Sets the initial value of bundled SBML symbol `S`.'), 'initial_differentiated_cells': ('D', 0.0, 'native SBML value', 'Initial Differentiated Cells. Sets the initial value of bundled SBML symbol `D`.')}
+    _HEADLINE_OUTPUTS = {'stem_like_cells': ('S', 'native SBML value', 'Stem-Like Cells observable. Maps to SBML symbol `S`.'), 'differentiated_cells': ('D', 'native SBML value', 'Differentiated Cells observable. Maps to SBML symbol `D`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/BIOMD0000000774.xml', integration_step: float = 0.1) -> None:

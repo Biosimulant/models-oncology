@@ -18,8 +18,8 @@ class Claret2009PredictingPhaseIiiOverallSurvivalModel1708310001Model(TelluriumS
     _OBSERVABLES = ['y']
     _SPECIES_LABELS = {'y': 'Y'}
     _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {'treatment_int_level': ('treatment_int', 14.0, 'native SBML value', 'Treatment int source parameter. Maps to bundled SBML parameter `treatment_int`.'), 'treatment_day_level': ('treatment_day', 1.0, 'native SBML value', 'Treatment day source parameter. Maps to bundled SBML parameter `treatment_day`.'), 'dose_length': ('dose_length', 0.0625, 'native SBML value', 'Dose length source parameter. Maps to bundled SBML parameter `dose_length`.'), 'dose_int2': ('Dose_int2', 0.5, 'native SBML value', 'Dose int2 source parameter. Maps to bundled SBML parameter `Dose_int2`.')}
-    _HEADLINE_OUTPUTS = {'model_state_1': ('y', 'native SBML value', 'Y observable. Maps to SBML symbol `y`.')}
+    _INITIAL_CONDITION_INPUTS = {'treatment_int_source_parameter': ('treatment_int', 14.0, 'native SBML value', 'Treatment int source parameter. Maps to bundled SBML parameter `treatment_int`.'), 'treatment_day_source_parameter': ('treatment_day', 1.0, 'native SBML value', 'Treatment day source parameter. Maps to bundled SBML parameter `treatment_day`.'), 'dose_length_source_parameter': ('dose_length', 0.0625, 'native SBML value', 'Dose length source parameter. Maps to bundled SBML parameter `dose_length`.'), 'dose_int2_source_parameter': ('Dose_int2', 0.5, 'native SBML value', 'Dose int2 source parameter. Maps to bundled SBML parameter `Dose_int2`.')}
+    _HEADLINE_OUTPUTS = {'y': ('y', 'native SBML value', 'Y observable. Maps to SBML symbol `y`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/MODEL1708310001.xml', integration_step: float = 0.1) -> None:

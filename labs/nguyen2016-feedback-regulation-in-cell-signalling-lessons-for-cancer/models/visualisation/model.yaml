@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: 'Nguyen2016 - Feedback regulation in cell signalling: Lessons for cancer therapeutics Visualisation'
-description: 'Oncology visualisation for Nguyen2016 - Feedback regulation in cell signalling: Lessons for cancer therapeutics.'
+title: 'Nguyen2016 - Feedback regulation in cell signalling: Lessons for cancer therapeutics
+  Visualisation'
+description: 'Oncology visualisation for Nguyen2016 - Feedback regulation in cell
+  signalling: Lessons for cancer therapeutics.'
 standard: other
 tags:
 - biomodels_ebi
@@ -19,17 +21,22 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: 'Nguyen2016 - Feedback regulation in cell signalling: Lessons for cancer therapeutics'
-    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    lab_title: 'Nguyen2016 - Feedback regulation in cell signalling: Lessons for cancer
+      therapeutics'
+    question: Which signaling states carry the dominant response in the bundled cancer
+      pathway model?
     answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
     visual_scope: Cancer signaling pathway activity and dominant source states
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model
-      title: 'Nguyen2016 - Feedback regulation in cell signalling: Lessons for cancer therapeutics'
+      title: 'Nguyen2016 - Feedback regulation in cell signalling: Lessons for cancer
+        therapeutics'
       state_observables:
       - IRS
       - aIRS
@@ -62,7 +69,7 @@ biosim:
       - iMEK
       observables:
       - id: PI3K
-        port: pi3k
+        port: pi3_k
         label: PI3K
         group: signaling
       - id: Akt
@@ -82,7 +89,7 @@ biosim:
         label: AAkt
         group: signaling
       - id: RasGDP
-        port: rasgdp
+        port: ras_gdp
         label: RasGDP
         group: signaling
 runtime:

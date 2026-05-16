@@ -16,10 +16,10 @@ class Depillis2003TheDynamicsOfAnOptimallyControBiomd0000000909Model(TelluriumSB
     _TIME_UNIT = "model_time"
     _OBSERVABLE_STRATEGY = 'species'
     _OBSERVABLES = ['N', 'T', 'I', 'u']
-    _SPECIES_LABELS = {'N': 'N', 'T': 'T', 'I': 'I', 'u': 'U'}
+    _SPECIES_LABELS = {'N': 'N', 'T': 'Tumor Cells', 'I': 'I', 'u': 'U'}
     _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {}
-    _HEADLINE_OUTPUTS = {'model_state_1': ('N', 'native SBML value', 'N observable. Maps to SBML symbol `N`.'), 'model_state_2': ('T', 'native SBML value', 'T observable. Maps to SBML symbol `T`.'), 'model_state_3': ('I', 'native SBML value', 'I observable. Maps to SBML symbol `I`.'), 'model_state_4': ('u', 'native SBML value', 'U observable. Maps to SBML symbol `u`.')}
+    _INITIAL_CONDITION_INPUTS = {'initial_tumor_cells': ('T', 0.25, 'native SBML value', 'Initial Tumor Cells. Sets the initial value of bundled SBML symbol `T`.')}
+    _HEADLINE_OUTPUTS = {'tumor_cells': ('T', 'native SBML value', 'Tumor Cells observable. Maps to SBML symbol `T`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/BIOMD0000000909.xml', integration_step: float = 0.1) -> None:

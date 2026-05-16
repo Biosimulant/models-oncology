@@ -1,6 +1,9 @@
 schema_version: '2.0'
-title: Hutchinson2016 - Vascular phenotype identification and anti-angiogenic treatment recommendation
-description: This is a spatially averaged multiscale mathematical model of tumor angiogenesis. The model describes the dynamics of VEGF, Ang1, Ang2, and PDGF, coupled with those of mature and immature endothelial.
+title: Hutchinson2016 - Vascular phenotype identification and anti-angiogenic treatment
+  recommendation
+description: This is a spatially averaged multiscale mathematical model of tumor angiogenesis.
+  The model describes the dynamics of VEGF, Ang1, Ang2, and PDGF, coupled with those
+  of mature and immature endothelial.
 standard: other
 tags:
 - angiogenesis
@@ -51,42 +54,44 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
-  - name: epsilon_level
+  - name: epsilon_source_parameter
     maps_to: epsilon
     label: Epsilon source parameter
     default: 0.04
     units: native SBML value
     description: Epsilon source parameter. Maps to bundled SBML parameter `epsilon`.
   outputs:
-  - name: model_state_1
+  - name: v
     maps_to: v
     label: V
     description: V observable. Maps to SBML symbol `v`.
-  - name: model_state_2
+  - name: rv
     maps_to: rv
     label: Rv
     description: Rv observable. Maps to SBML symbol `rv`.
-  - name: model_state_3
+  - name: bv
     maps_to: bv
     label: Bv
     description: Bv observable. Maps to SBML symbol `bv`.
-  - name: model_state_4
+  - name: a1
     maps_to: a1
     label: A1
     description: A1 observable. Maps to SBML symbol `a1`.
-  - name: model_state_5
+  - name: aw
     maps_to: aw
     label: Aw
     description: Aw observable. Maps to SBML symbol `aw`.
-  - name: model_state_6
+  - name: a2
     maps_to: a2
     label: A2
     description: A2 observable. Maps to SBML symbol `a2`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

@@ -1,6 +1,7 @@
 schema_version: '2.0'
 title: Moore_2004_Mathematical model for CML and T cell interaction Visualisation
-description: Oncology visualisation for Moore_2004_Mathematical model for CML and T cell interaction.
+description: Oncology visualisation for Moore_2004_Mathematical model for CML and
+  T cell interaction.
 standard: other
 tags:
 - biomodels_ebi
@@ -20,14 +21,18 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Moore_2004_Mathematical model for CML and T cell interaction
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_moore_2004_mathematical_model_for_cml_and_t_cell_biomd0000000733_model
       title: Moore_2004_Mathematical model for CML and T cell interaction
@@ -41,11 +46,11 @@ biosim:
         label: Tumor cells
         group: drug_response
       - id: naive_Tcells
-        port: naive_tcells
+        port: naive_t_cells
         label: Naive Tcells
         group: drug_response
       - id: eff_Tcells
-        port: eff_tcells
+        port: eff_t_cells
         label: Eff Tcells
         group: drug_response
 runtime:

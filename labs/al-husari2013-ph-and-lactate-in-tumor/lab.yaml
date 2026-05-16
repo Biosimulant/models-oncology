@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Al-Husari2013 - pH and lactate in tumor Lab
-description: 'The paper describes a model of pH control in tumor. Created by COPASI 4.26 (Build 213) This model is described in the article: Regulation of tumour intracellular pH: A mathematical model examining the.'
+description: 'The paper describes a model of pH control in tumor. Created by COPASI
+  4.26 (Build 213) This model is described in the article: Regulation of tumour intracellular
+  pH: A mathematical model examining the.'
 tags:
 - biomodels_ebi
 - curated
@@ -12,23 +14,36 @@ tags:
 - systemsbiology
 - tumor-growth
 io:
-  inputs: []
+  inputs:
+  - name: intracellular_ph
+    maps_to: oncology_sbml_al_husari2013_ph_and_lactate_in_tumor_biomd0000000805_model.intracellular_ph
+    label: Intracellular pH
+    default: 7.3
+    units: native SBML value
+    description: Intracellular pH. Overrides bundled SBML parameter `pHi`.
+  - name: extracellular_ph
+    maps_to: oncology_sbml_al_husari2013_ph_and_lactate_in_tumor_biomd0000000805_model.extracellular_ph
+    label: Extracellular pH
+    default: 7.0
+    units: native SBML value
+    description: Extracellular pH. Overrides bundled SBML parameter `pHe`.
   outputs:
-  - name: model_state_1
-    maps_to: oncology_sbml_al_husari2013_ph_and_lactate_in_tumor_biomd0000000805_model.model_state_1
-    description: Hi observable. Maps to SBML symbol `Hi`.
-  - name: model_state_2
-    maps_to: oncology_sbml_al_husari2013_ph_and_lactate_in_tumor_biomd0000000805_model.model_state_2
-    description: He observable. Maps to SBML symbol `He`.
-  - name: model_state_3
-    maps_to: oncology_sbml_al_husari2013_ph_and_lactate_in_tumor_biomd0000000805_model.model_state_3
-    description: Li observable. Maps to SBML symbol `Li`.
-  - name: model_state_4
-    maps_to: oncology_sbml_al_husari2013_ph_and_lactate_in_tumor_biomd0000000805_model.model_state_4
-    description: Le observable. Maps to SBML symbol `Le`.
+  - name: intracellular_hydrogen_ion
+    maps_to: oncology_sbml_al_husari2013_ph_and_lactate_in_tumor_biomd0000000805_model.intracellular_hydrogen_ion
+    description: Intracellular Hydrogen Ion observable. Maps to SBML symbol `Hi`.
+  - name: extracellular_hydrogen_ion
+    maps_to: oncology_sbml_al_husari2013_ph_and_lactate_in_tumor_biomd0000000805_model.extracellular_hydrogen_ion
+    description: Extracellular Hydrogen Ion observable. Maps to SBML symbol `He`.
+  - name: intracellular_lactate
+    maps_to: oncology_sbml_al_husari2013_ph_and_lactate_in_tumor_biomd0000000805_model.intracellular_lactate
+    description: Intracellular Lactate observable. Maps to SBML symbol `Li`.
+  - name: extracellular_lactate
+    maps_to: oncology_sbml_al_husari2013_ph_and_lactate_in_tumor_biomd0000000805_model.extracellular_lactate
+    description: Extracellular Lactate observable. Maps to SBML symbol `Le`.
   - name: state
     maps_to: oncology_sbml_al_husari2013_ph_and_lactate_in_tumor_biomd0000000805_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_al_husari2013_ph_and_lactate_in_tumor_biomd0000000805_model.summary
     description: Change and peak summary across the simulated SBML observables.

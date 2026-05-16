@@ -1,6 +1,9 @@
 schema_version: '2.0'
 title: Kosinsky2018 - Radiation and PD-(L)1 treatment combinations Lab
-description: This is a quantitative systems pharmacology (QSP) model that describes key elements of the cancer immunity cycle and the tumor microenvironment, tumor growth, as well as dose-exposure-target modulatio. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+description: This is a quantitative systems pharmacology (QSP) model that describes
+  key elements of the cancer immunity cycle and the tumor microenvironment, tumor
+  growth, as well as dose-exposure-target modulatio. It can be used to explore tumor-related
+  dynamics and compare treatment-response behavior across conditions.
 tags:
 - biomodels_ebi
 - curated
@@ -15,8 +18,8 @@ tags:
 - tumor-growth
 io:
   inputs:
-  - name: radiation_dose
-    maps_to: oncology_sbml_kosinsky2018_radiation_and_pd_l_1_treatment_comb_biomd0000000863_model.radiation_dose
+  - name: radiation_dose_source_parameter
+    maps_to: oncology_sbml_kosinsky2018_radiation_and_pd_l_1_treatment_comb_biomd0000000863_model.radiation_dose_source_parameter
     label: Radiation Dose source parameter
     default: 0.0
     units: native SBML value
@@ -27,8 +30,8 @@ io:
     default: 0.0
     units: native SBML value
     description: Initial DSB. Sets the initial value of bundled SBML symbol `U`.
-  - name: initial_pdl1
-    maps_to: oncology_sbml_kosinsky2018_radiation_and_pd_l_1_treatment_comb_biomd0000000863_model.initial_pdl1
+  - name: initial_pd_l1
+    maps_to: oncology_sbml_kosinsky2018_radiation_and_pd_l_1_treatment_comb_biomd0000000863_model.initial_pd_l1
     label: PDL1
     default: 0.0
     units: native SBML value
@@ -52,14 +55,14 @@ io:
     units: native SBML value
     description: Initial TC D. Sets the initial value of bundled SBML symbol `dTeff`.
   outputs:
-  - name: model_state_1
-    maps_to: oncology_sbml_kosinsky2018_radiation_and_pd_l_1_treatment_comb_biomd0000000863_model.model_state_1
+  - name: tv
+    maps_to: oncology_sbml_kosinsky2018_radiation_and_pd_l_1_treatment_comb_biomd0000000863_model.tv
     description: TV observable. Maps to SBML symbol `TV`.
   - name: dsb
     maps_to: oncology_sbml_kosinsky2018_radiation_and_pd_l_1_treatment_comb_biomd0000000863_model.dsb
     description: DSB observable. Maps to SBML symbol `U`.
-  - name: pdl1
-    maps_to: oncology_sbml_kosinsky2018_radiation_and_pd_l_1_treatment_comb_biomd0000000863_model.pdl1
+  - name: pd_l1
+    maps_to: oncology_sbml_kosinsky2018_radiation_and_pd_l_1_treatment_comb_biomd0000000863_model.pd_l1
     description: PDL1 observable. Maps to SBML symbol `PDL1`.
   - name: tvd
     maps_to: oncology_sbml_kosinsky2018_radiation_and_pd_l_1_treatment_comb_biomd0000000863_model.tvd
@@ -72,7 +75,8 @@ io:
     description: TC D observable. Maps to SBML symbol `dTeff`.
   - name: state
     maps_to: oncology_sbml_kosinsky2018_radiation_and_pd_l_1_treatment_comb_biomd0000000863_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_kosinsky2018_radiation_and_pd_l_1_treatment_comb_biomd0000000863_model.summary
     description: Change and peak summary across the simulated SBML observables.

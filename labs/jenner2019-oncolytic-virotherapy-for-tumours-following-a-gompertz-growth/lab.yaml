@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: Jenner2019 - Oncolytic virotherapy for tumours following a Gompertz growth law Lab
-description: This is a mathematical model using a Gompertz growth law to describe the in vivo dynamics of a cancer under treatment with an oncolytic virus. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+title: Jenner2019 - Oncolytic virotherapy for tumours following a Gompertz growth
+  law Lab
+description: This is a mathematical model using a Gompertz growth law to describe
+  the in vivo dynamics of a cancer under treatment with an oncolytic virus. It can
+  be used to explore tumor-related dynamics and compare treatment-response behavior
+  across conditions.
 tags:
 - biomodels_ebi
 - curated
@@ -15,20 +19,42 @@ tags:
 - tumor-growth
 - virotherapy
 io:
-  inputs: []
+  inputs:
+  - name: initial_uninfected_tumor_cells
+    maps_to: oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model.initial_uninfected_tumor_cells
+    label: Uninfected Tumor Cells
+    default: 75.0
+    units: native SBML value
+    description: Initial Uninfected Tumor Cells. Sets the initial value of bundled
+      SBML symbol `U`.
+  - name: initial_infected_tumor_cells
+    maps_to: oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model.initial_infected_tumor_cells
+    label: Infected Tumor Cells
+    default: 100.0
+    units: native SBML value
+    description: Initial Infected Tumor Cells. Sets the initial value of bundled SBML
+      symbol `I`.
+  - name: initial_virus_load
+    maps_to: oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model.initial_virus_load
+    label: Virus Load
+    default: 10.0
+    units: native SBML value
+    description: Initial Virus Load. Sets the initial value of bundled SBML symbol
+      `V`.
   outputs:
-  - name: model_state_1
-    maps_to: oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model.model_state_1
-    description: U observable. Maps to SBML symbol `U`.
-  - name: model_state_2
-    maps_to: oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model.model_state_2
-    description: I observable. Maps to SBML symbol `I`.
-  - name: model_state_3
-    maps_to: oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model.model_state_3
-    description: V observable. Maps to SBML symbol `V`.
+  - name: uninfected_tumor_cells
+    maps_to: oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model.uninfected_tumor_cells
+    description: Uninfected Tumor Cells observable. Maps to SBML symbol `U`.
+  - name: infected_tumor_cells
+    maps_to: oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model.infected_tumor_cells
+    description: Infected Tumor Cells observable. Maps to SBML symbol `I`.
+  - name: virus_load
+    maps_to: oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model.virus_load
+    description: Virus Load observable. Maps to SBML symbol `V`.
   - name: state
     maps_to: oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_jenner2019_oncolytic_virotherapy_for_tumours_fol_biomd0000000850_model.summary
     description: Change and peak summary across the simulated SBML observables.

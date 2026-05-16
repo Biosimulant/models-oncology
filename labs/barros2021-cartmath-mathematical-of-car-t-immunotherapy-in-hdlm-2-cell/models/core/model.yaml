@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: Barros2021 - CARTmath, Mathematical Model of CAR-T Immunotherapy in HDLM-2 cell line
-description: A mathematical model (CART-math) studying the impact of CAR-T cells therapy on haematological cancer cell line which in this case is HDLM-2. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+title: Barros2021 - CARTmath, Mathematical Model of CAR-T Immunotherapy in HDLM-2
+  cell line
+description: A mathematical model (CART-math) studying the impact of CAR-T cells therapy
+  on haematological cancer cell line which in this case is HDLM-2. It can be used
+  to explore tumor-related dynamics and compare treatment-response behavior across
+  conditions.
 standard: other
 tags:
 - biomodels_ebi
@@ -53,30 +57,32 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Logical/qualitative SBML semantics must be validated carefully; do not treat numeric trajectories as mechanistic ODEs without source support.
+caveats: Logical/qualitative SBML semantics must be validated carefully; do not treat
+  numeric trajectories as mechanistic ODEs without source support.
 io:
   inputs:
-  - name: epsilon_level
+  - name: epsilon_source_parameter
     maps_to: epsilon
     label: Epsilon source parameter
     default: 0.15
     units: native SBML value
     description: Epsilon source parameter. Maps to bundled SBML parameter `epsilon`.
   outputs:
-  - name: model_state_1
+  - name: tumor_cells
     maps_to: T
     label: T
     description: T observable. Maps to SBML symbol `T`.
-  - name: model_state_2
+  - name: cm
     maps_to: Cm
     label: Cm
     description: Cm observable. Maps to SBML symbol `Cm`.
-  - name: model_state_3
+  - name: ct
     maps_to: Ct
     label: Ct
     description: Ct observable. Maps to SBML symbol `Ct`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

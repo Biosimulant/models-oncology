@@ -1,6 +1,9 @@
 schema_version: '2.0'
 title: Tang2019 - Pharmacology modelling of AURKB and ZAK interaction in TNBC
-description: Aurora Kinase B and ZAK interaction model Equivalent of the stochastic model used in 'Network pharmacology model predicts combined Aurora B and ZAK inhibition in MDA-MB-231 breast cancer cells' by Tan. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+description: Aurora Kinase B and ZAK interaction model Equivalent of the stochastic
+  model used in 'Network pharmacology model predicts combined Aurora B and ZAK inhibition
+  in MDA-MB-231 breast cancer cells' by Tan. It can be used to explore tumor-related
+  dynamics and compare treatment-response behavior across conditions.
 standard: other
 tags:
 - biomodels_ebi
@@ -49,16 +52,17 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
-  - name: kd_tgfbr1_level
+  - name: kd_tgfbr1_source_parameter
     maps_to: kd_tgfbr1
     label: Kd tgfbr1 source parameter
     default: 0.45
     units: native SBML value
     description: Kd tgfbr1 source parameter. Maps to bundled SBML parameter `kd_tgfbr1`.
-  - name: k_tgfbr1_level
+  - name: k_tgfbr1_source_parameter
     maps_to: k_tgfbr1
     label: K tgfbr1 source parameter
     default: 0.5
@@ -114,7 +118,8 @@ io:
     label: PKN1
     description: PKN1 observable. Maps to SBML symbol `PKN1`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

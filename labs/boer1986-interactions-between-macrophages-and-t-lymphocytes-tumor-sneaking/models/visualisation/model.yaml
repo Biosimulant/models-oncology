@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: 'Boer1986 - Interactions between Macrophages and T-lymphocytes: Tumor Sneaking Through Intrinsic to Helper T cell Dynamics Visualisation'
-description: 'Oncology visualisation for Boer1986 - Interactions between Macrophages and T-lymphocytes: Tumor Sneaking Through Intrinsic to Helper T cell Dynamics.'
+title: 'Boer1986 - Interactions between Macrophages and T-lymphocytes: Tumor Sneaking
+  Through Intrinsic to Helper T cell Dynamics Visualisation'
+description: 'Oncology visualisation for Boer1986 - Interactions between Macrophages
+  and T-lymphocytes: Tumor Sneaking Through Intrinsic to Helper T cell Dynamics.'
 standard: other
 tags:
 - biomodels_ebi
@@ -20,17 +22,23 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: 'Boer1986 - Interactions between Macrophages and T-lymphocytes: Tumor Sneaking Through Intrinsic to Helper T cell Dynamics'
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    lab_title: 'Boer1986 - Interactions between Macrophages and T-lymphocytes: Tumor
+      Sneaking Through Intrinsic to Helper T cell Dynamics'
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model
-      title: 'Boer1986 - Interactions between Macrophages and T-lymphocytes: Tumor Sneaking Through Intrinsic to Helper T cell Dynamics'
+      title: 'Boer1986 - Interactions between Macrophages and T-lymphocytes: Tumor
+        Sneaking Through Intrinsic to Helper T cell Dynamics'
       state_observables:
       - CTLP
       - HTLP

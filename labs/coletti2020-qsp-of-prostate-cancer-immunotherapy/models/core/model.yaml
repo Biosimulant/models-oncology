@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Coletti2020 - QSP model of prostate cancer immunotherapy
-description: This model is based on the publication:Coletti R, Leonardelli L, Parolo S, Marchetti L. A QSP model of prostate cancer immunotherapy to identify effective combination therapies.
+description: This model is based on the publication:Coletti R, Leonardelli L, Parolo
+  S, Marchetti L. A QSP model of prostate cancer immunotherapy to identify effective
+  combination therapies.
 standard: other
 tags:
 - biomodels_ebi
@@ -53,42 +55,44 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
-  - name: k_antiil_level
+  - name: k_anti_il_source_parameter
     maps_to: k_antiIl
     label: K antiIl source parameter
     default: 0.714
     units: native SBML value
     description: K antiIl source parameter. Maps to bundled SBML parameter `k_antiIl`.
   outputs:
-  - name: model_state_1
+  - name: x_1
     maps_to: X_1
     label: X 1
     description: X 1 observable. Maps to SBML symbol `X_1`.
-  - name: model_state_2
+  - name: a
     maps_to: A
     label: A
     description: A observable. Maps to SBML symbol `A`.
-  - name: model_state_3
+  - name: d_m
     maps_to: D_m
     label: D m
     description: D m observable. Maps to SBML symbol `D_m`.
-  - name: model_state_4
+  - name: c_2
     maps_to: C_2
     label: C 2
     description: C 2 observable. Maps to SBML symbol `C_2`.
-  - name: model_state_5
+  - name: i_2
     maps_to: I_2
     label: I 2
     description: I 2 observable. Maps to SBML symbol `I_2`.
-  - name: model_state_6
+  - name: normal_cells
     maps_to: N
     label: N
     description: N observable. Maps to SBML symbol `N`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

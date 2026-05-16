@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Chen2011/2 - bone marrow invasion relative model
-description: 'The paper describes a model of tumor invasion to bone marrow. Created by COPASI 4.26 (Build 213) This model is described in the article: Modeling invasion of metastasizing cancer cells to bone marrow.'
+description: 'The paper describes a model of tumor invasion to bone marrow. Created
+  by COPASI 4.26 (Build 213) This model is described in the article: Modeling invasion
+  of metastasizing cancer cells to bone marrow.'
 standard: other
 tags:
 - biomodels_ebi
@@ -44,20 +46,36 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations. No scientifically safe external input was exposed by the cleanup.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations. Exposed inputs are traceable to bundled SBML parameters or initial conditions.
 io:
-  inputs: []
-  outputs:
-  - name: model_state_1
+  inputs:
+  - name: initial_healthy_bone_marrow
     maps_to: H
-    label: H
-    description: H observable. Maps to SBML symbol `H`.
-  - name: model_state_2
+    label: Healthy Bone Marrow
+    default: 0.5
+    units: native SBML value
+    description: Initial Healthy Bone Marrow. Sets the initial value of bundled SBML
+      symbol `H`.
+  - name: initial_tumor_burden
     maps_to: T
-    label: T
-    description: T observable. Maps to SBML symbol `T`.
+    label: Tumor Burden
+    default: 0.0001
+    units: native SBML value
+    description: Initial Tumor Burden. Sets the initial value of bundled SBML symbol
+      `T`.
+  outputs:
+  - name: healthy_bone_marrow
+    maps_to: H
+    label: Healthy Bone Marrow
+    description: Healthy Bone Marrow observable. Maps to SBML symbol `H`.
+  - name: tumor_burden
+    maps_to: T
+    label: Tumor Burden
+    description: Tumor Burden observable. Maps to SBML symbol `T`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

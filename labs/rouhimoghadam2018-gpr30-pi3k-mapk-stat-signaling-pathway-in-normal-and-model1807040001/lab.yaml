@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: Rouhimoghadam2018 - GPR30/PI3K/MAPK/STAT signaling pathway in normal and cancer cells Lab
-description: In the current study, we aimed to simulate the GPR30/PI3K/MAPK/STAT signaling pathway in normal and cancer cells by the use of ordinary differential equation modeling. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+title: Rouhimoghadam2018 - GPR30/PI3K/MAPK/STAT signaling pathway in normal and cancer
+  cells Lab
+description: In the current study, we aimed to simulate the GPR30/PI3K/MAPK/STAT signaling
+  pathway in normal and cancer cells by the use of ordinary differential equation
+  modeling. It can be used to explore tumor-related dynamics and compare treatment-response
+  behavior across conditions.
 tags:
 - biomodels_ebi
 - curated
@@ -16,46 +20,53 @@ tags:
 - tumor-growth
 io:
   inputs:
-  - name: initial_pegf_egfr2_pshc_grb2_sos_ras_gdp
-    maps_to: oncology_sbml_rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model1807040001_model.initial_pegf_egfr2_pshc_grb2_sos_ras_gdp
+  - name: initial_pegf_egfr2_p_shc_grb2_sos_ras_gdp
+    maps_to: oncology_sbml_rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model1807040001_model.initial_pegf_egfr2_p_shc_grb2_sos_ras_gdp
     label: PEGF EGFR2 pShc Grb2 SOS Ras GDP
     default: 0.0
     units: native SBML value
-    description: Initial PEGF EGFR2 pShc Grb2 SOS Ras GDP. Sets the initial value of bundled SBML symbol `mwf40d6176_abfc_4a30_886f_83a19fcffc48`.
+    description: Initial PEGF EGFR2 pShc Grb2 SOS Ras GDP. Sets the initial value
+      of bundled SBML symbol `mwf40d6176_abfc_4a30_886f_83a19fcffc48`.
   - name: initial_pegf_egfr2_grb2_sos_ras_gdp
     maps_to: oncology_sbml_rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model1807040001_model.initial_pegf_egfr2_grb2_sos_ras_gdp
     label: PEGF EGFR2 Grb2 SOS Ras GDP
     default: 0.0
     units: native SBML value
-    description: Initial PEGF EGFR2 Grb2 SOS Ras GDP. Sets the initial value of bundled SBML symbol `mw28464aad_8013_4a23_ae09_a406954859a6`.
+    description: Initial PEGF EGFR2 Grb2 SOS Ras GDP. Sets the initial value of bundled
+      SBML symbol `mw28464aad_8013_4a23_ae09_a406954859a6`.
   - name: initial_pegf_egfr2_ras_gap
     maps_to: oncology_sbml_rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model1807040001_model.initial_pegf_egfr2_ras_gap
     label: PEGF EGFR2 Ras GAP
     default: 0.0
     units: native SBML value
-    description: Initial PEGF EGFR2 Ras GAP. Sets the initial value of bundled SBML symbol `mwd39388fd_4f85_4d1c_b2a3_37857c595a2d`.
+    description: Initial PEGF EGFR2 Ras GAP. Sets the initial value of bundled SBML
+      symbol `mwd39388fd_4f85_4d1c_b2a3_37857c595a2d`.
   - name: initial_pegf_egfr2_ras_gap_ras_gtp
     maps_to: oncology_sbml_rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model1807040001_model.initial_pegf_egfr2_ras_gap_ras_gtp
     label: PEGF EGFR2 Ras GAP Ras GTP
     default: 0.0
     units: native SBML value
-    description: Initial PEGF EGFR2 Ras GAP Ras GTP. Sets the initial value of bundled SBML symbol `mwd7bf31ba_b05c_4c45_bb2f_6a2468a2a507`.
+    description: Initial PEGF EGFR2 Ras GAP Ras GTP. Sets the initial value of bundled
+      SBML symbol `mwd7bf31ba_b05c_4c45_bb2f_6a2468a2a507`.
   - name: initial_pegf_egfr2_ras_gap_shp2
     maps_to: oncology_sbml_rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model1807040001_model.initial_pegf_egfr2_ras_gap_shp2
     label: PEGF EGFR2 Ras GAP SHP2
     default: 0.0
     units: native SBML value
-    description: Initial PEGF EGFR2 Ras GAP SHP2. Sets the initial value of bundled SBML symbol `mwbf5cb039_b830_4282_aa22_a3dda6272ec1`.
-  - name: initial_pperk_pegf_egfr2_pshc_grb2_sos
-    maps_to: oncology_sbml_rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model1807040001_model.initial_pperk_pegf_egfr2_pshc_grb2_sos
+    description: Initial PEGF EGFR2 Ras GAP SHP2. Sets the initial value of bundled
+      SBML symbol `mwbf5cb039_b830_4282_aa22_a3dda6272ec1`.
+  - name: initial_pp_erk_p_egf_egfr2_p_shc_grb2_sos
+    maps_to: oncology_sbml_rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model1807040001_model.initial_pp_erk_p_egf_egfr2_p_shc_grb2_sos
     label: PpERK pEGF EGFR2 pShc Grb2 SOS
     default: 0.0
     units: native SBML value
-    description: Initial PpERK pEGF EGFR2 pShc Grb2 SOS. Sets the initial value of bundled SBML symbol `mw5babe3d5_a9af_4dfd_ac01_35474ef64af2`.
+    description: Initial PpERK pEGF EGFR2 pShc Grb2 SOS. Sets the initial value of
+      bundled SBML symbol `mw5babe3d5_a9af_4dfd_ac01_35474ef64af2`.
   outputs:
-  - name: pegf_egfr2_pshc_grb2_sos_ras_gdp
-    maps_to: oncology_sbml_rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model1807040001_model.pegf_egfr2_pshc_grb2_sos_ras_gdp
-    description: PEGF EGFR2 pShc Grb2 SOS Ras GDP observable. Maps to SBML symbol `mwf40d6176_abfc_4a30_886f_83a19fcffc48`.
+  - name: pegf_egfr2_p_shc_grb2_sos_ras_gdp
+    maps_to: oncology_sbml_rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model1807040001_model.pegf_egfr2_p_shc_grb2_sos_ras_gdp
+    description: PEGF EGFR2 pShc Grb2 SOS Ras GDP observable. Maps to SBML symbol
+      `mwf40d6176_abfc_4a30_886f_83a19fcffc48`.
   - name: pegf_egfr2_grb2_sos_ras_gdp
     maps_to: oncology_sbml_rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model1807040001_model.pegf_egfr2_grb2_sos_ras_gdp
     description: PEGF EGFR2 Grb2 SOS Ras GDP observable. Maps to SBML symbol `mw28464aad_8013_4a23_ae09_a406954859a6`.
@@ -68,12 +79,13 @@ io:
   - name: pegf_egfr2_ras_gap_shp2
     maps_to: oncology_sbml_rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model1807040001_model.pegf_egfr2_ras_gap_shp2
     description: PEGF EGFR2 Ras GAP SHP2 observable. Maps to SBML symbol `mwbf5cb039_b830_4282_aa22_a3dda6272ec1`.
-  - name: pperk_pegf_egfr2_pshc_grb2_sos
-    maps_to: oncology_sbml_rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model1807040001_model.pperk_pegf_egfr2_pshc_grb2_sos
+  - name: pp_erk_p_egf_egfr2_p_shc_grb2_sos
+    maps_to: oncology_sbml_rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model1807040001_model.pp_erk_p_egf_egfr2_p_shc_grb2_sos
     description: PpERK pEGF EGFR2 pShc Grb2 SOS observable. Maps to SBML symbol `mw5babe3d5_a9af_4dfd_ac01_35474ef64af2`.
   - name: state
     maps_to: oncology_sbml_rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model1807040001_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_rouhimoghadam2018_gpr30_pi3k_mapk_stat_signaling_model1807040001_model.summary
     description: Change and peak summary across the simulated SBML observables.

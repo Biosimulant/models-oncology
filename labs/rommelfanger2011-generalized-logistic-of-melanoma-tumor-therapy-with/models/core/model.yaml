@@ -1,6 +1,9 @@
 schema_version: '2.0'
-title: Rommelfanger2011 - Generalized logistic model of melanoma tumor therapy with vesicular stomatitis virus
-description: 'This mathematical model is described by the publication:Rommelfanger DM, Offord CP, Dev J, Bajzer Z, Vile RG, Dingli D. ''Dynamics of melanoma tumor therapy with vesicular stomatitis virus: explaining.'
+title: Rommelfanger2011 - Generalized logistic model of melanoma tumor therapy with
+  vesicular stomatitis virus
+description: 'This mathematical model is described by the publication:Rommelfanger
+  DM, Offord CP, Dev J, Bajzer Z, Vile RG, Dingli D. ''Dynamics of melanoma tumor
+  therapy with vesicular stomatitis virus: explaining.'
 standard: other
 tags:
 - biomodels_ebi
@@ -28,7 +31,8 @@ upstream:
   source_id: MODEL2109110004
   standard: sbml
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2109110004
-  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2109110004?filename=Rommelfanger2011 Generalized Logistic.xml
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2109110004?filename=Rommelfanger2011
+    Generalized Logistic.xml
   license: CC0
 biosim:
   entrypoint: src.rommelfanger2011_generalized_logistic_model_of_m_model2109110004_model:Rommelfanger2011GeneralizedLogisticModelOfMModel2109110004Model
@@ -51,38 +55,40 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
-  - name: epsilon_level
+  - name: epsilon_source_parameter
     maps_to: epsilon
     label: Epsilon source parameter
     default: 3.0
     units: native SBML value
     description: Epsilon source parameter. Maps to bundled SBML parameter `epsilon`.
   outputs:
-  - name: model_state_1
+  - name: y
     maps_to: y
     label: Y
     description: Y observable. Maps to SBML symbol `y`.
-  - name: model_state_2
+  - name: v
     maps_to: v
     label: V
     description: V observable. Maps to SBML symbol `v`.
-  - name: model_state_3
+  - name: injected_virus
     maps_to: v_i
     label: V i
     description: V i observable. Maps to SBML symbol `v_i`.
-  - name: model_state_4
+  - name: x
     maps_to: x
     label: X
     description: X observable. Maps to SBML symbol `x`.
-  - name: model_state_5
+  - name: z
     maps_to: z
     label: Z
     description: Z observable. Maps to SBML symbol `z`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

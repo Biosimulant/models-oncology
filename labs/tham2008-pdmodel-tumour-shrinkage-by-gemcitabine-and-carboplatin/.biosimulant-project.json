@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "0165c4ab-6ad0-4e2a-bced-625bbd735f2d",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "ea21db10-4981-49a8-b0fc-bb847fda59d6",
+  "created_at": "2026-05-15T19:05:40.399916781+00:00",
+  "last_synced_at": "2026-05-16T10:40:33.761074+00:00",
+  "hub_manifest_hash": "5544fc297a20fed4399e1e23238a731f2499350fd3a08e9e75ab0f2b5effe77f",
+  "package_name": "tham2008-pdmodel-tumour-shrinkage-by-gemcitabine-and-carboplatin"
+}

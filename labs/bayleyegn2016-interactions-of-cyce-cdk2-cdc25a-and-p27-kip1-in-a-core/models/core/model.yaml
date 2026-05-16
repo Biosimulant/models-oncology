@@ -1,6 +1,9 @@
 schema_version: '2.0'
-title: Bayleyegn2016 - interactions of CycE/Cdk2, Cdc25A, and P27 Kip1 in a core cancer subnetwork
-description: Mathematical description of the interactions of CycE/Cdk2, Cdc25A, and P27Kip1 in a core cancer subnetwork. Model is encoded by Matthieu Maire/partially by Krishna Kumar Tiwari and submitted to BioMod.
+title: Bayleyegn2016 - interactions of CycE/Cdk2, Cdc25A, and P27 Kip1 in a core cancer
+  subnetwork
+description: Mathematical description of the interactions of CycE/Cdk2, Cdc25A, and
+  P27Kip1 in a core cancer subnetwork. Model is encoded by Matthieu Maire/partially
+  by Krishna Kumar Tiwari and submitted to BioMod.
 standard: other
 tags:
 - biomodels_ebi
@@ -45,11 +48,31 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations. No scientifically safe external input was exposed by the cleanup.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations. Exposed inputs are traceable to bundled SBML parameters or initial conditions.
 io:
-  inputs: []
+  inputs:
+  - name: initial_cyce_cdk2
+    maps_to: CycE_CDK2
+    label: CycE/CDK2
+    default: 1.0
+    units: native SBML value
+    description: Initial CycE/CDK2. Sets the initial value of bundled SBML symbol
+      `CycE_CDK2`.
+  - name: initial_cdc25a
+    maps_to: Cdc25A
+    label: Cdc25A
+    default: 1.0
+    units: native SBML value
+    description: Initial Cdc25A. Sets the initial value of bundled SBML symbol `Cdc25A`.
+  - name: initial_p27_kip1
+    maps_to: p27_kip1
+    label: p27 Kip1
+    default: 1.0
+    units: native SBML value
+    description: Initial p27 Kip1. Sets the initial value of bundled SBML symbol `p27_kip1`.
   outputs:
-  - name: cyce_cdk2
+  - name: cyc_e_cdk2
     maps_to: CycE_CDK2
     label: CycE CDK2
     description: CycE CDK2 observable. Maps to SBML symbol `CycE_CDK2`.
@@ -62,7 +85,8 @@ io:
     label: Cdc25A
     description: Cdc25A observable. Maps to SBML symbol `Cdc25A`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

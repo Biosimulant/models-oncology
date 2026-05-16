@@ -1,6 +1,9 @@
 schema_version: '2.0'
-title: Hutchinson2016 - Vascular phenotype identification and anti-angiogenic treatment recommendation Lab
-description: This is a spatially averaged multiscale mathematical model of tumor angiogenesis. The model describes the dynamics of VEGF, Ang1, Ang2, and PDGF, coupled with those of mature and immature endothelial.
+title: Hutchinson2016 - Vascular phenotype identification and anti-angiogenic treatment
+  recommendation Lab
+description: This is a spatially averaged multiscale mathematical model of tumor angiogenesis.
+  The model describes the dynamics of VEGF, Ang1, Ang2, and PDGF, coupled with those
+  of mature and immature endothelial.
 tags:
 - angiogenesis
 - biomodels_ebi
@@ -16,34 +19,35 @@ tags:
 - tumor-growth
 io:
   inputs:
-  - name: epsilon_level
-    maps_to: oncology_sbml_hutchinson2016_vascular_phenotype_identification_model1911130007_model.epsilon_level
+  - name: epsilon_source_parameter
+    maps_to: oncology_sbml_hutchinson2016_vascular_phenotype_identification_model1911130007_model.epsilon_source_parameter
     label: Epsilon source parameter
     default: 0.04
     units: native SBML value
     description: Epsilon source parameter. Maps to bundled SBML parameter `epsilon`.
   outputs:
-  - name: model_state_1
-    maps_to: oncology_sbml_hutchinson2016_vascular_phenotype_identification_model1911130007_model.model_state_1
+  - name: v
+    maps_to: oncology_sbml_hutchinson2016_vascular_phenotype_identification_model1911130007_model.v
     description: V observable. Maps to SBML symbol `v`.
-  - name: model_state_2
-    maps_to: oncology_sbml_hutchinson2016_vascular_phenotype_identification_model1911130007_model.model_state_2
+  - name: rv
+    maps_to: oncology_sbml_hutchinson2016_vascular_phenotype_identification_model1911130007_model.rv
     description: Rv observable. Maps to SBML symbol `rv`.
-  - name: model_state_3
-    maps_to: oncology_sbml_hutchinson2016_vascular_phenotype_identification_model1911130007_model.model_state_3
+  - name: bv
+    maps_to: oncology_sbml_hutchinson2016_vascular_phenotype_identification_model1911130007_model.bv
     description: Bv observable. Maps to SBML symbol `bv`.
-  - name: model_state_4
-    maps_to: oncology_sbml_hutchinson2016_vascular_phenotype_identification_model1911130007_model.model_state_4
+  - name: a1
+    maps_to: oncology_sbml_hutchinson2016_vascular_phenotype_identification_model1911130007_model.a1
     description: A1 observable. Maps to SBML symbol `a1`.
-  - name: model_state_5
-    maps_to: oncology_sbml_hutchinson2016_vascular_phenotype_identification_model1911130007_model.model_state_5
+  - name: aw
+    maps_to: oncology_sbml_hutchinson2016_vascular_phenotype_identification_model1911130007_model.aw
     description: Aw observable. Maps to SBML symbol `aw`.
-  - name: model_state_6
-    maps_to: oncology_sbml_hutchinson2016_vascular_phenotype_identification_model1911130007_model.model_state_6
+  - name: a2
+    maps_to: oncology_sbml_hutchinson2016_vascular_phenotype_identification_model1911130007_model.a2
     description: A2 observable. Maps to SBML symbol `a2`.
   - name: state
     maps_to: oncology_sbml_hutchinson2016_vascular_phenotype_identification_model1911130007_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_hutchinson2016_vascular_phenotype_identification_model1911130007_model.summary
     description: Change and peak summary across the simulated SBML observables.

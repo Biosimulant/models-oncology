@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: Perez-Garcia19 - Computational design of improved standardized chemotherapy protocols for grade 2 oligodendrogliomas Lab
-description: "This is a model built by COPASI4.24(Build 197)This a model from the article: Computational design of improved standardized chemotherapy protocols for grade II oligodendrogliomasV\xEDctor M. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
+title: Perez-Garcia19 - Computational design of improved standardized chemotherapy
+  protocols for grade 2 oligodendrogliomas Lab
+description: "This is a model built by COPASI4.24(Build 197)This a model from the\
+  \ article: Computational design of improved standardized chemotherapy protocols\
+  \ for grade II oligodendrogliomasV\xEDctor M. It can be used to explore tumor-related\
+  \ dynamics and compare treatment-response behavior across conditions."
 tags:
 - biomodels_ebi
 - chemotherapy
@@ -15,26 +19,26 @@ tags:
 - tumor-growth
 io:
   inputs:
-  - name: dose_5
-    maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.dose_5
+  - name: dose_5_source_parameter
+    maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.dose_5_source_parameter
     label: Dose 5 source parameter
     default: 0.0
     units: native SBML value
     description: Dose 5 source parameter. Maps to bundled SBML parameter `dose_5`.
-  - name: dose_4
-    maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.dose_4
+  - name: dose_4_source_parameter
+    maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.dose_4_source_parameter
     label: Dose 4 source parameter
     default: 0.0
     units: native SBML value
     description: Dose 4 source parameter. Maps to bundled SBML parameter `dose_4`.
-  - name: dose3
-    maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.dose3
+  - name: dose3_source_parameter
+    maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.dose3_source_parameter
     label: Dose3 source parameter
     default: 0.0
     units: native SBML value
     description: Dose3 source parameter. Maps to bundled SBML parameter `dose3`.
-  - name: dose2
-    maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.dose2
+  - name: dose2_source_parameter
+    maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.dose2_source_parameter
     label: Dose2 source parameter
     default: 0.0
     units: native SBML value
@@ -44,13 +48,15 @@ io:
     label: Damaged Tumor Cells D
     default: 0.0
     units: native SBML value
-    description: Initial Damaged Tumor Cells D. Sets the initial value of bundled SBML symbol `Damaged_Tumor_Cells_D`.
+    description: Initial Damaged Tumor Cells D. Sets the initial value of bundled
+      SBML symbol `Damaged_Tumor_Cells_D`.
   - name: initial_tumor_cell_population_p
     maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.initial_tumor_cell_population_p
     label: Tumor Cell Population P
     default: 144.952075141053
     units: native SBML value
-    description: Initial Tumor Cell Population P. Sets the initial value of bundled SBML symbol `Tumor_Cell_Population_P`.
+    description: Initial Tumor Cell Population P. Sets the initial value of bundled
+      SBML symbol `Tumor_Cell_Population_P`.
   outputs:
   - name: damaged_tumor_cells_d
     maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.damaged_tumor_cells_d
@@ -63,7 +69,8 @@ io:
     description: Drug Concentration C observable. Maps to SBML symbol `Drug_Concentration_C`.
   - name: state
     maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_perez_garcia19_computational_design_of_improved_biomd0000000814_model.summary
     description: Change and peak summary across the simulated SBML observables.

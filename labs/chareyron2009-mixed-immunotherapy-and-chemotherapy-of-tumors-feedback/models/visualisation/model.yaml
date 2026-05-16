@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Chareyron2009 - Mixed immunotherapy and chemotherapy of tumors Feedback design and model updating schemes Visualisation
-description: Oncology visualisation for Chareyron2009 - Mixed immunotherapy and chemotherapy of tumors Feedback design and model updating schemes.
+title: Chareyron2009 - Mixed immunotherapy and chemotherapy of tumors Feedback design
+  and model updating schemes Visualisation
+description: Oncology visualisation for Chareyron2009 - Mixed immunotherapy and chemotherapy
+  of tumors Feedback design and model updating schemes.
 standard: other
 tags:
 - biomodels_ebi
@@ -21,17 +23,23 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Chareyron2009 - Mixed immunotherapy and chemotherapy of tumors Feedback design and model updating schemes
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    lab_title: Chareyron2009 - Mixed immunotherapy and chemotherapy of tumors Feedback
+      design and model updating schemes
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_chareyron2009_mixed_immunotherapy_and_chemothera_model2001160002_model
-      title: Chareyron2009 - Mixed immunotherapy and chemotherapy of tumors Feedback design and model updating schemes
+      title: Chareyron2009 - Mixed immunotherapy and chemotherapy of tumors Feedback
+        design and model updating schemes
       state_observables:
       - T
       - N
@@ -41,27 +49,22 @@ biosim:
       - I
       observables:
       - id: T
-        port: model_state_1
-        label: T
+        port: tumor_cells
+        label: Tumor Cells
         group: drug_response
       - id: N
-        port: model_state_2
         label: N
         group: drug_response
       - id: L
-        port: model_state_3
         label: L
         group: drug_response
       - id: C
-        port: model_state_4
         label: C
         group: drug_response
       - id: M
-        port: model_state_5
         label: M
         group: drug_response
       - id: I
-        port: model_state_6
         label: I
         group: drug_response
 runtime:

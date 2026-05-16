@@ -16,10 +16,10 @@ class Yang2012CancerGrowthWithAngiogenesisBiomd0000000796Model(TelluriumSBMLBioM
     _TIME_UNIT = "model_time"
     _OBSERVABLE_STRATEGY = 'species'
     _OBSERVABLES = ['C', 'E', 'T', 'P', 'A']
-    _SPECIES_LABELS = {'C': 'C', 'E': 'E', 'T': 'T', 'P': 'P', 'A': 'A'}
+    _SPECIES_LABELS = {'C': 'Cancer Cells', 'E': 'Endothelial Cells', 'T': 'T', 'P': 'P', 'A': 'A'}
     _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {}
-    _HEADLINE_OUTPUTS = {'model_state_1': ('C', 'native SBML value', 'C observable. Maps to SBML symbol `C`.'), 'model_state_2': ('E', 'native SBML value', 'E observable. Maps to SBML symbol `E`.'), 'model_state_3': ('T', 'native SBML value', 'T observable. Maps to SBML symbol `T`.'), 'model_state_4': ('P', 'native SBML value', 'P observable. Maps to SBML symbol `P`.'), 'model_state_5': ('A', 'native SBML value', 'A observable. Maps to SBML symbol `A`.')}
+    _INITIAL_CONDITION_INPUTS = {'initial_cancer_cells': ('C', 9.0, 'native SBML value', 'Initial Cancer Cells. Sets the initial value of bundled SBML symbol `C`.'), 'initial_endothelial_cells': ('E', 10.0, 'native SBML value', 'Initial Endothelial Cells. Sets the initial value of bundled SBML symbol `E`.')}
+    _HEADLINE_OUTPUTS = {'cancer_cells': ('C', 'native SBML value', 'Cancer Cells observable. Maps to SBML symbol `C`.'), 'endothelial_cells': ('E', 'native SBML value', 'Endothelial Cells observable. Maps to SBML symbol `E`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/BIOMD0000000796.xml', integration_step: float = 0.1) -> None:

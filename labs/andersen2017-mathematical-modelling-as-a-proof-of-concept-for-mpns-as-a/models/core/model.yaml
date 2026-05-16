@@ -1,6 +1,9 @@
 schema_version: '2.0'
-title: Andersen2017 - Mathematical modelling as a proof of concept for MPNs as a human inflammation model for cancer development
-description: This is a mathematical model investigating the role of chronic inflammation in the development and progression of myeloproliferative neoplasms (MPNs). The model describes the proliferation from stem c.
+title: Andersen2017 - Mathematical modelling as a proof of concept for MPNs as a human
+  inflammation model for cancer development
+description: This is a mathematical model investigating the role of chronic inflammation
+  in the development and progression of myeloproliferative neoplasms (MPNs). The model
+  describes the proliferation from stem c.
 standard: other
 tags:
 - biomodels_ebi
@@ -47,36 +50,44 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations. No scientifically safe external input was exposed by the cleanup.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations. Exposed inputs are traceable to bundled SBML parameters or initial conditions.
 io:
-  inputs: []
+  inputs:
+  - name: inflammation_level
+    maps_to: inflammation
+    label: Inflammation Level
+    default: 7.0
+    units: native SBML value
+    description: Inflammation Level. Overrides bundled SBML parameter `inflammation`.
   outputs:
-  - name: model_state_1
+  - name: x0
     maps_to: x0
     label: X0
     description: X0 observable. Maps to SBML symbol `x0`.
-  - name: model_state_2
+  - name: x1
     maps_to: x1
     label: X1
     description: X1 observable. Maps to SBML symbol `x1`.
-  - name: model_state_3
+  - name: a
     maps_to: a
     label: A
     description: A observable. Maps to SBML symbol `a`.
-  - name: model_state_4
+  - name: s
     maps_to: s
     label: S
     description: S observable. Maps to SBML symbol `s`.
-  - name: model_state_5
+  - name: y0
     maps_to: y0
     label: Y0
     description: Y0 observable. Maps to SBML symbol `y0`.
-  - name: model_state_6
+  - name: y1
     maps_to: y1
     label: Y1
     description: Y1 observable. Maps to SBML symbol `y1`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Yang2012 - cancer growth with angiogenesis
-description: 'The paper describes a model of tumor growth with angiogenesis. Created by COPASI 4.26 (Build 213) This model is described in the article: Mathematical modeling of solid cancer growth with angiogenesis.'
+description: 'The paper describes a model of tumor growth with angiogenesis. Created
+  by COPASI 4.26 (Build 213) This model is described in the article: Mathematical
+  modeling of solid cancer growth with angiogenesis.'
 standard: other
 tags:
 - angiogenesis
@@ -45,32 +47,36 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations. No scientifically safe external input was exposed by the cleanup.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations. Exposed inputs are traceable to bundled SBML parameters or initial conditions.
 io:
-  inputs: []
-  outputs:
-  - name: model_state_1
+  inputs:
+  - name: initial_cancer_cells
     maps_to: C
-    label: C
-    description: C observable. Maps to SBML symbol `C`.
-  - name: model_state_2
+    label: Cancer Cells
+    default: 9.0
+    units: native SBML value
+    description: Initial Cancer Cells. Sets the initial value of bundled SBML symbol
+      `C`.
+  - name: initial_endothelial_cells
     maps_to: E
-    label: E
-    description: E observable. Maps to SBML symbol `E`.
-  - name: model_state_3
-    maps_to: T
-    label: T
-    description: T observable. Maps to SBML symbol `T`.
-  - name: model_state_4
-    maps_to: P
-    label: P
-    description: P observable. Maps to SBML symbol `P`.
-  - name: model_state_5
-    maps_to: A
-    label: A
-    description: A observable. Maps to SBML symbol `A`.
+    label: Endothelial Cells
+    default: 10.0
+    units: native SBML value
+    description: Initial Endothelial Cells. Sets the initial value of bundled SBML
+      symbol `E`.
+  outputs:
+  - name: cancer_cells
+    maps_to: C
+    label: Cancer Cells
+    description: Cancer Cells observable. Maps to SBML symbol `C`.
+  - name: endothelial_cells
+    maps_to: E
+    label: Endothelial Cells
+    description: Endothelial Cells observable. Maps to SBML symbol `E`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

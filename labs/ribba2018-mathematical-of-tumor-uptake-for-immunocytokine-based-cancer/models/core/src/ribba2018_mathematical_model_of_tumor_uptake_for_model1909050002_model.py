@@ -18,7 +18,7 @@ class Ribba2018MathematicalModelOfTumorUptakeForModel1909050002Model(TelluriumSB
     _OBSERVABLES = ['A_1_b', 'C_4_T']
     _SPECIES_LABELS = {'A_1_b': 'A 1 b', 'C_4_T': 'C 4 T'}
     _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {'epsilon_level': ('epsilon', 0.25, 'native SBML value', 'Epsilon source parameter. Maps to bundled SBML parameter `epsilon`.'), 'initial_for_epsilon': ('ModelValue_2', 0.25, 'native SBML value', 'Initial for epsilon source parameter. Maps to bundled SBML parameter `ModelValue_2`.'), 'initial_a_1_b': ('A_1_b', 8.0, 'native SBML value', 'Initial A 1 b. Sets the initial value of bundled SBML symbol `A_1_b`.'), 'initial_c_4_t': ('C_4_T', 0.0, 'native SBML value', 'Initial C 4 T. Sets the initial value of bundled SBML symbol `C_4_T`.')}
+    _INITIAL_CONDITION_INPUTS = {'epsilon_source_parameter': ('epsilon', 0.25, 'native SBML value', 'Epsilon source parameter. Maps to bundled SBML parameter `epsilon`.'), 'initial_for_epsilon_source_parameter': ('ModelValue_2', 0.25, 'native SBML value', 'Initial for epsilon source parameter. Maps to bundled SBML parameter `ModelValue_2`.'), 'initial_a_1_b': ('A_1_b', 8.0, 'native SBML value', 'Initial A 1 b. Sets the initial value of bundled SBML symbol `A_1_b`.'), 'initial_c_4_t': ('C_4_T', 0.0, 'native SBML value', 'Initial C 4 T. Sets the initial value of bundled SBML symbol `C_4_T`.')}
     _HEADLINE_OUTPUTS = {'a_1_b': ('A_1_b', 'native SBML value', 'A 1 b observable. Maps to SBML symbol `A_1_b`.'), 'c_4_t': ('C_4_T', 'native SBML value', 'C 4 T observable. Maps to SBML symbol `C_4_T`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 

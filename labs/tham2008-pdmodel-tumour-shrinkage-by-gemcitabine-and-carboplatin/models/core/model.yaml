@@ -1,6 +1,9 @@
 schema_version: '2.0'
 title: Tham2008 - PDmodel, Tumour shrinkage by gemcitabine and carboplatin
-description: 'PURPOSE: This tumor response pharmacodynamic model aims to describe primary lesion shrinkage in non-small cell lung cancer over time and determine if concentration-based exposure metrics for gemcitabi. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+description: 'PURPOSE: This tumor response pharmacodynamic model aims to describe
+  primary lesion shrinkage in non-small cell lung cancer over time and determine if
+  concentration-based exposure metrics for gemcitabi. It can be used to explore tumor-related
+  dynamics and compare treatment-response behavior across conditions.'
 standard: other
 tags:
 - biomodels_ebi
@@ -50,44 +53,47 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
-  - name: dose_int2
+  - name: dose_int2_source_parameter
     maps_to: Dose_Int2
     label: Dose Int2 source parameter
     default: -2.0
     units: native SBML value
     description: Dose Int2 source parameter. Maps to bundled SBML parameter `Dose_Int2`.
-  - name: dose_int1
+  - name: dose_int1_source_parameter
     maps_to: Dose_Int1
     label: Dose Int1 source parameter
     default: 0.0
     units: native SBML value
     description: Dose Int1 source parameter. Maps to bundled SBML parameter `Dose_Int1`.
-  - name: dose
+  - name: dose_source_parameter
     maps_to: Dose
     label: Dose source parameter
     default: 5203.84
     units: native SBML value
     description: Dose source parameter. Maps to bundled SBML parameter `Dose`.
-  - name: initial_tumorsize
+  - name: initial_tumor_size
     maps_to: TumorSize
     label: TumorSize
     default: 6.66
     units: native SBML value
-    description: Initial TumorSize. Sets the initial value of bundled SBML symbol `TumorSize`.
+    description: Initial TumorSize. Sets the initial value of bundled SBML symbol
+      `TumorSize`.
   outputs:
-  - name: tumorsize
+  - name: tumor_size
     maps_to: TumorSize
     label: TumorSize
     description: TumorSize observable. Maps to SBML symbol `TumorSize`.
-  - name: model_state_2
+  - name: ce
     maps_to: Ce
     label: Ce
     description: Ce observable. Maps to SBML symbol `Ce`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

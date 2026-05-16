@@ -15,14 +15,18 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Eftimie2010 - immunity to melanoma
-    question: What oncology-relevant state dominates the bundled SBML simulation over the baseline run?
-    answer_focus: Compares the largest-changing and peak observables with selected source states.
+    question: What oncology-relevant state dominates the bundled SBML simulation over
+      the baseline run?
+    answer_focus: Compares the largest-changing and peak observables with selected
+      source states.
     visual_scope: Tumor-system state trajectories and dominant observable changes
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_eftimie2010_immunity_to_melanoma_biomd0000000768_model
       title: Eftimie2010 - immunity to melanoma
@@ -34,23 +38,20 @@ biosim:
       - C
       observables:
       - id: T
-        port: model_state_1
-        label: T
+        port: melanoma_cells
+        label: Melanoma Cells
         group: tumor_system
       - id: Th
-        port: model_state_2
-        label: Th
+        port: helper_t_cells
+        label: Helper T Cells
         group: tumor_system
       - id: Cs
-        port: model_state_3
         label: Cs
         group: tumor_system
       - id: Cp
-        port: model_state_4
         label: Cp
         group: tumor_system
       - id: C
-        port: model_state_5
         label: C
         group: tumor_system
 runtime:

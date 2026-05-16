@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Andersen2017 - Mathematical modelling as a proof of concept for MPNs as a human inflammation model for cancer development Visualisation
-description: Oncology visualisation for Andersen2017 - Mathematical modelling as a proof of concept for MPNs as a human inflammation model for cancer development.
+title: Andersen2017 - Mathematical modelling as a proof of concept for MPNs as a human
+  inflammation model for cancer development Visualisation
+description: Oncology visualisation for Andersen2017 - Mathematical modelling as a
+  proof of concept for MPNs as a human inflammation model for cancer development.
 standard: other
 tags:
 - biomodels_ebi
@@ -15,17 +17,23 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Andersen2017 - Mathematical modelling as a proof of concept for MPNs as a human inflammation model for cancer development
-    question: What oncology-relevant state dominates the bundled SBML simulation over the baseline run?
-    answer_focus: Compares the largest-changing and peak observables with selected source states.
+    lab_title: Andersen2017 - Mathematical modelling as a proof of concept for MPNs
+      as a human inflammation model for cancer development
+    question: What oncology-relevant state dominates the bundled SBML simulation over
+      the baseline run?
+    answer_focus: Compares the largest-changing and peak observables with selected
+      source states.
     visual_scope: Tumor-system state trajectories and dominant observable changes
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_andersen2017_mathematical_modelling_as_a_proof_o_biomd0000000852_model
-      title: Andersen2017 - Mathematical modelling as a proof of concept for MPNs as a human inflammation model for cancer development
+      title: Andersen2017 - Mathematical modelling as a proof of concept for MPNs
+        as a human inflammation model for cancer development
       state_observables:
       - x0
       - x1
@@ -35,27 +43,27 @@ biosim:
       - s
       observables:
       - id: x0
-        port: model_state_1
+        port: x0
         label: X0
         group: tumor_system
       - id: x1
-        port: model_state_2
+        port: x1
         label: X1
         group: tumor_system
       - id: a
-        port: model_state_3
+        port: a
         label: A
         group: tumor_system
       - id: s
-        port: model_state_4
+        port: s
         label: S
         group: tumor_system
       - id: y0
-        port: model_state_5
+        port: y0
         label: Y0
         group: tumor_system
       - id: y1
-        port: model_state_6
+        port: y1
         label: Y1
         group: tumor_system
 runtime:

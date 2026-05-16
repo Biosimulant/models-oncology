@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Nazari2018 - IL6 mediated stem cell driven tumor growth and targeted treatment Visualisation
-description: Oncology visualisation for Nazari2018 - IL6 mediated stem cell driven tumor growth and targeted treatment.
+title: Nazari2018 - IL6 mediated stem cell driven tumor growth and targeted treatment
+  Visualisation
+description: Oncology visualisation for Nazari2018 - IL6 mediated stem cell driven
+  tumor growth and targeted treatment.
 standard: other
 tags:
 - biomodels_ebi
@@ -17,17 +19,23 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Nazari2018 - IL6 mediated stem cell driven tumor growth and targeted treatment
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    lab_title: Nazari2018 - IL6 mediated stem cell driven tumor growth and targeted
+      treatment
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model
-      title: Nazari2018 - IL6 mediated stem cell driven tumor growth and targeted treatment
+      title: Nazari2018 - IL6 mediated stem cell driven tumor growth and targeted
+        treatment
       state_observables:
       - Cancer_Stem_Cell_S
       - IL_6__Cell_bound_IL_6R_complex_on_S
@@ -49,19 +57,19 @@ biosim:
         label: Differentiated tumor cell D
         group: drug_response
       - id: Cancer_Stem_Cell_S
-        port: cancer_stem_cell_s
+        port: cancer_stem_cells_s
         label: Cancer Stem Cell S
         group: drug_response
       - id: IL_6__Cell_bound_IL_6R_complex_on_S
-        port: il_6_cell_bound_il_6r_complex_on_s
+        port: il_6_cell_bound_il_6_r_complex_on_s
         label: IL 6, Cell bound IL 6R complex on S
         group: drug_response
       - id: IL_6__Cell_bound_IL_6R_complex_on_E
-        port: il_6_cell_bound_il_6r_complex_on_e
+        port: il_6_cell_bound_il_6_r_complex_on_e
         label: IL 6, Cell bound IL 6R complex on E
         group: drug_response
       - id: IL_6__Cell_bound_IL_6R_complex_on_D
-        port: il_6_cell_bound_il_6r_complex_on_d
+        port: il_6_cell_bound_il_6_r_complex_on_d
         label: IL 6, Cell bound IL 6R complex on D
         group: drug_response
 runtime:

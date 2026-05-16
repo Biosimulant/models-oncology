@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Li2016 - Model for pancreatic cancer patients receiving immunotherapy
-description: immunotherapy offers a better prognosis for pancreatic cancer patients. As a direct extension of this work, various new therapy methods that are under exploration and clinical trials could be assessed.
+description: immunotherapy offers a better prognosis for pancreatic cancer patients.
+  As a direct extension of this work, various new therapy methods that are under exploration
+  and clinical trials could be assessed.
 standard: other
 tags:
 - biomodels_ebi
@@ -49,7 +51,8 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
   - name: initial_pancreatic_cancer_cells_c
@@ -57,31 +60,36 @@ io:
     label: Pancreatic cancer cells (C)
     default: 1000000000.0
     units: native SBML value
-    description: Initial Pancreatic cancer cells (C). Sets the initial value of bundled SBML symbol `Pancreatic_cancer_cells__C`.
+    description: Initial Pancreatic cancer cells (C). Sets the initial value of bundled
+      SBML symbol `Pancreatic_cancer_cells__C`.
   - name: initial_pancreatic_stellate_cells_p
     maps_to: Pancreatic_stellate_cells__P
     label: Pancreatic stellate cells (P)
     default: 5600000.0
     units: native SBML value
-    description: Initial Pancreatic stellate cells (P). Sets the initial value of bundled SBML symbol `Pancreatic_stellate_cells__P`.
-  - name: initial_cd8_positive_t_cells_t
+    description: Initial Pancreatic stellate cells (P). Sets the initial value of
+      bundled SBML symbol `Pancreatic_stellate_cells__P`.
+  - name: initial_cd8_t_cells_t
     maps_to: CD8__T_cells__T
     label: CD8+ T cells (T)
     default: 700000000.0
     units: native SBML value
-    description: Initial CD8+ T cells (T). Sets the initial value of bundled SBML symbol `CD8__T_cells__T`.
+    description: Initial CD8+ T cells (T). Sets the initial value of bundled SBML
+      symbol `CD8__T_cells__T`.
   - name: initial_nk_cells_n
     maps_to: NK_cells__N
     label: NK cells (N)
     default: 352800000.0
     units: native SBML value
-    description: Initial NK cells (N). Sets the initial value of bundled SBML symbol `NK_cells__N`.
+    description: Initial NK cells (N). Sets the initial value of bundled SBML symbol
+      `NK_cells__N`.
   - name: initial_helper_t_cells_h
     maps_to: helper_T_cells__H
     label: Helper T cells (H)
     default: 1881600000.0
     units: native SBML value
-    description: Initial Helper T cells (H). Sets the initial value of bundled SBML symbol `helper_T_cells__H`.
+    description: Initial Helper T cells (H). Sets the initial value of bundled SBML
+      symbol `helper_T_cells__H`.
   outputs:
   - name: pancreatic_cancer_cells_c
     maps_to: Pancreatic_cancer_cells__C
@@ -91,7 +99,7 @@ io:
     maps_to: Pancreatic_stellate_cells__P
     label: Pancreatic stellate cells (P)
     description: Pancreatic stellate cells (P) observable. Maps to SBML symbol `Pancreatic_stellate_cells__P`.
-  - name: cd8_positive_t_cells_t
+  - name: cd8_t_cells_t
     maps_to: CD8__T_cells__T
     label: CD8+ T cells (T)
     description: CD8+ T cells (T) observable. Maps to SBML symbol `CD8__T_cells__T`.
@@ -104,7 +112,8 @@ io:
     label: Helper T cells (H)
     description: Helper T cells (H) observable. Maps to SBML symbol `helper_T_cells__H`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

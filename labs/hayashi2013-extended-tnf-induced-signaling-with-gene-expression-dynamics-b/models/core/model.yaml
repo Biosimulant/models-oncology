@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: Hayashi2013 - Extended TNF-induced Signaling with Gene Expression Dynamics (Model B)
-description: Hayashi2013 - Extended TNF-induced Signaling with Gene Expression Dynamics (Model B)Tumor necrosis factor (TNF) plays a crucial role in inflammation and is associated with diseases such as rheumatoid. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+title: Hayashi2013 - Extended TNF-induced Signaling with Gene Expression Dynamics
+  (Model B)
+description: Hayashi2013 - Extended TNF-induced Signaling with Gene Expression Dynamics
+  (Model B)Tumor necrosis factor (TNF) plays a crucial role in inflammation and is
+  associated with diseases such as rheumatoid. It can be used to explore tumor-related
+  dynamics and compare treatment-response behavior across conditions.
 standard: other
 tags:
 - biomodels_ebi
@@ -51,7 +55,8 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
   - name: initial_tnfr1
@@ -60,19 +65,20 @@ io:
     default: 1.0
     units: native SBML value
     description: Initial TNFR1. Sets the initial value of bundled SBML symbol `species_3`.
-  - name: initial_ikba_nfkb
+  - name: initial_ik_ba_nfkb
     maps_to: species_1
     label: IkBa NFkb
     default: 5.0
     units: native SBML value
-    description: Initial IkBa NFkb. Sets the initial value of bundled SBML symbol `species_1`.
+    description: Initial IkBa NFkb. Sets the initial value of bundled SBML symbol
+      `species_1`.
   - name: initial_mapk
     maps_to: species_13
     label: MAPK
     default: 46.0
     units: native SBML value
     description: Initial MAPK. Sets the initial value of bundled SBML symbol `species_13`.
-  - name: initial_nfkbc
+  - name: initial_nfk_bc
     maps_to: species_2
     label: NFkBc
     default: 0.0
@@ -95,7 +101,7 @@ io:
     maps_to: species_3
     label: TNFR1
     description: TNFR1 observable. Maps to SBML symbol `species_3`.
-  - name: ikba_nfkb
+  - name: ik_ba_nfkb
     maps_to: species_1
     label: IkBa NFkb
     description: IkBa NFkb observable. Maps to SBML symbol `species_1`.
@@ -103,7 +109,7 @@ io:
     maps_to: species_13
     label: MAPK
     description: MAPK observable. Maps to SBML symbol `species_13`.
-  - name: nfkbc
+  - name: nfk_bc
     maps_to: species_2
     label: NFkBc
     description: NFkBc observable. Maps to SBML symbol `species_2`.
@@ -116,7 +122,8 @@ io:
     label: TRAF5
     description: TRAF5 observable. Maps to SBML symbol `species_7`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

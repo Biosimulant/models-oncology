@@ -18,8 +18,8 @@ class Dritschel2018AMathematicalModelOfCytotoxicBiomd0000000763Model(TelluriumSB
     _OBSERVABLES = ['N_Tumour', 'T_H', 'T_C']
     _SPECIES_LABELS = {'N_Tumour': 'N Tumour', 'T_H': 'T H', 'T_C': 'T C'}
     _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {'ntilde_level': ('Ntilde', 0.04, 'native SBML value', 'Ntilde source parameter. Maps to bundled SBML parameter `Ntilde`.'), 'initial_n_tumour': ('N_Tumour', 0.01, 'native SBML value', 'Initial N Tumour. Sets the initial value of bundled SBML symbol `N_Tumour`.')}
-    _HEADLINE_OUTPUTS = {'n_tumour': ('N_Tumour', 'native SBML value', 'N Tumour observable. Maps to SBML symbol `N_Tumour`.'), 'model_state_2': ('T_H', 'native SBML value', 'T H observable. Maps to SBML symbol `T_H`.'), 'model_state_3': ('T_C', 'native SBML value', 'T C observable. Maps to SBML symbol `T_C`.')}
+    _INITIAL_CONDITION_INPUTS = {'ntilde_source_parameter': ('Ntilde', 0.04, 'native SBML value', 'Ntilde source parameter. Maps to bundled SBML parameter `Ntilde`.'), 'initial_n_tumor': ('N_Tumour', 0.01, 'native SBML value', 'Initial N Tumour. Sets the initial value of bundled SBML symbol `N_Tumour`.')}
+    _HEADLINE_OUTPUTS = {'n_tumor': ('N_Tumour', 'native SBML value', 'N Tumour observable. Maps to SBML symbol `N_Tumour`.'), 't_h': ('T_H', 'native SBML value', 'T H observable. Maps to SBML symbol `T_H`.'), 't_c': ('T_C', 'native SBML value', 'T C observable. Maps to SBML symbol `T_C`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/BIOMD0000000763.xml', integration_step: float = 0.1) -> None:

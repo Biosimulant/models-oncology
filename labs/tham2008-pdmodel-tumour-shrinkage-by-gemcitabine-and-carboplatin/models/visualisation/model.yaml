@@ -1,6 +1,7 @@
 schema_version: '2.0'
 title: Tham2008 - PDmodel, Tumour shrinkage by gemcitabine and carboplatin Visualisation
-description: Oncology visualisation for Tham2008 - PDmodel, Tumour shrinkage by gemcitabine and carboplatin.
+description: Oncology visualisation for Tham2008 - PDmodel, Tumour shrinkage by gemcitabine
+  and carboplatin.
 standard: other
 tags:
 - biomodels_ebi
@@ -18,14 +19,18 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Tham2008 - PDmodel, Tumour shrinkage by gemcitabine and carboplatin
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_tham2008_pdmodel_tumour_shrinkage_by_gemcitabine_biomd0000000234_model
       title: Tham2008 - PDmodel, Tumour shrinkage by gemcitabine and carboplatin
@@ -34,11 +39,11 @@ biosim:
       - TumorSize
       observables:
       - id: TumorSize
-        port: tumorsize
+        port: tumor_size
         label: TumorSize
         group: drug_response
       - id: Ce
-        port: model_state_2
+        port: ce
         label: Ce
         group: drug_response
 runtime:

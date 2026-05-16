@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "2c674f9b-3358-499b-b9c3-ed4195c375b4",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "e7d1b8c6-22d8-4836-9926-5263b42da53c",
+  "created_at": "2026-05-15T19:05:38.540259323+00:00",
+  "last_synced_at": "2026-05-16T09:59:25.599301+00:00",
+  "hub_manifest_hash": "6d364393bcb40ab9433c6ef79881bb0daf639b8c817befec5238bcf11025fb4d",
+  "package_name": "dritschel2018-a-mathematical-model-of-cytotoxic-and-helper-t-cel"
+}

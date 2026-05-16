@@ -1,6 +1,9 @@
 schema_version: '2.0'
 title: Moore_2004_Mathematical model for CML and T cell interaction
-description: Its a mathematical model depicting CML (chronic myelogenous leukemia) interaction with T cells and impact of T cell activations on CML progression over time. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+description: Its a mathematical model depicting CML (chronic myelogenous leukemia)
+  interaction with T cells and impact of T cell activations on CML progression over
+  time. It can be used to explore tumor-related dynamics and compare treatment-response
+  behavior across conditions.
 standard: other
 tags:
 - biomodels_ebi
@@ -49,7 +52,8 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
   - name: initial_tumor_cells
@@ -57,34 +61,38 @@ io:
     label: Tumor cells
     default: 10000.0
     units: native SBML value
-    description: Initial Tumor cells. Sets the initial value of bundled SBML symbol `tumor_cells`.
-  - name: initial_naive_tcells
+    description: Initial Tumor cells. Sets the initial value of bundled SBML symbol
+      `tumor_cells`.
+  - name: initial_naive_t_cells
     maps_to: naive_Tcells
     label: Naive Tcells
     default: 1510.0
     units: native SBML value
-    description: Initial Naive Tcells. Sets the initial value of bundled SBML symbol `naive_Tcells`.
-  - name: initial_eff_tcells
+    description: Initial Naive Tcells. Sets the initial value of bundled SBML symbol
+      `naive_Tcells`.
+  - name: initial_eff_t_cells
     maps_to: eff_Tcells
     label: Eff Tcells
     default: 20.0
     units: native SBML value
-    description: Initial Eff Tcells. Sets the initial value of bundled SBML symbol `eff_Tcells`.
+    description: Initial Eff Tcells. Sets the initial value of bundled SBML symbol
+      `eff_Tcells`.
   outputs:
   - name: tumor_cells
     maps_to: tumor_cells
     label: Tumor cells
     description: Tumor cells observable. Maps to SBML symbol `tumor_cells`.
-  - name: naive_tcells
+  - name: naive_t_cells
     maps_to: naive_Tcells
     label: Naive Tcells
     description: Naive Tcells observable. Maps to SBML symbol `naive_Tcells`.
-  - name: eff_tcells
+  - name: eff_t_cells
     maps_to: eff_Tcells
     label: Eff Tcells
     description: Eff Tcells observable. Maps to SBML symbol `eff_Tcells`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Wodarz2018/1 - simple model
-description: The paper describes a basic model of effect of cellular de-differentiation on the dynamics and evolution of tissue and tumor cells. Created by COPASI 4.25 (Build 207) This model is described in the ar.
+description: The paper describes a basic model of effect of cellular de-differentiation
+  on the dynamics and evolution of tissue and tumor cells. Created by COPASI 4.25
+  (Build 207) This model is described in the ar.
 standard: other
 tags:
 - biomodels_ebi
@@ -43,20 +45,36 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations. No scientifically safe external input was exposed by the cleanup.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations. Exposed inputs are traceable to bundled SBML parameters or initial conditions.
 io:
-  inputs: []
-  outputs:
-  - name: model_state_1
+  inputs:
+  - name: initial_stem_like_cells
     maps_to: S
-    label: S
-    description: S observable. Maps to SBML symbol `S`.
-  - name: model_state_2
+    label: Stem-Like Cells
+    default: 1.0
+    units: native SBML value
+    description: Initial Stem-Like Cells. Sets the initial value of bundled SBML symbol
+      `S`.
+  - name: initial_differentiated_cells
     maps_to: D
-    label: D
-    description: D observable. Maps to SBML symbol `D`.
+    label: Differentiated Cells
+    default: 0.0
+    units: native SBML value
+    description: Initial Differentiated Cells. Sets the initial value of bundled SBML
+      symbol `D`.
+  outputs:
+  - name: stem_like_cells
+    maps_to: S
+    label: Stem-Like Cells
+    description: Stem-Like Cells observable. Maps to SBML symbol `S`.
+  - name: differentiated_cells
+    maps_to: D
+    label: Differentiated Cells
+    description: Differentiated Cells observable. Maps to SBML symbol `D`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

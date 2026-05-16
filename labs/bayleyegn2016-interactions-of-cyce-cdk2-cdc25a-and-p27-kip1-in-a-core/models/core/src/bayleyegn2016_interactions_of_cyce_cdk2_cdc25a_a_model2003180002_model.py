@@ -18,8 +18,8 @@ class Bayleyegn2016InteractionsOfCyceCdk2Cdc25aAModel2003180002Model(TelluriumSB
     _OBSERVABLES = ['Cdc25A', 'CycE_CDK2', 'p27_kip1']
     _SPECIES_LABELS = {'CycE_CDK2': 'CycE CDK2', 'p27_kip1': 'P27 kip1', 'Cdc25A': 'Cdc25A'}
     _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {}
-    _HEADLINE_OUTPUTS = {'cyce_cdk2': ('CycE_CDK2', 'native SBML value', 'CycE CDK2 observable. Maps to SBML symbol `CycE_CDK2`.'), 'p27_kip1': ('p27_kip1', 'native SBML value', 'P27 kip1 observable. Maps to SBML symbol `p27_kip1`.'), 'cdc25a': ('Cdc25A', 'native SBML value', 'Cdc25A observable. Maps to SBML symbol `Cdc25A`.')}
+    _INITIAL_CONDITION_INPUTS = {'initial_cyce_cdk2': ('CycE_CDK2', 1.0, 'native SBML value', 'Initial CycE/CDK2. Sets the initial value of bundled SBML symbol `CycE_CDK2`.'), 'initial_cdc25a': ('Cdc25A', 1.0, 'native SBML value', 'Initial Cdc25A. Sets the initial value of bundled SBML symbol `Cdc25A`.'), 'initial_p27_kip1': ('p27_kip1', 1.0, 'native SBML value', 'Initial p27 Kip1. Sets the initial value of bundled SBML symbol `p27_kip1`.')}
+    _HEADLINE_OUTPUTS = {'cyc_e_cdk2': ('CycE_CDK2', 'native SBML value', 'CycE CDK2 observable. Maps to SBML symbol `CycE_CDK2`.'), 'p27_kip1': ('p27_kip1', 'native SBML value', 'P27 kip1 observable. Maps to SBML symbol `p27_kip1`.'), 'cdc25a': ('Cdc25A', 'native SBML value', 'Cdc25A observable. Maps to SBML symbol `Cdc25A`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/MODEL2003180002.xml', integration_step: float = 0.1) -> None:

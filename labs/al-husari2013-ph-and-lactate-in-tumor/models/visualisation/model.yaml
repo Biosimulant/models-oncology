@@ -16,14 +16,17 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Al-Husari2013 - pH and lactate in tumor
-    question: Which metabolic states dominate the baseline oncology-associated metabolic model?
+    question: Which metabolic states dominate the baseline oncology-associated metabolic
+      model?
     answer_focus: Compares selected metabolic observables and peak source states.
     visual_scope: Cancer metabolism and metabolic-state changes
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_al_husari2013_ph_and_lactate_in_tumor_biomd0000000805_model
       title: Al-Husari2013 - pH and lactate in tumor
@@ -34,20 +37,20 @@ biosim:
       - Le
       observables:
       - id: Hi
-        port: model_state_1
-        label: Hi
+        port: intracellular_hydrogen_ion
+        label: Intracellular Hydrogen Ion
         group: metabolism
       - id: He
-        port: model_state_2
-        label: He
+        port: extracellular_hydrogen_ion
+        label: Extracellular Hydrogen Ion
         group: metabolism
       - id: Li
-        port: model_state_3
-        label: Li
+        port: intracellular_lactate
+        label: Intracellular Lactate
         group: metabolism
       - id: Le
-        port: model_state_4
-        label: Le
+        port: extracellular_lactate
+        label: Extracellular Lactate
         group: metabolism
 runtime:
   python_version: '3.12'

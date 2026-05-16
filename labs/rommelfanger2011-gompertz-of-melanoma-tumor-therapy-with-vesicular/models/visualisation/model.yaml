@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Rommelfanger2011 - Gompertz model of melanoma tumor therapy with vesicular stomatitis virus Visualisation
-description: Oncology visualisation for Rommelfanger2011 - Gompertz model of melanoma tumor therapy with vesicular stomatitis virus.
+title: Rommelfanger2011 - Gompertz model of melanoma tumor therapy with vesicular
+  stomatitis virus Visualisation
+description: Oncology visualisation for Rommelfanger2011 - Gompertz model of melanoma
+  tumor therapy with vesicular stomatitis virus.
 standard: other
 tags:
 - biomodels_ebi
@@ -19,17 +21,23 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Rommelfanger2011 - Gompertz model of melanoma tumor therapy with vesicular stomatitis virus
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    lab_title: Rommelfanger2011 - Gompertz model of melanoma tumor therapy with vesicular
+      stomatitis virus
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_rommelfanger2011_gompertz_model_of_melanoma_tumo_model2109110003_model
-      title: Rommelfanger2011 - Gompertz model of melanoma tumor therapy with vesicular stomatitis virus
+      title: Rommelfanger2011 - Gompertz model of melanoma tumor therapy with vesicular
+        stomatitis virus
       state_observables:
       - x
       - y
@@ -37,19 +45,16 @@ biosim:
       - v_i
       observables:
       - id: y
-        port: model_state_1
         label: Y
         group: drug_response
       - id: v_i
-        port: model_state_2
-        label: V i
+        port: injected_virus
+        label: Injected Virus
         group: drug_response
       - id: x
-        port: model_state_3
         label: X
         group: drug_response
       - id: z
-        port: model_state_4
         label: Z
         group: drug_response
 runtime:

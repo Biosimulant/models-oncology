@@ -1,6 +1,9 @@
 schema_version: '2.0'
 title: Shin_2018_EGFR-PYK2-c-Met interaction network_model Lab
-description: Systems modelling of the EGFR-PYK2-c-Met interaction network predicted and prioritized synergistic drug combinations for Triple-negative breast cancer. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+description: Systems modelling of the EGFR-PYK2-c-Met interaction network predicted
+  and prioritized synergistic drug combinations for Triple-negative breast cancer.
+  It can be used to explore tumor-related dynamics and compare treatment-response
+  behavior across conditions.
 tags:
 - biomodels_ebi
 - curated
@@ -16,20 +19,20 @@ tags:
 - tumor-growth
 io:
   inputs:
-  - name: egfrtot_level
-    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.egfrtot_level
+  - name: egfrtot_source_parameter
+    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.egfrtot_source_parameter
     label: EGFRtot source parameter
     default: 398.107
     units: native SBML value
     description: EGFRtot source parameter. Maps to bundled SBML parameter `EGFRtot`.
-  - name: caegf_level
-    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.caegf_level
+  - name: ca_egf_source_parameter
+    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.ca_egf_source_parameter
     label: CaEGF source parameter
     default: 0.0891251
     units: native SBML value
     description: CaEGF source parameter. Maps to bundled SBML parameter `caEGF`.
-  - name: egf_level
-    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.egf_level
+  - name: egf_source_parameter
+    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.egf_source_parameter
     label: EGF source parameter
     default: 10.0
     units: native SBML value
@@ -65,15 +68,16 @@ io:
   - name: pstat3
     maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.pstat3
     description: PSTAT3 observable. Maps to SBML symbol `pSTAT3`.
-  - name: stat3ustattic
-    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.stat3ustattic
+  - name: stat3u_stattic
+    maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.stat3u_stattic
     description: STAT3uStattic observable. Maps to SBML symbol `STAT3uStattic`.
   - name: pyk2
     maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.pyk2
     description: PYK2 observable. Maps to SBML symbol `PYK2`.
   - name: state
     maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_shin_2018_egfr_pyk2_c_met_interaction_network_mo_biomd0000000826_model.summary
     description: Change and peak summary across the simulated SBML observables.

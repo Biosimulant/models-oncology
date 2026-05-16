@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Palaniappan2021 - Cell free modelling of second generation Toehold switches Visualisation
-description: Oncology visualisation for Palaniappan2021 - Cell free modelling of second generation Toehold switches.
+title: Palaniappan2021 - Cell free modelling of second generation Toehold switches
+  Visualisation
+description: Oncology visualisation for Palaniappan2021 - Cell free modelling of second
+  generation Toehold switches.
 standard: other
 tags:
 - biomodels_ebi
@@ -17,14 +19,19 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Palaniappan2021 - Cell free modelling of second generation Toehold switches
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    lab_title: Palaniappan2021 - Cell free modelling of second generation Toehold
+      switches
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_palaniappan2021_cell_free_modelling_of_second_ge_biomd0000001103_model
       title: Palaniappan2021 - Cell free modelling of second generation Toehold switches
@@ -39,11 +46,11 @@ biosim:
       - Mat_GFP
       observables:
       - id: miR
-        port: mir
+        port: mi_r
         label: MiR
         group: drug_response
       - id: antimiR
-        port: antimir
+        port: antimi_r
         label: AntimiR
         group: drug_response
       - id: Toehold_DNA
@@ -59,7 +66,7 @@ biosim:
         label: Toehold RNA CTS
         group: drug_response
       - id: miR_antimiR
-        port: mir_antimir
+        port: mi_r_antimi_r
         label: MiR antimiR
         group: drug_response
 runtime:

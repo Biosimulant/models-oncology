@@ -19,14 +19,17 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Owen1998 - tumour growth model
-    question: Does the baseline model indicate vascular or angiogenic support for tumour dynamics?
+    question: Does the baseline model indicate vascular or angiogenic support for
+      tumour dynamics?
     answer_focus: Tracks vascular, tumour, and therapy-linked observables where present.
     visual_scope: Tumour vascularization, angiogenesis, and tissue-level response
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_owen1998_tumour_growth_model_biomd0000000670_model
       title: Owen1998 - tumour growth model
@@ -36,16 +39,16 @@ biosim:
       - m
       observables:
       - id: l
-        port: model_state_1
-        label: L
+        port: macrophage
+        label: Macrophage
         group: angiogenesis
       - id: n
-        port: model_state_2
-        label: N
+        port: normal_cells
+        label: Normal Cells
         group: angiogenesis
       - id: m
-        port: model_state_3
-        label: M
+        port: mutated_cells
+        label: Mutated Cells
         group: angiogenesis
 runtime:
   python_version: '3.12'

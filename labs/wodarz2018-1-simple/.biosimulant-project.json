@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "7fbdc829-ac0d-4cb6-9565-e23bf04f4a3b",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "62981753-1f7e-4cea-9ac5-cf3610b7ee24",
+  "created_at": "2026-05-15T19:05:40.620691027+00:00",
+  "last_synced_at": "2026-05-16T10:44:53.329660+00:00",
+  "hub_manifest_hash": "880d4502b8c2954b7c62f95b3d59161dba9906eb31bae82c07c3cc6c08b6c82b",
+  "package_name": "wodarz2018-1-simple-model-lab"
+}

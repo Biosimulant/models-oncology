@@ -1,6 +1,7 @@
 schema_version: '2.0'
 title: Chen2011/1 - bone marrow invasion absolute model Visualisation
-description: Oncology visualisation for Chen2011/1 - bone marrow invasion absolute model.
+description: Oncology visualisation for Chen2011/1 - bone marrow invasion absolute
+  model.
 standard: other
 tags:
 - biomodels_ebi
@@ -15,14 +16,18 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Chen2011/1 - bone marrow invasion absolute model
-    question: What oncology-relevant state dominates the bundled SBML simulation over the baseline run?
-    answer_focus: Compares the largest-changing and peak observables with selected source states.
+    question: What oncology-relevant state dominates the bundled SBML simulation over
+      the baseline run?
+    answer_focus: Compares the largest-changing and peak observables with selected
+      source states.
     visual_scope: Tumor-system state trajectories and dominant observable changes
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_chen2011_1_bone_marrow_invasion_absolute_model_biomd0000000793_model
       title: Chen2011/1 - bone marrow invasion absolute model
@@ -31,12 +36,12 @@ biosim:
       - T
       observables:
       - id: H
-        port: model_state_1
-        label: H
+        port: healthy_bone_marrow
+        label: Healthy Bone Marrow
         group: tumor_system
       - id: T
-        port: model_state_2
-        label: T
+        port: tumor_burden
+        label: Tumor Burden
         group: tumor_system
 runtime:
   python_version: '3.12'

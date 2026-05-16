@@ -1,6 +1,9 @@
 schema_version: '2.0'
 title: Gulhane2022 - Sphingolipid metabolism and PI3K-AKT axis in NSCLC
-description: In this model, we demonstrated that the increased expression of sphingolipids enzyme affects PI3K-AKT signaling axis and its downstream signaling mediators resulting in cancer progression. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+description: In this model, we demonstrated that the increased expression of sphingolipids
+  enzyme affects PI3K-AKT signaling axis and its downstream signaling mediators resulting
+  in cancer progression. It can be used to explore tumor-related dynamics and compare
+  treatment-response behavior across conditions.
 standard: other
 tags:
 - biomodels_ebi
@@ -49,7 +52,8 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
   - name: initial_glucose_metabolism
@@ -57,14 +61,15 @@ io:
     label: Glucose Metabolism
     default: 518000.0
     units: native SBML value
-    description: Initial Glucose Metabolism. Sets the initial value of bundled SBML symbol `mwcc0d0d1e_f9ca_43ca_a94d_dbf4e0efbc13`.
+    description: Initial Glucose Metabolism. Sets the initial value of bundled SBML
+      symbol `mwcc0d0d1e_f9ca_43ca_a94d_dbf4e0efbc13`.
   - name: initial_ras
     maps_to: mw338974cb_3199_4092_a3fe_e32b9b3fc4d6
     label: Ras
     default: 100000.0
     units: native SBML value
     description: Initial Ras. Sets the initial value of bundled SBML symbol `mw338974cb_3199_4092_a3fe_e32b9b3fc4d6`.
-  - name: initial_pi3k
+  - name: initial_pi3_k
     maps_to: mw1906ffc7_edd7_4567_8b41_84201e788393
     label: PI3K
     default: 216000.0
@@ -97,7 +102,7 @@ io:
     maps_to: mw338974cb_3199_4092_a3fe_e32b9b3fc4d6
     label: Ras
     description: Ras observable. Maps to SBML symbol `mw338974cb_3199_4092_a3fe_e32b9b3fc4d6`.
-  - name: pi3k
+  - name: pi3_k
     maps_to: mw1906ffc7_edd7_4567_8b41_84201e788393
     label: PI3K
     description: PI3K observable. Maps to SBML symbol `mw1906ffc7_edd7_4567_8b41_84201e788393`.
@@ -114,7 +119,8 @@ io:
     label: IRS
     description: IRS observable. Maps to SBML symbol `mw36987a2d_4042_4802_add1_f8d289da6b4a`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

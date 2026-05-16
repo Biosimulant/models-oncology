@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Wodarz2018/1 - simple model Lab
-description: The paper describes a basic model of effect of cellular de-differentiation on the dynamics and evolution of tissue and tumor cells. Created by COPASI 4.25 (Build 207) This model is described in the ar.
+description: The paper describes a basic model of effect of cellular de-differentiation
+  on the dynamics and evolution of tissue and tumor cells. Created by COPASI 4.25
+  (Build 207) This model is described in the ar.
 tags:
 - biomodels_ebi
 - curated
@@ -11,17 +13,32 @@ tags:
 - systemsbiology
 - tumor-growth
 io:
-  inputs: []
+  inputs:
+  - name: initial_stem_like_cells
+    maps_to: oncology_sbml_wodarz2018_1_simple_model_biomd0000000774_model.initial_stem_like_cells
+    label: Stem-Like Cells
+    default: 1.0
+    units: native SBML value
+    description: Initial Stem-Like Cells. Sets the initial value of bundled SBML symbol
+      `S`.
+  - name: initial_differentiated_cells
+    maps_to: oncology_sbml_wodarz2018_1_simple_model_biomd0000000774_model.initial_differentiated_cells
+    label: Differentiated Cells
+    default: 0.0
+    units: native SBML value
+    description: Initial Differentiated Cells. Sets the initial value of bundled SBML
+      symbol `D`.
   outputs:
-  - name: model_state_1
-    maps_to: oncology_sbml_wodarz2018_1_simple_model_biomd0000000774_model.model_state_1
-    description: S observable. Maps to SBML symbol `S`.
-  - name: model_state_2
-    maps_to: oncology_sbml_wodarz2018_1_simple_model_biomd0000000774_model.model_state_2
-    description: D observable. Maps to SBML symbol `D`.
+  - name: stem_like_cells
+    maps_to: oncology_sbml_wodarz2018_1_simple_model_biomd0000000774_model.stem_like_cells
+    description: Stem-Like Cells observable. Maps to SBML symbol `S`.
+  - name: differentiated_cells
+    maps_to: oncology_sbml_wodarz2018_1_simple_model_biomd0000000774_model.differentiated_cells
+    description: Differentiated Cells observable. Maps to SBML symbol `D`.
   - name: state
     maps_to: oncology_sbml_wodarz2018_1_simple_model_biomd0000000774_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_wodarz2018_1_simple_model_biomd0000000774_model.summary
     description: Change and peak summary across the simulated SBML observables.

@@ -1,6 +1,7 @@
 schema_version: '2.0'
 title: Bianconi2012 - EGFR and IGF1R pathway in lung cancer Visualisation
-description: Oncology visualisation for Bianconi2012 - EGFR and IGF1R pathway in lung cancer.
+description: Oncology visualisation for Bianconi2012 - EGFR and IGF1R pathway in lung
+  cancer.
 standard: other
 tags:
 - biomodels_ebi
@@ -22,14 +23,17 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Bianconi2012 - EGFR and IGF1R pathway in lung cancer
-    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    question: Which signaling states carry the dominant response in the bundled cancer
+      pathway model?
     answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
     visual_scope: Cancer signaling pathway activity and dominant source states
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model
       title: Bianconi2012 - EGFR and IGF1R pathway in lung cancer
@@ -77,7 +81,7 @@ biosim:
         label: Ras
         group: signaling
       - id: PI3KCA
-        port: pi3kca
+        port: pi3_kca
         label: PI3KCA
         group: signaling
 runtime:

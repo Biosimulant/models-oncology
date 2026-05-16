@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: Chaudhury2020 - First order expansion model of CAR-T cell and tumour kinetics Lab
-description: This ordinary differential equation model of the cellular kinetics and pharmacodynamics of CAR-T cell therapy is described in the publication:Chaudhury, A., Zhu, X., Chu, L., Goliaei, A., June, C., Ke. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+title: Chaudhury2020 - First order expansion model of CAR-T cell and tumour kinetics
+  Lab
+description: This ordinary differential equation model of the cellular kinetics and
+  pharmacodynamics of CAR-T cell therapy is described in the publication:Chaudhury,
+  A., Zhu, X., Chu, L., Goliaei, A., June, C., Ke. It can be used to explore tumor-related
+  dynamics and compare treatment-response behavior across conditions.
 tags:
 - biomodels_ebi
 - car-t
@@ -16,14 +20,32 @@ tags:
 - systemsbiology
 - tumor-growth
 io:
-  inputs: []
+  inputs:
+  - name: initial_car_t_cells
+    maps_to: oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model.initial_car_t_cells
+    label: CAR-T Cells
+    default: 10.0
+    units: native SBML value
+    description: Initial CAR-T Cells. Sets the initial value of bundled SBML symbol
+      `CAR_T_cells`.
+  - name: initial_tumor_burden
+    maps_to: oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model.initial_tumor_burden
+    label: Tumor Burden
+    default: 900.000000000001
+    units: native SBML value
+    description: Initial Tumor Burden. Sets the initial value of bundled SBML symbol
+      `U`.
   outputs:
-  - name: model_state_1
-    maps_to: oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model.model_state_1
-    description: U observable. Maps to SBML symbol `U`.
+  - name: car_t_cells
+    maps_to: oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model.car_t_cells
+    description: CAR-T Cells observable. Maps to SBML symbol `CAR_T_cells`.
+  - name: tumor_burden
+    maps_to: oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model.tumor_burden
+    description: Tumor Burden observable. Maps to SBML symbol `U`.
   - name: state
     maps_to: oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model.summary
     description: Change and peak summary across the simulated SBML observables.
@@ -46,6 +68,6 @@ wiring:
   to:
   - visualisation.oncology_sbml_chaudhury2020_first_order_expansion_model_of_car_model2109110005_model_species_labels
 runtime:
-  duration: 10.0
+  duration: 8.5
   communication_step: 1.0
   initial_inputs: {}

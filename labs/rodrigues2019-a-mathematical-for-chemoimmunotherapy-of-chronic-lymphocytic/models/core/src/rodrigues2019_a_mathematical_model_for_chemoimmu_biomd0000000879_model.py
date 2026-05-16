@@ -18,8 +18,8 @@ class Rodrigues2019AMathematicalModelForChemoimmuBiomd0000000879Model(TelluriumS
     _OBSERVABLES = ['N', 'I', 'Q']
     _SPECIES_LABELS = {'N': 'N', 'I': 'I', 'Q': 'Q'}
     _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {'chemotherapy_input_level': ('Chemotherapy_Input', 8640.0, 'native SBML value', 'Chemotherapy Input source parameter. Maps to bundled SBML parameter `Chemotherapy_Input`.'), 'immunotherapy_input_level': ('Immunotherapy_Input', 0.0, 'native SBML value', 'Immunotherapy Input source parameter. Maps to bundled SBML parameter `Immunotherapy_Input`.'), 'infusion_dose': ('Infusion_Dose', 1080.0, 'native SBML value', 'Infusion Dose source parameter. Maps to bundled SBML parameter `Infusion_Dose`.')}
-    _HEADLINE_OUTPUTS = {'model_state_1': ('N', 'native SBML value', 'N observable. Maps to SBML symbol `N`.'), 'model_state_2': ('I', 'native SBML value', 'I observable. Maps to SBML symbol `I`.'), 'model_state_3': ('Q', 'native SBML value', 'Q observable. Maps to SBML symbol `Q`.')}
+    _INITIAL_CONDITION_INPUTS = {'chemotherapy_input_source_parameter': ('Chemotherapy_Input', 8640.0, 'native SBML value', 'Chemotherapy Input source parameter. Maps to bundled SBML parameter `Chemotherapy_Input`.'), 'immunotherapy_input_source_parameter': ('Immunotherapy_Input', 0.0, 'native SBML value', 'Immunotherapy Input source parameter. Maps to bundled SBML parameter `Immunotherapy_Input`.'), 'infusion_dose_source_parameter': ('Infusion_Dose', 1080.0, 'native SBML value', 'Infusion Dose source parameter. Maps to bundled SBML parameter `Infusion_Dose`.')}
+    _HEADLINE_OUTPUTS = {'normal_cells': ('N', 'native SBML value', 'N observable. Maps to SBML symbol `N`.'), 'infected_tumor_cells': ('I', 'native SBML value', 'I observable. Maps to SBML symbol `I`.'), 'q': ('Q', 'native SBML value', 'Q observable. Maps to SBML symbol `Q`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/BIOMD0000000879.xml', integration_step: float = 0.1) -> None:

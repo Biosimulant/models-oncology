@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: Shariatpanahi2018 - Mathematical modeling of tumor-induced immunosuppression by myeloid-derived suppressor cells Lab
-description: This is a ODE-based mathematical model featuring equations describing the dynamics of tumor cells, cytotoxic T cells, natural killer cells, and myeloid-derived suppressor cells (MDSCs) that together d. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+title: Shariatpanahi2018 - Mathematical modeling of tumor-induced immunosuppression
+  by myeloid-derived suppressor cells Lab
+description: This is a ODE-based mathematical model featuring equations describing
+  the dynamics of tumor cells, cytotoxic T cells, natural killer cells, and myeloid-derived
+  suppressor cells (MDSCs) that together d. It can be used to explore tumor-related
+  dynamics and compare treatment-response behavior across conditions.
 tags:
 - biomodels_ebi
 - curated
@@ -16,23 +20,33 @@ tags:
 - systemsbiology
 - tumor-growth
 io:
-  inputs: []
+  inputs:
+  - name: initial_tumor_cells
+    maps_to: oncology_sbml_shariatpanahi2018_mathematical_modeling_of_tumor_model1909090003_model.initial_tumor_cells
+    label: Tumor Cells
+    default: 1.0
+    units: native SBML value
+    description: Initial Tumor Cells. Sets the initial value of bundled SBML symbol
+      `T`.
+  - name: initial_myeloid_derived_suppressor_cells
+    maps_to: oncology_sbml_shariatpanahi2018_mathematical_modeling_of_tumor_model1909090003_model.initial_myeloid_derived_suppressor_cells
+    label: Myeloid-Derived Suppressor Cells
+    default: 5000000.0
+    units: native SBML value
+    description: Initial Myeloid-Derived Suppressor Cells. Sets the initial value
+      of bundled SBML symbol `M`.
   outputs:
-  - name: model_state_1
-    maps_to: oncology_sbml_shariatpanahi2018_mathematical_modeling_of_tumor_model1909090003_model.model_state_1
-    description: C observable. Maps to SBML symbol `C`.
-  - name: model_state_2
-    maps_to: oncology_sbml_shariatpanahi2018_mathematical_modeling_of_tumor_model1909090003_model.model_state_2
-    description: N observable. Maps to SBML symbol `N`.
-  - name: model_state_3
-    maps_to: oncology_sbml_shariatpanahi2018_mathematical_modeling_of_tumor_model1909090003_model.model_state_3
-    description: T observable. Maps to SBML symbol `T`.
-  - name: model_state_4
-    maps_to: oncology_sbml_shariatpanahi2018_mathematical_modeling_of_tumor_model1909090003_model.model_state_4
-    description: M observable. Maps to SBML symbol `M`.
+  - name: tumor_cells
+    maps_to: oncology_sbml_shariatpanahi2018_mathematical_modeling_of_tumor_model1909090003_model.tumor_cells
+    description: Tumor Cells observable. Maps to SBML symbol `T`.
+  - name: myeloid_derived_suppressor_cells
+    maps_to: oncology_sbml_shariatpanahi2018_mathematical_modeling_of_tumor_model1909090003_model.myeloid_derived_suppressor_cells
+    description: Myeloid-Derived Suppressor Cells observable. Maps to SBML symbol
+      `M`.
   - name: state
     maps_to: oncology_sbml_shariatpanahi2018_mathematical_modeling_of_tumor_model1909090003_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_shariatpanahi2018_mathematical_modeling_of_tumor_model1909090003_model.summary
     description: Change and peak summary across the simulated SBML observables.

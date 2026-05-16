@@ -1,6 +1,9 @@
 schema_version: '2.0'
 title: Bianconi2012 - EGFR and IGF1R pathway in lung cancer Lab
-description: Bianconi2012 - EGFR and IGF1R pathway in lung cancer EGFR and IGF1R pathways play a key role in various human cancers and are crucial for tumour transformation and survival of malignant cells. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+description: Bianconi2012 - EGFR and IGF1R pathway in lung cancer EGFR and IGF1R pathways
+  play a key role in various human cancers and are crucial for tumour transformation
+  and survival of malignant cells. It can be used to explore tumor-related dynamics
+  and compare treatment-response behavior across conditions.
 tags:
 - biomodels_ebi
 - curated
@@ -19,8 +22,8 @@ tags:
 - tumor-growth
 io:
   inputs:
-  - name: gamma_egfr_level
-    maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.gamma_egfr_level
+  - name: gamma_egfr_source_parameter
+    maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.gamma_egfr_source_parameter
     label: Gamma EGFR source parameter
     default: 0.02
     units: native SBML value
@@ -30,7 +33,8 @@ io:
     label: EGFR active
     default: 8000.0
     units: native SBML value
-    description: Initial EGFR active. Sets the initial value of bundled SBML symbol `EGFR_active`.
+    description: Initial EGFR active. Sets the initial value of bundled SBML symbol
+      `EGFR_active`.
   - name: initial_raf
     maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.initial_raf
     label: Raf
@@ -71,12 +75,13 @@ io:
   - name: ras
     maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.ras
     description: Ras observable. Maps to SBML symbol `Ras`.
-  - name: pi3kca
-    maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.pi3kca
+  - name: pi3_kca
+    maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.pi3_kca
     description: PI3KCA observable. Maps to SBML symbol `PI3KCA`.
   - name: state
     maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_bianconi2012_egfr_and_igf1r_pathway_in_lung_canc_biomd0000000427_model.summary
     description: Change and peak summary across the simulated SBML observables.

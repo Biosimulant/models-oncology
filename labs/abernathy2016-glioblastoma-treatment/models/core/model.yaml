@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Abernathy2016 - glioblastoma treatment
-description: 'The paper describes a model of glioblastoma. Created by COPASI 4.25 (Build 207) This model is described in the article: Modeling the Treatment of Glioblastoma Multiforme and Cancer Stem Cells with Ord.'
+description: 'The paper describes a model of glioblastoma. Created by COPASI 4.25
+  (Build 207) This model is described in the article: Modeling the Treatment of Glioblastoma
+  Multiforme and Cancer Stem Cells with Ord.'
 standard: other
 tags:
 - biomodels_ebi
@@ -46,72 +48,76 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
-  - name: initial_tumor
+  - name: initial_tumor_burden
     maps_to: Tumor
     label: Tumor
     default: 70.0
     units: native SBML value
     description: Initial Tumor. Sets the initial value of bundled SBML symbol `Tumor`.
-  - name: initial_cancerstemcell
+  - name: initial_cancer_stem_cells
     maps_to: CancerStemCell
     label: CancerStemCell
     default: 30.0
     units: native SBML value
-    description: Initial CancerStemCell. Sets the initial value of bundled SBML symbol `CancerStemCell`.
-  - name: initial_cytotoxictcell
+    description: Initial CancerStemCell. Sets the initial value of bundled SBML symbol
+      `CancerStemCell`.
+  - name: initial_cytotoxic_t_cells
     maps_to: CytotoxicTcell
     label: CytotoxicTcell
     default: 250.0
     units: native SBML value
-    description: Initial CytotoxicTcell. Sets the initial value of bundled SBML symbol `CytotoxicTcell`.
-  - name: initial_tgfb
+    description: Initial CytotoxicTcell. Sets the initial value of bundled SBML symbol
+      `CytotoxicTcell`.
+  - name: initial_tgf_beta
     maps_to: TGFb
     label: TGFb
     default: 50.0
     units: native SBML value
     description: Initial TGFb. Sets the initial value of bundled SBML symbol `TGFb`.
-  - name: initial_ifny
+  - name: initial_ifn_gamma
     maps_to: IFNy
     label: IFNy
     default: 50.0
     units: native SBML value
     description: Initial IFNy. Sets the initial value of bundled SBML symbol `IFNy`.
-  - name: initial_mhc1
+  - name: initial_mhc_i
     maps_to: MHC1
     label: MHC1
     default: 50.0
     units: native SBML value
     description: Initial MHC1. Sets the initial value of bundled SBML symbol `MHC1`.
   outputs:
-  - name: tumor
+  - name: tumor_burden
     maps_to: Tumor
     label: Tumor
     description: Tumor observable. Maps to SBML symbol `Tumor`.
-  - name: cancerstemcell
+  - name: cancer_stem_cells
     maps_to: CancerStemCell
     label: CancerStemCell
     description: CancerStemCell observable. Maps to SBML symbol `CancerStemCell`.
-  - name: cytotoxictcell
+  - name: cytotoxic_t_cells
     maps_to: CytotoxicTcell
     label: CytotoxicTcell
     description: CytotoxicTcell observable. Maps to SBML symbol `CytotoxicTcell`.
-  - name: tgfb
+  - name: tgf_beta
     maps_to: TGFb
     label: TGFb
     description: TGFb observable. Maps to SBML symbol `TGFb`.
-  - name: ifny
+  - name: ifn_gamma
     maps_to: IFNy
     label: IFNy
     description: IFNy observable. Maps to SBML symbol `IFNy`.
-  - name: mhc1
+  - name: mhc_i
     maps_to: MHC1
     label: MHC1
     description: MHC1 observable. Maps to SBML symbol `MHC1`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Greene2019 - Differentiate Spontaneous and Induced Evolution to Drug Resistance During Cancer Treatment Visualisation
-description: Oncology visualisation for Greene2019 - Differentiate Spontaneous and Induced Evolution to Drug Resistance During Cancer Treatment.
+title: Greene2019 - Differentiate Spontaneous and Induced Evolution to Drug Resistance
+  During Cancer Treatment Visualisation
+description: Oncology visualisation for Greene2019 - Differentiate Spontaneous and
+  Induced Evolution to Drug Resistance During Cancer Treatment.
 standard: other
 tags:
 - biomodels_ebi
@@ -17,17 +19,23 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Greene2019 - Differentiate Spontaneous and Induced Evolution to Drug Resistance During Cancer Treatment
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    lab_title: Greene2019 - Differentiate Spontaneous and Induced Evolution to Drug
+      Resistance During Cancer Treatment
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_greene2019_differentiate_spontaneous_and_induced_biomd0000000825_model
-      title: Greene2019 - Differentiate Spontaneous and Induced Evolution to Drug Resistance During Cancer Treatment
+      title: Greene2019 - Differentiate Spontaneous and Induced Evolution to Drug
+        Resistance During Cancer Treatment
       state_observables:
       - Resistant_tumor_R
       - Sensitive_tumor_S

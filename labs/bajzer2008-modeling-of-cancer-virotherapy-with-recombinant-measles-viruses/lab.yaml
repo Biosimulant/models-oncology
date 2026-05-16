@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: Bajzer2008 - Modeling of cancer virotherapy with recombinant measles viruses Lab
-description: This model describes the interactions between tumor cells and virus particles, with particular reference to virus-induced syncytium formation and ultimately death of tumor cells. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+title: Bajzer2008 - Modeling of cancer virotherapy with recombinant measles viruses
+  Lab
+description: This model describes the interactions between tumor cells and virus particles,
+  with particular reference to virus-induced syncytium formation and ultimately death
+  of tumor cells. It can be used to explore tumor-related dynamics and compare treatment-response
+  behavior across conditions.
 tags:
 - biomodels_ebi
 - curated
@@ -16,8 +20,8 @@ tags:
 - virotherapy
 io:
   inputs:
-  - name: epsilon_level
-    maps_to: oncology_sbml_bajzer2008_modeling_of_cancer_virotherapy_with_r_biomd0000000771_model.epsilon_level
+  - name: epsilon_source_parameter
+    maps_to: oncology_sbml_bajzer2008_modeling_of_cancer_virotherapy_with_r_biomd0000000771_model.epsilon_source_parameter
     label: Epsilon source parameter
     default: 1.648773
     units: native SBML value
@@ -27,13 +31,15 @@ io:
     label: Y Tumor Cell
     default: 126.237
     units: native SBML value
-    description: Initial Y Tumor Cell. Sets the initial value of bundled SBML symbol `y_Tumor_Cell`.
+    description: Initial Y Tumor Cell. Sets the initial value of bundled SBML symbol
+      `y_Tumor_Cell`.
   - name: initial_x_infected_cell
     maps_to: oncology_sbml_bajzer2008_modeling_of_cancer_virotherapy_with_r_biomd0000000771_model.initial_x_infected_cell
     label: X Infected Cell
     default: 0.0
     units: native SBML value
-    description: Initial X Infected Cell. Sets the initial value of bundled SBML symbol `x_Infected_Cell`.
+    description: Initial X Infected Cell. Sets the initial value of bundled SBML symbol
+      `x_Infected_Cell`.
   - name: initial_v_virus
     maps_to: oncology_sbml_bajzer2008_modeling_of_cancer_virotherapy_with_r_biomd0000000771_model.initial_v_virus
     label: V Virus
@@ -52,7 +58,8 @@ io:
     description: V Virus observable. Maps to SBML symbol `v_Virus`.
   - name: state
     maps_to: oncology_sbml_bajzer2008_modeling_of_cancer_virotherapy_with_r_biomd0000000771_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_bajzer2008_modeling_of_cancer_virotherapy_with_r_biomd0000000771_model.summary
     description: Change and peak summary across the simulated SBML observables.

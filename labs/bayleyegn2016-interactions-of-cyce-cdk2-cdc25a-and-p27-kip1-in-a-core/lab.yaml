@@ -1,6 +1,9 @@
 schema_version: '2.0'
-title: Bayleyegn2016 - interactions of CycE/Cdk2, Cdc25A, and P27 Kip1 in a core cancer subnetwork Lab
-description: Mathematical description of the interactions of CycE/Cdk2, Cdc25A, and P27Kip1 in a core cancer subnetwork. Model is encoded by Matthieu Maire/partially by Krishna Kumar Tiwari and submitted to BioMod.
+title: Bayleyegn2016 - interactions of CycE/Cdk2, Cdc25A, and P27 Kip1 in a core cancer
+  subnetwork Lab
+description: Mathematical description of the interactions of CycE/Cdk2, Cdc25A, and
+  P27Kip1 in a core cancer subnetwork. Model is encoded by Matthieu Maire/partially
+  by Krishna Kumar Tiwari and submitted to BioMod.
 tags:
 - biomodels_ebi
 - cellcycle
@@ -12,10 +15,29 @@ tags:
 - systemsbiology
 - tumor-growth
 io:
-  inputs: []
+  inputs:
+  - name: initial_cyce_cdk2
+    maps_to: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model.initial_cyce_cdk2
+    label: CycE/CDK2
+    default: 1.0
+    units: native SBML value
+    description: Initial CycE/CDK2. Sets the initial value of bundled SBML symbol
+      `CycE_CDK2`.
+  - name: initial_cdc25a
+    maps_to: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model.initial_cdc25a
+    label: Cdc25A
+    default: 1.0
+    units: native SBML value
+    description: Initial Cdc25A. Sets the initial value of bundled SBML symbol `Cdc25A`.
+  - name: initial_p27_kip1
+    maps_to: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model.initial_p27_kip1
+    label: p27 Kip1
+    default: 1.0
+    units: native SBML value
+    description: Initial p27 Kip1. Sets the initial value of bundled SBML symbol `p27_kip1`.
   outputs:
-  - name: cyce_cdk2
-    maps_to: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model.cyce_cdk2
+  - name: cyc_e_cdk2
+    maps_to: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model.cyc_e_cdk2
     description: CycE CDK2 observable. Maps to SBML symbol `CycE_CDK2`.
   - name: p27_kip1
     maps_to: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model.p27_kip1
@@ -25,7 +47,8 @@ io:
     description: Cdc25A observable. Maps to SBML symbol `Cdc25A`.
   - name: state
     maps_to: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model.summary
     description: Change and peak summary across the simulated SBML observables.

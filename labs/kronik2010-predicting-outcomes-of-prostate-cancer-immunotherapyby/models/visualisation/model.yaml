@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Kronik2010 - Predicting Outcomes of Prostate Cancer Immunotherapyby Personalized Mathematical Models Visualisation
-description: Oncology visualisation for Kronik2010 - Predicting Outcomes of Prostate Cancer Immunotherapyby Personalized Mathematical Models.
+title: Kronik2010 - Predicting Outcomes of Prostate Cancer Immunotherapyby Personalized
+  Mathematical Models Visualisation
+description: Oncology visualisation for Kronik2010 - Predicting Outcomes of Prostate
+  Cancer Immunotherapyby Personalized Mathematical Models.
 standard: other
 tags:
 - biomodels_ebi
@@ -22,17 +24,22 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Kronik2010 - Predicting Outcomes of Prostate Cancer Immunotherapyby Personalized Mathematical Models
-    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    lab_title: Kronik2010 - Predicting Outcomes of Prostate Cancer Immunotherapyby
+      Personalized Mathematical Models
+    question: Which signaling states carry the dominant response in the bundled cancer
+      pathway model?
     answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
     visual_scope: Cancer signaling pathway activity and dominant source states
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_kronik2010_predicting_outcomes_of_prostate_cance_model2001130003_model
-      title: Kronik2010 - Predicting Outcomes of Prostate Cancer Immunotherapyby Personalized Mathematical Models
+      title: Kronik2010 - Predicting Outcomes of Prostate Cancer Immunotherapyby Personalized
+        Mathematical Models
       state_observables:
       - V
       - Dm
@@ -43,27 +50,22 @@ biosim:
       - P
       observables:
       - id: V
-        port: model_state_1
-        label: V
+        port: tumor_volume
+        label: Tumor Volume
         group: signaling
       - id: Dm
-        port: model_state_2
         label: Dm
         group: signaling
       - id: Dc
-        port: model_state_3
         label: Dc
         group: signaling
       - id: Dr
-        port: model_state_4
         label: Dr
         group: signaling
       - id: C
-        port: model_state_5
         label: C
         group: signaling
       - id: R
-        port: model_state_6
         label: R
         group: signaling
 runtime:

@@ -16,10 +16,10 @@ class Owen1998TumourGrowthModelBiomd0000000670Model(TelluriumSBMLBioModule):
     _TIME_UNIT = "model_time"
     _OBSERVABLE_STRATEGY = 'rateRule'
     _OBSERVABLES = ['l', 'n', 'm']
-    _SPECIES_LABELS = {'l': 'L', 'n': 'N', 'm': 'M'}
+    _SPECIES_LABELS = {'l': 'Macrophage', 'n': 'Normal Cells', 'm': 'Mutated Cells'}
     _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {}
-    _HEADLINE_OUTPUTS = {'model_state_1': ('l', 'native SBML value', 'L observable. Maps to SBML symbol `l`.'), 'model_state_2': ('n', 'native SBML value', 'N observable. Maps to SBML symbol `n`.'), 'model_state_3': ('m', 'native SBML value', 'M observable. Maps to SBML symbol `m`.')}
+    _INITIAL_CONDITION_INPUTS = {'initial_macrophage': ('l', 0.0999999999999985, 'native SBML value', 'Initial Macrophage. Sets the initial value of bundled SBML symbol `l`.'), 'initial_normal_cells': ('n', 0.899999999999988, 'native SBML value', 'Initial Normal Cells. Sets the initial value of bundled SBML symbol `n`.'), 'initial_mutated_cells': ('m', 0.899999999999988, 'native SBML value', 'Initial Mutated Cells. Sets the initial value of bundled SBML symbol `m`.')}
+    _HEADLINE_OUTPUTS = {'macrophage': ('l', 'native SBML value', 'Macrophage observable. Maps to SBML symbol `l`.'), 'normal_cells': ('n', 'native SBML value', 'Normal Cells observable. Maps to SBML symbol `n`.'), 'mutated_cells': ('m', 'native SBML value', 'Mutated Cells observable. Maps to SBML symbol `m`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/BIOMD0000000670.xml', integration_step: float = 0.1) -> None:

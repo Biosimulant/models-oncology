@@ -18,8 +18,8 @@ class Tham2008PdmodelTumourShrinkageByGemcitabineBiomd0000000234Model(TelluriumS
     _OBSERVABLES = ['Ce', 'TumorSize']
     _SPECIES_LABELS = {'TumorSize': 'TumorSize', 'Ce': 'Ce'}
     _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {'dose_int2': ('Dose_Int2', -2.0, 'native SBML value', 'Dose Int2 source parameter. Maps to bundled SBML parameter `Dose_Int2`.'), 'dose_int1': ('Dose_Int1', 0.0, 'native SBML value', 'Dose Int1 source parameter. Maps to bundled SBML parameter `Dose_Int1`.'), 'dose': ('Dose', 5203.84, 'native SBML value', 'Dose source parameter. Maps to bundled SBML parameter `Dose`.'), 'initial_tumorsize': ('TumorSize', 6.66, 'native SBML value', 'Initial TumorSize. Sets the initial value of bundled SBML symbol `TumorSize`.')}
-    _HEADLINE_OUTPUTS = {'tumorsize': ('TumorSize', 'native SBML value', 'TumorSize observable. Maps to SBML symbol `TumorSize`.'), 'model_state_2': ('Ce', 'native SBML value', 'Ce observable. Maps to SBML symbol `Ce`.')}
+    _INITIAL_CONDITION_INPUTS = {'dose_int2_source_parameter': ('Dose_Int2', -2.0, 'native SBML value', 'Dose Int2 source parameter. Maps to bundled SBML parameter `Dose_Int2`.'), 'dose_int1_source_parameter': ('Dose_Int1', 0.0, 'native SBML value', 'Dose Int1 source parameter. Maps to bundled SBML parameter `Dose_Int1`.'), 'dose_source_parameter': ('Dose', 5203.84, 'native SBML value', 'Dose source parameter. Maps to bundled SBML parameter `Dose`.'), 'initial_tumor_size': ('TumorSize', 6.66, 'native SBML value', 'Initial TumorSize. Sets the initial value of bundled SBML symbol `TumorSize`.')}
+    _HEADLINE_OUTPUTS = {'tumor_size': ('TumorSize', 'native SBML value', 'TumorSize observable. Maps to SBML symbol `TumorSize`.'), 'ce': ('Ce', 'native SBML value', 'Ce observable. Maps to SBML symbol `Ce`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/BIOMD0000000234.xml', integration_step: float = 0.1) -> None:

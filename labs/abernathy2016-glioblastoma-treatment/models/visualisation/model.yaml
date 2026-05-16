@@ -17,14 +17,18 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Abernathy2016 - glioblastoma treatment
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_abernathy2016_glioblastoma_treatment_biomd0000000757_model
       title: Abernathy2016 - glioblastoma treatment
@@ -38,27 +42,27 @@ biosim:
       - MHC2
       observables:
       - id: Tumor
-        port: tumor
+        port: tumor_burden
         label: Tumor
         group: drug_response
       - id: CancerStemCell
-        port: cancerstemcell
+        port: cancer_stem_cells
         label: CancerStemCell
         group: drug_response
       - id: CytotoxicTcell
-        port: cytotoxictcell
+        port: cytotoxic_t_cells
         label: CytotoxicTcell
         group: drug_response
       - id: TGFb
-        port: tgfb
+        port: tgf_beta
         label: TGFb
         group: drug_response
       - id: IFNy
-        port: ifny
+        port: ifn_gamma
         label: IFNy
         group: drug_response
       - id: MHC1
-        port: mhc1
+        port: mhc_i
         label: MHC1
         group: drug_response
 runtime:

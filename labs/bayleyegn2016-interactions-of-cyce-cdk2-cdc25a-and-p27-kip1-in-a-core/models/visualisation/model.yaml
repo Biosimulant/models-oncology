@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Bayleyegn2016 - interactions of CycE/Cdk2, Cdc25A, and P27 Kip1 in a core cancer subnetwork Visualisation
-description: Oncology visualisation for Bayleyegn2016 - interactions of CycE/Cdk2, Cdc25A, and P27 Kip1 in a core cancer subnetwork.
+title: Bayleyegn2016 - interactions of CycE/Cdk2, Cdc25A, and P27 Kip1 in a core cancer
+  subnetwork Visualisation
+description: Oncology visualisation for Bayleyegn2016 - interactions of CycE/Cdk2,
+  Cdc25A, and P27 Kip1 in a core cancer subnetwork.
 standard: other
 tags:
 - biomodels_ebi
@@ -16,24 +18,30 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Bayleyegn2016 - interactions of CycE/Cdk2, Cdc25A, and P27 Kip1 in a core cancer subnetwork
-    question: Which cell-cycle or damage-response states dominate the baseline cancer model?
-    answer_focus: Compares selected cycle/checkpoint observables and largest state changes.
+    lab_title: Bayleyegn2016 - interactions of CycE/Cdk2, Cdc25A, and P27 Kip1 in
+      a core cancer subnetwork
+    question: Which cell-cycle or damage-response states dominate the baseline cancer
+      model?
+    answer_focus: Compares selected cycle/checkpoint observables and largest state
+      changes.
     visual_scope: Cancer cell-cycle/checkpoint state activity
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_bayleyegn2016_interactions_of_cyce_cdk2_cdc25a_a_model2003180002_model
-      title: Bayleyegn2016 - interactions of CycE/Cdk2, Cdc25A, and P27 Kip1 in a core cancer subnetwork
+      title: Bayleyegn2016 - interactions of CycE/Cdk2, Cdc25A, and P27 Kip1 in a
+        core cancer subnetwork
       state_observables:
       - Cdc25A
       - CycE_CDK2
       - p27_kip1
       observables:
       - id: CycE_CDK2
-        port: cyce_cdk2
+        port: cyc_e_cdk2
         label: CycE CDK2
         group: cellcycle
       - id: p27_kip1

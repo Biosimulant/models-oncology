@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Chen2011/2 - bone marrow invasion relative model Lab
-description: 'The paper describes a model of tumor invasion to bone marrow. Created by COPASI 4.26 (Build 213) This model is described in the article: Modeling invasion of metastasizing cancer cells to bone marrow.'
+description: 'The paper describes a model of tumor invasion to bone marrow. Created
+  by COPASI 4.26 (Build 213) This model is described in the article: Modeling invasion
+  of metastasizing cancer cells to bone marrow.'
 tags:
 - biomodels_ebi
 - curated
@@ -11,17 +13,32 @@ tags:
 - systemsbiology
 - tumor-growth
 io:
-  inputs: []
+  inputs:
+  - name: initial_healthy_bone_marrow
+    maps_to: oncology_sbml_chen2011_2_bone_marrow_invasion_relative_model_biomd0000000795_model.initial_healthy_bone_marrow
+    label: Healthy Bone Marrow
+    default: 0.5
+    units: native SBML value
+    description: Initial Healthy Bone Marrow. Sets the initial value of bundled SBML
+      symbol `H`.
+  - name: initial_tumor_burden
+    maps_to: oncology_sbml_chen2011_2_bone_marrow_invasion_relative_model_biomd0000000795_model.initial_tumor_burden
+    label: Tumor Burden
+    default: 0.0001
+    units: native SBML value
+    description: Initial Tumor Burden. Sets the initial value of bundled SBML symbol
+      `T`.
   outputs:
-  - name: model_state_1
-    maps_to: oncology_sbml_chen2011_2_bone_marrow_invasion_relative_model_biomd0000000795_model.model_state_1
-    description: H observable. Maps to SBML symbol `H`.
-  - name: model_state_2
-    maps_to: oncology_sbml_chen2011_2_bone_marrow_invasion_relative_model_biomd0000000795_model.model_state_2
-    description: T observable. Maps to SBML symbol `T`.
+  - name: healthy_bone_marrow
+    maps_to: oncology_sbml_chen2011_2_bone_marrow_invasion_relative_model_biomd0000000795_model.healthy_bone_marrow
+    description: Healthy Bone Marrow observable. Maps to SBML symbol `H`.
+  - name: tumor_burden
+    maps_to: oncology_sbml_chen2011_2_bone_marrow_invasion_relative_model_biomd0000000795_model.tumor_burden
+    description: Tumor Burden observable. Maps to SBML symbol `T`.
   - name: state
     maps_to: oncology_sbml_chen2011_2_bone_marrow_invasion_relative_model_biomd0000000795_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_chen2011_2_bone_marrow_invasion_relative_model_biomd0000000795_model.summary
     description: Change and peak summary across the simulated SBML observables.

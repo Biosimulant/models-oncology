@@ -1,6 +1,9 @@
 schema_version: '2.0'
-title: 'Boer1986 - Interactions between Macrophages and T-lymphocytes: Tumor Sneaking Through Intrinsic to Helper T cell Dynamics Lab'
-description: 'Interactions between Macrophages and T-lymphocytes: TumorSneaking Through Intrinsic to Helper T cell DynamicsROB J. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+title: 'Boer1986 - Interactions between Macrophages and T-lymphocytes: Tumor Sneaking
+  Through Intrinsic to Helper T cell Dynamics Lab'
+description: 'Interactions between Macrophages and T-lymphocytes: TumorSneaking Through
+  Intrinsic to Helper T cell DynamicsROB J. It can be used to explore tumor-related
+  dynamics and compare treatment-response behavior across conditions.'
 tags:
 - biomodels_ebi
 - curated
@@ -17,8 +20,8 @@ tags:
 - tumor-growth
 io:
   inputs:
-  - name: kill_level
-    maps_to: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.kill_level
+  - name: kill_source_parameter
+    maps_to: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.kill_source_parameter
     label: KILL source parameter
     default: 10.0
     units: native SBML value
@@ -74,7 +77,8 @@ io:
     description: HTL observable. Maps to SBML symbol `HTL`.
   - name: state
     maps_to: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_boer1986_interactions_between_macrophages_and_t_model1912110001_model.summary
     description: Change and peak summary across the simulated SBML observables.

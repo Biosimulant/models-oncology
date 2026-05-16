@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: Nazari2018 - IL6 mediated stem cell driven tumor growth and targeted treatment Lab
-description: 'This a model from the article: A mathematical model for IL-6-mediated, stem cell driven tumor growth and targeted treatmentFereshteh Nazari, Alexander T. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+title: Nazari2018 - IL6 mediated stem cell driven tumor growth and targeted treatment
+  Lab
+description: 'This a model from the article: A mathematical model for IL-6-mediated,
+  stem cell driven tumor growth and targeted treatmentFereshteh Nazari, Alexander
+  T. It can be used to explore tumor-related dynamics and compare treatment-response
+  behavior across conditions.'
 tags:
 - biomodels_ebi
 - curated
@@ -19,37 +23,43 @@ io:
     label: Progenitor tumor cell E
     default: 0.01
     units: native SBML value
-    description: Initial Progenitor tumor cell E. Sets the initial value of bundled SBML symbol `Progenitor_tumor_cell_E`.
+    description: Initial Progenitor tumor cell E. Sets the initial value of bundled
+      SBML symbol `Progenitor_tumor_cell_E`.
   - name: initial_differentiated_tumor_cell_d
     maps_to: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model.initial_differentiated_tumor_cell_d
     label: Differentiated tumor cell D
     default: 0.01
     units: native SBML value
-    description: Initial Differentiated tumor cell D. Sets the initial value of bundled SBML symbol `Differentiated_tumor_cell_D`.
-  - name: initial_cancer_stem_cell_s
-    maps_to: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model.initial_cancer_stem_cell_s
+    description: Initial Differentiated tumor cell D. Sets the initial value of bundled
+      SBML symbol `Differentiated_tumor_cell_D`.
+  - name: initial_cancer_stem_cells_s
+    maps_to: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model.initial_cancer_stem_cells_s
     label: Cancer Stem Cell S
     default: 1000.0
     units: native SBML value
-    description: Initial Cancer Stem Cell S. Sets the initial value of bundled SBML symbol `Cancer_Stem_Cell_S`.
-  - name: initial_il_6_cell_bound_il_6r_complex_on_s
-    maps_to: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model.initial_il_6_cell_bound_il_6r_complex_on_s
+    description: Initial Cancer Stem Cell S. Sets the initial value of bundled SBML
+      symbol `Cancer_Stem_Cell_S`.
+  - name: initial_il_6_cell_bound_il_6_r_complex_on_s
+    maps_to: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model.initial_il_6_cell_bound_il_6_r_complex_on_s
     label: IL 6, Cell bound IL 6R complex on S
     default: 0.0
     units: native SBML value
-    description: Initial IL 6, Cell bound IL 6R complex on S. Sets the initial value of bundled SBML symbol `IL_6__Cell_bound_IL_6R_complex_on_S`.
-  - name: initial_il_6_cell_bound_il_6r_complex_on_e
-    maps_to: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model.initial_il_6_cell_bound_il_6r_complex_on_e
+    description: Initial IL 6, Cell bound IL 6R complex on S. Sets the initial value
+      of bundled SBML symbol `IL_6__Cell_bound_IL_6R_complex_on_S`.
+  - name: initial_il_6_cell_bound_il_6_r_complex_on_e
+    maps_to: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model.initial_il_6_cell_bound_il_6_r_complex_on_e
     label: IL 6, Cell bound IL 6R complex on E
     default: 0.0
     units: native SBML value
-    description: Initial IL 6, Cell bound IL 6R complex on E. Sets the initial value of bundled SBML symbol `IL_6__Cell_bound_IL_6R_complex_on_E`.
-  - name: initial_il_6_cell_bound_il_6r_complex_on_d
-    maps_to: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model.initial_il_6_cell_bound_il_6r_complex_on_d
+    description: Initial IL 6, Cell bound IL 6R complex on E. Sets the initial value
+      of bundled SBML symbol `IL_6__Cell_bound_IL_6R_complex_on_E`.
+  - name: initial_il_6_cell_bound_il_6_r_complex_on_d
+    maps_to: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model.initial_il_6_cell_bound_il_6_r_complex_on_d
     label: IL 6, Cell bound IL 6R complex on D
     default: 0.0
     units: native SBML value
-    description: Initial IL 6, Cell bound IL 6R complex on D. Sets the initial value of bundled SBML symbol `IL_6__Cell_bound_IL_6R_complex_on_D`.
+    description: Initial IL 6, Cell bound IL 6R complex on D. Sets the initial value
+      of bundled SBML symbol `IL_6__Cell_bound_IL_6R_complex_on_D`.
   outputs:
   - name: progenitor_tumor_cell_e
     maps_to: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model.progenitor_tumor_cell_e
@@ -57,21 +67,25 @@ io:
   - name: differentiated_tumor_cell_d
     maps_to: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model.differentiated_tumor_cell_d
     description: Differentiated tumor cell D observable. Maps to SBML symbol `Differentiated_tumor_cell_D`.
-  - name: cancer_stem_cell_s
-    maps_to: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model.cancer_stem_cell_s
+  - name: cancer_stem_cells_s
+    maps_to: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model.cancer_stem_cells_s
     description: Cancer Stem Cell S observable. Maps to SBML symbol `Cancer_Stem_Cell_S`.
-  - name: il_6_cell_bound_il_6r_complex_on_s
-    maps_to: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model.il_6_cell_bound_il_6r_complex_on_s
-    description: IL 6, Cell bound IL 6R complex on S observable. Maps to SBML symbol `IL_6__Cell_bound_IL_6R_complex_on_S`.
-  - name: il_6_cell_bound_il_6r_complex_on_e
-    maps_to: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model.il_6_cell_bound_il_6r_complex_on_e
-    description: IL 6, Cell bound IL 6R complex on E observable. Maps to SBML symbol `IL_6__Cell_bound_IL_6R_complex_on_E`.
-  - name: il_6_cell_bound_il_6r_complex_on_d
-    maps_to: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model.il_6_cell_bound_il_6r_complex_on_d
-    description: IL 6, Cell bound IL 6R complex on D observable. Maps to SBML symbol `IL_6__Cell_bound_IL_6R_complex_on_D`.
+  - name: il_6_cell_bound_il_6_r_complex_on_s
+    maps_to: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model.il_6_cell_bound_il_6_r_complex_on_s
+    description: IL 6, Cell bound IL 6R complex on S observable. Maps to SBML symbol
+      `IL_6__Cell_bound_IL_6R_complex_on_S`.
+  - name: il_6_cell_bound_il_6_r_complex_on_e
+    maps_to: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model.il_6_cell_bound_il_6_r_complex_on_e
+    description: IL 6, Cell bound IL 6R complex on E observable. Maps to SBML symbol
+      `IL_6__Cell_bound_IL_6R_complex_on_E`.
+  - name: il_6_cell_bound_il_6_r_complex_on_d
+    maps_to: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model.il_6_cell_bound_il_6_r_complex_on_d
+    description: IL 6, Cell bound IL 6R complex on D observable. Maps to SBML symbol
+      `IL_6__Cell_bound_IL_6R_complex_on_D`.
   - name: state
     maps_to: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_nazari2018_il6_mediated_stem_cell_driven_tumor_g_biomd0000000819_model.summary
     description: Change and peak summary across the simulated SBML observables.

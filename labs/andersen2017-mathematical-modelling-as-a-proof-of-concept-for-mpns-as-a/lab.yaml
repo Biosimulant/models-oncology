@@ -1,6 +1,9 @@
 schema_version: '2.0'
-title: Andersen2017 - Mathematical modelling as a proof of concept for MPNs as a human inflammation model for cancer development Lab
-description: This is a mathematical model investigating the role of chronic inflammation in the development and progression of myeloproliferative neoplasms (MPNs). The model describes the proliferation from stem c.
+title: Andersen2017 - Mathematical modelling as a proof of concept for MPNs as a human
+  inflammation model for cancer development Lab
+description: This is a mathematical model investigating the role of chronic inflammation
+  in the development and progression of myeloproliferative neoplasms (MPNs). The model
+  describes the proliferation from stem c.
 tags:
 - biomodels_ebi
 - curated
@@ -11,29 +14,36 @@ tags:
 - systemsbiology
 - tumor-growth
 io:
-  inputs: []
+  inputs:
+  - name: inflammation_level
+    maps_to: oncology_sbml_andersen2017_mathematical_modelling_as_a_proof_o_biomd0000000852_model.inflammation_level
+    label: Inflammation Level
+    default: 7.0
+    units: native SBML value
+    description: Inflammation Level. Overrides bundled SBML parameter `inflammation`.
   outputs:
-  - name: model_state_1
-    maps_to: oncology_sbml_andersen2017_mathematical_modelling_as_a_proof_o_biomd0000000852_model.model_state_1
+  - name: x0
+    maps_to: oncology_sbml_andersen2017_mathematical_modelling_as_a_proof_o_biomd0000000852_model.x0
     description: X0 observable. Maps to SBML symbol `x0`.
-  - name: model_state_2
-    maps_to: oncology_sbml_andersen2017_mathematical_modelling_as_a_proof_o_biomd0000000852_model.model_state_2
+  - name: x1
+    maps_to: oncology_sbml_andersen2017_mathematical_modelling_as_a_proof_o_biomd0000000852_model.x1
     description: X1 observable. Maps to SBML symbol `x1`.
-  - name: model_state_3
-    maps_to: oncology_sbml_andersen2017_mathematical_modelling_as_a_proof_o_biomd0000000852_model.model_state_3
+  - name: a
+    maps_to: oncology_sbml_andersen2017_mathematical_modelling_as_a_proof_o_biomd0000000852_model.a
     description: A observable. Maps to SBML symbol `a`.
-  - name: model_state_4
-    maps_to: oncology_sbml_andersen2017_mathematical_modelling_as_a_proof_o_biomd0000000852_model.model_state_4
+  - name: s
+    maps_to: oncology_sbml_andersen2017_mathematical_modelling_as_a_proof_o_biomd0000000852_model.s
     description: S observable. Maps to SBML symbol `s`.
-  - name: model_state_5
-    maps_to: oncology_sbml_andersen2017_mathematical_modelling_as_a_proof_o_biomd0000000852_model.model_state_5
+  - name: y0
+    maps_to: oncology_sbml_andersen2017_mathematical_modelling_as_a_proof_o_biomd0000000852_model.y0
     description: Y0 observable. Maps to SBML symbol `y0`.
-  - name: model_state_6
-    maps_to: oncology_sbml_andersen2017_mathematical_modelling_as_a_proof_o_biomd0000000852_model.model_state_6
+  - name: y1
+    maps_to: oncology_sbml_andersen2017_mathematical_modelling_as_a_proof_o_biomd0000000852_model.y1
     description: Y1 observable. Maps to SBML symbol `y1`.
   - name: state
     maps_to: oncology_sbml_andersen2017_mathematical_modelling_as_a_proof_o_biomd0000000852_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_andersen2017_mathematical_modelling_as_a_proof_o_biomd0000000852_model.summary
     description: Change and peak summary across the simulated SBML observables.

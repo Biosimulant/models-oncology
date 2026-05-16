@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: dePillis2008 - Optimal control of mixed immunotherapy and chemotherapy of tumors Lab
-description: '&amp;lt;notes xmlns=&amp;quot;http://www.sbml.org/sbml/level2/version4&amp;quot;&amp;gt; &amp;lt;body xmlns=&amp;quot;http://www.w3.org/1999/xhtml&amp;quot;&amp;gt; &amp;lt;pre&amp;gt;Optimal control. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+title: dePillis2008 - Optimal control of mixed immunotherapy and chemotherapy of tumors
+  Lab
+description: '&amp;lt;notes xmlns=&amp;quot;http://www.sbml.org/sbml/level2/version4&amp;quot;&amp;gt;
+  &amp;lt;body xmlns=&amp;quot;http://www.w3.org/1999/xhtml&amp;quot;&amp;gt; &amp;lt;pre&amp;gt;Optimal
+  control. It can be used to explore tumor-related dynamics and compare treatment-response
+  behavior across conditions.'
 tags:
 - biomodels_ebi
 - chemotherapy
@@ -17,29 +21,28 @@ tags:
 - systemsbiology
 - tumor-growth
 io:
-  inputs: []
+  inputs:
+  - name: initial_tumor_cells
+    maps_to: oncology_sbml_depillis2008_optimal_control_of_mixed_immunother_biomd0000000913_model.initial_tumor_cells
+    label: Tumor Cells
+    default: 10000000.0
+    units: native SBML value
+    description: Initial Tumor Cells. Sets the initial value of bundled SBML symbol
+      `T`.
+  - name: chemotherapy_drug_level
+    maps_to: oncology_sbml_depillis2008_optimal_control_of_mixed_immunother_biomd0000000913_model.chemotherapy_drug_level
+    label: Chemotherapy Drug Level
+    default: 6.6666657777779e-07
+    units: native SBML value
+    description: Chemotherapy Drug Level. Overrides bundled SBML parameter `D`.
   outputs:
-  - name: model_state_1
-    maps_to: oncology_sbml_depillis2008_optimal_control_of_mixed_immunother_biomd0000000913_model.model_state_1
-    description: T observable. Maps to SBML symbol `T`.
-  - name: model_state_2
-    maps_to: oncology_sbml_depillis2008_optimal_control_of_mixed_immunother_biomd0000000913_model.model_state_2
-    description: L observable. Maps to SBML symbol `L`.
-  - name: model_state_3
-    maps_to: oncology_sbml_depillis2008_optimal_control_of_mixed_immunother_biomd0000000913_model.model_state_3
-    description: N observable. Maps to SBML symbol `N`.
-  - name: model_state_4
-    maps_to: oncology_sbml_depillis2008_optimal_control_of_mixed_immunother_biomd0000000913_model.model_state_4
-    description: C observable. Maps to SBML symbol `C`.
-  - name: model_state_5
-    maps_to: oncology_sbml_depillis2008_optimal_control_of_mixed_immunother_biomd0000000913_model.model_state_5
-    description: I observable. Maps to SBML symbol `I`.
-  - name: model_state_6
-    maps_to: oncology_sbml_depillis2008_optimal_control_of_mixed_immunother_biomd0000000913_model.model_state_6
-    description: M observable. Maps to SBML symbol `M`.
+  - name: tumor_cells
+    maps_to: oncology_sbml_depillis2008_optimal_control_of_mixed_immunother_biomd0000000913_model.tumor_cells
+    description: Tumor Cells observable. Maps to SBML symbol `T`.
   - name: state
     maps_to: oncology_sbml_depillis2008_optimal_control_of_mixed_immunother_biomd0000000913_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_depillis2008_optimal_control_of_mixed_immunother_biomd0000000913_model.summary
     description: Change and peak summary across the simulated SBML observables.

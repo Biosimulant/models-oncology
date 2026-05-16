@@ -1,6 +1,9 @@
 schema_version: '2.0'
-title: Dritschel2018 - A mathematical model of cytotoxic and helper T cell interactions in a tumour microenvironment
-description: This model examines the role of helper and cytotoxic T cells in an anti-tumour response, with implicit inclusions of immunosuppressive effects. The model demonstrates the dependence of immunoediting o.
+title: Dritschel2018 - A mathematical model of cytotoxic and helper T cell interactions
+  in a tumour microenvironment
+description: This model examines the role of helper and cytotoxic T cells in an anti-tumour
+  response, with implicit inclusions of immunosuppressive effects. The model demonstrates
+  the dependence of immunoediting o.
 standard: other
 tags:
 - biomodels_ebi
@@ -49,36 +52,38 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
-  - name: ntilde_level
+  - name: ntilde_source_parameter
     maps_to: Ntilde
     label: Ntilde source parameter
     default: 0.04
     units: native SBML value
     description: Ntilde source parameter. Maps to bundled SBML parameter `Ntilde`.
-  - name: initial_n_tumour
+  - name: initial_n_tumor
     maps_to: N_Tumour
     label: N Tumour
     default: 0.01
     units: native SBML value
     description: Initial N Tumour. Sets the initial value of bundled SBML symbol `N_Tumour`.
   outputs:
-  - name: n_tumour
+  - name: n_tumor
     maps_to: N_Tumour
     label: N Tumour
     description: N Tumour observable. Maps to SBML symbol `N_Tumour`.
-  - name: model_state_2
+  - name: t_h
     maps_to: T_H
     label: T H
     description: T H observable. Maps to SBML symbol `T_H`.
-  - name: model_state_3
+  - name: t_c
     maps_to: T_C
     label: T C
     description: T C observable. Maps to SBML symbol `T_C`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

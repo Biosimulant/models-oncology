@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: 'Nguyen2016 - Feedback regulation in cell signalling: Lessons for cancer therapeutics Lab'
-description: 'Feedback regulation in cell signalling: Lessons for cancer therapeutics This model is described in the article: Feedback regulation in cell signalling: Lessons for cancer therapeutics. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+title: 'Nguyen2016 - Feedback regulation in cell signalling: Lessons for cancer therapeutics
+  Lab'
+description: 'Feedback regulation in cell signalling: Lessons for cancer therapeutics
+  This model is described in the article: Feedback regulation in cell signalling:
+  Lessons for cancer therapeutics. It can be used to explore tumor-related dynamics
+  and compare treatment-response behavior across conditions.'
 tags:
 - biomodels_ebi
 - curated
@@ -16,8 +20,8 @@ tags:
 - tumor-growth
 io:
   inputs:
-  - name: initial_pi3k
-    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.initial_pi3k
+  - name: initial_pi3_k
+    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.initial_pi3_k
     label: PI3K
     default: 100.0
     units: native SBML value
@@ -46,15 +50,15 @@ io:
     default: 0.0
     units: native SBML value
     description: Initial AAkt. Sets the initial value of bundled SBML symbol `aAkt`.
-  - name: initial_rasgdp
-    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.initial_rasgdp
+  - name: initial_ras_gdp
+    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.initial_ras_gdp
     label: RasGDP
     default: 100.0
     units: native SBML value
     description: Initial RasGDP. Sets the initial value of bundled SBML symbol `RasGDP`.
   outputs:
-  - name: pi3k
-    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.pi3k
+  - name: pi3_k
+    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.pi3_k
     description: PI3K observable. Maps to SBML symbol `PI3K`.
   - name: akt
     maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.akt
@@ -68,12 +72,13 @@ io:
   - name: aakt
     maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.aakt
     description: AAkt observable. Maps to SBML symbol `aAkt`.
-  - name: rasgdp
-    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.rasgdp
+  - name: ras_gdp
+    maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.ras_gdp
     description: RasGDP observable. Maps to SBML symbol `RasGDP`.
   - name: state
     maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_nguyen2016_feedback_regulation_in_cell_signallin_biomd0000000651_model.summary
     description: Change and peak summary across the simulated SBML observables.

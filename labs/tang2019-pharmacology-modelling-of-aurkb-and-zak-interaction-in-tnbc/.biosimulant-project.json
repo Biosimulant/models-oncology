@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "e45326d0-e724-4d05-8399-8d44977ffcfb",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "75bc2938-c797-42f4-9dc2-cebc5a28e292",
+  "created_at": "2026-05-15T19:05:40.382643795+00:00",
+  "last_synced_at": "2026-05-16T10:39:34.938793+00:00",
+  "hub_manifest_hash": "48f2d9d0f4c22aff894b83da601d2f03f3589f06eefbaef24366885ac5cc3674",
+  "package_name": "tang2019-pharmacology-modelling-of-aurkb-and-zak-interaction-in"
+}

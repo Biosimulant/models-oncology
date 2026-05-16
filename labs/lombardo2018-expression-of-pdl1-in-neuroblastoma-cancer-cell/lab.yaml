@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Lombardo2018 - Expression of PDL1 in Neuroblastoma Cancer Cell Lab
-description: 'The model reproduces the time profiles of PDL1 in a Neuroblastoma Cancer Cell, considering the activating mutation of ALK: ALKF1174L. We simulate the impact of two different therapy: Crizotinib and Ge.'
+description: 'The model reproduces the time profiles of PDL1 in a Neuroblastoma Cancer
+  Cell, considering the activating mutation of ALK: ALKF1174L. We simulate the impact
+  of two different therapy: Crizotinib and Ge.'
 tags:
 - biomodels_ebi
 - curated
@@ -14,14 +16,14 @@ tags:
 - tumor-growth
 io:
   inputs:
-  - name: kmegf_level
-    maps_to: oncology_sbml_lombardo2018_expression_of_pdl1_in_neuroblastoma_model1812070002_model.kmegf_level
+  - name: km_egf_source_parameter
+    maps_to: oncology_sbml_lombardo2018_expression_of_pdl1_in_neuroblastoma_model1812070002_model.km_egf_source_parameter
     label: KmEGF source parameter
     default: 6086070.0
     units: native SBML value
     description: KmEGF source parameter. Maps to bundled SBML parameter `KmEGF`.
-  - name: kcategf_level
-    maps_to: oncology_sbml_lombardo2018_expression_of_pdl1_in_neuroblastoma_model1812070002_model.kcategf_level
+  - name: kcat_egf_source_parameter
+    maps_to: oncology_sbml_lombardo2018_expression_of_pdl1_in_neuroblastoma_model1812070002_model.kcat_egf_source_parameter
     label: KcatEGF source parameter
     default: 694.731
     units: native SBML value
@@ -43,13 +45,15 @@ io:
     label: EGFR free
     default: 618.0
     units: native SBML value
-    description: Initial EGFR free. Sets the initial value of bundled SBML symbol `EGFR_f`.
+    description: Initial EGFR free. Sets the initial value of bundled SBML symbol
+      `EGFR_f`.
   - name: initial_sos_inactive
     maps_to: oncology_sbml_lombardo2018_expression_of_pdl1_in_neuroblastoma_model1812070002_model.initial_sos_inactive
     label: SOS inactive
     default: 9456.0
     units: native SBML value
-    description: Initial SOS inactive. Sets the initial value of bundled SBML symbol `SOS_inactive`.
+    description: Initial SOS inactive. Sets the initial value of bundled SBML symbol
+      `SOS_inactive`.
   outputs:
   - name: ngfr
     maps_to: oncology_sbml_lombardo2018_expression_of_pdl1_in_neuroblastoma_model1812070002_model.ngfr
@@ -63,15 +67,16 @@ io:
   - name: sos_inactive
     maps_to: oncology_sbml_lombardo2018_expression_of_pdl1_in_neuroblastoma_model1812070002_model.sos_inactive
     description: SOS inactive observable. Maps to SBML symbol `SOS_inactive`.
-  - name: p90rsk_inactive
-    maps_to: oncology_sbml_lombardo2018_expression_of_pdl1_in_neuroblastoma_model1812070002_model.p90rsk_inactive
+  - name: p90_rsk_inactive
+    maps_to: oncology_sbml_lombardo2018_expression_of_pdl1_in_neuroblastoma_model1812070002_model.p90_rsk_inactive
     description: P90Rsk inactive observable. Maps to SBML symbol `P90Rsk_inactive`.
   - name: ras_inactive
     maps_to: oncology_sbml_lombardo2018_expression_of_pdl1_in_neuroblastoma_model1812070002_model.ras_inactive
     description: RAS inactive observable. Maps to SBML symbol `RAS_inactive`.
   - name: state
     maps_to: oncology_sbml_lombardo2018_expression_of_pdl1_in_neuroblastoma_model1812070002_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_lombardo2018_expression_of_pdl1_in_neuroblastoma_model1812070002_model.summary
     description: Change and peak summary across the simulated SBML observables.
@@ -94,6 +99,6 @@ wiring:
   to:
   - visualisation.oncology_sbml_lombardo2018_expression_of_pdl1_in_neuroblastoma_model1812070002_model_species_labels
 runtime:
-  duration: 10.0
+  duration: 0.00575
   communication_step: 1.0
   initial_inputs: {}

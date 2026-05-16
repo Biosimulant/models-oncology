@@ -1,6 +1,9 @@
 schema_version: '2.0'
 title: Melhem 2017 - Neutropenia Model Lab
-description: "The objective of the present study was to use pharmacokinetic\u2013pharmacodynamic modelling to characterize the effects of chemotherapy on the granulopoietic system and to predict the absolute neutrophil. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions."
+description: "The objective of the present study was to use pharmacokinetic\u2013\
+  pharmacodynamic modelling to characterize the effects of chemotherapy on the granulopoietic\
+  \ system and to predict the absolute neutrophil. It can be used to explore tumor-related\
+  \ dynamics and compare treatment-response behavior across conditions."
 tags:
 - biomodels_ebi
 - chemotherapy
@@ -34,11 +37,11 @@ io:
   - name: crt
     maps_to: oncology_sbml_melhem_2017_neutropenia_model_model2211040001_model.crt
     description: Crt observable. Maps to SBML symbol `Crt`.
-  - name: model_state_3
-    maps_to: oncology_sbml_melhem_2017_neutropenia_model_model2211040001_model.model_state_3
+  - name: dt
+    maps_to: oncology_sbml_melhem_2017_neutropenia_model_model2211040001_model.dt
     description: Dt observable. Maps to SBML symbol `Dt`.
-  - name: model_state_4
-    maps_to: oncology_sbml_melhem_2017_neutropenia_model_model2211040001_model.model_state_4
+  - name: mt
+    maps_to: oncology_sbml_melhem_2017_neutropenia_model_model2211040001_model.mt
     description: Mt observable. Maps to SBML symbol `Mt`.
   - name: pm1
     maps_to: oncology_sbml_melhem_2017_neutropenia_model_model2211040001_model.pm1
@@ -48,7 +51,8 @@ io:
     description: Pm2 observable. Maps to SBML symbol `Pm2`.
   - name: state
     maps_to: oncology_sbml_melhem_2017_neutropenia_model_model2211040001_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_melhem_2017_neutropenia_model_model2211040001_model.summary
     description: Change and peak summary across the simulated SBML observables.

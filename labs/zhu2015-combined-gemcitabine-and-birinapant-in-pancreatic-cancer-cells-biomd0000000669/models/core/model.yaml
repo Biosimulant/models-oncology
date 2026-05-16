@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: Zhu2015 - Combined gemcitabine and birinapant in pancreatic cancer cells - mechanistic PD model
-description: Zhu2015 - combined gemcitabine and birinapantin pancreatic cancer cells - mechanistic PD model Mechanistic mathematical model toillustrate the effectiveness of combination chemotherapy involvinggemcit. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+title: Zhu2015 - Combined gemcitabine and birinapant in pancreatic cancer cells -
+  mechanistic PD model
+description: Zhu2015 - combined gemcitabine and birinapantin pancreatic cancer cells
+  - mechanistic PD model Mechanistic mathematical model toillustrate the effectiveness
+  of combination chemotherapy involvinggemcit. It can be used to explore tumor-related
+  dynamics and compare treatment-response behavior across conditions.
 standard: other
 tags:
 - biomodels_ebi
@@ -48,32 +52,58 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations. No scientifically safe external input was exposed by the cleanup.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations. Exposed inputs are traceable to bundled SBML parameters or initial conditions.
 io:
-  inputs: []
-  outputs:
-  - name: g1
+  inputs:
+  - name: gemcitabine_concentration
+    maps_to: C_g
+    label: Gemcitabine Concentration
+    default: 20.0
+    units: native SBML value
+    description: Gemcitabine Concentration. Overrides bundled SBML parameter `C_g`.
+  - name: birinapant_concentration
+    maps_to: C_b
+    label: Birinapant Concentration
+    default: 500.0
+    units: native SBML value
+    description: Birinapant Concentration. Overrides bundled SBML parameter `C_b`.
+  - name: initial_g1_cells
     maps_to: G1
-    label: G1
-    description: G1 observable. Maps to SBML symbol `G1`.
-  - name: model_state_2
-    maps_to: S
-    label: S
-    description: S observable. Maps to SBML symbol `S`.
-  - name: g2
+    label: G1 Cells
+    default: 113516.0
+    units: native SBML value
+    description: Initial G1 Cells. Sets the initial value of bundled SBML symbol `G1`.
+  - name: initial_g2_cells
     maps_to: G2
-    label: G2
-    description: G2 observable. Maps to SBML symbol `G2`.
-  - name: r_apo
+    label: G2 Cells
+    default: 81656.0
+    units: native SBML value
+    description: Initial G2 Cells. Sets the initial value of bundled SBML symbol `G2`.
+  outputs:
+  - name: g1_cells
+    maps_to: G1
+    label: G1 Cells
+    description: G1 Cells observable. Maps to SBML symbol `G1`.
+  - name: s_phase_cells
+    maps_to: S
+    label: S-Phase Cells
+    description: S-Phase Cells observable. Maps to SBML symbol `S`.
+  - name: g2_cells
+    maps_to: G2
+    label: G2 Cells
+    description: G2 Cells observable. Maps to SBML symbol `G2`.
+  - name: apoptotic_response
     maps_to: R_apo
-    label: R apo
-    description: R apo observable. Maps to SBML symbol `R_apo`.
-  - name: r_other
+    label: Apoptotic Response
+    description: Apoptotic Response observable. Maps to SBML symbol `R_apo`.
+  - name: other_response
     maps_to: R_other
-    label: R other
-    description: R other observable. Maps to SBML symbol `R_other`.
+    label: Other Response
+    description: Other Response observable. Maps to SBML symbol `R_other`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

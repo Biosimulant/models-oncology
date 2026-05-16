@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Hutchinson2016 - Vascular phenotype identification and anti-angiogenic treatment recommendation Visualisation
-description: Oncology visualisation for Hutchinson2016 - Vascular phenotype identification and anti-angiogenic treatment recommendation.
+title: Hutchinson2016 - Vascular phenotype identification and anti-angiogenic treatment
+  recommendation Visualisation
+description: Oncology visualisation for Hutchinson2016 - Vascular phenotype identification
+  and anti-angiogenic treatment recommendation.
 standard: other
 tags:
 - angiogenesis
@@ -19,17 +21,22 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Hutchinson2016 - Vascular phenotype identification and anti-angiogenic treatment recommendation
-    question: Does the baseline model indicate vascular or angiogenic support for tumour dynamics?
+    lab_title: Hutchinson2016 - Vascular phenotype identification and anti-angiogenic
+      treatment recommendation
+    question: Does the baseline model indicate vascular or angiogenic support for
+      tumour dynamics?
     answer_focus: Tracks vascular, tumour, and therapy-linked observables where present.
     visual_scope: Tumour vascularization, angiogenesis, and tissue-level response
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_hutchinson2016_vascular_phenotype_identification_model1911130007_model
-      title: Hutchinson2016 - Vascular phenotype identification and anti-angiogenic treatment recommendation
+      title: Hutchinson2016 - Vascular phenotype identification and anti-angiogenic
+        treatment recommendation
       state_observables:
       - v
       - rv
@@ -49,27 +56,27 @@ biosim:
       - EP
       observables:
       - id: v
-        port: model_state_1
+        port: v
         label: V
         group: angiogenesis
       - id: rv
-        port: model_state_2
+        port: rv
         label: Rv
         group: angiogenesis
       - id: bv
-        port: model_state_3
+        port: bv
         label: Bv
         group: angiogenesis
       - id: a1
-        port: model_state_4
+        port: a1
         label: A1
         group: angiogenesis
       - id: aw
-        port: model_state_5
+        port: aw
         label: Aw
         group: angiogenesis
       - id: a2
-        port: model_state_6
+        port: a2
         label: A2
         group: angiogenesis
 runtime:

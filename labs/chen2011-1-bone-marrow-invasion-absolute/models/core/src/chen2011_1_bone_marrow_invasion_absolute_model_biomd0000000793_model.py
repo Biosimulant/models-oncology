@@ -16,10 +16,10 @@ class Chen20111BoneMarrowInvasionAbsoluteModelBiomd0000000793Model(TelluriumSBML
     _TIME_UNIT = "model_time"
     _OBSERVABLE_STRATEGY = 'species'
     _OBSERVABLES = ['H', 'T']
-    _SPECIES_LABELS = {'H': 'H', 'T': 'T'}
+    _SPECIES_LABELS = {'H': 'Healthy Bone Marrow', 'T': 'Tumor Burden'}
     _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {}
-    _HEADLINE_OUTPUTS = {'model_state_1': ('H', 'native SBML value', 'H observable. Maps to SBML symbol `H`.'), 'model_state_2': ('T', 'native SBML value', 'T observable. Maps to SBML symbol `T`.')}
+    _INITIAL_CONDITION_INPUTS = {'initial_healthy_bone_marrow': ('H', 0.6, 'native SBML value', 'Initial Healthy Bone Marrow. Sets the initial value of bundled SBML symbol `H`.'), 'initial_tumor_burden': ('T', 0.0001, 'native SBML value', 'Initial Tumor Burden. Sets the initial value of bundled SBML symbol `T`.')}
+    _HEADLINE_OUTPUTS = {'healthy_bone_marrow': ('H', 'native SBML value', 'Healthy Bone Marrow observable. Maps to SBML symbol `H`.'), 'tumor_burden': ('T', 'native SBML value', 'Tumor Burden observable. Maps to SBML symbol `T`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/BIOMD0000000793.xml', integration_step: float = 0.1) -> None:

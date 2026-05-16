@@ -1,6 +1,9 @@
 schema_version: '2.0'
-title: Ribba2018 - Mathematical Model of Tumor Uptake for Immunocytokine-Based Cancer Immunotherapy
-description: This is a model developed to predict concentrations of cergutuzumab amunaleukin (CEA-IL2v) after various systemic dosing intensities. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+title: Ribba2018 - Mathematical Model of Tumor Uptake for Immunocytokine-Based Cancer
+  Immunotherapy
+description: This is a model developed to predict concentrations of cergutuzumab amunaleukin
+  (CEA-IL2v) after various systemic dosing intensities. It can be used to explore
+  tumor-related dynamics and compare treatment-response behavior across conditions.
 standard: other
 tags:
 - biomodels_ebi
@@ -29,7 +32,8 @@ upstream:
   source_id: MODEL1909050002
   standard: sbml
   original_url: https://www.ebi.ac.uk/biomodels/MODEL1909050002
-  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1909050002?filename=Ribba2018 Model 2.xml
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL1909050002?filename=Ribba2018
+    Model 2.xml
   license: CC0
 biosim:
   entrypoint: src.ribba2018_mathematical_model_of_tumor_uptake_for_model1909050002_model:Ribba2018MathematicalModelOfTumorUptakeForModel1909050002Model
@@ -52,21 +56,23 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
-  - name: epsilon_level
+  - name: epsilon_source_parameter
     maps_to: epsilon
     label: Epsilon source parameter
     default: 0.25
     units: native SBML value
     description: Epsilon source parameter. Maps to bundled SBML parameter `epsilon`.
-  - name: initial_for_epsilon
+  - name: initial_for_epsilon_source_parameter
     maps_to: ModelValue_2
     label: for epsilon source parameter
     default: 0.25
     units: native SBML value
-    description: Initial for epsilon source parameter. Maps to bundled SBML parameter `ModelValue_2`.
+    description: Initial for epsilon source parameter. Maps to bundled SBML parameter
+      `ModelValue_2`.
   - name: initial_a_1_b
     maps_to: A_1_b
     label: A 1 b
@@ -89,7 +95,8 @@ io:
     label: C 4 T
     description: C 4 T observable. Maps to SBML symbol `C_4_T`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

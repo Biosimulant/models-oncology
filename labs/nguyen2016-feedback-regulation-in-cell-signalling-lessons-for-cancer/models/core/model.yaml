@@ -1,6 +1,9 @@
 schema_version: '2.0'
 title: 'Nguyen2016 - Feedback regulation in cell signalling: Lessons for cancer therapeutics'
-description: 'Feedback regulation in cell signalling: Lessons for cancer therapeutics This model is described in the article: Feedback regulation in cell signalling: Lessons for cancer therapeutics. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+description: 'Feedback regulation in cell signalling: Lessons for cancer therapeutics
+  This model is described in the article: Feedback regulation in cell signalling:
+  Lessons for cancer therapeutics. It can be used to explore tumor-related dynamics
+  and compare treatment-response behavior across conditions.'
 standard: other
 tags:
 - biomodels_ebi
@@ -48,10 +51,11 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
-  - name: initial_pi3k
+  - name: initial_pi3_k
     maps_to: PI3K
     label: PI3K
     default: 100.0
@@ -81,14 +85,14 @@ io:
     default: 0.0
     units: native SBML value
     description: Initial AAkt. Sets the initial value of bundled SBML symbol `aAkt`.
-  - name: initial_rasgdp
+  - name: initial_ras_gdp
     maps_to: RasGDP
     label: RasGDP
     default: 100.0
     units: native SBML value
     description: Initial RasGDP. Sets the initial value of bundled SBML symbol `RasGDP`.
   outputs:
-  - name: pi3k
+  - name: pi3_k
     maps_to: PI3K
     label: PI3K
     description: PI3K observable. Maps to SBML symbol `PI3K`.
@@ -108,12 +112,13 @@ io:
     maps_to: aAkt
     label: AAkt
     description: AAkt observable. Maps to SBML symbol `aAkt`.
-  - name: rasgdp
+  - name: ras_gdp
     maps_to: RasGDP
     label: RasGDP
     description: RasGDP observable. Maps to SBML symbol `RasGDP`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

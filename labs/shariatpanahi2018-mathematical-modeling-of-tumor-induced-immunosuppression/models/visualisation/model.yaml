@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Shariatpanahi2018 - Mathematical modeling of tumor-induced immunosuppression by myeloid-derived suppressor cells Visualisation
-description: Oncology visualisation for Shariatpanahi2018 - Mathematical modeling of tumor-induced immunosuppression by myeloid-derived suppressor cells.
+title: Shariatpanahi2018 - Mathematical modeling of tumor-induced immunosuppression
+  by myeloid-derived suppressor cells Visualisation
+description: Oncology visualisation for Shariatpanahi2018 - Mathematical modeling
+  of tumor-induced immunosuppression by myeloid-derived suppressor cells.
 standard: other
 tags:
 - biomodels_ebi
@@ -20,17 +22,23 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Shariatpanahi2018 - Mathematical modeling of tumor-induced immunosuppression by myeloid-derived suppressor cells
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    lab_title: Shariatpanahi2018 - Mathematical modeling of tumor-induced immunosuppression
+      by myeloid-derived suppressor cells
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_shariatpanahi2018_mathematical_modeling_of_tumor_model1909090003_model
-      title: Shariatpanahi2018 - Mathematical modeling of tumor-induced immunosuppression by myeloid-derived suppressor cells
+      title: Shariatpanahi2018 - Mathematical modeling of tumor-induced immunosuppression
+        by myeloid-derived suppressor cells
       state_observables:
       - C
       - N
@@ -38,20 +46,18 @@ biosim:
       - M
       observables:
       - id: C
-        port: model_state_1
         label: C
         group: drug_response
       - id: N
-        port: model_state_2
         label: N
         group: drug_response
       - id: T
-        port: model_state_3
-        label: T
+        port: tumor_cells
+        label: Tumor Cells
         group: drug_response
       - id: M
-        port: model_state_4
-        label: M
+        port: myeloid_derived_suppressor_cells
+        label: Myeloid-Derived Suppressor Cells
         group: drug_response
 runtime:
   python_version: '3.12'

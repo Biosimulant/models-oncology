@@ -1,6 +1,9 @@
 schema_version: '2.0'
 title: Chaudhury2020 - First order expansion model of CAR-T cell and tumour kinetics
-description: This ordinary differential equation model of the cellular kinetics and pharmacodynamics of CAR-T cell therapy is described in the publication:Chaudhury, A., Zhu, X., Chu, L., Goliaei, A., June, C., Ke. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+description: This ordinary differential equation model of the cellular kinetics and
+  pharmacodynamics of CAR-T cell therapy is described in the publication:Chaudhury,
+  A., Zhu, X., Chu, L., Goliaei, A., June, C., Ke. It can be used to explore tumor-related
+  dynamics and compare treatment-response behavior across conditions.
 standard: other
 tags:
 - biomodels_ebi
@@ -29,7 +32,8 @@ upstream:
   source_id: MODEL2109110005
   standard: sbml
   original_url: https://www.ebi.ac.uk/biomodels/MODEL2109110005
-  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2109110005?filename=Chaudhury2020 Eq S1-S3.xml
+  download_url: https://www.ebi.ac.uk/biomodels/model/download/MODEL2109110005?filename=Chaudhury2020
+    Eq S1-S3.xml
   license: CC0
 biosim:
   entrypoint: src.chaudhury2020_first_order_expansion_model_of_car_model2109110005_model:Chaudhury2020FirstOrderExpansionModelOfCarModel2109110005Model
@@ -52,16 +56,36 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations. No scientifically safe external input was exposed by the cleanup.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations. Exposed inputs are traceable to bundled SBML parameters or initial conditions.
 io:
-  inputs: []
-  outputs:
-  - name: model_state_1
+  inputs:
+  - name: initial_car_t_cells
+    maps_to: CAR_T_cells
+    label: CAR-T Cells
+    default: 10.0
+    units: native SBML value
+    description: Initial CAR-T Cells. Sets the initial value of bundled SBML symbol
+      `CAR_T_cells`.
+  - name: initial_tumor_burden
     maps_to: U
-    label: U
-    description: U observable. Maps to SBML symbol `U`.
+    label: Tumor Burden
+    default: 900.000000000001
+    units: native SBML value
+    description: Initial Tumor Burden. Sets the initial value of bundled SBML symbol
+      `U`.
+  outputs:
+  - name: car_t_cells
+    maps_to: CAR_T_cells
+    label: CAR-T Cells
+    description: CAR-T Cells observable. Maps to SBML symbol `CAR_T_cells`.
+  - name: tumor_burden
+    maps_to: U
+    label: Tumor Burden
+    description: Tumor Burden observable. Maps to SBML symbol `U`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

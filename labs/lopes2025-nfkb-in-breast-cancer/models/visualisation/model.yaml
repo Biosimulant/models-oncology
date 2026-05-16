@@ -17,14 +17,17 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Lopes2025 - NFkB model in Breast Cancer
-    question: Which signaling states carry the dominant response in the bundled cancer pathway model?
+    question: Which signaling states carry the dominant response in the bundled cancer
+      pathway model?
     answer_focus: Tracks selected pathway species and the largest-changing SBML observable.
     visual_scope: Cancer signaling pathway activity and dominant source states
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_lopes2025_nfkb_model_in_breast_cancer_model2508260001_model
       title: Lopes2025 - NFkB model in Breast Cancer
@@ -52,7 +55,7 @@ biosim:
       - N1TWIST1
       observables:
       - id: NFkB
-        port: nf_kb
+        port: nf_k_b
         label: NF-kB
         group: signaling
       - id: SLUG

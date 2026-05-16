@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: Segun2018 - model of breast cancer determing Chemotherapy and Keto diet response Lab
-description: optimal control theory is applied to find out the optimal drug adjustment as an input control of the system therapies to minimize the number of cancerous cells by considering different controlled comb. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+title: Segun2018 - model of breast cancer determing Chemotherapy and Keto diet response
+  Lab
+description: optimal control theory is applied to find out the optimal drug adjustment
+  as an input control of the system therapies to minimize the number of cancerous
+  cells by considering different controlled comb. It can be used to explore tumor-related
+  dynamics and compare treatment-response behavior across conditions.
 tags:
 - biomodels_ebi
 - chemotherapy
@@ -14,23 +18,32 @@ tags:
 - systemsbiology
 - tumor-growth
 io:
-  inputs: []
+  inputs:
+  - name: initial_breast_tumor_cells
+    maps_to: oncology_sbml_segun2018_model_of_breast_cancer_determing_chemo_model2003050001_model.initial_breast_tumor_cells
+    label: Breast Tumor Cells
+    default: 800.0
+    units: native SBML value
+    description: Initial Breast Tumor Cells. Sets the initial value of bundled SBML
+      symbol `T`.
+  - name: initial_normal_cells
+    maps_to: oncology_sbml_segun2018_model_of_breast_cancer_determing_chemo_model2003050001_model.initial_normal_cells
+    label: Normal Cells
+    default: 2000.0
+    units: native SBML value
+    description: Initial Normal Cells. Sets the initial value of bundled SBML symbol
+      `N`.
   outputs:
-  - name: model_state_1
-    maps_to: oncology_sbml_segun2018_model_of_breast_cancer_determing_chemo_model2003050001_model.model_state_1
-    description: N observable. Maps to SBML symbol `N`.
-  - name: model_state_2
-    maps_to: oncology_sbml_segun2018_model_of_breast_cancer_determing_chemo_model2003050001_model.model_state_2
-    description: T observable. Maps to SBML symbol `T`.
-  - name: model_state_3
-    maps_to: oncology_sbml_segun2018_model_of_breast_cancer_determing_chemo_model2003050001_model.model_state_3
-    description: M observable. Maps to SBML symbol `M`.
-  - name: model_state_4
-    maps_to: oncology_sbml_segun2018_model_of_breast_cancer_determing_chemo_model2003050001_model.model_state_4
-    description: E observable. Maps to SBML symbol `E`.
+  - name: breast_tumor_cells
+    maps_to: oncology_sbml_segun2018_model_of_breast_cancer_determing_chemo_model2003050001_model.breast_tumor_cells
+    description: Breast Tumor Cells observable. Maps to SBML symbol `T`.
+  - name: normal_cells
+    maps_to: oncology_sbml_segun2018_model_of_breast_cancer_determing_chemo_model2003050001_model.normal_cells
+    description: Normal Cells observable. Maps to SBML symbol `N`.
   - name: state
     maps_to: oncology_sbml_segun2018_model_of_breast_cancer_determing_chemo_model2003050001_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_segun2018_model_of_breast_cancer_determing_chemo_model2003050001_model.summary
     description: Change and peak summary across the simulated SBML observables.

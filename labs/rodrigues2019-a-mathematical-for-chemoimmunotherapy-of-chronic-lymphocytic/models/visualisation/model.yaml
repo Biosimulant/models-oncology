@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Rodrigues2019 - A mathematical model for chemoimmunotherapy of chronic lymphocytic leukemia Visualisation
-description: Oncology visualisation for Rodrigues2019 - A mathematical model for chemoimmunotherapy of chronic lymphocytic leukemia.
+title: Rodrigues2019 - A mathematical model for chemoimmunotherapy of chronic lymphocytic
+  leukemia Visualisation
+description: Oncology visualisation for Rodrigues2019 - A mathematical model for chemoimmunotherapy
+  of chronic lymphocytic leukemia.
 standard: other
 tags:
 - biomodels_ebi
@@ -21,32 +23,38 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Rodrigues2019 - A mathematical model for chemoimmunotherapy of chronic lymphocytic leukemia
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    lab_title: Rodrigues2019 - A mathematical model for chemoimmunotherapy of chronic
+      lymphocytic leukemia
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_rodrigues2019_a_mathematical_model_for_chemoimmu_biomd0000000879_model
-      title: Rodrigues2019 - A mathematical model for chemoimmunotherapy of chronic lymphocytic leukemia
+      title: Rodrigues2019 - A mathematical model for chemoimmunotherapy of chronic
+        lymphocytic leukemia
       state_observables:
       - N
       - I
       - Q
       observables:
       - id: N
-        port: model_state_1
+        port: normal_cells
         label: N
         group: drug_response
       - id: I
-        port: model_state_2
+        port: infected_tumor_cells
         label: I
         group: drug_response
       - id: Q
-        port: model_state_3
+        port: q
         label: Q
         group: drug_response
 runtime:

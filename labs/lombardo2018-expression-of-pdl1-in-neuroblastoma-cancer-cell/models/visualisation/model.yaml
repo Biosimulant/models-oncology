@@ -1,6 +1,7 @@
 schema_version: '2.0'
 title: Lombardo2018 - Expression of PDL1 in Neuroblastoma Cancer Cell Visualisation
-description: Oncology visualisation for Lombardo2018 - Expression of PDL1 in Neuroblastoma Cancer Cell.
+description: Oncology visualisation for Lombardo2018 - Expression of PDL1 in Neuroblastoma
+  Cancer Cell.
 standard: other
 tags:
 - biomodels_ebi
@@ -17,14 +18,18 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Lombardo2018 - Expression of PDL1 in Neuroblastoma Cancer Cell
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_lombardo2018_expression_of_pdl1_in_neuroblastoma_model1812070002_model
       title: Lombardo2018 - Expression of PDL1 in Neuroblastoma Cancer Cell
@@ -125,7 +130,7 @@ biosim:
         label: SOS inactive
         group: drug_response
       - id: P90Rsk_inactive
-        port: p90rsk_inactive
+        port: p90_rsk_inactive
         label: P90Rsk inactive
         group: drug_response
       - id: RAS_inactive

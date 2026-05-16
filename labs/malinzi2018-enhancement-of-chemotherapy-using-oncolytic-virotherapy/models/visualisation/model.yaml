@@ -1,6 +1,7 @@
 schema_version: '2.0'
 title: Malinzi2018 - Enhancement of chemotherapy using oncolytic virotherapy Visualisation
-description: Oncology visualisation for Malinzi2018 - Enhancement of chemotherapy using oncolytic virotherapy.
+description: Oncology visualisation for Malinzi2018 - Enhancement of chemotherapy
+  using oncolytic virotherapy.
 standard: other
 tags:
 - biomodels_ebi
@@ -20,14 +21,18 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Malinzi2018 - Enhancement of chemotherapy using oncolytic virotherapy
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_malinzi2018_enhancement_of_chemotherapy_using_on_model2003050002_model
       title: Malinzi2018 - Enhancement of chemotherapy using oncolytic virotherapy
@@ -39,23 +44,21 @@ biosim:
       - R
       observables:
       - id: I
-        port: model_state_1
-        label: I
+        port: infected_tumor_cells
+        label: Infected Tumor Cells
         group: drug_response
       - id: T
-        port: model_state_2
-        label: T
+        port: uninfected_tumor_cells
+        label: Uninfected Tumor Cells
         group: drug_response
       - id: Td
-        port: model_state_3
         label: Td
         group: drug_response
       - id: C
-        port: model_state_4
-        label: C
+        port: chemotherapy_level
+        label: Chemotherapy Level
         group: drug_response
       - id: R
-        port: model_state_5
         label: R
         group: drug_response
 runtime:

@@ -16,10 +16,10 @@ class Jenner2018TreatmentOfOncolyticVirusBiomd0000000789Model(TelluriumSBMLBioMo
     _TIME_UNIT = "model_time"
     _OBSERVABLE_STRATEGY = 'species'
     _OBSERVABLES = ['V', 'S', 'I']
-    _SPECIES_LABELS = {'S': 'S', 'V': 'V', 'I': 'I'}
+    _SPECIES_LABELS = {'S': 'Susceptible Tumor Cells', 'V': 'Virus Load', 'I': 'Infected Tumor Cells'}
     _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {}
-    _HEADLINE_OUTPUTS = {'model_state_1': ('S', 'native SBML value', 'S observable. Maps to SBML symbol `S`.'), 'model_state_2': ('V', 'native SBML value', 'V observable. Maps to SBML symbol `V`.'), 'model_state_3': ('I', 'native SBML value', 'I observable. Maps to SBML symbol `I`.')}
+    _INITIAL_CONDITION_INPUTS = {'initial_virus_load': ('V', 0.0, 'native SBML value', 'Initial Virus Load. Sets the initial value of bundled SBML symbol `V`.'), 'initial_susceptible_tumor_cells': ('S', 251000000.0, 'native SBML value', 'Initial Susceptible Tumor Cells. Sets the initial value of bundled SBML symbol `S`.'), 'initial_infected_tumor_cells': ('I', 0.0, 'native SBML value', 'Initial Infected Tumor Cells. Sets the initial value of bundled SBML symbol `I`.')}
+    _HEADLINE_OUTPUTS = {'virus_load': ('V', 'native SBML value', 'Virus Load observable. Maps to SBML symbol `V`.'), 'susceptible_tumor_cells': ('S', 'native SBML value', 'Susceptible Tumor Cells observable. Maps to SBML symbol `S`.'), 'infected_tumor_cells': ('I', 'native SBML value', 'Infected Tumor Cells observable. Maps to SBML symbol `I`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/BIOMD0000000789.xml', integration_step: float = 0.1) -> None:

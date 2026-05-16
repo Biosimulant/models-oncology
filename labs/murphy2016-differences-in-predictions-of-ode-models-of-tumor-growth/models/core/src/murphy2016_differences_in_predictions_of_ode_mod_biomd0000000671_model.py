@@ -18,7 +18,7 @@ class Murphy2016DifferencesInPredictionsOfOdeModBiomd0000000671Model(TelluriumSB
     _OBSERVABLES = ['V_exp', 'V_mend', 'V_log', 'V_lin', 'V_surf', 'V_gomp', 'V_bert']
     _SPECIES_LABELS = {'V_exp': 'V exp', 'V_mend': 'V mend', 'V_log': 'V log', 'V_lin': 'V lin', 'V_surf': 'V surf', 'V_gomp': 'V gomp'}
     _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {}
+    _INITIAL_CONDITION_INPUTS = {'initial_exponential_tumor_volume': ('V_exp', 220.0, 'native SBML value', 'Initial Exponential Tumor Volume. Sets the initial value of bundled SBML symbol `V_exp`.'), 'initial_logistic_tumor_volume': ('V_log', 220.0, 'native SBML value', 'Initial Logistic Tumor Volume. Sets the initial value of bundled SBML symbol `V_log`.'), 'initial_gompertz_tumor_volume': ('V_gomp', 220.0, 'native SBML value', 'Initial Gompertz Tumor Volume. Sets the initial value of bundled SBML symbol `V_gomp`.')}
     _HEADLINE_OUTPUTS = {'v_exp': ('V_exp', 'native SBML value', 'V exp observable. Maps to SBML symbol `V_exp`.'), 'v_mend': ('V_mend', 'native SBML value', 'V mend observable. Maps to SBML symbol `V_mend`.'), 'v_log': ('V_log', 'native SBML value', 'V log observable. Maps to SBML symbol `V_log`.'), 'v_lin': ('V_lin', 'native SBML value', 'V lin observable. Maps to SBML symbol `V_lin`.'), 'v_surf': ('V_surf', 'native SBML value', 'V surf observable. Maps to SBML symbol `V_surf`.'), 'v_gomp': ('V_gomp', 'native SBML value', 'V gomp observable. Maps to SBML symbol `V_gomp`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 

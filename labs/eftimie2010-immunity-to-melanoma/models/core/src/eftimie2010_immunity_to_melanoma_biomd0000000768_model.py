@@ -16,10 +16,10 @@ class Eftimie2010ImmunityToMelanomaBiomd0000000768Model(TelluriumSBMLBioModule):
     _TIME_UNIT = "model_time"
     _OBSERVABLE_STRATEGY = 'species'
     _OBSERVABLES = ['Th', 'T', 'Cs', 'Cp', 'C']
-    _SPECIES_LABELS = {'T': 'T', 'Th': 'Th', 'Cs': 'Cs', 'Cp': 'Cp', 'C': 'C'}
+    _SPECIES_LABELS = {'T': 'Melanoma Cells', 'Th': 'Helper T Cells', 'Cs': 'Cs', 'Cp': 'Cp', 'C': 'C'}
     _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {}
-    _HEADLINE_OUTPUTS = {'model_state_1': ('T', 'native SBML value', 'T observable. Maps to SBML symbol `T`.'), 'model_state_2': ('Th', 'native SBML value', 'Th observable. Maps to SBML symbol `Th`.'), 'model_state_3': ('Cs', 'native SBML value', 'Cs observable. Maps to SBML symbol `Cs`.'), 'model_state_4': ('Cp', 'native SBML value', 'Cp observable. Maps to SBML symbol `Cp`.'), 'model_state_5': ('C', 'native SBML value', 'C observable. Maps to SBML symbol `C`.')}
+    _INITIAL_CONDITION_INPUTS = {'initial_melanoma_cells': ('T', 100000.0, 'native SBML value', 'Initial Melanoma Cells. Sets the initial value of bundled SBML symbol `T`.'), 'initial_helper_t_cells': ('Th', 0.0, 'native SBML value', 'Initial Helper T Cells. Sets the initial value of bundled SBML symbol `Th`.')}
+    _HEADLINE_OUTPUTS = {'melanoma_cells': ('T', 'native SBML value', 'Melanoma Cells observable. Maps to SBML symbol `T`.'), 'helper_t_cells': ('Th', 'native SBML value', 'Helper T Cells observable. Maps to SBML symbol `Th`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/BIOMD0000000768.xml', integration_step: float = 0.1) -> None:

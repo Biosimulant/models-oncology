@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Lopes2025 - NFkB model in Breast Cancer
-description: "Model for the activation of SLUG, SIP1, TWIST1, and NF-\u03BAB (subunits p50 and p65). The model exhibits two stationary states (bistability), each corresponding to the gene expression profiles we determin."
+description: "Model for the activation of SLUG, SIP1, TWIST1, and NF-\u03BAB (subunits\
+  \ p50 and p65). The model exhibits two stationary states (bistability), each corresponding\
+  \ to the gene expression profiles we determin."
 standard: other
 tags:
 - biomodels_ebi
@@ -49,10 +51,11 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
-  - name: initial_nf_kb
+  - name: initial_nf_k_b
     maps_to: NFkB
     label: NF-kB
     default: 5893.41991828698
@@ -77,7 +80,7 @@ io:
     units: native SBML value
     description: Initial TWIST1. Sets the initial value of bundled SBML symbol `TWIST1`.
   outputs:
-  - name: nf_kb
+  - name: nf_k_b
     maps_to: NFkB
     label: NF-kB
     description: NF-kB observable. Maps to SBML symbol `NFkB`.
@@ -102,7 +105,8 @@ io:
     label: TWIST1
     description: TWIST1 observable. Maps to SBML symbol `TWIST1`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

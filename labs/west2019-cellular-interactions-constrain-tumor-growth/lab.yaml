@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: West2019 - Cellular interactions constrain tumor growth Lab
-description: These selections of models are described in the paper:Cellular interactions constrain tumor growthby Jeffrey West and Paul K. NewtonSignificance:A mathematical model relating tumor heterogeneity at th.
+description: These selections of models are described in the paper:Cellular interactions
+  constrain tumor growthby Jeffrey West and Paul K. NewtonSignificance:A mathematical
+  model relating tumor heterogeneity at th.
 tags:
 - biomodels_ebi
 - curated
@@ -17,37 +19,43 @@ io:
     label: Tumor at Exp Lin growth
     default: 1.0
     units: native SBML value
-    description: Initial Tumor at Exp Lin growth. Sets the initial value of bundled SBML symbol `tumor_at_Exp_Lin_growth`.
-  - name: initial_tumor_at_gen_logistic_growth
-    maps_to: oncology_sbml_west2019_cellular_interactions_constrain_tumor_g_biomd0000000820_model.initial_tumor_at_gen_logistic_growth
+    description: Initial Tumor at Exp Lin growth. Sets the initial value of bundled
+      SBML symbol `tumor_at_Exp_Lin_growth`.
+  - name: initial_tumor_at_gen
+    maps_to: oncology_sbml_west2019_cellular_interactions_constrain_tumor_g_biomd0000000820_model.initial_tumor_at_gen
     label: Tumor at Gen
     default: 1.0
     units: native SBML value
-    description: Initial Tumor at Gen. logistic growth. Sets the initial value of bundled SBML symbol `tumor_at_Gen__logistic_growth`.
-  - name: initial_tumor_at_gomp_growth
-    maps_to: oncology_sbml_west2019_cellular_interactions_constrain_tumor_g_biomd0000000820_model.initial_tumor_at_gomp_growth
+    description: Initial Tumor at Gen. logistic growth. Sets the initial value of
+      bundled SBML symbol `tumor_at_Gen__logistic_growth`.
+  - name: initial_tumor_at_gomp
+    maps_to: oncology_sbml_west2019_cellular_interactions_constrain_tumor_g_biomd0000000820_model.initial_tumor_at_gomp
     label: Tumor at Gomp
     default: 1.0
     units: native SBML value
-    description: Initial Tumor at Gomp. growth. Sets the initial value of bundled SBML symbol `tumor_at_Gomp__growth`.
+    description: Initial Tumor at Gomp. growth. Sets the initial value of bundled
+      SBML symbol `tumor_at_Gomp__growth`.
   - name: initial_tumor_at_power_growth
     maps_to: oncology_sbml_west2019_cellular_interactions_constrain_tumor_g_biomd0000000820_model.initial_tumor_at_power_growth
     label: Tumor at Power growth
     default: 1.0
     units: native SBML value
-    description: Initial Tumor at Power growth. Sets the initial value of bundled SBML symbol `tumor_at_Power_growth`.
-  - name: initial_tumor_at_von_bert_growth
-    maps_to: oncology_sbml_west2019_cellular_interactions_constrain_tumor_g_biomd0000000820_model.initial_tumor_at_von_bert_growth
+    description: Initial Tumor at Power growth. Sets the initial value of bundled
+      SBML symbol `tumor_at_Power_growth`.
+  - name: initial_tumor_at_von_bert
+    maps_to: oncology_sbml_west2019_cellular_interactions_constrain_tumor_g_biomd0000000820_model.initial_tumor_at_von_bert
     label: Tumor at Von Bert
     default: 1.0
     units: native SBML value
-    description: Initial Tumor at Von Bert. growth. Sets the initial value of bundled SBML symbol `tumor_at_Von_Bert__growth`.
+    description: Initial Tumor at Von Bert. growth. Sets the initial value of bundled
+      SBML symbol `tumor_at_Von_Bert__growth`.
   - name: initial_tumor_at_exp_growth
     maps_to: oncology_sbml_west2019_cellular_interactions_constrain_tumor_g_biomd0000000820_model.initial_tumor_at_exp_growth
     label: Tumor at Exp growth
     default: 1.0
     units: native SBML value
-    description: Initial Tumor at Exp growth. Sets the initial value of bundled SBML symbol `tumor_at_Exp_growth`.
+    description: Initial Tumor at Exp growth. Sets the initial value of bundled SBML
+      symbol `tumor_at_Exp_growth`.
   outputs:
   - name: tumor_at_exp_lin_growth
     maps_to: oncology_sbml_west2019_cellular_interactions_constrain_tumor_g_biomd0000000820_model.tumor_at_exp_lin_growth
@@ -69,7 +77,8 @@ io:
     description: Tumor at Exp growth observable. Maps to SBML symbol `tumor_at_Exp_growth`.
   - name: state
     maps_to: oncology_sbml_west2019_cellular_interactions_constrain_tumor_g_biomd0000000820_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_west2019_cellular_interactions_constrain_tumor_g_biomd0000000820_model.summary
     description: Change and peak summary across the simulated SBML observables.

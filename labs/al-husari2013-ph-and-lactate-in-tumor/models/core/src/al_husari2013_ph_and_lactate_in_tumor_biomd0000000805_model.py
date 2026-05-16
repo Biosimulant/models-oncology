@@ -16,10 +16,10 @@ class AlHusari2013PhAndLactateInTumorBiomd0000000805Model(TelluriumSBMLBioModule
     _TIME_UNIT = "model_time"
     _OBSERVABLE_STRATEGY = 'species'
     _OBSERVABLES = ['Hi', 'He', 'Li', 'Le']
-    _SPECIES_LABELS = {'Hi': 'Hi', 'He': 'He', 'Li': 'Li', 'Le': 'Le'}
-    _PARAMETER_INPUTS = {}
+    _SPECIES_LABELS = {'Hi': 'Intracellular Hydrogen Ion', 'He': 'Extracellular Hydrogen Ion', 'Li': 'Intracellular Lactate', 'Le': 'Extracellular Lactate'}
+    _PARAMETER_INPUTS = {'intracellular_ph': ('pHi', 7.3, 'native SBML value', 'Intracellular pH. Overrides bundled SBML parameter `pHi`.'), 'extracellular_ph': ('pHe', 7.0, 'native SBML value', 'Extracellular pH. Overrides bundled SBML parameter `pHe`.')}
     _INITIAL_CONDITION_INPUTS = {}
-    _HEADLINE_OUTPUTS = {'model_state_1': ('Hi', 'native SBML value', 'Hi observable. Maps to SBML symbol `Hi`.'), 'model_state_2': ('He', 'native SBML value', 'He observable. Maps to SBML symbol `He`.'), 'model_state_3': ('Li', 'native SBML value', 'Li observable. Maps to SBML symbol `Li`.'), 'model_state_4': ('Le', 'native SBML value', 'Le observable. Maps to SBML symbol `Le`.')}
+    _HEADLINE_OUTPUTS = {'intracellular_hydrogen_ion': ('Hi', 'native SBML value', 'Intracellular Hydrogen Ion observable. Maps to SBML symbol `Hi`.'), 'extracellular_hydrogen_ion': ('He', 'native SBML value', 'Extracellular Hydrogen Ion observable. Maps to SBML symbol `He`.'), 'intracellular_lactate': ('Li', 'native SBML value', 'Intracellular Lactate observable. Maps to SBML symbol `Li`.'), 'extracellular_lactate': ('Le', 'native SBML value', 'Extracellular Lactate observable. Maps to SBML symbol `Le`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/BIOMD0000000805.xml', integration_step: float = 0.1) -> None:

@@ -17,14 +17,18 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Iwamoto2010 - Cell cycle reponse to DNA damage
-    question: Which cell-cycle or damage-response states dominate the baseline cancer model?
-    answer_focus: Compares selected cycle/checkpoint observables and largest state changes.
+    question: Which cell-cycle or damage-response states dominate the baseline cancer
+      model?
+    answer_focus: Compares selected cycle/checkpoint observables and largest state
+      changes.
     visual_scope: Cancer cell-cycle/checkpoint state activity
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_iwamoto2010_cell_cycle_reponse_to_dna_damage_biomd0000000939_model
       title: Iwamoto2010 - Cell cycle reponse to DNA damage
@@ -85,27 +89,27 @@ biosim:
       - Cyclin_B_Cdk1_nuclear_inactive
       observables:
       - id: p27_CyclinD_Cdk4
-        port: p27_cyclind_cdk4
+        port: p27_cyclin_d_cdk4
         label: P27/CyclinD/Cdk4
         group: cellcycle
       - id: p27_CyclinE_Cdk2
-        port: p27_cycline_cdk2
+        port: p27_cyclin_e_cdk2
         label: P27/CyclinE/Cdk2
         group: cellcycle
       - id: p27_CyclinA_Cdk2
-        port: p27_cyclina_cdk2
+        port: p27_cyclin_a_cdk2
         label: P27/CyclinA/Cdk2
         group: cellcycle
       - id: p21_CyclinD_Cdk4
-        port: p21_cyclind_cdk4
+        port: p21_cyclin_d_cdk4
         label: P21/CyclinD/Cdk4
         group: cellcycle
       - id: p21_CyclinE_Cdk2
-        port: p21_cycline_cdk2
+        port: p21_cyclin_e_cdk2
         label: P21/CyclinE/Cdk2
         group: cellcycle
       - id: p21_CyclinA_Cdk2
-        port: p21_cyclina_cdk2
+        port: p21_cyclin_a_cdk2
         label: P21/CyclinA/Cdk2
         group: cellcycle
 runtime:

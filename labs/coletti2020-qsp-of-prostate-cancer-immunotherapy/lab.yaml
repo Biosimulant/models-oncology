@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Coletti2020 - QSP model of prostate cancer immunotherapy Lab
-description: This model is based on the publication:Coletti R, Leonardelli L, Parolo S, Marchetti L. A QSP model of prostate cancer immunotherapy to identify effective combination therapies.
+description: This model is based on the publication:Coletti R, Leonardelli L, Parolo
+  S, Marchetti L. A QSP model of prostate cancer immunotherapy to identify effective
+  combination therapies.
 tags:
 - biomodels_ebi
 - curated
@@ -19,34 +21,35 @@ tags:
 - tumor-growth
 io:
   inputs:
-  - name: k_antiil_level
-    maps_to: oncology_sbml_coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model.k_antiil_level
+  - name: k_anti_il_source_parameter
+    maps_to: oncology_sbml_coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model.k_anti_il_source_parameter
     label: K antiIl source parameter
     default: 0.714
     units: native SBML value
     description: K antiIl source parameter. Maps to bundled SBML parameter `k_antiIl`.
   outputs:
-  - name: model_state_1
-    maps_to: oncology_sbml_coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model.model_state_1
+  - name: x_1
+    maps_to: oncology_sbml_coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model.x_1
     description: X 1 observable. Maps to SBML symbol `X_1`.
-  - name: model_state_2
-    maps_to: oncology_sbml_coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model.model_state_2
+  - name: a
+    maps_to: oncology_sbml_coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model.a
     description: A observable. Maps to SBML symbol `A`.
-  - name: model_state_3
-    maps_to: oncology_sbml_coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model.model_state_3
+  - name: d_m
+    maps_to: oncology_sbml_coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model.d_m
     description: D m observable. Maps to SBML symbol `D_m`.
-  - name: model_state_4
-    maps_to: oncology_sbml_coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model.model_state_4
+  - name: c_2
+    maps_to: oncology_sbml_coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model.c_2
     description: C 2 observable. Maps to SBML symbol `C_2`.
-  - name: model_state_5
-    maps_to: oncology_sbml_coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model.model_state_5
+  - name: i_2
+    maps_to: oncology_sbml_coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model.i_2
     description: I 2 observable. Maps to SBML symbol `I_2`.
-  - name: model_state_6
-    maps_to: oncology_sbml_coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model.model_state_6
+  - name: normal_cells
+    maps_to: oncology_sbml_coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model.normal_cells
     description: N observable. Maps to SBML symbol `N`.
   - name: state
     maps_to: oncology_sbml_coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_coletti2020_qsp_model_of_prostate_cancer_immunot_model2109110002_model.summary
     description: Change and peak summary across the simulated SBML observables.

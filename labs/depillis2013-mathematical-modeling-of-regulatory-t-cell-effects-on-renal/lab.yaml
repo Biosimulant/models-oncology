@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: dePillis2013 - Mathematical modeling of regulatory T cell effects on renal cell carcinoma treatment Lab
-description: Mathematical modeling of regulatory T cell effects on renal cell carcinoma treatmentLisette dePillis 1, , Trevor Caldwell 2, , Elizabeth Sarapata 2, and Heather Williams 2,1. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+title: dePillis2013 - Mathematical modeling of regulatory T cell effects on renal
+  cell carcinoma treatment Lab
+description: Mathematical modeling of regulatory T cell effects on renal cell carcinoma
+  treatmentLisette dePillis 1, , Trevor Caldwell 2, , Elizabeth Sarapata 2, and Heather
+  Williams 2,1. It can be used to explore tumor-related dynamics and compare treatment-response
+  behavior across conditions.
 tags:
 - biomodels_ebi
 - curated
@@ -16,29 +20,28 @@ tags:
 - systemsbiology
 - tumor-growth
 io:
-  inputs: []
+  inputs:
+  - name: initial_tumor_cells
+    maps_to: oncology_sbml_depillis2013_mathematical_modeling_of_regulatory_biomd0000000908_model.initial_tumor_cells
+    label: Tumor Cells
+    default: 4662000000.0
+    units: native SBML value
+    description: Initial Tumor Cells. Sets the initial value of bundled SBML symbol
+      `T`.
+  - name: drug_treatment_level
+    maps_to: oncology_sbml_depillis2013_mathematical_modeling_of_regulatory_biomd0000000908_model.drug_treatment_level
+    label: Drug Treatment Level
+    default: 9.47552761007735e-06
+    units: native SBML value
+    description: Drug Treatment Level. Overrides bundled SBML parameter `D`.
   outputs:
-  - name: model_state_1
-    maps_to: oncology_sbml_depillis2013_mathematical_modeling_of_regulatory_biomd0000000908_model.model_state_1
-    description: T observable. Maps to SBML symbol `T`.
-  - name: model_state_2
-    maps_to: oncology_sbml_depillis2013_mathematical_modeling_of_regulatory_biomd0000000908_model.model_state_2
-    description: N observable. Maps to SBML symbol `N`.
-  - name: model_state_3
-    maps_to: oncology_sbml_depillis2013_mathematical_modeling_of_regulatory_biomd0000000908_model.model_state_3
-    description: L observable. Maps to SBML symbol `L`.
-  - name: model_state_4
-    maps_to: oncology_sbml_depillis2013_mathematical_modeling_of_regulatory_biomd0000000908_model.model_state_4
-    description: R observable. Maps to SBML symbol `R`.
-  - name: model_state_5
-    maps_to: oncology_sbml_depillis2013_mathematical_modeling_of_regulatory_biomd0000000908_model.model_state_5
-    description: C observable. Maps to SBML symbol `C`.
-  - name: model_state_6
-    maps_to: oncology_sbml_depillis2013_mathematical_modeling_of_regulatory_biomd0000000908_model.model_state_6
-    description: I observable. Maps to SBML symbol `I`.
+  - name: tumor_cells
+    maps_to: oncology_sbml_depillis2013_mathematical_modeling_of_regulatory_biomd0000000908_model.tumor_cells
+    description: Tumor Cells observable. Maps to SBML symbol `T`.
   - name: state
     maps_to: oncology_sbml_depillis2013_mathematical_modeling_of_regulatory_biomd0000000908_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_depillis2013_mathematical_modeling_of_regulatory_biomd0000000908_model.summary
     description: Change and peak summary across the simulated SBML observables.

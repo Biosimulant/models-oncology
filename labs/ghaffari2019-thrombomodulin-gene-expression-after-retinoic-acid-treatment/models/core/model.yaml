@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: Ghaffari2019 - Thrombomodulin Gene Expression after Retinoic Acid Treatment for Cancer Patients with Coagulation Disorders
-description: Publication includes a mathematical model for how retinoic acid affects thrombomodulin gene and mRNA expression as well as a two-compartment pharmacokinetic model for retinoic acid. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+title: Ghaffari2019 - Thrombomodulin Gene Expression after Retinoic Acid Treatment
+  for Cancer Patients with Coagulation Disorders
+description: Publication includes a mathematical model for how retinoic acid affects
+  thrombomodulin gene and mRNA expression as well as a two-compartment pharmacokinetic
+  model for retinoic acid. It can be used to explore tumor-related dynamics and compare
+  treatment-response behavior across conditions.
 standard: other
 tags:
 - biomodels_ebi
@@ -47,7 +51,8 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
   - name: initial_stm
@@ -62,18 +67,18 @@ io:
     default: 1.0e-06
     units: native SBML value
     description: Initial REC1t. Sets the initial value of bundled SBML symbol `REC1t`.
-  - name: initial_tm_mrna
+  - name: initial_tm_m_rna
     maps_to: TM_mRNA
     label: TM mRNA
     default: 0.0
     units: native SBML value
     description: Initial TM mRNA. Sets the initial value of bundled SBML symbol `TM_mRNA`.
   outputs:
-  - name: model_state_1
+  - name: tm
     maps_to: TM
     label: TM
     description: TM observable. Maps to SBML symbol `TM`.
-  - name: model_state_2
+  - name: ra
     maps_to: RA
     label: RA
     description: RA observable. Maps to SBML symbol `RA`.
@@ -85,12 +90,13 @@ io:
     maps_to: REC1t
     label: REC1t
     description: REC1t observable. Maps to SBML symbol `REC1t`.
-  - name: tm_mrna
+  - name: tm_m_rna
     maps_to: TM_mRNA
     label: TM mRNA
     description: TM mRNA observable. Maps to SBML symbol `TM_mRNA`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

@@ -18,14 +18,18 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Melhem 2017 - Neutropenia Model
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_melhem_2017_neutropenia_model_model2211040001_model
       title: Melhem 2017 - Neutropenia Model
@@ -49,11 +53,11 @@ biosim:
         label: Crt
         group: drug_response
       - id: Dt
-        port: model_state_3
+        port: dt
         label: Dt
         group: drug_response
       - id: Mt
-        port: model_state_4
+        port: mt
         label: Mt
         group: drug_response
       - id: Pm1

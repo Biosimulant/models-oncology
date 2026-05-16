@@ -1,6 +1,10 @@
 schema_version: '2.0'
-title: Unni2019 - Mathematical Modeling, Analysis, and Simulation of Tumor Dynamics with Drug Interventions Lab
-description: Mathematical Modeling, Analysis, and Simulation of Tumor Dynamics with Drug InterventionsPranav Unni 1 and Padmanabhan SeshaiyerAbstractOver the last few decades, there have been significant developme. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+title: Unni2019 - Mathematical Modeling, Analysis, and Simulation of Tumor Dynamics
+  with Drug Interventions Lab
+description: Mathematical Modeling, Analysis, and Simulation of Tumor Dynamics with
+  Drug InterventionsPranav Unni 1 and Padmanabhan SeshaiyerAbstractOver the last few
+  decades, there have been significant developme. It can be used to explore tumor-related
+  dynamics and compare treatment-response behavior across conditions.
 tags:
 - biomodels_ebi
 - curated
@@ -13,23 +17,32 @@ tags:
 - systemsbiology
 - tumor-growth
 io:
-  inputs: []
+  inputs:
+  - name: initial_tumor_cells
+    maps_to: oncology_sbml_unni2019_mathematical_modeling_analysis_and_simu_biomd0000000888_model.initial_tumor_cells
+    label: Tumor Cells
+    default: 100.0
+    units: native SBML value
+    description: Initial Tumor Cells. Sets the initial value of bundled SBML symbol
+      `T`.
+  - name: initial_drug_level
+    maps_to: oncology_sbml_unni2019_mathematical_modeling_analysis_and_simu_biomd0000000888_model.initial_drug_level
+    label: Drug Level
+    default: 1.0
+    units: native SBML value
+    description: Initial Drug Level. Sets the initial value of bundled SBML symbol
+      `D`.
   outputs:
-  - name: model_state_1
-    maps_to: oncology_sbml_unni2019_mathematical_modeling_analysis_and_simu_biomd0000000888_model.model_state_1
-    description: T observable. Maps to SBML symbol `T`.
-  - name: model_state_2
-    maps_to: oncology_sbml_unni2019_mathematical_modeling_analysis_and_simu_biomd0000000888_model.model_state_2
-    description: N observable. Maps to SBML symbol `N`.
-  - name: model_state_3
-    maps_to: oncology_sbml_unni2019_mathematical_modeling_analysis_and_simu_biomd0000000888_model.model_state_3
-    description: D observable. Maps to SBML symbol `D`.
-  - name: model_state_4
-    maps_to: oncology_sbml_unni2019_mathematical_modeling_analysis_and_simu_biomd0000000888_model.model_state_4
-    description: L observable. Maps to SBML symbol `L`.
+  - name: tumor_cells
+    maps_to: oncology_sbml_unni2019_mathematical_modeling_analysis_and_simu_biomd0000000888_model.tumor_cells
+    description: Tumor Cells observable. Maps to SBML symbol `T`.
+  - name: drug_level
+    maps_to: oncology_sbml_unni2019_mathematical_modeling_analysis_and_simu_biomd0000000888_model.drug_level
+    description: Drug Level observable. Maps to SBML symbol `D`.
   - name: state
     maps_to: oncology_sbml_unni2019_mathematical_modeling_analysis_and_simu_biomd0000000888_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_unni2019_mathematical_modeling_analysis_and_simu_biomd0000000888_model.summary
     description: Change and peak summary across the simulated SBML observables.

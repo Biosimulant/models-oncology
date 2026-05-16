@@ -16,10 +16,10 @@ class Segun2018ModelOfBreastCancerDetermingChemoModel2003050001Model(TelluriumSB
     _TIME_UNIT = "model_time"
     _OBSERVABLE_STRATEGY = 'species'
     _OBSERVABLES = ['N', 'T', 'M', 'E']
-    _SPECIES_LABELS = {'N': 'N', 'T': 'T', 'M': 'M', 'E': 'E'}
+    _SPECIES_LABELS = {'N': 'Normal Cells', 'T': 'Breast Tumor Cells', 'M': 'M', 'E': 'E'}
     _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {}
-    _HEADLINE_OUTPUTS = {'model_state_1': ('N', 'native SBML value', 'N observable. Maps to SBML symbol `N`.'), 'model_state_2': ('T', 'native SBML value', 'T observable. Maps to SBML symbol `T`.'), 'model_state_3': ('M', 'native SBML value', 'M observable. Maps to SBML symbol `M`.'), 'model_state_4': ('E', 'native SBML value', 'E observable. Maps to SBML symbol `E`.')}
+    _INITIAL_CONDITION_INPUTS = {'initial_breast_tumor_cells': ('T', 800.0, 'native SBML value', 'Initial Breast Tumor Cells. Sets the initial value of bundled SBML symbol `T`.'), 'initial_normal_cells': ('N', 2000.0, 'native SBML value', 'Initial Normal Cells. Sets the initial value of bundled SBML symbol `N`.')}
+    _HEADLINE_OUTPUTS = {'breast_tumor_cells': ('T', 'native SBML value', 'Breast Tumor Cells observable. Maps to SBML symbol `T`.'), 'normal_cells': ('N', 'native SBML value', 'Normal Cells observable. Maps to SBML symbol `N`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/MODEL2003050001.xml', integration_step: float = 0.1) -> None:

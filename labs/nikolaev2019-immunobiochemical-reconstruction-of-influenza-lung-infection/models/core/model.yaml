@@ -1,6 +1,9 @@
 schema_version: '2.0'
-title: Nikolaev2019 - Immunobiochemical reconstruction of influenza lung infection-melanoma skin cancer interactions
-description: This is a mathematical mechanistic immunobiochemical model that incorporates T cell pathways that control programmed cell death protein 1 (PD-1) expression. A core component of the model is a kinetic.
+title: Nikolaev2019 - Immunobiochemical reconstruction of influenza lung infection-melanoma
+  skin cancer interactions
+description: This is a mathematical mechanistic immunobiochemical model that incorporates
+  T cell pathways that control programmed cell death protein 1 (PD-1) expression.
+  A core component of the model is a kinetic.
 standard: other
 tags:
 - biomodels_ebi
@@ -48,34 +51,36 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
-  - name: sigma_p_tilde_level
+  - name: sigma_p_tilde_source_parameter
     maps_to: sigma_p_tilde
     label: Sigma p tilde source parameter
     default: 0.1
     units: native SBML value
     description: Sigma p tilde source parameter. Maps to bundled SBML parameter `sigma_p_tilde`.
   outputs:
-  - name: model_state_1
+  - name: chemotherapy_level
     maps_to: C
     label: C
     description: C observable. Maps to SBML symbol `C`.
-  - name: model_state_2
+  - name: p
     maps_to: P
     label: P
     description: P observable. Maps to SBML symbol `P`.
-  - name: model_state_3
+  - name: infected_tumor_cells
     maps_to: I
     label: I
     description: I observable. Maps to SBML symbol `I`.
-  - name: model_state_4
+  - name: b
     maps_to: B
     label: B
     description: B observable. Maps to SBML symbol `B`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels

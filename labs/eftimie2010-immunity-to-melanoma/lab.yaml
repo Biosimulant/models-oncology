@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Eftimie2010 - immunity to melanoma Lab
-description: 'The paper describes a model of immunity to melanoma. Created by COPASI 4.25 (Build 207) This model is described in the article: Modeling anti-tumor Th1 and Th2 immunity in the rejection of melanoma Ra.'
+description: 'The paper describes a model of immunity to melanoma. Created by COPASI
+  4.25 (Build 207) This model is described in the article: Modeling anti-tumor Th1
+  and Th2 immunity in the rejection of melanoma Ra.'
 tags:
 - biomodels_ebi
 - curated
@@ -11,26 +13,32 @@ tags:
 - systemsbiology
 - tumor-growth
 io:
-  inputs: []
+  inputs:
+  - name: initial_melanoma_cells
+    maps_to: oncology_sbml_eftimie2010_immunity_to_melanoma_biomd0000000768_model.initial_melanoma_cells
+    label: Melanoma Cells
+    default: 100000.0
+    units: native SBML value
+    description: Initial Melanoma Cells. Sets the initial value of bundled SBML symbol
+      `T`.
+  - name: initial_helper_t_cells
+    maps_to: oncology_sbml_eftimie2010_immunity_to_melanoma_biomd0000000768_model.initial_helper_t_cells
+    label: Helper T Cells
+    default: 0.0
+    units: native SBML value
+    description: Initial Helper T Cells. Sets the initial value of bundled SBML symbol
+      `Th`.
   outputs:
-  - name: model_state_1
-    maps_to: oncology_sbml_eftimie2010_immunity_to_melanoma_biomd0000000768_model.model_state_1
-    description: T observable. Maps to SBML symbol `T`.
-  - name: model_state_2
-    maps_to: oncology_sbml_eftimie2010_immunity_to_melanoma_biomd0000000768_model.model_state_2
-    description: Th observable. Maps to SBML symbol `Th`.
-  - name: model_state_3
-    maps_to: oncology_sbml_eftimie2010_immunity_to_melanoma_biomd0000000768_model.model_state_3
-    description: Cs observable. Maps to SBML symbol `Cs`.
-  - name: model_state_4
-    maps_to: oncology_sbml_eftimie2010_immunity_to_melanoma_biomd0000000768_model.model_state_4
-    description: Cp observable. Maps to SBML symbol `Cp`.
-  - name: model_state_5
-    maps_to: oncology_sbml_eftimie2010_immunity_to_melanoma_biomd0000000768_model.model_state_5
-    description: C observable. Maps to SBML symbol `C`.
+  - name: melanoma_cells
+    maps_to: oncology_sbml_eftimie2010_immunity_to_melanoma_biomd0000000768_model.melanoma_cells
+    description: Melanoma Cells observable. Maps to SBML symbol `T`.
+  - name: helper_t_cells
+    maps_to: oncology_sbml_eftimie2010_immunity_to_melanoma_biomd0000000768_model.helper_t_cells
+    description: Helper T Cells observable. Maps to SBML symbol `Th`.
   - name: state
     maps_to: oncology_sbml_eftimie2010_immunity_to_melanoma_biomd0000000768_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_eftimie2010_immunity_to_melanoma_biomd0000000768_model.summary
     description: Change and peak summary across the simulated SBML observables.

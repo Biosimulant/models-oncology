@@ -17,14 +17,17 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Yang2012 - cancer growth with angiogenesis
-    question: Does the baseline model indicate vascular or angiogenic support for tumour dynamics?
+    question: Does the baseline model indicate vascular or angiogenic support for
+      tumour dynamics?
     answer_focus: Tracks vascular, tumour, and therapy-linked observables where present.
     visual_scope: Tumour vascularization, angiogenesis, and tissue-level response
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_yang2012_cancer_growth_with_angiogenesis_biomd0000000796_model
       title: Yang2012 - cancer growth with angiogenesis
@@ -36,23 +39,20 @@ biosim:
       - A
       observables:
       - id: C
-        port: model_state_1
-        label: C
+        port: cancer_cells
+        label: Cancer Cells
         group: angiogenesis
       - id: E
-        port: model_state_2
-        label: E
+        port: endothelial_cells
+        label: Endothelial Cells
         group: angiogenesis
       - id: T
-        port: model_state_3
         label: T
         group: angiogenesis
       - id: P
-        port: model_state_4
         label: P
         group: angiogenesis
       - id: A
-        port: model_state_5
         label: A
         group: angiogenesis
 runtime:

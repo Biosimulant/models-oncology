@@ -1,6 +1,9 @@
 schema_version: '2.0'
 title: Hu2019 - Modeling Pancreatic Cancer Dynamics with Immunotherapy Lab
-description: This is a mathematical model of pancreatic cancer that includes descriptions of pancreatic cancer cells, pancreatic stellate cells, effector cells and tumor-promoting and tumor-suppressing cytokines t. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
+description: This is a mathematical model of pancreatic cancer that includes descriptions
+  of pancreatic cancer cells, pancreatic stellate cells, effector cells and tumor-promoting
+  and tumor-suppressing cytokines t. It can be used to explore tumor-related dynamics
+  and compare treatment-response behavior across conditions.
 tags:
 - biomodels_ebi
 - curated
@@ -22,7 +25,8 @@ io:
     label: Z Effector Cells
     default: 190000000.0
     units: native SBML value
-    description: Initial Z Effector Cells. Sets the initial value of bundled SBML symbol `z_Effector_Cells`.
+    description: Initial Z Effector Cells. Sets the initial value of bundled SBML
+      symbol `z_Effector_Cells`.
   - name: initial_x_pcc
     maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.initial_x_pcc
     label: X PCC
@@ -47,8 +51,8 @@ io:
     default: 9.4
     units: native SBML value
     description: Initial V TSC. Sets the initial value of bundled SBML symbol `v_TSC`.
-  - name: initial_r_sirna
-    maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.initial_r_sirna
+  - name: initial_r_si_rna
+    maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.initial_r_si_rna
     label: R siRNA
     default: 1.0
     units: native SBML value
@@ -69,12 +73,13 @@ io:
   - name: v_tsc
     maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.v_tsc
     description: V TSC observable. Maps to SBML symbol `v_TSC`.
-  - name: r_sirna
-    maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.r_sirna
+  - name: r_si_rna
+    maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.r_si_rna
     description: R siRNA observable. Maps to SBML symbol `R_siRNA`.
   - name: state
     maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_hu2019_modeling_pancreatic_cancer_dynamics_with_biomd0000000792_model.summary
     description: Change and peak summary across the simulated SBML observables.

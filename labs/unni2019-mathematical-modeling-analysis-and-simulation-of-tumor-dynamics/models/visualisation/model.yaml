@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Unni2019 - Mathematical Modeling, Analysis, and Simulation of Tumor Dynamics with Drug Interventions Visualisation
-description: Oncology visualisation for Unni2019 - Mathematical Modeling, Analysis, and Simulation of Tumor Dynamics with Drug Interventions.
+title: Unni2019 - Mathematical Modeling, Analysis, and Simulation of Tumor Dynamics
+  with Drug Interventions Visualisation
+description: Oncology visualisation for Unni2019 - Mathematical Modeling, Analysis,
+  and Simulation of Tumor Dynamics with Drug Interventions.
 standard: other
 tags:
 - biomodels_ebi
@@ -17,17 +19,23 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Unni2019 - Mathematical Modeling, Analysis, and Simulation of Tumor Dynamics with Drug Interventions
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    lab_title: Unni2019 - Mathematical Modeling, Analysis, and Simulation of Tumor
+      Dynamics with Drug Interventions
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_unni2019_mathematical_modeling_analysis_and_simu_biomd0000000888_model
-      title: Unni2019 - Mathematical Modeling, Analysis, and Simulation of Tumor Dynamics with Drug Interventions
+      title: Unni2019 - Mathematical Modeling, Analysis, and Simulation of Tumor Dynamics
+        with Drug Interventions
       state_observables:
       - T
       - N
@@ -35,19 +43,17 @@ biosim:
       - L
       observables:
       - id: T
-        port: model_state_1
-        label: T
+        port: tumor_cells
+        label: Tumor Cells
         group: drug_response
       - id: N
-        port: model_state_2
         label: N
         group: drug_response
       - id: D
-        port: model_state_3
-        label: D
+        port: drug_level
+        label: Drug Level
         group: drug_response
       - id: L
-        port: model_state_4
         label: L
         group: drug_response
 runtime:

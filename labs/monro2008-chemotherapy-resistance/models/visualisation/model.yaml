@@ -18,14 +18,18 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
     lab_title: Monro2008 - chemotherapy resistance
-    question: How does the bundled treatment-response model evolve under its baseline source conditions?
-    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant response variables.
+    question: How does the bundled treatment-response model evolve under its baseline
+      source conditions?
+    answer_focus: Summarizes treatment-linked states, tumour burden, and dominant
+      response variables.
     visual_scope: Drug/treatment response and tumour-state change
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_monro2008_chemotherapy_resistance_biomd0000000776_model
       title: Monro2008 - chemotherapy resistance
@@ -34,12 +38,12 @@ biosim:
       - R
       observables:
       - id: S
-        port: model_state_1
-        label: S
+        port: chemo_sensitive_cells
+        label: Chemo-Sensitive Cells
         group: drug_response
       - id: R
-        port: model_state_2
-        label: R
+        port: chemo_resistant_cells
+        label: Chemo-Resistant Cells
         group: drug_response
 runtime:
   python_version: '3.12'

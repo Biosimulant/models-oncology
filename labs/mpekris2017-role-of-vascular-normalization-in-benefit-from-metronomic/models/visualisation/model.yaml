@@ -1,6 +1,8 @@
 schema_version: '2.0'
-title: Mpekris2017 - Role of vascular normalization in benefit from metronomic chemotherapy Visualisation
-description: Oncology visualisation for Mpekris2017 - Role of vascular normalization in benefit from metronomic chemotherapy.
+title: Mpekris2017 - Role of vascular normalization in benefit from metronomic chemotherapy
+  Visualisation
+description: Oncology visualisation for Mpekris2017 - Role of vascular normalization
+  in benefit from metronomic chemotherapy.
 standard: other
 tags:
 - angiogenesis
@@ -20,17 +22,22 @@ tags:
 authors:
 - Biosimulant Team
 biosim:
+  communication_step: 1.0
   entrypoint: src.oncology_visualisation:OncologyVisualisationModel
   init_kwargs:
     integration_step: 1.0
-    lab_title: Mpekris2017 - Role of vascular normalization in benefit from metronomic chemotherapy
-    question: Does the baseline model indicate vascular or angiogenic support for tumour dynamics?
+    lab_title: Mpekris2017 - Role of vascular normalization in benefit from metronomic
+      chemotherapy
+    question: Does the baseline model indicate vascular or angiogenic support for
+      tumour dynamics?
     answer_focus: Tracks vascular, tumour, and therapy-linked observables where present.
     visual_scope: Tumour vascularization, angiogenesis, and tissue-level response
-    caveat: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+    caveat: Values are native SBML quantities; the cleanup does not reinterpret source
+      equations.
     sources:
     - alias: oncology_sbml_mpekris2017_role_of_vascular_normalization_in_be_model2001200002_model
-      title: Mpekris2017 - Role of vascular normalization in benefit from metronomic chemotherapy
+      title: Mpekris2017 - Role of vascular normalization in benefit from metronomic
+        chemotherapy
       state_observables:
       - C
       - T
@@ -41,11 +48,11 @@ biosim:
       - Treg
       observables:
       - id: C
-        port: model_state_1
+        port: chemotherapy_level
         label: C
         group: angiogenesis
       - id: T
-        port: model_state_2
+        port: tumor_cells
         label: T
         group: angiogenesis
       - id: Csc
@@ -53,15 +60,15 @@ biosim:
         label: Csc
         group: angiogenesis
       - id: I
-        port: model_state_4
+        port: infected_tumor_cells
         label: I
         group: angiogenesis
       - id: N
-        port: model_state_5
+        port: normal_cells
         label: N
         group: angiogenesis
       - id: L
-        port: model_state_6
+        port: l
         label: L
         group: angiogenesis
 runtime:

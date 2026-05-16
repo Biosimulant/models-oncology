@@ -1,6 +1,9 @@
 schema_version: '2.0'
 title: Pappalardo2016 - PI3K/AKT and MAPK Signaling Pathways in Melanoma Cancer Lab
-description: 'Pappalardo2016 - PI3K/AKT and MAPK SignalingPathways in Melanoma Cancer This model is described in the article: Computational Modeling of PI3K/AKT and MAPK Signaling Pathways in Melanoma Cancer. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+description: 'Pappalardo2016 - PI3K/AKT and MAPK SignalingPathways in Melanoma Cancer
+  This model is described in the article: Computational Modeling of PI3K/AKT and MAPK
+  Signaling Pathways in Melanoma Cancer. It can be used to explore tumor-related dynamics
+  and compare treatment-response behavior across conditions.'
 tags:
 - biomodels_ebi
 - curated
@@ -16,64 +19,71 @@ tags:
 - tumor-growth
 io:
   inputs:
-  - name: initial_rasinactive
-    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.initial_rasinactive
+  - name: initial_ras_inactive
+    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.initial_ras_inactive
     label: RasInactive
     default: 120000.0
     units: native SBML value
-    description: Initial RasInactive. Sets the initial value of bundled SBML symbol `species_5`.
-  - name: initial_raf1inactive
-    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.initial_raf1inactive
+    description: Initial RasInactive. Sets the initial value of bundled SBML symbol
+      `species_5`.
+  - name: initial_raf1_inactive
+    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.initial_raf1_inactive
     label: Raf1Inactive
     default: 120000.0
     units: native SBML value
-    description: Initial Raf1Inactive. Sets the initial value of bundled SBML symbol `species_7`.
-  - name: initial_erkinactive
-    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.initial_erkinactive
+    description: Initial Raf1Inactive. Sets the initial value of bundled SBML symbol
+      `species_7`.
+  - name: initial_erk_inactive
+    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.initial_erk_inactive
     label: ErkInactive
     default: 600000.0
     units: native SBML value
-    description: Initial ErkInactive. Sets the initial value of bundled SBML symbol `species_11`.
-  - name: initial_pi3kinactive
-    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.initial_pi3kinactive
+    description: Initial ErkInactive. Sets the initial value of bundled SBML symbol
+      `species_11`.
+  - name: initial_pi3_kinactive
+    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.initial_pi3_kinactive
     label: PI3KInactive
     default: 120000.0
     units: native SBML value
-    description: Initial PI3KInactive. Sets the initial value of bundled SBML symbol `species_15`.
-  - name: initial_aktinactive
-    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.initial_aktinactive
+    description: Initial PI3KInactive. Sets the initial value of bundled SBML symbol
+      `species_15`.
+  - name: initial_akt_inactive
+    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.initial_akt_inactive
     label: AktInactive
     default: 120000.0
     units: native SBML value
-    description: Initial AktInactive. Sets the initial value of bundled SBML symbol `species_17`.
-  - name: initial_brafmutated
-    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.initial_brafmutated
+    description: Initial AktInactive. Sets the initial value of bundled SBML symbol
+      `species_17`.
+  - name: initial_braf_mutated
+    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.initial_braf_mutated
     label: BRafMutated
     default: 120000.0
     units: native SBML value
-    description: Initial BRafMutated. Sets the initial value of bundled SBML symbol `bRafMutated`.
+    description: Initial BRafMutated. Sets the initial value of bundled SBML symbol
+      `bRafMutated`.
   outputs:
-  - name: rasinactive
-    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.rasinactive
+  - name: ras_inactive
+    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.ras_inactive
     description: RasInactive observable. Maps to SBML symbol `species_5`.
-  - name: raf1inactive
-    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.raf1inactive
+  - name: raf1_inactive
+    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.raf1_inactive
     description: Raf1Inactive observable. Maps to SBML symbol `species_7`.
-  - name: erkinactive
-    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.erkinactive
+  - name: erk_inactive
+    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.erk_inactive
     description: ErkInactive observable. Maps to SBML symbol `species_11`.
-  - name: pi3kinactive
-    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.pi3kinactive
+  - name: pi3_kinactive
+    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.pi3_kinactive
     description: PI3KInactive observable. Maps to SBML symbol `species_15`.
-  - name: aktinactive
-    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.aktinactive
+  - name: akt_inactive
+    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.akt_inactive
     description: AktInactive observable. Maps to SBML symbol `species_17`.
-  - name: brafmutated
-    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.brafmutated
+  - name: braf_mutated
+    maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.braf_mutated
     description: BRafMutated observable. Maps to SBML symbol `bRafMutated`.
   - name: state
     maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_pappalardo2016_pi3k_akt_and_mapk_signaling_pathw_biomd0000000666_model.summary
     description: Change and peak summary across the simulated SBML observables.

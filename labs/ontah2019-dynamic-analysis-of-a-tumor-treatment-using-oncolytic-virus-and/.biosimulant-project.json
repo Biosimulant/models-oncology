@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "local_id": "d1dabab6-48c7-4a34-bd17-d1834db2c59d",
+  "kind": "lab",
+  "source": "local",
+  "hub_id": "74cb3315-444b-44de-82fb-9ab0171c4c68",
+  "created_at": "2026-05-15T19:05:39.680315270+00:00",
+  "last_synced_at": "2026-05-16T10:25:26.351471+00:00",
+  "hub_manifest_hash": "a70cea97ba6dc4fc4f579c6f6d6a4fe2f67d46da0d8fec77ccebd6c1f4b5f62e",
+  "package_name": "ontah2019-dynamic-analysis-of-a-tumor-treatment-model-using-onco"
+}

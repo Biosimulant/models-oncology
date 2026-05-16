@@ -19,7 +19,7 @@ class Mpekris2017RoleOfVascularNormalizationInBeModel2001200002Model(TelluriumSB
     _SPECIES_LABELS = {'C': 'C', 'T': 'T', 'Csc': 'Csc', 'I': 'I', 'N': 'N', 'L': 'L'}
     _PARAMETER_INPUTS = {}
     _INITIAL_CONDITION_INPUTS = {'initial_csc': ('Csc', 1.0, 'native SBML value', 'Initial Csc. Sets the initial value of bundled SBML symbol `Csc`.')}
-    _HEADLINE_OUTPUTS = {'model_state_1': ('C', 'native SBML value', 'C observable. Maps to SBML symbol `C`.'), 'model_state_2': ('T', 'native SBML value', 'T observable. Maps to SBML symbol `T`.'), 'csc': ('Csc', 'native SBML value', 'Csc observable. Maps to SBML symbol `Csc`.'), 'model_state_4': ('I', 'native SBML value', 'I observable. Maps to SBML symbol `I`.'), 'model_state_5': ('N', 'native SBML value', 'N observable. Maps to SBML symbol `N`.'), 'model_state_6': ('L', 'native SBML value', 'L observable. Maps to SBML symbol `L`.')}
+    _HEADLINE_OUTPUTS = {'chemotherapy_level': ('C', 'native SBML value', 'C observable. Maps to SBML symbol `C`.'), 'tumor_cells': ('T', 'native SBML value', 'T observable. Maps to SBML symbol `T`.'), 'csc': ('Csc', 'native SBML value', 'Csc observable. Maps to SBML symbol `Csc`.'), 'infected_tumor_cells': ('I', 'native SBML value', 'I observable. Maps to SBML symbol `I`.'), 'normal_cells': ('N', 'native SBML value', 'N observable. Maps to SBML symbol `N`.'), 'l': ('L', 'native SBML value', 'L observable. Maps to SBML symbol `L`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/MODEL2001200002.xml', integration_step: float = 0.1) -> None:

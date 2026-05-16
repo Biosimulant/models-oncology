@@ -1,6 +1,8 @@
 schema_version: '2.0'
 title: Jenner2018 - treatment of oncolytic virus Lab
-description: 'The paper describes a model of oncolytic virotherapy. Created by COPASI 4.26 (Build 213) This model is described in the article: Mathematical Modelling of the Interaction Between Cancer Cells and an O.'
+description: 'The paper describes a model of oncolytic virotherapy. Created by COPASI
+  4.26 (Build 213) This model is described in the article: Mathematical Modelling
+  of the Interaction Between Cancer Cells and an O.'
 tags:
 - biomodels_ebi
 - curated
@@ -15,20 +17,42 @@ tags:
 - tumor-growth
 - virotherapy
 io:
-  inputs: []
+  inputs:
+  - name: initial_virus_load
+    maps_to: oncology_sbml_jenner2018_treatment_of_oncolytic_virus_biomd0000000789_model.initial_virus_load
+    label: Virus Load
+    default: 0.0
+    units: native SBML value
+    description: Initial Virus Load. Sets the initial value of bundled SBML symbol
+      `V`.
+  - name: initial_susceptible_tumor_cells
+    maps_to: oncology_sbml_jenner2018_treatment_of_oncolytic_virus_biomd0000000789_model.initial_susceptible_tumor_cells
+    label: Susceptible Tumor Cells
+    default: 251000000.0
+    units: native SBML value
+    description: Initial Susceptible Tumor Cells. Sets the initial value of bundled
+      SBML symbol `S`.
+  - name: initial_infected_tumor_cells
+    maps_to: oncology_sbml_jenner2018_treatment_of_oncolytic_virus_biomd0000000789_model.initial_infected_tumor_cells
+    label: Infected Tumor Cells
+    default: 0.0
+    units: native SBML value
+    description: Initial Infected Tumor Cells. Sets the initial value of bundled SBML
+      symbol `I`.
   outputs:
-  - name: model_state_1
-    maps_to: oncology_sbml_jenner2018_treatment_of_oncolytic_virus_biomd0000000789_model.model_state_1
-    description: S observable. Maps to SBML symbol `S`.
-  - name: model_state_2
-    maps_to: oncology_sbml_jenner2018_treatment_of_oncolytic_virus_biomd0000000789_model.model_state_2
-    description: V observable. Maps to SBML symbol `V`.
-  - name: model_state_3
-    maps_to: oncology_sbml_jenner2018_treatment_of_oncolytic_virus_biomd0000000789_model.model_state_3
-    description: I observable. Maps to SBML symbol `I`.
+  - name: virus_load
+    maps_to: oncology_sbml_jenner2018_treatment_of_oncolytic_virus_biomd0000000789_model.virus_load
+    description: Virus Load observable. Maps to SBML symbol `V`.
+  - name: susceptible_tumor_cells
+    maps_to: oncology_sbml_jenner2018_treatment_of_oncolytic_virus_biomd0000000789_model.susceptible_tumor_cells
+    description: Susceptible Tumor Cells observable. Maps to SBML symbol `S`.
+  - name: infected_tumor_cells
+    maps_to: oncology_sbml_jenner2018_treatment_of_oncolytic_virus_biomd0000000789_model.infected_tumor_cells
+    description: Infected Tumor Cells observable. Maps to SBML symbol `I`.
   - name: state
     maps_to: oncology_sbml_jenner2018_treatment_of_oncolytic_virus_biomd0000000789_model.state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     maps_to: oncology_sbml_jenner2018_treatment_of_oncolytic_virus_biomd0000000789_model.summary
     description: Change and peak summary across the simulated SBML observables.

@@ -16,10 +16,10 @@ class Unni2019MathematicalModelingAnalysisAndSimuBiomd0000000888Model(TelluriumS
     _TIME_UNIT = "model_time"
     _OBSERVABLE_STRATEGY = 'species'
     _OBSERVABLES = ['T', 'N', 'D', 'L']
-    _SPECIES_LABELS = {'T': 'T', 'N': 'N', 'D': 'D', 'L': 'L'}
+    _SPECIES_LABELS = {'T': 'Tumor Cells', 'N': 'N', 'D': 'Drug Level', 'L': 'L'}
     _PARAMETER_INPUTS = {}
-    _INITIAL_CONDITION_INPUTS = {}
-    _HEADLINE_OUTPUTS = {'model_state_1': ('T', 'native SBML value', 'T observable. Maps to SBML symbol `T`.'), 'model_state_2': ('N', 'native SBML value', 'N observable. Maps to SBML symbol `N`.'), 'model_state_3': ('D', 'native SBML value', 'D observable. Maps to SBML symbol `D`.'), 'model_state_4': ('L', 'native SBML value', 'L observable. Maps to SBML symbol `L`.')}
+    _INITIAL_CONDITION_INPUTS = {'initial_tumor_cells': ('T', 100.0, 'native SBML value', 'Initial Tumor Cells. Sets the initial value of bundled SBML symbol `T`.'), 'initial_drug_level': ('D', 1.0, 'native SBML value', 'Initial Drug Level. Sets the initial value of bundled SBML symbol `D`.')}
+    _HEADLINE_OUTPUTS = {'tumor_cells': ('T', 'native SBML value', 'Tumor Cells observable. Maps to SBML symbol `T`.'), 'drug_level': ('D', 'native SBML value', 'Drug Level observable. Maps to SBML symbol `D`.')}
     _EXPOSE_INTEGRATION_STEP_INPUT = False
 
     def __init__(self, model_path: str = 'data/BIOMD0000000888.xml', integration_step: float = 0.1) -> None:

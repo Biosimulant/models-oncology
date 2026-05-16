@@ -1,6 +1,9 @@
 schema_version: '2.0'
 title: Claret2009 - Predicting phase III overall survival in colorectal cancer
-description: 'Claret2009 - Predicting phase III overall survival in colorectal cancer This model is described in the article: Model-based prediction of phase III overall survival in colorectal cancer on the basis o. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
+description: 'Claret2009 - Predicting phase III overall survival in colorectal cancer
+  This model is described in the article: Model-based prediction of phase III overall
+  survival in colorectal cancer on the basis o. It can be used to explore tumor-related
+  dynamics and compare treatment-response behavior across conditions.'
 standard: other
 tags:
 - biomodels_ebi
@@ -49,40 +52,42 @@ parameters:
   min: 0.0
   units: model_time
   description: Output sampling step for the Tellurium simulator.
-caveats: Values are native SBML quantities; the cleanup does not reinterpret source equations.
+caveats: Values are native SBML quantities; the cleanup does not reinterpret source
+  equations.
 io:
   inputs:
-  - name: treatment_int_level
+  - name: treatment_int_source_parameter
     maps_to: treatment_int
     label: Treatment int source parameter
     default: 14.0
     units: native SBML value
     description: Treatment int source parameter. Maps to bundled SBML parameter `treatment_int`.
-  - name: treatment_day_level
+  - name: treatment_day_source_parameter
     maps_to: treatment_day
     label: Treatment day source parameter
     default: 1.0
     units: native SBML value
     description: Treatment day source parameter. Maps to bundled SBML parameter `treatment_day`.
-  - name: dose_length
+  - name: dose_length_source_parameter
     maps_to: dose_length
     label: Dose length source parameter
     default: 0.0625
     units: native SBML value
     description: Dose length source parameter. Maps to bundled SBML parameter `dose_length`.
-  - name: dose_int2
+  - name: dose_int2_source_parameter
     maps_to: Dose_int2
     label: Dose int2 source parameter
     default: 0.5
     units: native SBML value
     description: Dose int2 source parameter. Maps to bundled SBML parameter `Dose_int2`.
   outputs:
-  - name: model_state_1
+  - name: y
     maps_to: y
     label: Y
     description: Y observable. Maps to SBML symbol `y`.
   - name: state
-    description: Full raw SBML observable record for reproducibility and downstream visualisation.
+    description: Full raw SBML observable record for reproducibility and downstream
+      visualisation.
   - name: summary
     description: Change and peak summary across the simulated SBML observables.
   - name: species_labels
