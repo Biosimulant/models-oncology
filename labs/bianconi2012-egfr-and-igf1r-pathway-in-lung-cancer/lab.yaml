@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: bianconi2012-egfr-and-igf1r-pathway-in-lung-cancer
+version: 1.0.0
 title: Bianconi2012 - EGFR and IGF1R pathway in lung cancer Lab
 description: Bianconi2012 - EGFR and IGF1R pathway in lung cancer EGFR and IGF1R pathways
   play a key role in various human cancers and are crucial for tumour transformation

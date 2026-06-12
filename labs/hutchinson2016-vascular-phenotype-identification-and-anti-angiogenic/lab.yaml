@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: hutchinson2016-vascular-phenotype-identification-and-an-1f3af325
+version: 1.0.0
 title: Hutchinson2016 - Vascular phenotype identification and anti-angiogenic treatment
   recommendation Lab
 description: This is a spatially averaged multiscale mathematical model of tumor angiogenesis.

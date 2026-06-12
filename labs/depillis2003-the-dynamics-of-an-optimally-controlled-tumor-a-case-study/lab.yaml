@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: depillis2003-the-dynamics-of-an-optimally-controlled-tu-86657504
+version: 1.0.0
 title: 'dePillis2003 - The dynamics of an optimally controlled tumor model: A case
   study Lab'
 description: '&lt;notes xmlns=&quot;http://www.sbml.org/sbml/level2/version4&quot;&gt;

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: lopes2025-nfkb-in-breast-cancer
+version: 1.0.0
 title: Lopes2025 - NFkB model in Breast Cancer Lab
 description: "Model for the activation of SLUG, SIP1, TWIST1, and NF-\u03BAB (subunits\
   \ p50 and p65). The model exhibits two stationary states (bistability), each corresponding\

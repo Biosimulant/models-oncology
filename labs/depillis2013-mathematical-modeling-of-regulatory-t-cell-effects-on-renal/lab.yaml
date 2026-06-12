@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: depillis2013-mathematical-modeling-of-regulatory-t-cell-477d4093
+version: 1.0.0
 title: dePillis2013 - Mathematical modeling of regulatory T cell effects on renal
   cell carcinoma treatment Lab
 description: Mathematical modeling of regulatory T cell effects on renal cell carcinoma

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: bajzer2008-modeling-of-cancer-virotherapy-with-recombin-62d71656
+version: 1.0.0
 title: Bajzer2008 - Modeling of cancer virotherapy with recombinant measles viruses
   Lab
 description: This model describes the interactions between tumor cells and virus particles,

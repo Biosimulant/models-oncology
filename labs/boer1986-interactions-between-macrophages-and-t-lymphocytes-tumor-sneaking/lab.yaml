@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: boer1986-interactions-between-macrophages-and-t-lymphoc-98b45fd9
+version: 1.0.0
 title: 'Boer1986 - Interactions between Macrophages and T-lymphocytes: Tumor Sneaking
   Through Intrinsic to Helper T cell Dynamics Lab'
 description: 'Interactions between Macrophages and T-lymphocytes: TumorSneaking Through

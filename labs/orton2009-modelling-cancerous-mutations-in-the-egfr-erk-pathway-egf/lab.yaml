@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: orton2009-modelling-cancerous-mutations-in-the-egfr-erk-a60efba1
+version: 1.0.0
 title: Orton2009 - Modelling cancerous mutations in the EGFR/ERK pathway - EGF Model
   Lab
 description: Orton2009 - Modelling cancerous mutations inthe EGFR/ERK pathway - EGF

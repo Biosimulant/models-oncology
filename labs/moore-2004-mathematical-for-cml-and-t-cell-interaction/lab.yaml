@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: moore-2004-mathematical-for-cml-and-t-cell-interaction
+version: 1.0.0
 title: Moore_2004_Mathematical model for CML and T cell interaction Lab
 description: Its a mathematical model depicting CML (chronic myelogenous leukemia)
   interaction with T cells and impact of T cell activations on CML progression over

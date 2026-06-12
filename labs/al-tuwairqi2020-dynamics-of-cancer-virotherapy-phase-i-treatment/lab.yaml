@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: al-tuwairqi2020-dynamics-of-cancer-virotherapy-phase-i-treatment
+version: 1.0.0
 title: Al-Tuwairqi2020 - Dynamics of cancer virotherapy - Phase I treatment Lab
 description: This ordinary differential equation model of cancer virotherapy dynamics is described in the publication:Salma M. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
 tags:

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: rommelfanger2011-gompertz-of-melanoma-tumor-therapy-wit-921594cf
+version: 1.0.0
 title: Rommelfanger2011 - Gompertz model of melanoma tumor therapy with vesicular
   stomatitis virus Lab
 description: 'This mathematical model is described by the publication:Rommelfanger

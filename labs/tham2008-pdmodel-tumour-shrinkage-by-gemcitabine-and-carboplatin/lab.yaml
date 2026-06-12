@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: tham2008-pdmodel-tumour-shrinkage-by-gemcitabine-and-carboplatin
+version: 1.0.0
 title: Tham2008 - PDmodel, Tumour shrinkage by gemcitabine and carboplatin Lab
 description: 'PURPOSE: This tumor response pharmacodynamic model aims to describe
   primary lesion shrinkage in non-small cell lung cancer over time and determine if

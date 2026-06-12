@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: wei2019-mathematical-modeling-of-tumor-growth-the-mcf-7-7e25fd85
+version: 1.0.0
 title: Wei2019 - Mathematical modeling of tumor growth The MCF-7 breast cancer cell
   line Lab
 description: This is a mathematical model describing MCF-7 cancer cell growth with

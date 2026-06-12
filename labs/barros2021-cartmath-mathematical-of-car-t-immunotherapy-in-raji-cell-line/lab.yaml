@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: barros2021-cartmath-mathematical-of-car-t-immunotherapy-ee840d4a
+version: 1.0.0
 title: Barros2021 - CARTmath, Mathematical Model of CAR-T Immunotherapy in Raji Cell
   Line Lab
 description: A mathematical model (CART-math) studying the impact of CAR-T cells therapy

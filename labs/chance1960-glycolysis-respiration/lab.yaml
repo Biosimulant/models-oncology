@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: chance1960-glycolysis-respiration
+version: 1.0.0
 title: Chance1960_Glycolysis_Respiration Lab
 description: 'This model is described inthe article: Metabolic control mechanisms. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
 tags:

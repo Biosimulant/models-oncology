@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: lombardo2018-expression-of-pdl1-in-neuroblastoma-cancer-cell
+version: 1.0.0
 title: Lombardo2018 - Expression of PDL1 in Neuroblastoma Cancer Cell Lab
 description: 'The model reproduces the time profiles of PDL1 in a Neuroblastoma Cancer
   Cell, considering the activating mutation of ALK: ALKF1174L. We simulate the impact

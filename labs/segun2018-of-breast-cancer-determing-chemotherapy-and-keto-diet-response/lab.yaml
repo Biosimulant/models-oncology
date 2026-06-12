@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: segun2018-of-breast-cancer-determing-chemotherapy-and-k-52b7448c
+version: 1.0.0
 title: Segun2018 - model of breast cancer determing Chemotherapy and Keto diet response
   Lab
 description: optimal control theory is applied to find out the optimal drug adjustment

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: jiao2018-feedback-regulation-in-a-stem-cell-with-acute-d05aeec8
+version: 1.0.0
 title: Jiao2018 - Feedback regulation in a stem cell model with acute myeloid leukaemia Lab
 description: This is a mathematical model describing the hematopoietic lineages with leukemia lineages, as controlled by end-product negative feedback inhibition. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
 tags:

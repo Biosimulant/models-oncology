@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: bayleyegn2016-interactions-of-cyce-cdk2-cdc25a-and-p27-ad0e4cbc
+version: 1.0.0
 title: Bayleyegn2016 - interactions of CycE/Cdk2, Cdc25A, and P27 Kip1 in a core cancer
   subnetwork Lab
 description: Mathematical description of the interactions of CycE/Cdk2, Cdc25A, and

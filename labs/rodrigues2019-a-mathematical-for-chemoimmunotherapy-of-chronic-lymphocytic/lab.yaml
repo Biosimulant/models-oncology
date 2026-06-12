@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: rodrigues2019-a-mathematical-for-chemoimmunotherapy-of-86d58ab8
+version: 1.0.0
 title: Rodrigues2019 - A mathematical model for chemoimmunotherapy of chronic lymphocytic
   leukemia Lab
 description: THis is a simple ordinary differential equation model describing chemoimmunotherapy

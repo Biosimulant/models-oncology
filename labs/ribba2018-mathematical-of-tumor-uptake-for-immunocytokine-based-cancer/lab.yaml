@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: ribba2018-mathematical-of-tumor-uptake-for-immunocytoki-c3a82eb6
+version: 1.0.0
 title: Ribba2018 - Mathematical Model of Tumor Uptake for Immunocytokine-Based Cancer
   Immunotherapy Lab
 description: This is a model developed to predict concentrations of cergutuzumab amunaleukin

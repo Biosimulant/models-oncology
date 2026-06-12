@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: zhu2015-combined-gemcitabine-and-birinapant-in-pancreat-dbb5a416
+version: 1.0.0
 title: Zhu2015 - Combined gemcitabine and birinapant in pancreatic cancer cells -
   mechanistic PD model Lab
 description: Zhu2015 - combined gemcitabine and birinapantin pancreatic cancer cells

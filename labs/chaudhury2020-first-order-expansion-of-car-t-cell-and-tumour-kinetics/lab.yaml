@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: chaudhury2020-first-order-expansion-of-car-t-cell-and-t-4f30f63c
+version: 1.0.0
 title: Chaudhury2020 - First order expansion model of CAR-T cell and tumour kinetics
   Lab
 description: This ordinary differential equation model of the cellular kinetics and

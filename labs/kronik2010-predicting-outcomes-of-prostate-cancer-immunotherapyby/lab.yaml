@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: kronik2010-predicting-outcomes-of-prostate-cancer-immun-b8457f48
+version: 1.0.0
 title: Kronik2010 - Predicting Outcomes of Prostate Cancer Immunotherapyby Personalized
   Mathematical Models Lab
 description: "Predicting Outcomes of Prostate Cancer Immunotherapyby Personalized\

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: hayashi2013-extended-tnf-induced-signaling-with-gene-ex-a346a0c7
+version: 1.0.0
 title: Hayashi2013 - Extended TNF-induced Signaling with Gene Expression Dynamics
   (Model B) Lab
 description: Hayashi2013 - Extended TNF-induced Signaling with Gene Expression Dynamics

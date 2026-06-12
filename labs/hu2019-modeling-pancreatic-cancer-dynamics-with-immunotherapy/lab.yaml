@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: hu2019-modeling-pancreatic-cancer-dynamics-with-immunotherapy
+version: 1.0.0
 title: Hu2019 - Modeling Pancreatic Cancer Dynamics with Immunotherapy Lab
 description: This is a mathematical model of pancreatic cancer that includes descriptions
   of pancreatic cancer cells, pancreatic stellate cells, effector cells and tumor-promoting

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: claret2009-predicting-phase-iii-overall-survival-in-col-5a73f5ec
+version: 1.0.0
 title: Claret2009 - Predicting phase III overall survival in colorectal cancer Lab
 description: 'Claret2009 - Predicting phase III overall survival in colorectal cancer
   This model is described in the article: Model-based prediction of phase III overall

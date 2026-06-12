@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: murphy2016-differences-in-predictions-of-ode-models-of-a5a2187d
+version: 1.0.0
 title: Murphy2016 - Differences in predictions of ODE models of tumor growth Lab
 description: Murphy2016 - Differences in predictions ofODE models of tumor growth
   Comparison of 7 ODE models for tumoursize. This models have been compared to experimental

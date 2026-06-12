@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: galante2012-b7-h1-and-a-mathematical-for-cytotoxic-t-ce-d6bd58a4
+version: 1.0.0
 title: Galante2012 - B7-H1 and a Mathematical Model for Cytotoxic T Cell and Tumor Cell Interaction Lab
 description: This is a mathematical model that describes the interactions between cytotoxic T cells and tumor cells as influenced by B7-H1 (PD-L1) activity, with a focus on how B7-H1 affects cancer cells apoptosis. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
 tags:

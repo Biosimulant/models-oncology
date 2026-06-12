@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: wodarz2018-1-simple
+version: 1.0.0
 title: Wodarz2018/1 - simple model Lab
 description: The paper describes a basic model of effect of cellular de-differentiation
   on the dynamics and evolution of tissue and tumor cells. Created by COPASI 4.25

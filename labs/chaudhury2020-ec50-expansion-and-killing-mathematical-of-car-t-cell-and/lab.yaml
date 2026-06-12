@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: chaudhury2020-ec50-expansion-and-killing-mathematical-o-dafbdcbc
+version: 1.0.0
 title: Chaudhury2020 - EC50 expansion and killing mathematical model of CAR-T cell and tumour kinetics Lab
 description: This ordinary differential equation model of the cellular kinetics and pharmacodynamics of CAR-T cell therapy is described in the publication:Chaudhury, A., Zhu, X., Chu, L., Goliaei, A., June, C., Ke. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
 tags:

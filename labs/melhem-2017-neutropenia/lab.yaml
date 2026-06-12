@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: melhem-2017-neutropenia
+version: 1.0.0
 title: Melhem 2017 - Neutropenia Model Lab
 description: "The objective of the present study was to use pharmacokinetic\u2013\
   pharmacodynamic modelling to characterize the effects of chemotherapy on the granulopoietic\

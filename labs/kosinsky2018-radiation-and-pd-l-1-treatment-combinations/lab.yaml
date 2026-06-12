@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: kosinsky2018-radiation-and-pd-l-1-treatment-combinations
+version: 1.0.0
 title: Kosinsky2018 - Radiation and PD-(L)1 treatment combinations Lab
 description: This is a quantitative systems pharmacology (QSP) model that describes
   key elements of the cancer immunity cycle and the tumor microenvironment, tumor

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: yang2012-cancer-growth-with-angiogenesis
+version: 1.0.0
 title: Yang2012 - cancer growth with angiogenesis Lab
 description: 'The paper describes a model of tumor growth with angiogenesis. Created
   by COPASI 4.26 (Build 213) This model is described in the article: Mathematical

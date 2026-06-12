@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: rommelfanger2011-generalized-logistic-of-melanoma-tumor-f6c58b77
+version: 1.0.0
 title: Rommelfanger2011 - Generalized logistic model of melanoma tumor therapy with
   vesicular stomatitis virus Lab
 description: 'This mathematical model is described by the publication:Rommelfanger

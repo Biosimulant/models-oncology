@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: eftimie2010-immunity-to-melanoma
+version: 1.0.0
 title: Eftimie2010 - immunity to melanoma Lab
 description: 'The paper describes a model of immunity to melanoma. Created by COPASI
   4.25 (Build 207) This model is described in the article: Modeling anti-tumor Th1

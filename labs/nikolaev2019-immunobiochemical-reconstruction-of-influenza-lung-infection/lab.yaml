@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: nikolaev2019-immunobiochemical-reconstruction-of-influe-df48d57f
+version: 1.0.0
 title: Nikolaev2019 - Immunobiochemical reconstruction of influenza lung infection-melanoma
   skin cancer interactions Lab
 description: This is a mathematical mechanistic immunobiochemical model that incorporates

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: unni2019-mathematical-modeling-analysis-and-simulation-14f01099
+version: 1.0.0
 title: Unni2019 - Mathematical Modeling, Analysis, and Simulation of Tumor Dynamics
   with Drug Interventions Lab
 description: Mathematical Modeling, Analysis, and Simulation of Tumor Dynamics with

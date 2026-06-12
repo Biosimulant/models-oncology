@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: talemi2015-persistent-telomere-associated-dna-damage-fo-270a2838
+version: 1.0.0
 title: Talemi2015 - Persistent telomere-associated DNA damage foci (TAF), a measure
   to predict cancer risks Lab
 description: A Robust Model of DNA Damage Dynamics.Rasgou Talemi and Schaber, 12.20.2014.

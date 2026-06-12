@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: al-husari2013-ph-and-lactate-in-tumor
+version: 1.0.0
 title: Al-Husari2013 - pH and lactate in tumor Lab
 description: 'The paper describes a model of pH control in tumor. Created by COPASI
   4.26 (Build 213) This model is described in the article: Regulation of tumour intracellular

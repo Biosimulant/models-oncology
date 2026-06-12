@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: ontah2019-dynamic-analysis-of-a-tumor-treatment-using-o-77d569a4
+version: 1.0.0
 title: Ontah2019 - Dynamic analysis of a tumor treatment model using oncolytic virus
   and chemotherapy with saturated infection rate Lab
 description: This is a mathematical model describing the treatment of tumors using

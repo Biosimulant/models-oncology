@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: shariatpanahi2018-mathematical-modeling-of-tumor-induce-905cf15f
+version: 1.0.0
 title: Shariatpanahi2018 - Mathematical modeling of tumor-induced immunosuppression
   by myeloid-derived suppressor cells Lab
 description: This is a ODE-based mathematical model featuring equations describing

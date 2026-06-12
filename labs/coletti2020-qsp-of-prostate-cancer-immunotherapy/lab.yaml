@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: coletti2020-qsp-of-prostate-cancer-immunotherapy
+version: 1.0.0
 title: Coletti2020 - QSP model of prostate cancer immunotherapy Lab
 description: This model is based on the publication:Coletti R, Leonardelli L, Parolo
   S, Marchetti L. A QSP model of prostate cancer immunotherapy to identify effective

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: gulhane2022-sphingolipid-metabolism-and-pi3k-akt-axis-in-nsclc
+version: 1.0.0
 title: Gulhane2022 - Sphingolipid metabolism and PI3K-AKT axis in NSCLC Lab
 description: In this model, we demonstrated that the increased expression of sphingolipids
   enzyme affects PI3K-AKT signaling axis and its downstream signaling mediators resulting

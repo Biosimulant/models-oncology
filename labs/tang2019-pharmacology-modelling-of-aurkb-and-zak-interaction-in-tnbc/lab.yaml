@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: tang2019-pharmacology-modelling-of-aurkb-and-zak-intera-505370bb
+version: 1.0.0
 title: Tang2019 - Pharmacology modelling of AURKB and ZAK interaction in TNBC Lab
 description: Aurora Kinase B and ZAK interaction model Equivalent of the stochastic
   model used in 'Network pharmacology model predicts combined Aurora B and ZAK inhibition

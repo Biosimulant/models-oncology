@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: zhu2015-combined-gemcitabine-and-birinapant-in-pancreat-8ba36cfe
+version: 1.0.0
 title: Zhu2015 - Combined gemcitabine and birinapant in pancreatic cancer cells - basic PD model Lab
 description: Zhu2015 - Combined gemcitabine and birinapantin pancreatic cancer cells - basic PD model Mathematical model to illustrate theeffectiveness of combination chemotherapy involving gemcitabine andbirinapa. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
 tags:

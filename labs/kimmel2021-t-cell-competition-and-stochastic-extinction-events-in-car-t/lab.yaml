@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: kimmel2021-t-cell-competition-and-stochastic-extinction-cae6bf6a
+version: 1.0.0
 title: Kimmel2021 - T cell competition and stochastic extinction events in CAR T cell
   therapy Lab
 description: This mathematical model of T cell-tumour interactions considering the

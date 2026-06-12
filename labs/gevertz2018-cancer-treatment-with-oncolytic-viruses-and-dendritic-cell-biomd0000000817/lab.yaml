@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: gevertz2018-cancer-treatment-with-oncolytic-viruses-and-c0207ab6
+version: 1.0.0
 title: Gevertz2018 - cancer treatment with oncolytic viruses and dendritic cell injections
   minimal model Lab
 description: The model is based on 'Developing a Minimally Structured Mathematical

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: andersen2017-mathematical-modelling-as-a-proof-of-conce-182c1d3b
+version: 1.0.0
 title: Andersen2017 - Mathematical modelling as a proof of concept for MPNs as a human
   inflammation model for cancer development Lab
 description: This is a mathematical model investigating the role of chronic inflammation

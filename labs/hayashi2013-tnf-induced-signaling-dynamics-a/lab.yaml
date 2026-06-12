@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: hayashi2013-tnf-induced-signaling-dynamics-a
+version: 1.0.0
 title: Hayashi2013 - TNF-induced Signaling Dynamics (Model A) Lab
 description: Hayashi2013 - TNF-induced Signaling Dynamics Model (Model A)Tumor necrosis
   factor (TNF) plays a crucial role in inflammation and is associated with diseases

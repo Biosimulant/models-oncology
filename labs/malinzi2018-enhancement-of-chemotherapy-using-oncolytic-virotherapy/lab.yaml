@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: malinzi2018-enhancement-of-chemotherapy-using-oncolytic-7800be95
+version: 1.0.0
 title: Malinzi2018 - Enhancement of chemotherapy using oncolytic virotherapy Lab
 description: IA spatio-temporal mathematical model, in the form of a moving boundary
   problem, to explain cancer dormancy is developed. Analysis of the model is carried

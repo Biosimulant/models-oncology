@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: nazari2018-il6-mediated-stem-cell-driven-tumor-growth-a-a1b61cbd
+version: 1.0.0
 title: Nazari2018 - IL6 mediated stem cell driven tumor growth and targeted treatment
   Lab
 description: 'This a model from the article: A mathematical model for IL-6-mediated,

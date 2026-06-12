@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: jafarnejad2019-mechanistically-detailed-systems-biology-36e38518
+version: 1.0.0
 title: Jafarnejad2019 - Mechanistically detailed systems biology modeling of the HGF/Met
   pathway in hepatocellular carcinoma Lab
 description: Hepatocyte growth factor (HGF) signaling through its receptor Met has

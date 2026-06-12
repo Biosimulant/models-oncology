@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: dorvash2019-dynamic-modeling-of-signal-transduction-by-361f966e
+version: 1.0.0
 title: Dorvash2019 - Dynamic modeling of signal transduction by mTOR complexes in
   cancer Lab
 description: This model is based on:Dynamic modeling of signal transduction by mTOR

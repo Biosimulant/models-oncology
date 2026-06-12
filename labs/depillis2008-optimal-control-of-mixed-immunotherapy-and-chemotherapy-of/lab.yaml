@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: depillis2008-optimal-control-of-mixed-immunotherapy-and-0b1f5f8a
+version: 1.0.0
 title: dePillis2008 - Optimal control of mixed immunotherapy and chemotherapy of tumors
   Lab
 description: '&amp;lt;notes xmlns=&amp;quot;http://www.sbml.org/sbml/level2/version4&amp;quot;&amp;gt;

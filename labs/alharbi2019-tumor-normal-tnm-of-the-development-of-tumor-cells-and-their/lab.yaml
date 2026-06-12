@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: alharbi2019-tumor-normal-tnm-of-the-development-of-tumo-03bb85d5
+version: 1.0.0
 title: Alharbi2019 - Tumor-normal model (TNM) of the development of tumor cells and their impact on normal cell dynamics Lab
 description: This ordinary differential equation model of the interactions between tumor and normal cells is based on the publication:S. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
 tags:

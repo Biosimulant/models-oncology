@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: abernathy2016-glioblastoma-treatment
+version: 1.0.0
 title: Abernathy2016 - glioblastoma treatment Lab
 description: 'The paper describes a model of glioblastoma. Created by COPASI 4.25
   (Build 207) This model is described in the article: Modeling the Treatment of Glioblastoma

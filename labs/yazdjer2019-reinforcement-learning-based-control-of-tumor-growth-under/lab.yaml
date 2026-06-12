@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: yazdjer2019-reinforcement-learning-based-control-of-tum-5f0a640b
+version: 1.0.0
 title: Yazdjer2019 - reinforcement learning-based control of tumor growth under anti-angiogenic therapy Lab
 description: 'This model is based on:Reinforcement learning-based control of tumor growth under anti-angiogenic therapyAuthors: Parisa Yazdjerdi, Nader Meskin, Mohammad Al-Naemi, Ala-Eddin Al Moustafa, Levente Kova. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
 tags:

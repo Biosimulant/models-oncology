@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: barros2021-cartmath-mathematical-of-car-t-immunotherapy-299df534
+version: 1.0.0
 title: Barros2021 - CARTmath, Mathematical Model of CAR-T Immunotherapy in HDLM-2
   cell line Lab
 description: A mathematical model (CART-math) studying the impact of CAR-T cells therapy

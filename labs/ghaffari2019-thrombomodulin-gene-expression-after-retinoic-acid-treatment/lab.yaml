@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: ghaffari2019-thrombomodulin-gene-expression-after-retin-34732448
+version: 1.0.0
 title: Ghaffari2019 - Thrombomodulin Gene Expression after Retinoic Acid Treatment
   for Cancer Patients with Coagulation Disorders Lab
 description: Publication includes a mathematical model for how retinoic acid affects

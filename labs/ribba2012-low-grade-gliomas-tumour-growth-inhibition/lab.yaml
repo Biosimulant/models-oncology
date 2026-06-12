@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: ribba2012-low-grade-gliomas-tumour-growth-inhibition
+version: 1.0.0
 title: Ribba2012 - Low-grade gliomas, tumour growth inhibition model Lab
 description: Ribba2012 - Low-grade gliomas, tumour growth inhibition model Using longitudinal mean tumour diameter (MTD) data, this model describe the size evolution of low-grade glioma (LGG) in patients treated w. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
 tags:

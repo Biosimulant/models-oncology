@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: shin-2018-egfr-pyk2-c-met-interaction-network-model
+version: 1.0.0
 title: Shin_2018_EGFR-PYK2-c-Met interaction network_model Lab
 description: Systems modelling of the EGFR-PYK2-c-Met interaction network predicted
   and prioritized synergistic drug combinations for Triple-negative breast cancer.

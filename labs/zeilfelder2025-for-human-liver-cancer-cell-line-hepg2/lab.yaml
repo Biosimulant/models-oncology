@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: zeilfelder2025-for-human-liver-cancer-cell-line-hepg2
+version: 1.0.0
 title: Zeilfelder2025 - Model for human liver cancer cell line HepG2 Lab
 description: Mathematical multi-compartment model described by sets of coupledordinary
   differential equations (ODEs) for studying the IL6 and SMAD signaling in HepG2 human

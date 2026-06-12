@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: morrison1989-folate-cycle
+version: 1.0.0
 title: Morrison1989 - Folate Cycle Lab
 description: 'Morrison1989 - Folate Cycle The model describes the folate cyclekinetics
   in breast cancer cells. This model is described in the article: Folate cycle kinetics

@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: greene2019-differentiate-spontaneous-and-induced-evolut-b3e467da
+version: 1.0.0
 title: Greene2019 - Differentiate Spontaneous and Induced Evolution to Drug Resistance
   During Cancer Treatment Lab
 description: This model is built by COPASI 4.24(Build 197), based on paper:Mathematical

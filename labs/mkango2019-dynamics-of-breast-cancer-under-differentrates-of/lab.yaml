@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: mkango2019-dynamics-of-breast-cancer-under-differentrates-of
+version: 1.0.0
 title: Mkango2019 - Dynamics of Breast Cancer under DifferentRates of Chemoradiotherapy
   Lab
 description: Dynamics of Breast Cancer under Different Rates of Chemoradiotherapy.Mkango

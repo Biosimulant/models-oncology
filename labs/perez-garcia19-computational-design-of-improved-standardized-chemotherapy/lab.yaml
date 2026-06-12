@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: perez-garcia19-computational-design-of-improved-standar-a9a6b1fc
+version: 1.0.0
 title: Perez-Garcia19 - Computational design of improved standardized chemotherapy
   protocols for grade 2 oligodendrogliomas Lab
 description: "This is a model built by COPASI4.24(Build 197)This a model from the\

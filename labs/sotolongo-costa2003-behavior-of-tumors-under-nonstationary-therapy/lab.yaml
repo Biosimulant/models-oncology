@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: sotolongo-costa2003-behavior-of-tumors-under-nonstation-045906ed
+version: 1.0.0
 title: Sotolongo-Costa2003 - Behavior of tumors under nonstationary therapy Lab
 description: This model describes the interaction dynamics of a lymphocyte-tumor cell population. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.
 tags:

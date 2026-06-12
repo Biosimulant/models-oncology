@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: dritschel2018-a-mathematical-of-cytotoxic-and-helper-t-568b90ff
+version: 1.0.0
 title: Dritschel2018 - A mathematical model of cytotoxic and helper T cell interactions
   in a tumour microenvironment Lab
 description: This model examines the role of helper and cytotoxic T cells in an anti-tumour

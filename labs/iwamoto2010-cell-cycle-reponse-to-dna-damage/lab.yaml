@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: iwamoto2010-cell-cycle-reponse-to-dna-damage
+version: 1.0.0
 title: Iwamoto2010 - Cell cycle reponse to DNA damage Lab
 description: After DNA damage, cells activate p53, a tumor suppressor gene, and select
   a cell fate (e.g., DNA repair, cell cycle arrest, or apoptosis). Recently, a p53

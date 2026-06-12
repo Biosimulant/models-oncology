@@ -1,4 +1,6 @@
 schema_version: '2.0'
+package: fassoni2019-oncogenesis-encompassing-mutations-and-gene-c627e928
+version: 1.0.0
 title: Fassoni2019 - Oncogenesis encompassing mutations and genetic instability Lab
 description: 'This model describes the multistep process that transform a normal cell and its descendants into a malignant tumour by considering three populations: normal, premalignant and cancer cells. It can be used to explore tumor-related dynamics and compare treatment-response behavior across conditions.'
 tags:
