@@ -17,7 +17,7 @@ All models use SBML format with tellurium runtime.
 
 ## Prerequisites
 ```bash
-pip install "biosim @ git+https://github.com/BioSimulant/biosim.git@main"
+pip install "biosimulant @ git+https://github.com/Biosimulant/biosimulant.git@main"
 ```
 
 ## License
